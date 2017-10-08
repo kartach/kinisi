@@ -1,0 +1,88 @@
+//
+// Progress bars
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+
+// Linear Progress Bars
+// --------------------------------------------------
+
+.progress-linear {
+  margin-bottom: 50px;
+  position: relative;
+  height: 12px;
+
+  .progress-bar-linear-wrap, .progress-bar-linear {
+    height: 100%;
+    border-radius: 3px;
+  }
+
+  .progress-title{
+    float: left;
+  }
+
+  .progress-value{
+    float: right;
+  }
+
+  .progress-bar-linear-wrap {
+    background: @gray-lighter;
+  }
+
+  .progress-bar-linear {
+    width: 0;
+    .transition(.5s all ease);
+  }
+
+  .progress-value{
+    &:after{
+      content:"%";
+    }
+  }
+}
+
+// Circle Progress Bars
+// --------------------------------------------------
+.progress-bar-circle_wrapper{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.progress-bar-circle {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  line-height: 1.2;
+  text-align: center;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 74%;
+    height: 74%;
+    content: '';
+    .translate(-50%, -50%);
+    border-radius: 50%;
+  }
+
+  canvas {
+    vertical-align: middle;
+  }
+
+  span {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 38px;
+    .translate(-50%, -50%);
+
+    &:after {
+      content: '%';
+    }
+  }
+}

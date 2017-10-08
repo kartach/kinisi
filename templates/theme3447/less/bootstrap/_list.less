@@ -1,0 +1,332 @@
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+//
+// Lists
+// --------------------------------------------------
+//===========================================
+//   Ordered and Unordered List Styles
+//===========================================
+ul,
+ol {
+    margin: 0 0 @line-height-base;
+    padding: 0;
+    list-style: none;
+    li {
+        line-height: @line-height-base;
+        a {
+            text-decoration: none;
+            color: @global-color;
+            &:hover {
+                color: @global-color2;
+            }
+        }
+    }
+}
+
+//===========================================
+//   Ordered List Styles
+//===========================================
+ol {
+    list-style: none;
+    counter-reset: list;
+    li {
+        padding-left: 30px;
+        position: relative;
+        &:before {
+            content: counter(list, decimal)'.';
+            counter-increment: list;
+            left: 0;
+            padding: 0px;
+            position: absolute;
+            top: 0;
+            color: @global-color;
+        }
+        + li {
+            margin-top: 11px;
+        }
+    }
+}
+
+//===========================================
+// Unordered List Styles
+//===========================================
+.item_introtext,
+.item_fulltext,
+.category_desc,
+.site_map {
+    ul {
+        li {
+            + li {
+                margin-top: 12px;
+            }
+        }
+        &.nav-tabs {
+            li {
+                padding: 0;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        a,
+        span {
+            text-decoration: none;
+        }
+    }
+}
+
+ul.tags,
+ul.nav,
+ul.btn-toolbar,
+ul.dropdown-menu,
+ul.chzn-results,
+ul.chzn-choices {
+    li {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+// =======================
+// SOCIAL LIST
+// =======================
+.nav.menu.social {
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    text-align: right;
+    li {
+        display: inline-block;
+        padding: 0 0px 0px 10px;
+        &:before {
+            display: none;
+        }
+        a {
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            color: @white;
+            background: #464a4d;
+            line-height: 25px;
+            display: block;
+            font-size: 12px;
+            position: relative;
+            text-align: center;
+            .transition(all 0.5s ease);
+            &:hover {
+                background: @global-color2;
+                color: @white;
+            }
+        }
+    }
+    &.copy_soc {
+        li {
+            span.separator {
+                font: 400 14px/1.2em @font-family-base;
+                font-style: italic;
+                color: @white;
+            }
+        }
+    }
+}
+
+//===========================================
+// List Styles
+//===========================================
+ul.list {
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 15px;
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '\f105';
+            font-family: @fa;
+            font-size: 18px;
+            color: @global-color2;
+        }
+        + li {
+            margin-top: 11px;
+        }
+    }
+}
+
+//===========================================
+// Icon List Styles
+//===========================================
+ul.icons {
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 0px;
+        a {
+            font: 700 24px/1.2em @font-family-base;
+            color: @headings-color;
+            text-transform: capitalize;
+            &:hover {
+                color: @global-color;
+            }
+        }
+        + li {
+            margin-top: 35px;
+        }
+        &:before {
+            font-family: @tr;
+            font-size: 50px;
+            color: @global-color2;
+            line-height: 30px;
+            width: auto;
+            height: auto;
+            top: 8px;
+            padding-right: 20px;
+            position: relative;
+        }
+        &:nth-child(2n-1):before {
+            content: '\e81c';
+        }
+        &:nth-child(2n):before {
+            content: '\e807';
+        }
+    }
+}
+
+//===========================================
+// Bootstrap Styles
+//===========================================
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    &.nav-child {
+        margin: 5px 0 0;
+    }
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+    margin-left: 0;
+    list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+    margin-left: 0;
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+// Description Lists
+dl + * {
+    margin-top: @line-height-base;
+}
+
+dt,
+dd {
+    line-height: @line-height-base;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: @line-height-base / 2;
+}
+
+// Horizontal layout (like forms)
+.dl-horizontal {
+    .clearfix(); // Ensure dl clears floats if empty dd elements present
+    dt {
+        float: left;
+        width: @component-offset-horizontal - 20;
+        clear: left;
+        text-align: right;
+        .text-overflow();
+    }
+    dd {
+        margin-left: @component-offset-horizontal;
+    }
+}
+
+.portfolio-meta-list {
+    display: table;
+    margin-left: 0;
+    overflow: hidden;
+    li {
+        color: @link-hover-color;
+        display: table-row;
+        strong {
+            color: @text-color;
+        }
+        > strong,
+        > span {
+            display: table-cell;
+        }
+        > span {
+            padding-left: 5px;
+            color: @text-color;
+        }
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.item_fulltext .portfolio-meta-list li span:hover {
+    color: inherit;
+}
+
+#q_links {
+    list-style-position: inside;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    li {
+        display: block;
+        a {
+            display: inline-block;
+            font: 400 14px/19px @font-family-base;
+            color: @white;
+            &:hover {
+                color: @global-color2;
+                &:before {
+                    padding-right: 5px;
+                    padding-left: 5px;
+                    color: @white;
+                }
+            }
+            &:before {
+                font-family: @fa;
+                font-size: 18px;
+                line-height: 19px;
+                color: @global-color2;
+                display: inline-block;
+                padding-right: 10px;
+                .transition(all 0.3s ease);
+            }
+        }
+        +li {
+            margin-top: 15px;
+        }
+        &.active {
+          a{
+              color: @global-color2;
+            &:before {
+                padding-right: 10px;
+                padding-left: 0px;
+                color: @global-color2;
+            }
+          }
+        }
+    }
+}

@@ -1,0 +1,391 @@
+//
+// Typography
+// --------------------------------------------------
+// Core variables and mixins
+@import "_variables.less";
+// Custom for this template
+@import "bootstrap/_mixins.less";
+.lead {
+    margin-bottom: @line-height-base;
+    font-size: @font-size-base * 1.5;
+    line-height: @line-height-base * 1.5;
+}
+
+a {
+    .transition(.5s all ease);
+    color: @text-color;
+    outline: none;
+    cursor: pointer;
+    &:focus,
+    &:active {
+        outline: none;
+        color: @global-color2;
+    }
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: @global-color2;
+        outline: none;
+    }
+}
+
+b {}
+
+// Headings
+// -------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: @headings-color;
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    position: relative;
+    margin-top: 0;
+    text-transform: uppercase;
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+    &.heading-style-1 {
+        font-size: 65px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    &.heading-style-2 {
+        font-size: 62px;
+        font-weight: 100;
+        margin-bottom: 20px;
+    }
+    &.heading-style-3 {
+        font-size: 45px;
+        font-weight: 100;
+        margin-bottom: 20px;
+        text-align: center;
+        .item_title_part_first{
+          font-weight: 700;
+        }
+    }
+    &.heading-style-4 {
+        font-weight: 100;
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+    &.heading-style-5 {
+        font-size: 33px;
+        font-weight: 700;
+        text-transform: none;
+        margin-bottom: 13px;
+    }
+    &.heading-style-6 {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+    &.heading-style-7 {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+    &.heading-style-8 {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+        &.heading-style-9 {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: none;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        margin-bottom: 20px;
+    }
+    small {
+        font-weight: normal;
+        line-height: 1;
+        color: @gray-light;
+    }
+}
+
+.page-header,
+.page_header {
+    *[class*=heading-style] {}
+}
+
+// Body text
+// -------------------------
+p {
+    margin: 0px;
+    letter-spacing: 0.025em;
+    padding: 0 0 @line-height-base;
+}
+
+.text-offset {
+    margin-top: 46px;
+}
+
+.lead {
+    margin-bottom: @line-height-computed;
+    font-size: floor((@font-size-base * 1.15));
+    font-weight: 300;
+    line-height: 1.4;
+    @media (min-width: 768px) {
+        font-size: (@font-size-base * 1.5);
+    }
+}
+
+// Emphasis & misc
+// -------------------------
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+    font-size: floor((100% * @font-size-small / @font-size-base));
+}
+
+mark,
+.mark {
+    background-color: @state-warning-bg;
+    padding: .2em;
+}
+
+// Alignment
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+// Transformation
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Contextual colors
+.text-muted {
+    color: @text-muted;
+}
+
+.text-primary {
+    .text-emphasis-variant(@brand-primary);
+}
+
+.text-success {
+    .text-emphasis-variant(@state-success-text);
+}
+
+.text-info {
+    .text-emphasis-variant(@state-info-text);
+}
+
+.text-warning {
+    .text-emphasis-variant(@state-warning-text);
+}
+
+.text-danger {
+    .text-emphasis-variant(@state-danger-text);
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+    // Given the contrast here, this is the only class to have its color inverted
+    // automatically.
+    color: #fff;
+    .bg-variant(@brand-primary);
+}
+
+.bg-success {
+    .bg-variant(@state-success-bg);
+}
+
+.bg-info {
+    .bg-variant(@state-info-bg);
+}
+
+.bg-warning {
+    .bg-variant(@state-warning-bg);
+}
+
+.bg-danger {
+    .bg-variant(@state-danger-bg);
+}
+
+// Lists
+// -------------------------
+// Unordered and Ordered lists
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: @line-height-base;
+    ul,
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+// List options
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+    .list-unstyled();
+    margin-left: -5px;
+    > li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+// Description Lists
+dl {
+    margin-top: 0; // Remove browser default
+    margin-bottom: @line-height-computed;
+}
+
+dt,
+dd {
+    line-height: @line-height-base;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0; // Undo browser default
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+// Misc
+// -------------------------
+// Abbreviations and acronyms
+abbr[title],
+// Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted @abbr-border-color;
+}
+
+.initialism {
+    font-size: 90%;
+    .text-uppercase();
+}
+
+// Blockquotes
+blockquote {
+    padding: 0px 0px 0px 0px;
+    margin: 0 0 @line-height-computed;
+    position: relative;
+    text-align: center;
+    &:before {
+        display: block;
+        content: '\f10d';
+        font: 30px/30px @fa;
+        color: @global-color;
+    }
+    p {
+        font: 300 19px/30px @font-family-base;
+    }
+    p,
+    ul,
+    ol {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    // Note: Deprecated small and .small as of v3.1.0
+    // Context: https://github.com/twbs/bootstrap/issues/11660
+    footer,
+    small,
+    .small {
+        font: 400 14px/1.2em @font-family-base;
+    }
+    cite {
+        color: @global-color;
+        display: inline-block;
+        font: 700 14px/1.2em @font-family-base;
+    }
+    @media(max-width:767px) {
+        margin-bottom: 30px;
+    }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @blockquote-border-color;
+    border-left: 0;
+    text-align: right;
+    // Account for citation
+    footer,
+    small,
+    .small {
+        &:before {
+            content: '';
+        }
+        &:after {
+            content: '\00A0 \2014'; // nbsp, em dash
+        }
+    }
+}
+
+.item_introtext,
+.item_fulltext,
+.category_desc {
+    p a:not(.btn) {
+        text-decoration: underline;
+    }
+    strong {
+        color: @link-color;
+    }
+    mark {
+        color: white;
+        padding: 0px 4px;
+        background: @global-color2;
+    }
+}
+
+// Addresses
+address {
+    margin-bottom: @line-height-computed;
+    font-style: normal;
+    line-height: @line-height-base;
+}

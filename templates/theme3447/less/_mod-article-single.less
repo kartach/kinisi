@@ -1,0 +1,32 @@
+@import "_variables.less";
+@import "bootstrap/_mixins.less";
+// ============================
+// Article Single Modules
+// ============================
+
+.mod-article-single {
+
+  margin-bottom: @line-height-base*2;
+
+  .item__module {
+    .clearfix();
+  }
+  &.mod-article-single__bottom_logo{
+  	.item_img{
+  		margin-bottom: 20px;
+  	}
+  	p{
+  		padding-bottom: 20px;
+  	}
+  	.mod-newsflash-adv_custom-link{
+  		a{
+  			font: 600 16px/1.2em @font-family-base;
+  			color:@white;
+  			&:hover{
+  				color:@global-color2;
+  			}
+  		}
+  	}
+  }
+
+}
