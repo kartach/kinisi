@@ -105,7 +105,8 @@ if (!empty($this->spacing)) : ?>
 			<span class="ktopic-category"> <?php echo JText::sprintf('COM_KUNENA_CATEGORY_X', $this->getCategoryLink($this->topic->getCategory(), null, $this->topic->getCategory()->description, KunenaTemplate::getInstance()->tooltips())) ?></span>
 			<?php if ($config->post_dateformat != 'none') : ?>
 			<br />
-				<?php echo $topic->getFirstPostTime()->toKunena('config_post_dateformat'); ?>
+			<?php echo JText::_('COM_KUNENA_TOPIC_STARTED_ON')?>
+			<?php echo $topic->getFirstPostTime()->toKunena('config_post_dateformat'); ?>
 			<?php endif; ?>
 			<div class="pull-right hidden-phone">
 				<?php /** TODO: New Feature - LABELS
@@ -160,11 +161,11 @@ if (!empty($this->spacing)) : ?>
 				<?php else : ?>
 					<div class="span12">
 				<?php endif; ?>
-					<span><?php echo $this->getTopicLink($this->topic, 'last', JText::_('COM_KUNENA_GEN_LAST_POST'), null, KunenaTemplate::getInstance()->tooltips(), $category, false, true); ?>
+					<span class="lastpostlink"><?php echo $this->getTopicLink($this->topic, 'last', JText::_('COM_KUNENA_GEN_LAST_POST'), null, KunenaTemplate::getInstance()->tooltips(), $category, false, true); ?>
 						<?php echo ' ' . JText::_('COM_KUNENA_BY') . ' ' . $this->topic->getLastPostAuthor()->getLink(null, JText::sprintf('COM_KUNENA_VIEW_USER_LINK_TITLE', $this->topic->getLastPostAuthor()->getName()), '', '', KunenaTemplate::getInstance()->tooltips(), $category->id);?>
 					</span>
 					<br>
-					<span><?php echo $topic->getLastPostTime()->toKunena('config_post_dateformat'); ?></span>
+					<span class="datepost"><?php echo $topic->getLastPostTime()->toKunena('config_post_dateformat'); ?></span>
 				</div>
 			</div>
 		</div>

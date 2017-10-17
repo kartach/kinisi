@@ -97,7 +97,7 @@ defined('_JEXEC') or die('(@)|(@)');
             }
 			$title = (!empty($link['plugin_title'])) ? ' title="'.$link['plugin_title'].'"' : '';
             ?>
-            <a  rel="nofollow" class="link<?php echo $link['class'];?>" <?php echo $linkParams.$title;?> href="<?php echo JRoute::_($link['link']);?>"><span class="<?php echo $link['class'];?> slogin-ico"></span><span class="text-socbtn"><?php echo $link['plugin_title'];?></span></a>
+            <a  rel="nofollow" class="link<?php echo $link['class'];?>" <?php echo $linkParams.$title;?> href="<?php echo JRoute::_($link['link']);?>"><span class="<?php echo $link['class'];?> slogin-ico">&nbsp;</span><span class="text-socbtn"><?php echo $link['plugin_title'];?></span></a>
         <?php endforeach; ?>
     <?php endif; ?>
 

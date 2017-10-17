@@ -226,7 +226,7 @@ class KunenaAttachment extends KunenaDatabaseObject
 		$protect = (bool) KunenaConfig::getInstance()->attachment_protection;
 
 		// Use direct URLs to the attachments if protection is turned off and file wasn't protected.
-		if (!$protect && !$this->protected)
+		if (!$protect)
 		{
 			$file = $this->folder . '/' . $this->filename;
 			$fileThumb = $this->folder . '/thumb/' . $this->filename;
@@ -237,6 +237,15 @@ class KunenaAttachment extends KunenaDatabaseObject
 			}
 
 			$url = ($thumb ? $fileThumb : $file);
+
+			if (JFactory::getApplication()->isAdmin())
+			{
+				$url = $url;
+			}
+			else
+			{
+				$url = JURI::base() . $url;
+			}
 
 			return $escape ? htmlspecialchars($url, ENT_COMPAT, 'UTF-8') : $url;
 		}

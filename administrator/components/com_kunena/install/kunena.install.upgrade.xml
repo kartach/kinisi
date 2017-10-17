@@ -730,9 +730,9 @@
 		         versionname="Internal">
 			<phpfile name="5.0.5-2016-12-20_userlist"/>
 		</version>
-		<version version="5.0.8"
-				versiondate="2017-05-15"
-				versionname="Hoatzin">
+		<version version="5.0.11"
+				versiondate="2017-09-02"
+				versionname="Kinkajou">
 		</version>
 	</upgrade>
 </comupgrade>

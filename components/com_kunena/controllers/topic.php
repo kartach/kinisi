@@ -65,16 +65,7 @@ class KunenaControllerTopic extends KunenaController
 			$object->folder  = $attach->folder;
 			$object->caption = $attach->caption;
 			$object->type    = $attach->filetype;
-
-			if ($attach->protected)
-			{
-				$object->path    = $attach->getUrl();
-			}
-			else
-			{
-				$object->path    = JURI::root(true) . '/' . $attach->getUrl();
-			}
-
+			$object->path    = $attach->getUrl();
 			$object->image   = $attach->isImage();
 			$list['files'][] = $object;
 		}
@@ -420,7 +411,7 @@ class KunenaControllerTopic extends KunenaController
 
 			if ($count)
 			{
-				$this->app->enqueueMessage(JText::sprintf('COM_KUNENA_POST_TOPIC_FLOOD', $this->config->floodprotection));
+				$this->app->enqueueMessage(JText::sprintf('COM_KUNENA_POST_TOPIC_FLOOD', $this->config->floodprotection), 'error');
 				$this->setRedirectBack();
 
 				return;

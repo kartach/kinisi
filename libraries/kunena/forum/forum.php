@@ -214,7 +214,7 @@ abstract class KunenaForum
 	 */
 	public static function isDev()
 	{
-		if ('5.0.8' == '@' . 'kunenaversion' . '@')
+		if ('5.0.11' == '@' . 'kunenaversion' . '@')
 		{
 			return true;
 		}
@@ -400,7 +400,7 @@ abstract class KunenaForum
 
 	protected static function buildVersion()
 	{
-		if ('5.0.8' == '@' . 'kunenaversion' . '@')
+		if ('5.0.11' == '@' . 'kunenaversion' . '@')
 		{
 			$file          = JPATH_MANIFESTS . '/packages/pkg_kunena.xml';
 			if (file_exists($file)) {
@@ -409,16 +409,16 @@ abstract class KunenaForum
 			}
 			else
 			{
-				self::$version = strtoupper('5.0.8');
+				self::$version = strtoupper('5.0.11');
 			}
 		}
 		else
 		{
-			self::$version = strtoupper('5.0.8');
+			self::$version = strtoupper('5.0.11');
 		}
 
 		self::$version_major = substr(self::$version, 0, 3);
-		self::$version_date = ('2017-05-15' == '@' . 'kunenaversiondate' . '@') ? JFactory::getDate()->format('Y-m-d') : '2017-05-15';
-		self::$version_name = ('Hoatzin' == '@' . 'kunenaversionname' . '@') ? 'Git Repository' : 'Hoatzin';
+		self::$version_date = ('2017-09-02' == '@' . 'kunenaversiondate' . '@') ? JFactory::getDate()->format('Y-m-d') : '2017-09-02';
+		self::$version_name = ('Kinkajou' == '@' . 'kunenaversionname' . '@') ? 'Git Repository' : 'Kinkajou';
 	}
 }

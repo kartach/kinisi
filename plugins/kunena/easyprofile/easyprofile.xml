@@ -2,8 +2,8 @@
 <!DOCTYPE extension>
 <extension version="2.5" type="plugin" group="kunena" method="upgrade">
 	<name>PLG_KUNENA_EASYPROFILE</name>
-	<version>5.0.8</version>
-	<creationDate>2017-05-15</creationDate>
+	<version>5.0.11</version>
+	<creationDate>2017-09-02</creationDate>
 	<author>Onlinecommunityhub</author>
 	<authorEmail>info@onlinecommunityhub.nl</authorEmail>
 	<authorUrl>https://onlinecommunityhub.nl</authorUrl>
