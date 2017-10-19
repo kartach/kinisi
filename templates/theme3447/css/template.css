@@ -1199,7 +1199,7 @@ h3.heading-style-1,
 h4.heading-style-1,
 h5.heading-style-1,
 h6.heading-style-1 {
-  font-size: 65px;
+  font-size: 60px; 
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -12113,7 +12113,7 @@ body.body__home:not(.view-article) #mainbottom-2 h6 {
   color: #ffffff;
 }
 body.body__about:not(.view-article) #mainbottom-2 {
-  background: url(../images/bg_4.jpg) 50% 50% no-repeat fixed;
+ /*KC-BYLO V ORIG====== background: url(../images/bg_4.jpg) 50% 50% no-repeat fixed;=====*/
   padding: 90px 0 100px;
   position: relative;
   background-size: cover;
