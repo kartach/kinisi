@@ -12,3 +12,5 @@
 2017-02-01T14:45:33+00:00	INFO 127.0.0.1	sloginfailure	Empty password not allowed.
 2017-02-13T10:01:43+00:00	INFO 127.0.0.1	sloginfailure	Empty password not allowed.
 2017-10-09T13:24:19+00:00	INFO ::1	sloginfailure	Username and password do not match or you do not have an account yet.
+2017-10-19T11:30:23+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-10-19T11:30:27+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
