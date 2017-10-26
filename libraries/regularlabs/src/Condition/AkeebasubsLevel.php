@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,11 +19,10 @@ defined('_JEXEC') or die;
  */
 class AkeebasubsLevel
 	extends Akeebasubs
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
-		if (!$this->request->id || $this->request->option != 'com_akeebasubs' || $this->request->view != 'level')
+		if ( ! $this->request->id || $this->request->option != 'com_akeebasubs' || $this->request->view != 'level')
 		{
 			return $this->_(false);
 		}

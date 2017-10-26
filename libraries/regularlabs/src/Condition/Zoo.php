@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,15 +19,10 @@ use JFactory;
  * Class Zoo
  * @package RegularLabs\Library\Condition
  */
-class Zoo
-	extends \RegularLabs\Library\ConditionContent
-	implements \RegularLabs\Library\Api\ConditionInterface
+abstract class Zoo
+	extends \RegularLabs\Library\Condition
 {
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
+	use \RegularLabs\Library\ConditionContent;
 
 	public function initRequest(&$request)
 	{
@@ -43,7 +38,7 @@ class Zoo
 				break;
 		}
 
-		if (!isset($request->idname))
+		if ( ! isset($request->idname))
 		{
 			$request->idname = '';
 		}

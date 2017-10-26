@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -36,7 +36,7 @@ class RLAssignmentsIPs extends RLAssignment
 		foreach ($this->selection as $range)
 		{
 			// Check next range if this one doesn't match
-			if (!$this->checkIP($range))
+			if ( ! $this->checkIP($range))
 			{
 				continue;
 			}

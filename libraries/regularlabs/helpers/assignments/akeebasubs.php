@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -17,7 +17,7 @@ class RLAssignmentsAkeebaSubs extends RLAssignment
 {
 	public function init()
 	{
-		if (!$this->request->id && $this->request->view == 'level')
+		if ( ! $this->request->id && $this->request->view == 'level')
 		{
 			$slug = JFactory::getApplication()->input->getString('slug', '');
 			if ($slug)
@@ -39,7 +39,7 @@ class RLAssignmentsAkeebaSubs extends RLAssignment
 
 	public function passLevels()
 	{
-		if (!$this->request->id || $this->request->option != 'com_akeebasubs' || $this->request->view != 'level')
+		if ( ! $this->request->id || $this->request->option != 'com_akeebasubs' || $this->request->view != 'level')
 		{
 			return $this->pass(false);
 		}

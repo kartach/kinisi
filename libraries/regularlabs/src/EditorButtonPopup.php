@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -14,6 +14,7 @@ namespace RegularLabs\Library;
 defined('_JEXEC') or die;
 
 use Exception;
+use JHtml;
 use JText;
 use ReflectionClass;
 
@@ -23,8 +24,9 @@ use ReflectionClass;
  */
 class EditorButtonPopup
 {
-	var $extension = '';
-	var $params    = null;
+	var $extension         = '';
+	var $params            = null;
+	var $require_core_auth = true;
 
 	public function __construct($extension)
 	{
@@ -34,12 +36,12 @@ class EditorButtonPopup
 
 	public function render()
 	{
-		if (!Extension::isAuthorised())
+		if ( ! Extension::isAuthorised($this->require_core_auth))
 		{
 			throw new Exception(JText::_("ALERTNOTAUTH"));
 		}
 
-		if (!Extension::isEnabledInArea($this->params))
+		if ( ! Extension::isEnabledInArea($this->params))
 		{
 			throw new Exception(JText::_("ALERTNOTAUTH"));
 		}
@@ -75,6 +77,8 @@ class EditorButtonPopup
 
 	private function loadLibraryScriptsStyles()
 	{
+		JHtml::_('jquery.framework');
+
 		Document::script('regularlabs/script.min.js');
 		Document::style('regularlabs/popup.min.css');
 		Document::style('regularlabs/style.min.css');

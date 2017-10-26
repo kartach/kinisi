@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -31,7 +31,7 @@ class License
 	 */
 	public static function getMessage($name, $check_pro = false)
 	{
-		if (!$name)
+		if ( ! $name)
 		{
 			return '';
 		}
@@ -45,7 +45,7 @@ class License
 		}
 
 		return
-			'<div class="alert rl_licence">'
+			'<div class="alert alert-default rl_licence">'
 			. JText::sprintf('RL_IS_FREE_VERSION', $name)
 			. '<br>'
 			. JText::_('RL_FOR_MORE_GO_PRO')
@@ -66,7 +66,7 @@ class License
 	 */
 	private static function isPro($element_name)
 	{
-		if (!$version = Extension::getXMLValue('version', $element_name))
+		if ( ! $version = Extension::getXMLValue('version', $element_name))
 		{
 			return false;
 		}

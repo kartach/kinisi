@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -31,7 +31,7 @@ class JFormFieldRL_MijoShop extends \RegularLabs\Library\FieldGroup
 			return $error;
 		}
 
-		if (!class_exists('MijoShop'))
+		if ( ! class_exists('MijoShop'))
 		{
 			require_once(JPATH_ROOT . '/components/com_mijoshop/mijoshop/mijoshop.php');
 		}
@@ -45,7 +45,7 @@ class JFormFieldRL_MijoShop extends \RegularLabs\Library\FieldGroup
 	function getCategories()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(c.category_id)')
+			->select('COUNT(*)')
 			->from('#__mijoshop_category AS c')
 			->join('INNER', '#__mijoshop_category_description AS cd ON c.category_id = cd.category_id')
 			->join('INNER', '#__mijoshop_category_to_store AS cts ON c.category_id = cts.category_id')
@@ -73,7 +73,7 @@ class JFormFieldRL_MijoShop extends \RegularLabs\Library\FieldGroup
 	function getProducts()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(p.product_id)')
+			->select('COUNT(*)')
 			->from('#__mijoshop_product AS p')
 			->join('INNER', '#__mijoshop_product_description AS pd ON p.product_id = pd.product_id')
 			->join('INNER', '#__mijoshop_product_to_store AS pts ON p.product_id = pts.product_id')->where('p.status = 1')

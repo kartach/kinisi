@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -32,11 +32,25 @@ class JFormFieldRL_MenuItems extends \RegularLabs\Library\Field
 		$size     = (int) $this->get('size');
 		$multiple = $this->get('multiple', 0);
 
-		RL_Language::load('com_menus', JPATH_ADMINISTRATOR);
+		return $this->selectListAjax(
+			$this->type, $this->name, $this->value, $this->id,
+			compact('size', 'multiple')
+		);
+	}
+
+	function getAjaxRaw()
+	{
+		$input = JFactory::getApplication()->input;
 
 		$options = $this->getMenuItems();
 
-		return $this->selectList($options, $this->name, $this->value, $this->id, $size, $multiple);
+		$name     = $input->getString('name', $this->type);
+		$id       = $input->get('id', strtolower($name));
+		$value    = json_decode($input->getString('value', '[]'));
+		$size     = $input->getInt('size');
+		$multiple = $input->getBool('multiple');
+
+		return $this->selectList($options, $name, $value, $id, $size, $multiple);
 	}
 
 	/**
@@ -86,6 +100,8 @@ class JFormFieldRL_MenuItems extends \RegularLabs\Library\Field
 			return false;
 		}
 
+		RL_Language::load('com_menus', JPATH_ADMINISTRATOR);
+
 		// Create a reverse lookup and aggregate the links.
 		$rlu = [];
 		foreach ($menuTypes as &$type)
@@ -103,31 +119,33 @@ class JFormFieldRL_MenuItems extends \RegularLabs\Library\Field
 		// Loop through the list of menu links.
 		foreach ($links as &$link)
 		{
-			if (isset($rlu[$link->menutype]))
+			if ( ! isset($rlu[$link->menutype]))
 			{
-				$check1 = RL_RegEx::replace('[^a-z0-9]', '', strtolower($link->text));
-				$check2 = RL_RegEx::replace('[^a-z0-9]', '', $link->alias);
-				if ($check1 !== $check2)
-				{
-					$link->text .= ' <small>[' . $link->alias . ']</small>';
-				}
-
-				if ($link->language && $link->language != '*')
-				{
-					$link->text .= ' <small>(' . $link->language . ')</small>';
-				}
-
-				if ($link->type == 'alias')
-				{
-					$link->text    .= ' <small>(' . JText::_('COM_MENUS_TYPE_ALIAS') . ')</small>';
-					$link->disable = 1;
-				}
-
-				$rlu[$link->menutype]->links[] = &$link;
-
-				// Cleanup garbage.
-				unset($link->menutype);
+				continue;
 			}
+
+			$check1 = RL_RegEx::replace('[^a-z0-9]', '', strtolower($link->text));
+			$check2 = RL_RegEx::replace('[^a-z0-9]', '', $link->alias);
+			if ($check1 !== $check2)
+			{
+				$link->text .= ' <small>[' . $link->alias . ']</small>';
+			}
+
+			if ($link->language && $link->language != '*')
+			{
+				$link->text .= ' <small>(' . $link->language . ')</small>';
+			}
+
+			if ($link->type == 'alias')
+			{
+				$link->text    .= ' <small>(' . JText::_('COM_MENUS_TYPE_ALIAS') . ')</small>';
+				$link->disable = 1;
+			}
+
+			$rlu[$link->menutype]->links[] = &$link;
+
+			// Cleanup garbage.
+			unset($link->menutype);
 		}
 
 		return $menuTypes;

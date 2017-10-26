@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -24,6 +24,6 @@ class RLLicenses
 {
 	public static function render($name, $check_pro = false)
 	{
-		return !class_exists('RegularLabs\Library\License') ? '' : RL_License::getMessage($name, $check_pro);
+		return ! class_exists('RegularLabs\Library\License') ? '' : RL_License::getMessage($name, $check_pro);
 	}
 }

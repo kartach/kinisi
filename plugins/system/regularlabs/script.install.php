@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!class_exists('PlgSystemRegularLabsInstallerScript'))
+if ( ! class_exists('PlgSystemRegularLabsInstallerScript'))
 {
 	require_once __DIR__ . '/script.install.helper.php';
 
@@ -24,22 +24,14 @@ if (!class_exists('PlgSystemRegularLabsInstallerScript'))
 
 		public function onBeforeInstall($route)
 		{
-			if (!$this->isNewer())
+			if ( ! $this->isNewer())
 			{
+				$this->softbreak = true;
+
 				return false;
 			}
 
 			return true;
-		}
-
-		public function onAfterInstall($route)
-		{
-			if ($route != 'update')
-			{
-				return;
-			}
-
-			$this->deleteOldFiles();
 		}
 
 		public function uninstall($adapter)
@@ -52,15 +44,6 @@ if (!class_exists('PlgSystemRegularLabsInstallerScript'))
 			$this->delete(
 				[
 					JPATH_LIBRARIES . '/regularlabs',
-				]
-			);
-		}
-
-		private function deleteOldFiles()
-		{
-			$this->delete(
-				[
-					JPATH_PLUGINS . '/system/regularlabs/helpers',
 				]
 			);
 		}

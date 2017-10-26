@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,13 +19,12 @@ defined('_JEXEC') or die;
  */
 class ContentPagetype
 	extends Content
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
 		$components = ['com_content', 'com_contentsubmit'];
 
-		if (!in_array($this->request->option, $components))
+		if ( ! in_array($this->request->option, $components))
 		{
 			return $this->_(false);
 		}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>UT Joomstagram</name>
+	<author>Unitemplates.com</author>
+	<creationDate>September 2017</creationDate>
+	<copyright>Copyright (C) 2015 Unitemplates.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@unitemplates.com</authorEmail>
+	<authorUrl>www.unitemplates.com</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_UT_JOOMSTAGRAM_XML_DESCRIPTION</description>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ut_joomstagram.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_ut_joomstagram.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_ut_joomstagram.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.mod_ut_joomstagram.sys.ini</language>
+	</languages>	
+	<files>
+		<filename module="mod_ut_joomstagram">mod_ut_joomstagram.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jg_intro" type="textarea" label="JG_INTRO_LABEL" description="JG_INTRO_DESC" />
+				<field name="jg_clientid_info" type="spacer" label="JG_CLIENTID_INFO_LABEL" />
+				<field name="jg_client_id" type="text" label="JG_CLIENT_ID_LABEL" description="JG_CLIENT_ID_DESC" />
+				<field name="jg_token_info" type="spacer" label="JG_TOKEN_INFO_LABEL" />
+				<field name="jg_access_token" type="text" label="JG_ACCESS_TOKEN_LABEL" description="JG_ACCESS_TOKEN_DESC" />
+				<field name="jg_feed_source" type="list" label="JG_FEED_SOURCE_LABEL" description="JG_FEED_SOURCE_DESC">
+					<option value="getUserFeed">JGLOBAL_USERNAME</option>
+					<!-- <option value="getPopular">Popular</option> -->
+					<option value="getRecentTagged">Tag</option>
+				</field>
+				<field name="jg_user" type="text" showon="jg_feed_source:getUserFeed" label="JG_USER_LABEL" description="JG_USER_DESC" />
+				<field name="jg_tag" type="text" showon="jg_feed_source:getRecentTagged" label="JG_TAG_LABEL" description="JG_TAG_DESC" />
+				<field name="jg_photo_size"  type="list" label="JG_PHOTO_SIZE_LABEL" description="JG_PHOTO_SIZE_DESC" default="medium">
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="big">Big</option>
+				</field>
+				<field name="jg_columns" type="list" label="JG_COLUMNS_LABEL" description="JG_COLUMNS_DESC" default="4">
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="6">6</option>
+				</field>
+				<field name="jg_rows" type="text" label="JG_ROWS_LABEL" description="JG_ROWS_DESC" default="2"/>
+				<field name="jg_padding" type="text" label="JG_PADDING_LABEL" description="JG_PADDING_DESC" default="0" />
+			</fieldset>
+			<fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field name="add_container" type="list" label="JG_ADD_CONTAINER_LABEL" description="JG_ADD_CONTAINER_DESC" default="0">
+                    <option value="0">JNO</option>
+                    <option value="container">JYES</option>
+                </field>
+                <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+        <server type="extension">https://update.unitemplates.com/extensions/mod_ut_joomstagram.xml</server>
+    </updateservers>
+</extension>

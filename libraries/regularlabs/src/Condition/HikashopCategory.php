@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
  */
 class HikashopCategory
 	extends Hikashop
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -35,7 +34,7 @@ class HikashopCategory
 			|| ($this->params->inc_items && $this->request->view == 'product')
 		);
 
-		if (!$pass)
+		if ( ! $pass)
 		{
 			return $this->_(false);
 		}
@@ -48,7 +47,7 @@ class HikashopCategory
 		{
 			return $this->_(false);
 		}
-		else if (!$pass && $this->params->inc_children)
+		else if ( ! $pass && $this->params->inc_children)
 		{
 			foreach ($cats as $cat)
 			{

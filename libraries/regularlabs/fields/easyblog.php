@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -35,7 +35,7 @@ class JFormFieldRL_EasyBlog extends \RegularLabs\Library\FieldGroup
 	function getCategories()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(c.id)')
+			->select('COUNT(*)')
 			->from('#__easyblog_category AS c')
 			->where('c.published > -1');
 		$this->db->setQuery($query);

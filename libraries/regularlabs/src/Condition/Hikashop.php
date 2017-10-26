@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -17,13 +17,7 @@ defined('_JEXEC') or die;
  * Class Hikashop
  * @package RegularLabs\Library\Condition
  */
-class Hikashop
+abstract class Hikashop
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
 }

@@ -1,0 +1,19 @@
+/**
+* info@unitemplates.com
+* http://www.unitemplates.com
+* Copyright (C) 2014 - 2015 Unitemplates. All rights reserved.
+* GNU General Public License version 2 or later.
+*/
+
+/*--------------------------------------
+Class for Spectragram
+--------------------------------------*/
+.ut-spectragram{}
+.ut-spectragram .jg-intro{margin: 0 0 20px;}
+.ut-spectragram .jg-intro p{}
+.ut-spectragram .jg-photo-ct{}
+.ut-spectragram .jg-photo-ct ul{padding: 0;}
+.ut-spectragram .jg-photo-ct ul li{display: inline-block;float: left;border:none;}
+.ut-spectragram .jg-photo-ct ul li a{padding: 0;}
+.ut-spectragram .jg-photo-ct ul li a:before{display: none;padding: 0;}
+.ut-spectragram .jg-photo-ct ul li a img{width: 100%;}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -69,22 +69,26 @@ class Protect
 			return Cache::get($hash);
 		}
 
+		$input = JFactory::getApplication()->input;
+
 		// return if current page is in protected formats
 		// return if current page is an image
+		// return if current page is an installation page
 		// return if current page is Regular Labs QuickPage
 		// return if current page is a JoomFish or Josetta page
 		$is_restricted = (
-			in_array(JFactory::getApplication()->input->get('format'), $restricted_formats)
-			|| in_array(JFactory::getApplication()->input->get('view'), ['image', 'img'])
-			|| in_array(JFactory::getApplication()->input->get('type'), ['image', 'img'])
+			in_array($input->get('format'), $restricted_formats)
+			|| in_array($input->get('view'), ['image', 'img'])
+			|| in_array($input->get('type'), ['image', 'img'])
+			|| in_array($input->get('task'), ['install.install', 'install.ajax_upload'])
 			|| ($hastags
 				&& (
-					JFactory::getApplication()->input->getInt('rl_qp', 0)
-					|| in_array(JFactory::getApplication()->input->get('option'), ['com_joomfishplus', 'com_josetta'])
+					$input->getInt('rl_qp', 0)
+					|| in_array($input->get('option'), ['com_joomfishplus', 'com_josetta'])
 				)
 			)
-			|| (JFactory::getApplication()->isAdmin()
-				&& in_array(JFactory::getApplication()->input->get('option'), ['com_jdownloads'])
+			|| (Document::isClient('administrator')
+				&& in_array($input->get('option'), ['com_jdownloads'])
 			)
 		);
 
@@ -117,7 +121,7 @@ class Protect
 	 */
 	public static function isRestrictedComponent($restricted_components, $area = 'component')
 	{
-		if ($area != 'component' && !($area == 'article' && JFactory::getApplication()->input->get('option') == 'com_content'))
+		if ($area != 'component' && ! ($area == 'article' && JFactory::getApplication()->input->get('option') == 'com_content'))
 		{
 			return false;
 		}
@@ -191,7 +195,7 @@ class Protect
 	public static function protectFields(&$string, $search_strings = [])
 	{
 		// No specified strings tags found in the string
-		if (!self::containsStringsToProtect($string, $search_strings))
+		if ( ! self::containsStringsToProtect($string, $search_strings))
 		{
 			return;
 		}
@@ -200,7 +204,7 @@ class Protect
 
 		foreach ($parts as &$part)
 		{
-			if (!self::containsStringsToProtect($part, $search_strings))
+			if ( ! self::containsStringsToProtect($part, $search_strings))
 			{
 				continue;
 			}
@@ -234,7 +238,7 @@ class Protect
 		}
 
 		// No specified strings tags found in the string
-		if (!empty($search_strings) && !StringHelper::contains($string, $search_strings))
+		if ( ! empty($search_strings) && ! StringHelper::contains($string, $search_strings))
 		{
 			return false;
 		}
@@ -436,9 +440,9 @@ class Protect
 	 */
 	public static function getSourcererTag()
 	{
-		if (!is_null(self::$sourcerer_tag))
+		if ( ! is_null(self::$sourcerer_tag))
 		{
-			return array(self::$sourcerer_tag, self::$sourcerer_characters);
+			return [self::$sourcerer_tag, self::$sourcerer_characters];
 		}
 
 		$parameters = Parameters::getInstance()->getPluginParams('sourcerer');
@@ -446,7 +450,7 @@ class Protect
 		self::$sourcerer_tag        = isset($parameters->syntax_word) ? $parameters->syntax_word : '';
 		self::$sourcerer_characters = isset($parameters->tag_characters) ? $parameters->tag_characters : '{.}';
 
-		return array(self::$sourcerer_tag, self::$sourcerer_characters);
+		return [self::$sourcerer_tag, self::$sourcerer_characters];
 	}
 
 	/**
@@ -498,7 +502,7 @@ class Protect
 	 */
 	public static function protectForm(&$string, $tags = [], $include_closing_tags = true)
 	{
-		if (!Document::isEditPage())
+		if ( ! Document::isEditPage())
 		{
 			return;
 		}
@@ -510,7 +514,7 @@ class Protect
 
 		foreach ($string as $i => &$string_part)
 		{
-			if (empty($string_part) || !fmod($i, 2))
+			if (empty($string_part) || ! fmod($i, 2))
 			{
 				continue;
 			}
@@ -547,7 +551,7 @@ class Protect
 
 		$regex_tags = RegEx::quote($tags);
 
-		if (!RegEx::match($regex_tags, $string))
+		if ( ! RegEx::match($regex_tags, $string))
 		{
 			return;
 		}
@@ -585,30 +589,48 @@ class Protect
 	 */
 	public static function unprotect(&$string)
 	{
-		self::unprotectByRegex(
+		self::unprotectByDelimiters(
 			$string,
-			RegEx::quote(self::$protect_tags_start) . '(.*?)' . RegEx::quote(self::$protect_tags_end)
+			[self::$protect_tags_start, self::$protect_tags_end]
 		);
 
-		self::unprotectByRegex(
+		self::unprotectByDelimiters(
 			$string,
-			RegEx::quote(self::$protect_start) . '(.*?)' . RegEx::quote(self::$protect_end)
+			[self::$protect_start, self::$protect_end]
 		);
+
+		if (StringHelper::contains($string, [self::$protect_tags_start, self::$protect_tags_end, self::$protect_start, self::$protect_end]))
+		{
+			self::unprotect($string);
+		}
 	}
 
 	/**
 	 * @param string $string
-	 * @param string $regex
+	 * @param array  $delimiters
 	 */
-	private static function unprotectByRegex(&$string, $regex)
+	private static function unprotectByDelimiters(&$string, $delimiters)
 	{
-		while (RegEx::matchAll($regex, $string, $matches))
+		if ( ! StringHelper::contains($string, $delimiters))
 		{
-			foreach ($matches as $match)
-			{
-				$string = str_replace($match['0'], base64_decode($match['1']), $string);
-			}
+			return;
 		}
+
+		$regex = RegEx::preparePattern(RegEx::quote($delimiters), 's', $string);
+
+		$parts = preg_split($regex, $string);
+
+		foreach ($parts as $i => &$part)
+		{
+			if ($i % 2 == 0)
+			{
+				continue;
+			}
+
+			$part = base64_decode($part);
+		}
+
+		$string = implode('', $parts);
 	}
 
 	/**
@@ -671,7 +693,7 @@ class Protect
 	 */
 	private static function prepareTags($tags, $include_closing_tags = true)
 	{
-		if (!is_array($tags))
+		if ( ! is_array($tags))
 		{
 			$tags = [$tags];
 		}
@@ -913,6 +935,52 @@ class Protect
 	}
 
 	/**
+	 * Wraps a style or javascript declaration with comment tags
+	 *
+	 * @param string $content
+	 * @param string $name
+	 * @param string $type
+	 * @param bool   $minify
+	 */
+	public static function wrapDeclaration($content = '', $name = '', $type = 'styles', $minify = true)
+	{
+		if (empty($name))
+		{
+			return $content;
+		}
+
+		list($start, $end) = self::getInlineCommentTags($name, $type);
+
+		$spacer = $minify ? ' ' : "\n";
+
+		return $start . $spacer . $content . $spacer . $end;
+	}
+
+	/**
+	 * Wraps a javascript declaration with comment tags
+	 *
+	 * @param string $content
+	 * @param string $name
+	 * @param bool   $minify
+	 */
+	public static function wrapScriptDeclaration($content = '', $name = '', $minify = true)
+	{
+		return self::wrapDeclaration($content, $name, 'scripts', $minify);
+	}
+
+	/**
+	 * Wraps a stylesheet declaration with comment tags
+	 *
+	 * @param string $content
+	 * @param string $name
+	 * @param bool   $minify
+	 */
+	public static function wrapStyleDeclaration($content = '', $name = '', $minify = true)
+	{
+		return self::wrapDeclaration($content, $name, 'styles', $minify);
+	}
+
+	/**
 	 * Remove area comments in html
 	 *
 	 * @param string $string
@@ -934,11 +1002,11 @@ class Protect
 		list($start, $end) = self::getCommentTags($name);
 
 		$string = str_replace(
-			array(
+			[
 				$start, $end,
 				htmlentities($start), htmlentities($end),
 				urlencode($start), urlencode($end),
-			), '', $string
+			], '', $string
 		);
 
 		list($start, $end) = self::getMessageCommentTags($name);
@@ -978,7 +1046,7 @@ class Protect
 
 		foreach ($tags as $tag)
 		{
-			if (!is_array($tag))
+			if ( ! is_array($tag))
 			{
 				$tag = [$tag, $tag];
 			}
@@ -1010,7 +1078,7 @@ class Protect
 	{
 		list($tags, $protected) = self::prepareTags($tags, $include_closing_tags);
 
-		if (!is_array($html_tags))
+		if ( ! is_array($html_tags))
 		{
 			$html_tags = [$html_tags];
 		}
@@ -1050,7 +1118,7 @@ class Protect
 			$attributes = ['[a-z][a-z0-9-_]*'];
 		}
 
-		if (!is_array($attributes))
+		if ( ! is_array($attributes))
 		{
 			$attributes = [$attributes];
 		}
@@ -1075,7 +1143,7 @@ class Protect
 
 		foreach ($matches as $match)
 		{
-			if (!StringHelper::contains($match, $tags))
+			if ( ! StringHelper::contains($match, $tags))
 			{
 				continue;
 			}
@@ -1098,7 +1166,7 @@ class Protect
 	 */
 	public static function articlePassesSecurity(&$article, $securtiy_levels = [])
 	{
-		if (!isset($article->created_by))
+		if ( ! isset($article->created_by))
 		{
 			return true;
 		}
@@ -1114,7 +1182,7 @@ class Protect
 		}
 
 		if (
-			!is_array($securtiy_levels)
+			! is_array($securtiy_levels)
 			|| in_array('-1', $securtiy_levels)
 		)
 		{

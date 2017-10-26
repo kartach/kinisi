@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
  */
 class Ip
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -40,7 +39,7 @@ class Ip
 		foreach ($this->selection as $range)
 		{
 			// Check next range if this one doesn't match
-			if (!$this->checkIP($range))
+			if ( ! $this->checkIP($range))
 			{
 				continue;
 			}
@@ -108,7 +107,7 @@ class Ip
 	{
 		$max_parts = explode('.', $max);
 
-		if (count() == 4)
+		if (count($max_parts) == 4)
 		{
 			return $max;
 		}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -23,13 +23,12 @@ use RegularLabs\Library\StringHelper;
  */
 class Url
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
 		$regex = isset($this->params->regex) ? $this->params->regex : false;
 
-		if (!is_array($this->selection))
+		if ( ! is_array($this->selection))
 		{
 			$this->selection = explode("\n", $this->selection);
 		}
@@ -42,12 +41,12 @@ class Url
 		$url = JUri::getInstance();
 		$url = $url->toString();
 
-		$urls = array(
+		$urls = [
 			StringHelper::html_entity_decoder(urldecode($url)),
 			urldecode($url),
 			StringHelper::html_entity_decoder($url),
 			$url,
-		);
+		];
 		$urls = array_unique($urls);
 
 		$pass = false;

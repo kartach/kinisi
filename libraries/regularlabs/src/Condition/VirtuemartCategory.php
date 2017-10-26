@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -22,7 +22,6 @@ use RegularLabs\Library\RegEx;
  */
 class VirtuemartCategory
 	extends Virtuemart
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -38,7 +37,7 @@ class VirtuemartCategory
 			|| ($this->params->inc_items && $this->request->view == 'productdetails')
 		);
 
-		if (!$pass)
+		if ( ! $pass)
 		{
 			return $this->_(false);
 		}
@@ -56,7 +55,7 @@ class VirtuemartCategory
 		else if ($this->request->category_id)
 		{
 			$cats = $this->request->category_id;
-			if (!is_numeric($cats))
+			if ( ! is_numeric($cats))
 			{
 				$query = $this->db->getQuery(true)
 					->select('config')
@@ -93,7 +92,7 @@ class VirtuemartCategory
 			return $this->_(false);
 		}
 
-		if (!$pass && $this->params->inc_children)
+		if ( ! $pass && $this->params->inc_children)
 		{
 			foreach ($cats as $cat)
 			{

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -25,11 +25,11 @@ class JFormFieldRL_Content extends \RegularLabs\Library\FieldGroup
 	function getCategories()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(c.id)')
-			->from('#__categories AS c')
-			->where('c.extension = ' . $this->db->quote('com_content'))
-			->where('c.parent_id > 0')
-			->where('c.published > -1');
+			->select('COUNT(*)')
+			->from('#__categories')
+			->where('extension = ' . $this->db->quote('com_content'))
+			->where('parent_id > 0')
+			->where('published > -1');
 		$this->db->setQuery($query);
 		$total = $this->db->loadResult();
 
@@ -51,8 +51,8 @@ class JFormFieldRL_Content extends \RegularLabs\Library\FieldGroup
 		}
 
 		$query->clear('select')
-			->select('c.id, c.title as name, c.level, c.published, c.language')
-			->order('c.lft');
+			->select('id, title as name, level, published, language')
+			->order('lft');
 
 		$this->db->setQuery($query);
 		$list = $this->db->loadObjectList();
@@ -65,7 +65,7 @@ class JFormFieldRL_Content extends \RegularLabs\Library\FieldGroup
 	function getItems()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(i.id)')
+			->select('COUNT(*)')
 			->from('#__content AS i')
 			->where('i.access > -1');
 		$this->db->setQuery($query);
@@ -77,12 +77,20 @@ class JFormFieldRL_Content extends \RegularLabs\Library\FieldGroup
 		}
 
 		$query->clear('select')
-			->select('i.id, i.title as name, i.language, c.title as cat, i.access as published')
+			->select('i.id, i.title as name, i.language, c.title as cat, i.state as published')
 			->join('LEFT', '#__categories AS c ON c.id = i.catid')
 			->order('i.title, i.ordering, i.id');
 		$this->db->setQuery($query);
 		$list = $this->db->loadObjectList();
 
-		return $this->getOptionsByList($list, ['language', 'cat', 'id']);
+		$options = $this->getOptionsByList($list, ['language', 'cat', 'id']);
+
+		if ($this->get('showselect'))
+		{
+			array_unshift($options, JHtml::_('select.option', '-', '&nbsp;', 'value', 'text', true));
+			array_unshift($options, JHtml::_('select.option', '-', '- ' . JText::_('Select Item') . ' -'));
+		}
+
+		return $options;
 	}
 }

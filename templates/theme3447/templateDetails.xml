@@ -73,6 +73,7 @@
     <position>careers-accordion-4</position>
     <position>careers-accordion-requirements</position>
     <position>careers-accordion-expect</position>
+    <position>accordeon_up</position>
   </positions>
   <languages folder="language">
     <language tag="en-GB">en-GB/en-GB.tpl_theme3447.sys.ini</language>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
  */
 class ZooCategory
 	extends Zoo
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -34,7 +33,7 @@ class ZooCategory
 			|| ($this->params->inc_items && $this->request->view == 'item')
 		);
 
-		if (!$pass)
+		if ( ! $pass)
 		{
 			return $this->_(false);
 		}
@@ -55,7 +54,7 @@ class ZooCategory
 			return $this->_(false);
 		}
 
-		if (!$pass && $this->params->inc_children)
+		if ( ! $pass && $this->params->inc_children)
 		{
 			foreach ($cats as $cat)
 			{
@@ -83,7 +82,7 @@ class ZooCategory
 					return [$this->request->id];
 				}
 
-				if (!isset($menuparams->application))
+				if ( ! isset($menuparams->application))
 				{
 					return [];
 				}
@@ -119,12 +118,12 @@ class ZooCategory
 			case 'item':
 				$id = $this->request->id;
 
-				if (!$id && isset($menuparams->item_id))
+				if ( ! $id && isset($menuparams->item_id))
 				{
 					$id = $menuparams->item_id;
 				}
 
-				if (!$id)
+				if ( ! $id)
 				{
 					return [];
 				}
@@ -155,7 +154,7 @@ class ZooCategory
 	{
 		$parent_ids = [];
 
-		if (!$id)
+		if ( ! $id)
 		{
 			return $parent_ids;
 		}
@@ -175,7 +174,7 @@ class ZooCategory
 			$this->db->setQuery($query);
 			$pid = $this->db->loadResult();
 
-			if (!$pid)
+			if ( ! $pid)
 			{
 				$query = $this->db->getQuery(true)
 					->select('c.application_id')

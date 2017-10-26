@@ -14,3 +14,6 @@
 2017-10-09T13:24:19+00:00	INFO ::1	sloginfailure	Username and password do not match or you do not have an account yet.
 2017-10-19T11:30:23+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2017-10-19T11:30:27+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-10-20T10:08:42+00:00	INFO ::1	sloginfailure	Prázdné heslo není povoleno
+2017-10-25T12:27:45+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-10-25T12:27:55+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.

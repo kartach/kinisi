@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -13,24 +13,16 @@ namespace RegularLabs\Library\Condition;
 
 defined('_JEXEC') or die;
 
-use GeoIp;
 use JLog;
 
 /**
  * Class Geo
  * @package RegularLabs\Library\Condition
  */
-class Geo
+abstract class Geo
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	var $geo = null;
-
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
 
 	public function getGeo($ip = '')
 	{
@@ -39,14 +31,13 @@ class Geo
 			return $this->geo;
 		}
 
-		if (!file_exists(JPATH_LIBRARIES . '/geoip/geoip.php'))
+
+		$geo = $this->getGeoObject($ip);
+
+		if (empty($geo))
 		{
 			return false;
 		}
-
-		require_once JPATH_LIBRARIES . '/geoip/geoip.php';
-
-		$geo = new GeoIp($ip);
 
 		$this->geo = $geo->get();
 
@@ -57,5 +48,22 @@ class Geo
 		}
 
 		return $this->geo;
+	}
+
+	private function getGeoObject($ip)
+	{
+		if ( ! file_exists(JPATH_LIBRARIES . '/geoip/geoip.php'))
+		{
+			return false;
+		}
+
+		require_once JPATH_LIBRARIES . '/geoip/geoip.php';
+
+		if ( ! class_exists('RegularLabs_GeoIp'))
+		{
+			return new \GeoIp($ip);
+		}
+
+		return new \RegularLabs_GeoIp($ip);
 	}
 }

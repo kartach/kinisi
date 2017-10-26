@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -35,9 +35,9 @@ class JFormFieldRL_HikaShop extends \RegularLabs\Library\FieldGroup
 	function getCategories()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(c.category_id)')
-			->from('#__hikashop_category AS c')
-			->where('c.category_published > -1');
+			->select('COUNT(*)')
+			->from('#__hikashop_category')
+			->where('category_published > -1');
 		$this->db->setQuery($query);
 		$total = $this->db->loadResult();
 
@@ -68,7 +68,7 @@ class JFormFieldRL_HikaShop extends \RegularLabs\Library\FieldGroup
 	function getProducts()
 	{
 		$query = $this->db->getQuery(true)
-			->select('COUNT(p.product_id)')
+			->select('COUNT(*)')
 			->from('#__hikashop_product AS p')
 			->where('p.product_published = 1')
 			->where('p.product_type = ' . $this->db->quote('main'));

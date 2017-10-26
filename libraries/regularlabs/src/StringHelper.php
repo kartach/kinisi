@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -10,6 +10,8 @@
  */
 
 namespace RegularLabs\Library;
+
+use Joomla\String\Normalise;
 
 defined('_JEXEC') or die;
 
@@ -33,15 +35,14 @@ class StringHelper
 	{
 		if (is_array($data))
 		{
-			array_walk($data, function (&$part, $key, $quote_style, $encoding)
-			{
+			array_walk($data, function (&$part, $key, $quote_style, $encoding) {
 				$part = self::html_entity_decoder($part, $quote_style, $encoding);
 			}, $quote_style, $encoding);
 
 			return $data;
 		}
 
-		if (!is_string($data))
+		if ( ! is_string($data))
 		{
 			return $data;
 		}
@@ -138,7 +139,7 @@ class StringHelper
 		}
 
 		// No delimiters given or found
-		if (empty($delimiters) || !self::contains($string, $delimiters))
+		if (empty($delimiters) || ! self::contains($string, $delimiters))
 		{
 			return [$string];
 		}
@@ -146,7 +147,7 @@ class StringHelper
 		// preg_quote all delimiters
 		$array = preg_split('#' . RegEx::quote($delimiters) . '#s', $string, null, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
-		if (!$maximize_parts)
+		if ( ! $maximize_parts)
 		{
 			return $array;
 		}
@@ -155,7 +156,7 @@ class StringHelper
 		foreach ($array as $part)
 		{
 			// First element, add to new array
-			if (!count($new_array))
+			if ( ! count($new_array))
 			{
 				$new_array[] = $part;
 				continue;
@@ -203,5 +204,57 @@ class StringHelper
 
 		// As last fallback, check if the preg_match finds anything using the unicode flag
 		return preg_match('#.#u', $string);
+	}
+
+	/**
+	 * Converts a string to a UTF-8 encoded string
+	 *
+	 * @param string $string
+	 *
+	 * @return string
+	 */
+	public static function convertToUtf8(&$string = '')
+	{
+		if (self::detectUTF8($string))
+		{
+			// Already UTF-8, so skip
+			return $string;
+		}
+
+		if ( ! function_exists('iconv'))
+		{
+			// Still need to find a stable fallback
+			return $string;
+		}
+
+		$utf8_string = @iconv('UTF8', 'UTF-8//IGNORE', $string);
+
+		if (empty($utf8_string))
+		{
+			return $string;
+		}
+
+		return $utf8_string;
+	}
+
+	/**
+	 * Converts a camelcased string to a underscore separated string
+	 * eg: FooBar => foo_bar
+	 *
+	 * @param string $string
+	 * @param bool   $tolowercase
+	 *
+	 * @return string
+	 */
+	public static function camelToUnderscore($string = '', $tolowercase = true)
+	{
+		$string = Normalise::toUnderscoreSeparated(Normalise::fromCamelCase($string));
+
+		if ( ! $tolowercase)
+		{
+			return $string;
+		}
+
+		return strtolower($string);
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,15 +19,10 @@ use JModelLegacy;
  * Class Content
  * @package RegularLabs\Library\Condition
  */
-class Content
-	extends \RegularLabs\Library\ConditionContent
-	implements \RegularLabs\Library\Api\ConditionInterface
+abstract class Content
+	extends \RegularLabs\Library\Condition
 {
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
+	use \RegularLabs\Library\ConditionContent;
 
 	public function getItem($fields = [])
 	{
@@ -36,14 +31,14 @@ class Content
 			return $this->article;
 		}
 
-		if (!class_exists('ContentModelArticle'))
+		if ( ! class_exists('ContentModelArticle'))
 		{
 			require_once JPATH_SITE . '/components/com_content/models/article.php';
 		}
 
 		$model = JModelLegacy::getInstance('article', 'contentModel');
 
-		if (!method_exists($model, 'getItem'))
+		if ( ! method_exists($model, 'getItem'))
 		{
 			return null;
 		}

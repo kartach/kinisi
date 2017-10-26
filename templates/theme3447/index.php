@@ -34,11 +34,16 @@ include_once('includes/includes.php'); ?>
                     }
                     if($this->countModules('feature')){
                         echo display_position('feature','','','class="stuck_position"');
-                    }
+                    }    
+                    if($this->countModules('accordeon_up')){
+                        echo display_position('accordeon_up','','','class="stuck_position"');   
+                    }    
                     if($this->countModules('maintop')){
                         echo display_position('maintop','','','class="stuck_position"');
                     }
                 } ?>
+       
+        
                 <!-- Main Content row -->
                 <div id="content">
                     <?php if($this->countModules('map') && !$hideByView){
@@ -150,7 +155,7 @@ include_once('includes/includes.php'); ?>
                                   <jdoc:include type="modules" name="copyright" style="themeHtml5"/>
                             
                             <?php echo $todesktop; ?>
-                            More <a  rel='nofollow' href='http://www.templatemonster.com/category.php?category=1&type=24' target='_blank'>Business at TemplateMonster.com</a>
+                            
                            
                         </div>
                     </div>

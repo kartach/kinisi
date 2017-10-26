@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,21 +19,34 @@ defined('_JEXEC') or die;
  */
 class GeoRegion
 	extends Geo
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
-		if (!$this->getGeo() || empty($this->geo->countryCode) || empty($this->geo->regionCodes))
+		if ( ! $this->getGeo() || empty($this->geo->countryCode) || empty($this->geo->regionCodes))
 		{
 			return $this->_(false);
 		}
 
+		$country = $this->geo->countryCode;
 		$regions = $this->geo->regionCodes;
-		array_walk($regions, function (&$value)
-		{
-			$value = $this->geo->countryCode . '-' . $value;
-		});
+
+		array_walk($regions, function (&$region, $key, $country) {
+
+			$region = $this->getCountryRegionCode($region, $country);
+		}, $country);
 
 		return $this->passSimple($regions);
+	}
+
+	private function getCountryRegionCode(&$region, $country)
+	{
+		switch ($country . '-' . $region)
+		{
+			case 'MX-CMX':
+				return 'MX-DIF';
+
+			default:
+				return $country . '-' . $region;
+		}
 	}
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -154,12 +154,12 @@ class SearchModelSearch extends JModelLegacy
 
 			JPluginHelper::importPlugin('search');
 			$dispatcher = JEventDispatcher::getInstance();
-			$results    = $dispatcher->trigger('onContentSearch', array(
+			$results    = $dispatcher->trigger('onContentSearch', [
 					$this->getState('keyword'),
 					$this->getState('match'),
 					$this->getState('ordering'),
 					$areas['active'],
-				)
+				]
 			);
 
 			$rows = [];

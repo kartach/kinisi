@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -24,11 +24,10 @@ use RegularLabs\Library\RegEx;
  */
 class Php
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
-		if (!is_array($this->selection))
+		if ( ! is_array($this->selection))
 		{
 			$this->selection = [$this->selection];
 		}
@@ -48,7 +47,7 @@ class Php
 			}
 
 			ob_start();
-			$pass = (bool) $this->execute($php);
+			$pass = (bool) $this->execute($php, $this->article);
 			ob_end_clean();
 
 			if ($pass)
@@ -62,19 +61,19 @@ class Php
 
 	private function getArticleById($id = 0)
 	{
-		if (!$id)
+		if ( ! $id)
 		{
 			return null;
 		}
 
-		if (!class_exists('ContentModelArticle'))
+		if ( ! class_exists('ContentModelArticle'))
 		{
 			require_once JPATH_SITE . '/components/com_content/models/article.php';
 		}
 
 		$model = JModelLegacy::getInstance('article', 'contentModel');
 
-		if (!method_exists($model, 'getItem'))
+		if ( ! method_exists($model, 'getItem'))
 		{
 			return null;
 		}
@@ -82,9 +81,9 @@ class Php
 		return $model->getItem($this->request->id);
 	}
 
-	private function execute($string = '')
+	public function execute($string = '', $article = null)
 	{
-		$function_name = 'rl_' . md5($string);
+		$function_name = 'regularlabs_php_' . md5($string);
 
 		if (function_exists($function_name))
 		{
@@ -100,17 +99,19 @@ class Php
 
 		include_once $temp_file;
 
-		JFile::delete($temp_file);
+		if ( ! defined('JDEBUG') || ! JDEBUG)
+		{
+			@chmod($temp_file, 0777);
+			@unlink($temp_file);
+		}
 
-		if (!function_exists($function_name))
+		if ( ! function_exists($function_name))
 		{
 			// Something went wrong!
 			return true;
 		}
 
-		$article = $this->article;
-
-		if (!$article && strpos($string, '$article') !== false)
+		if ( ! $article && strpos($string, '$article') !== false)
 		{
 			$article = null;
 			if ($this->request->option == 'com_content' && $this->request->view == 'article')
@@ -136,7 +137,20 @@ class Php
 			';}',
 		];
 
-		return implode("\n", $contents);
+		$contents = implode("\n", $contents);
+
+		// Remove Zero Width spaces / (non-)joiners
+		$contents = str_replace(
+			[
+				"\xE2\x80\x8B",
+				"\xE2\x80\x8C",
+				"\xE2\x80\x8D",
+			],
+			'',
+			$contents
+		);
+
+		return $contents;
 	}
 
 	private function getVarInits()

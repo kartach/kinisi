@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -14,6 +14,7 @@ namespace RegularLabs\Library\Condition;
 defined('_JEXEC') or die;
 
 use JFactory;
+use RegularLabs\Library\Document as RL_Document;
 
 /**
  * Class Menu
@@ -21,14 +22,19 @@ use JFactory;
  */
 class Menu
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
 		// return if no Itemid or selection is set
-		if (!$this->request->Itemid || empty($this->selection))
+		if ( ! $this->request->Itemid || empty($this->selection))
 		{
 			return $this->_($this->params->inc_noitemid);
+		}
+
+		// return true if menu is in selection
+		if (in_array($this->request->Itemid, $this->selection))
+		{
+			return $this->_(($this->params->inc_children != 2));
 		}
 
 		$menutype = 'type.' . self::getMenuType();
@@ -39,13 +45,7 @@ class Menu
 			return $this->_(true);
 		}
 
-		// return true if menu is in selection
-		if (in_array($this->request->Itemid, $this->selection))
-		{
-			return $this->_(($this->params->inc_children != 2));
-		}
-
-		if (!$this->params->inc_children)
+		if ( ! $this->params->inc_children)
 		{
 			return $this->_(false);
 		}
@@ -54,7 +54,7 @@ class Menu
 		$parent_ids = array_diff($parent_ids, ['1']);
 		foreach ($parent_ids as $id)
 		{
-			if (!in_array($id, $this->selection))
+			if ( ! in_array($id, $this->selection))
 			{
 				continue;
 			}
@@ -84,7 +84,7 @@ class Menu
 			return $this->request->menutype;
 		}
 
-		if (JFactory::getApplication()->isSite())
+		if (RL_Document::isClient('site'))
 		{
 			$menu = JFactory::getApplication()->getMenu()->getItem((int) $this->request->Itemid);
 

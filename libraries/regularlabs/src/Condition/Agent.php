@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -20,19 +20,12 @@ use RegularLabs\Library\RegEx;
  * Class Agent
  * @package RegularLabs\Library\Condition
  */
-class Agent
+abstract class Agent
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	var $agent     = null;
 	var $device    = null;
 	var $is_mobile = false;
-
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
 
 	/**
 	 * isPhone
@@ -71,7 +64,7 @@ class Agent
 	 */
 	public function passBrowser($browser = '')
 	{
-		if (!$browser)
+		if ( ! $browser)
 		{
 			return false;
 		}
@@ -93,7 +86,7 @@ class Agent
 	 */
 	private function getDevice()
 	{
-		if (!is_null($this->device))
+		if ( ! is_null($this->device))
 		{
 			return $this->device;
 		}
@@ -124,7 +117,7 @@ class Agent
 	 */
 	private function getAgent()
 	{
-		if (!is_null($this->agent))
+		if ( ! is_null($this->agent))
 		{
 			return $this->agent;
 		}

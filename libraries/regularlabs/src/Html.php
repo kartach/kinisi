@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -31,7 +31,7 @@ class Html
 	public static function convertWysiwygToPlainText($string)
 	{
 		// replace chr style enters with normal enters
-		$string = str_replace(array(chr(194) . chr(160), '&#160;', '&nbsp;'), ' ', $string);
+		$string = str_replace([chr(194) . chr(160), '&#160;', '&nbsp;'], ' ', $string);
 
 		// replace linebreak tags with normal linebreaks (paragraphs, enters, etc).
 		$enter_tags = ['p', 'br'];
@@ -68,6 +68,9 @@ class Html
 			return ['', $html, ''];
 		}
 
+		// Force string to UTF-8
+		$html = StringHelper::convertToUtf8($html);
+
 		$html_split = explode('<body', $html, 2);
 		$pre        = $html_split['0'];
 		$body       = '<body' . $html_split['1'];
@@ -90,7 +93,7 @@ class Html
 	 *
 	 * @return array
 	 */
-	public static function getContentContainingSearches($string, $start_searches = [], $end_searches = [], $start_offset = 200, $end_offset = null)
+	public static function getContentContainingSearches($string, $start_searches = [], $end_searches = [], $start_offset = 1000, $end_offset = null)
 	{
 		// String is too short to split and search through
 		if (strlen($string) < 2000)
@@ -117,7 +120,7 @@ class Html
 		}
 
 		// No searches are found
-		if (!$found)
+		if ( ! $found)
 		{
 			return [$string, '', ''];
 		}
@@ -157,7 +160,7 @@ class Html
 		}
 
 		// No end split is found, so don't split remainder
-		if (!$found)
+		if ( ! $found)
 		{
 			return [$pre, $string, ''];
 		}
@@ -193,7 +196,7 @@ class Html
 	 */
 	public static function fix($string)
 	{
-		if (!!self::containsBlockElements($string))
+		if ( ! self::containsBlockElements($string))
 		{
 			return $string;
 		}
@@ -225,6 +228,8 @@ class Html
 
 			$string = mb_convert_encoding($string, 'utf-8', 'html-entities');
 		}
+
+		$string = self::removeParagraphsAroundComments($string);
 
 		return $string;
 	}
@@ -284,10 +289,20 @@ class Html
 
 		$doc->substituteEntities = false;
 
+		// Add temporary surrounding div
+		$string = '<div>' . $string . '</div>';
+
 		@$doc->loadHTML($string);
 		$string = $doc->saveHTML();
 
-		$string = RegEx::replace('^.*?(?:<head>(.*)</head>.*?)?<body>(.*)</body>.*?$', '\1\2', $string);
+		// Remove html document structures
+		$string = RegEx::replace('^<[^>]*>(.*?)<html>.*?(?:<head>(.*)</head>.*?)?<body>(.*)</body>.*?$', '\1\2\3', $string);
+
+		// Remove temporary surrounding div
+		$string = RegEx::replace('^\s*<div>(.*)</div>\s*$', '\1', $string);
+
+		// Remove leading/trailing empty paragraph
+		$string = RegEx::replace('(^\s*<div>\s*</div>|<div>\s*</div>\s*$)', '', $string);
 
 		// Remove leading/trailing empty paragraph
 		$string = RegEx::replace('(^\s*<p(?: [^>]*)?>\s*</p>|<p(?: [^>]*)?>\s*</p>\s*$)', '', $string);
@@ -311,7 +326,7 @@ class Html
 
 		foreach ($parts as $i => &$part)
 		{
-			if (!RegEx::match('^' . $block_regex, $part, $type))
+			if ( ! RegEx::match('^' . $block_regex, $part, $type))
 			{
 				continue;
 			}
@@ -346,13 +361,15 @@ class Html
 	 */
 	public static function cleanSurroundingTags($parts, $elements = ['p', 'span'])
 	{
-		$breaks = '(?:(?:<br ?/?>|:\|:)\s*)*';
+		$breaks = '(?:(?:<br ?/?>|<\!--.*?-->|:\|:)\s*)*';
 		$keys   = array_keys($parts);
 
 		$string = implode(':|:', $parts);
 
 		// Remove empty tags
-		while (RegEx::match('<(' . implode('|', $elements) . ')(?: [^>]*)?>\s*(' . $breaks . ')<\/\1>\s*', $string, $match))
+		$regex = '<(' . implode('|', $elements) . ')(?: [^>]*)?>\s*(' . $breaks . ')<\/\1>\s*';
+
+		while (RegEx::match($regex, $string, $match))
 		{
 			$string = str_replace($match['0'], $match['2'], $string);
 		}
@@ -365,7 +382,9 @@ class Html
 		];
 		$block_elements = '(' . implode('|', $block_elements) . ')';
 
-		while (RegEx::match('(<p(?: [^>]*)?>)(\s*' . $breaks . ')(<' . $block_elements . '(?: [^>]*)?>)', $string, $match))
+		$regex = '(<p(?: [^>]*)?>)(\s*' . $breaks . ')(<' . $block_elements . '(?: [^>]*)?>)';
+
+		while (RegEx::match($regex, $string, $match))
 		{
 			if ($match['4'] == 'p')
 			{
@@ -376,7 +395,9 @@ class Html
 			$string = str_replace($match['0'], $match['2'] . $match['3'], $string);
 		}
 
-		while (RegEx::match('(</' . $block_elements . '>\s*' . $breaks . ')</p>', $string, $match))
+		$regex = '(</' . $block_elements . '>\s*' . $breaks . ')</p>';
+
+		while (RegEx::match($regex, $string, $match))
 		{
 			$string = str_replace($match['0'], $match['1'], $string);
 		}
@@ -409,16 +430,39 @@ class Html
 		}
 
 		$string = RegEx::replace(
-			'(?:<p(?: [^>]*)?>\s*)'
-			. '(</?(?:' . implode('|', self::getBlockElements()) . ')'
-			. '(?: [^>]*)?>)',
+			'<p(?: [^>]*)?>\s*'
+			. '((?:<\!--.*?-->\s*)*</?(?:' . implode('|', self::getBlockElements()) . ')' . '(?: [^>]*)?>)',
 			'\1',
 			$string
 		);
 
 		$string = RegEx::replace(
-			'(</?(?:' . implode('|', self::getBlockElements()) . ')'
-			. '(?: [^>]*)?>)'
+			'(</?(?:' . implode('|', self::getBlockElements()) . ')' . '(?: [^>]*)?>(?:\s*<\!--.*?-->)*)'
+			. '(?:\s*</p>)',
+			'\1',
+			$string
+		);
+
+		return $string;
+	}
+
+	/**
+	 * Remove <p> tags around comments
+	 *
+	 * @param string $string
+	 *
+	 * @return mixed
+	 */
+	private static function removeParagraphsAroundComments($string)
+	{
+		if (strpos($string, '</p>') == false)
+		{
+			return $string;
+		}
+
+		$string = RegEx::replace(
+			'(?:<p(?: [^>]*)?>\s*)'
+			. '(<\!--.*?-->)'
 			. '(?:\s*</p>)',
 			'\1',
 			$string
@@ -446,13 +490,17 @@ class Html
 
 		foreach ($parts as &$part)
 		{
-			if (strpos($part, '<p>') === false)
+			if (strpos($part, '<p>') === false && strpos($part, '<p ') === false)
 			{
 				$part = '<p>' . $part;
 				continue;
 			}
 
-			$part = RegEx::replace('(<p(?: [^>]*)?>.*?)(<p(?: [^>]*)?>)', '\1</p>\2', $part);
+			$part = RegEx::replace(
+				'(<p(?: [^>]*)?>.*?)(<p(?: [^>]*)?>)',
+				'\1</p>\2',
+				$part
+			);
 		}
 
 		return implode('</p>', $parts) . $ending;
@@ -468,9 +516,11 @@ class Html
 	 */
 	public static function removeEmptyTagPairs($string, $elements = ['p', 'span'])
 	{
-		$breaks = '(?:<br ?/?>\s*)*';
+		$breaks = '(?:(?:<br ?/?>|<\!--.*?-->)\s*)*';
 
-		while (RegEx::match('<(' . implode('|', $elements) . ')(?: [^>]*)?>\s*(' . $breaks . ')<\/\1>\s*', $string, $match))
+		$regex = '<(' . implode('|', $elements) . ')(?: [^>]*)?>\s*(' . $breaks . ')<\/\1>\s*';
+
+		while (RegEx::match($regex, $string, $match))
 		{
 			$string = str_replace($match['0'], $match['2'], $string);
 		}
@@ -592,7 +642,7 @@ class Html
 	 */
 	public static function getBlockElements($exclude = [])
 	{
-		if (!is_array($exclude))
+		if ( ! is_array($exclude))
 		{
 			$exclude = [$exclude];
 		}
@@ -602,7 +652,13 @@ class Html
 			'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
 		];
 
-		return array_diff($elements, $exclude);
+		$elements = array_diff($elements, $exclude);
+
+		$elements = implode(',', $elements);
+		$elements = str_replace('h1,h2,h3,h4,h5,h6', 'h[1-6]', $elements);
+		$elements = explode(',', $elements);
+
+		return $elements;
 	}
 
 	/**
@@ -614,7 +670,7 @@ class Html
 	 */
 	public static function getInlineElements($exclude = [])
 	{
-		if (!is_array($exclude))
+		if ( ! is_array($exclude))
 		{
 			$exclude = [$exclude];
 		}
@@ -664,10 +720,16 @@ class Html
 		Protect::protectByRegex($string, '(<|&lt;)\?php\s.*?\?(>|&gt;)');
 
 		// Protect {...} tags
-		Protect::protectByRegex($string, '\{.*?\}');
+		Protect::protectByRegex($string, '\{[a-z0-9].*?\}');
 
 		// Protect [...] tags
-		Protect::protectByRegex($string, '\[.*?\]');
+		Protect::protectByRegex($string, '\[[a-z0-9].*?\]');
+
+		// Protect scripts
+		Protect::protectByRegex($string, '<script[^>]*>.*?</script>');
+
+		// Protect css
+		Protect::protectByRegex($string, '<style[^>]*>.*?</style>');
 
 		Protect::convertProtectionToHtmlSafe($string);
 
@@ -697,7 +759,7 @@ class Html
 	 */
 	private static function fixBrokenTagsByPreString(&$pre, &$string)
 	{
-		if (!RegEx::match('</?[a-z][^>]*(="[^"]*)?$', $pre, $match))
+		if ( ! RegEx::match('<(\![^>]*|/?[a-z][^>]*(="[^"]*)?)$', $pre, $match))
 		{
 			return;
 		}
@@ -715,12 +777,12 @@ class Html
 	 */
 	private static function fixBrokenTagsByPostString(&$post, &$string)
 	{
-		if (!RegEx::match('</?[a-z][^>]*(="[^"]*)?$', $string, $match))
+		if ( ! RegEx::match('<(\![^>]*|/?[a-z][^>]*(="[^"]*)?)$', $string, $match))
 		{
 			return;
 		}
 
-		if (!RegEx::match('^[^>]*>', $post, $match))
+		if ( ! RegEx::match('^[^>]*>', $post, $match))
 		{
 			return;
 		}

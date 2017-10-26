@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -17,8 +17,7 @@ defined('_JEXEC') or die;
  * Class ConditionContent
  * @package RegularLabs\Library
  */
-class ConditionContent
-	extends Condition
+trait ConditionContent
 {
 	public function passContentId()
 	{
@@ -37,13 +36,13 @@ class ConditionContent
 			return null;
 		}
 
-		if (!$text)
+		if ( ! $text)
 		{
 			$item = $this->getItem($fields);
 
 			foreach ($fields as $field)
 			{
-				if (!isset($item->{$field}))
+				if ( ! isset($item->{$field}))
 				{
 					return false;
 				}
@@ -61,13 +60,15 @@ class ConditionContent
 
 		foreach ($this->params->content_keywords as $keyword)
 		{
-			if (!RegEx::match('\b' . RegEx::quote($keyword) . '\b', $text))
+			if ( ! RegEx::match('\b' . RegEx::quote($keyword) . '\b', $text))
 			{
 				continue;
 			}
 
 			return true;
 		}
+
+		return false;
 	}
 
 	public function passMetaKeyword($field = 'metakey', $keywords = '')
@@ -77,11 +78,11 @@ class ConditionContent
 			return null;
 		}
 
-		if (!$keywords)
+		if ( ! $keywords)
 		{
 			$item = $this->getItem($field);
 
-			if (!isset($item->metakey) || empty($item->metakey))
+			if ( ! isset($item->metakey) || empty($item->metakey))
 			{
 				return false;
 			}
@@ -105,13 +106,15 @@ class ConditionContent
 
 		foreach ($this->params->meta_keywords as $keyword)
 		{
-			if (!$keyword || !in_array(trim($keyword), $keywords))
+			if ( ! $keyword || ! in_array(trim($keyword), $keywords))
 			{
 				continue;
 			}
 
 			return true;
 		}
+
+		return false;
 	}
 
 	public function passAuthor($field = 'created_by', $author = '')
@@ -121,11 +124,11 @@ class ConditionContent
 			return null;
 		}
 
-		if (!$author)
+		if ( ! $author)
 		{
 			$item = $this->getItem($field);
 
-			if (!isset($item->{$field}))
+			if ( ! isset($item->{$field}))
 			{
 				return false;
 			}
@@ -143,8 +146,5 @@ class ConditionContent
 		return in_array($author, $this->params->authors);
 	}
 
-	public function getItem($fields = [])
-	{
-		return [];
-	}
+	abstract public function getItem($fields = []);
 }

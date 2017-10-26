@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -24,21 +24,21 @@ class RLVersions
 {
 	public static function getXMLVersion($alias, $urlformat = false, $type = 'component', $folder = 'system')
 	{
-		return !class_exists('RegularLabs\Library\Version') ? '' : RL_Version::get($alias, $type, $folder);
+		return ! class_exists('RegularLabs\Library\Version') ? '' : RL_Version::get($alias, $type, $folder);
 	}
 
 	public static function getPluginXMLVersion($alias, $folder = 'system')
 	{
-		return !class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getPluginVersion($alias, $folder);
+		return ! class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getPluginVersion($alias, $folder);
 	}
 
 	public static function render($alias)
 	{
-		return !class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getMessage($alias);
+		return ! class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getMessage($alias);
 	}
 
 	public static function getFooter($name, $copyright = 1)
 	{
-		return !class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getFooter($name, $copyright);
+		return ! class_exists('RegularLabs\Library\Version') ? '' : RL_Version::getFooter($name, $copyright);
 	}
 }

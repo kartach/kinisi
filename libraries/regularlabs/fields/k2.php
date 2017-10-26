@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -11,7 +11,7 @@
 
 defined('_JEXEC') or die;
 
-if (!is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
+if ( ! is_file(JPATH_LIBRARIES . '/regularlabs/autoload.php'))
 {
 	return;
 }
@@ -40,7 +40,7 @@ class JFormFieldRL_K2 extends \RegularLabs\Library\FieldGroup
 		$state_field = RL_K2_VERSION == 3 ? 'state' : 'published';
 
 		$query = $this->db->getQuery(true)
-			->select('COUNT(c.id)')
+			->select('COUNT(*)')
 			->from('#__k2_categories AS c')
 			->where('c.' . $state_field . ' > -1');
 		$this->db->setQuery($query);
@@ -57,7 +57,7 @@ class JFormFieldRL_K2 extends \RegularLabs\Library\FieldGroup
 
 		$query->clear('select')
 			->select('c.id, c.' . $parent_field . ' AS parent_id, c.' . $title_field . ' AS title, c.' . $state_field . ' AS published');
-		if (!$this->get('getcategories', 1))
+		if ( ! $this->get('getcategories', 1))
 		{
 			$query->where('c.' . $parent_field . ' = 0');
 		}
@@ -88,7 +88,7 @@ class JFormFieldRL_K2 extends \RegularLabs\Library\FieldGroup
 		$state_field = RL_K2_VERSION == 3 ? 'state' : 'published';
 
 		$query = $this->db->getQuery(true)
-			->select('COUNT(i.id)')
+			->select('COUNT(*)')
 			->from('#__k2_items AS i')
 			->where('i.' . $state_field . ' > -1');
 		$this->db->setQuery($query);

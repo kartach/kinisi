@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -21,7 +21,6 @@ use JFactory;
  */
 class K2Tag
 	extends K2
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -36,14 +35,14 @@ class K2Tag
 			|| ($this->params->inc_items && $this->request->view == 'item')
 		);
 
-		if (!$pass)
+		if ( ! $pass)
 		{
 			return $this->_(false);
 		}
 
 		if ($this->params->inc_tags && $tag != '')
 		{
-			$tags = array(trim(JFactory::getApplication()->input->getString('tag', '')));
+			$tags = [trim(JFactory::getApplication()->input->getString('tag', ''))];
 
 			return $this->passSimple($tags, true);
 		}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -19,7 +19,6 @@ defined('_JEXEC') or die;
  */
 class FlexicontentType
 	extends Flexicontent
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
@@ -30,7 +29,7 @@ class FlexicontentType
 
 		$pass = in_array($this->request->view, ['item', 'items']);
 
-		if (!$pass)
+		if ( ! $pass)
 		{
 			return $this->_(false);
 		}

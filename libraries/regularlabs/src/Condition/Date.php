@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -20,18 +20,11 @@ use JFactory;
  * Class Date
  * @package RegularLabs\Library\Condition
  */
-class Date
+abstract class Date
 	extends \RegularLabs\Library\Condition
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	var $timezone = null;
 	var $dates    = [];
-
-	public function pass()
-	{
-		// See specific conditions
-		return false;
-	}
 
 	public function getNow()
 	{
@@ -59,7 +52,7 @@ class Date
 
 	private function getTimeZone()
 	{
-		if (!is_null($this->timezone))
+		if ( ! is_null($this->timezone))
 		{
 			return $this->timezone;
 		}

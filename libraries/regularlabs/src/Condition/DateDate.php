@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -21,11 +21,10 @@ use RegularLabs\Library\Date as RL_Date;
  */
 class DateDate
 	extends Date
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
-		if (!$this->params->publish_up && !$this->params->publish_down)
+		if ( ! $this->params->publish_up && ! $this->params->publish_down)
 		{
 			// no date range set
 			return ($this->include_type == 'include');
@@ -40,7 +39,7 @@ class DateDate
 
 		if (isset($this->params->recurring) && $this->params->recurring)
 		{
-			if (!(int) $this->params->publish_up || !(int) $this->params->publish_down)
+			if ( ! (int) $this->params->publish_up || ! (int) $this->params->publish_down)
 			{
 				// no date range set
 				return ($this->include_type == 'include');

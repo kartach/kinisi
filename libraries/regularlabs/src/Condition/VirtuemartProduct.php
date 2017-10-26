@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Regular Labs Library
- * @version         17.2.23030
+ * @version         17.10.18912
  * 
  * @author          Peter van Westen <info@regularlabs.com>
  * @link            http://www.regularlabs.com
@@ -21,14 +21,13 @@ use JFactory;
  */
 class VirtuemartProduct
 	extends Virtuemart
-	implements \RegularLabs\Library\Api\ConditionInterface
 {
 	public function pass()
 	{
 		// Because VM sucks, we have to get the view again
 		$this->request->view = JFactory::getApplication()->input->getString('view');
 
-		if (!$this->request->id || $this->request->option != 'com_virtuemart' || $this->request->view != 'productdetails')
+		if ( ! $this->request->id || $this->request->option != 'com_virtuemart' || $this->request->view != 'productdetails')
 		{
 			return $this->_(false);
 		}
