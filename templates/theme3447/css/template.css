@@ -10031,11 +10031,17 @@ ul.icesubMenu ul > li.hover > ul {
 .moduletable:after {
   clear: both;
 }
+  /*KK ============ puvdone .moduletable:before,
+.moduletable:after {
+  content: " ";
+  display: table;
+  margin-top: 20px; uprava pro flavicku
+=======================*/
 .moduletable:before,
 .moduletable:after {
   content: " ";
   display: table;
-  margin-top: 20px;
+  margin-top: 0px;
   
   /*KK ============v originalu bylo=========== .moduletable:before,
 .moduletable:after {
@@ -12096,10 +12102,11 @@ body.body__about:not(.view-article) #content-top {
 }
 /*KC-BYLO V ORIG====== #content {
   padding-top: 90px;
-  padding-bottom: 60px;=====*/
+  padding-bottom: 60px;=====
+  dalsi oprava puvodne padding-bottom: 40px; */
 #content {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 #component {
   min-height: 0;
@@ -12140,12 +12147,17 @@ body.body__about:not(.view-article) #content-top {
   list-style: none;
   margin: 0;
 }
+ /*KC-BYLO V ORIG====== #mainbottom {
+  padding-bottom: 80px;=====*/
 #mainbottom {
-  padding-bottom: 80px;
+  padding-bottom: 0px;
 }
+ /*KC-BYLO V ORIG====== #mainbottom-2 {
+  background-color: #3a3c3e;
+  padding: 70px 0 70px; =====*/
 #mainbottom-2 {
   background-color: #3a3c3e;
-  padding: 70px 0 70px;
+  padding: 40px 0 40px;
 }
 body.body__home:not(.view-article) #mainbottom-2 {
   background: url(../images/bg_2.jpg) 50% 50% no-repeat fixed;
@@ -12173,8 +12185,9 @@ body.body__home:not(.view-article) #mainbottom-2 h6 {
   color: #ffffff;
 }
 body.body__about:not(.view-article) #mainbottom-2 {
- /*KC-BYLO V ORIG====== background: url(../images/bg_4.jpg) 50% 50% no-repeat fixed;=====*/
-  padding: 90px 0 100px;
+ /*KK -BYLO V ORIG====== background: url(../images/bg_4.jpg) 50% 50% no-repeat fixed;=====
+KK 2. uprava pro about - puvodne bylo   padding: 90px 0 100px;*/
+  padding: 0px 0 0px;
   position: relative;
   background-size: cover;
 }
@@ -12215,16 +12228,25 @@ body.body__about:not(.view-article) #mainbottom-2 h6 a:hover {
 }
 body.body__about:not(.view-article) #mainbottom-2 p {
   color: rgba(255, 255, 255, 0.5);
+   /*KC-BYLO V ORIG====== #mainbottom-3 {
+  padding-top: 90px;
+  padding-bottom: 55px;=====*/
 }
 #mainbottom-3 {
-  padding-top: 90px;
-  padding-bottom: 55px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-#bottom {
+  /*KC-BYLO V ORIG====== #bottom {
   text-align: left;
   background: #3a3c3e;
   padding-top: 75px;
-  padding-bottom: 45px;
+  padding-bottom: 45px;=====*/
+
+#bottom {
+  text-align: left;
+  background: #3a3c3e;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 #bottom h1,
 #bottom h2,
