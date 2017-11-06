@@ -1867,7 +1867,7 @@ pre code {
     right: 50%;
   }
   .col-sm-pull-5 {
-    right: 41.66666667%;
+    right: 61.66666667%;
   }
   .col-sm-pull-4 {
     right: 33.33333333%;
@@ -12187,7 +12187,7 @@ body.body__home:not(.view-article) #mainbottom-2 h6 {
 body.body__about:not(.view-article) #mainbottom-2 {
  /*KK -BYLO V ORIG====== background: url(../images/bg_4.jpg) 50% 50% no-repeat fixed;=====
 KK 2. uprava pro about - puvodne bylo   padding: 90px 0 100px;*/
-  padding: 0px 0 0px;
+  padding: 40px 0 0px;
   position: relative;
   background-size: cover;
 }
