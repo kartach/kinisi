@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 class StatisticsController extends acymailingController{
 
     function listing(){
-        JRequest::setVar('tmpl','component');
+        acymailing_setVar('tmpl','component');
 
         $statsClass = acymailing_get('class.stats');
         $statsClass->saveStats();
@@ -25,9 +25,8 @@ class StatisticsController extends acymailingController{
 
         ob_end_clean();
 
-        JPluginHelper::importPlugin('acymailing');
-        $this->dispatcher = JDispatcher::getInstance();
-        $results = $this->dispatcher->trigger('acymailing_getstatpicture');
+        acymailing_importPlugin('acymailing');
+        $results = acymailing_trigger('acymailing_getstatpicture');
 
         $picture = reset($results);
         if(empty($picture)) $picture = 'media/com_acymailing/images/statpicture.png';
@@ -47,7 +46,7 @@ class StatisticsController extends acymailingController{
 
     function detecttimeout(){
         $config = acymailing_config();
-        if($config->get('security_key') != JRequest::getString('seckey')) die('wrong key');
+        if($config->get('security_key') != acymailing_getVar('string', 'seckey')) die('wrong key');
         $db = JFactory::getDBO();
         $db->setQuery("REPLACE INTO `#__acymailing_config` (`namekey`,`value`) VALUES ('max_execution_time','5'), ('last_maxexec_check','".time()."')");
         $db->query();

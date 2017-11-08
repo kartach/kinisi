@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -12,19 +12,18 @@ defined('_JEXEC') or die('Restricted access');
 		padding: 5px;
 	}
 </style>
-<?php JHTML::_('behavior.modal'); ?>
 <div id="acy_content">
 	<div id="iframedoc"></div>
 	<div id="acybase_filters" style="display:none">
 		<div id="filters_original">
-			<?php echo JHTML::_('select.genericlist', $this->typevaluesFilters, "filter[type][__num__]", 'class="inputbox chzn-done" size="1" onchange="updateFilter(__num__);countresults(__num__);"', 'value', 'text', 'filtertype__num__'); ?>
+			<?php echo acymailing_select($this->typevaluesFilters, "filter[type][__num__]", 'class="inputbox chzn-done" size="1" onchange="updateFilter(__num__);countresults(__num__);"', 'value', 'text', 'filtertype__num__'); ?>
 			<span id="countresult___num__"></span>
 
 			<div class="acyfilterarea" id="filterarea___num__"></div>
 		</div>
 		<?php echo $this->outputFilters; ?>
 		<div id="actions_original">
-			<?php echo JHTML::_('select.genericlist', $this->typevaluesActions, "action[type][__num__]", 'class="inputbox chzn-done" size="1" onchange="updateAction(__num__);"', 'value', 'text', 'actiontype__num__'); ?>
+			<?php echo acymailing_select($this->typevaluesActions, "action[type][__num__]", 'class="inputbox chzn-done" size="1" onchange="updateAction(__num__);"', 'value', 'text', 'actiontype__num__'); ?>
 			<div class="acyfilterarea" id="actionarea___num__"></div>
 		</div>
 		<?php echo $this->outputActions; ?>
@@ -64,12 +63,12 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 	<?php } ?>
 	<form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=filter" method="post" name="adminForm" id="adminForm" autocomplete="off">
-		<?php if(JRequest::getCmd('tmpl') == 'component'){
+		<?php if(acymailing_getVar('cmd', 'tmpl') == 'component'){
 			if(empty($this->subid)){
 				acymailing_display(acymailing_translation('PLEASE_SELECT_USERS'), 'warning');
 				return;
 			}
-			$acyToolbar = acymailing::get('helper.toolbar');
+			$acyToolbar = acymailing_get('helper.toolbar');
 			$acyToolbar->custom('process', acymailing_translation('PROCESS'), 'process', false);
 			$acyToolbar->setTitle(acymailing_translation('ACTIONS'), '');
 			$acyToolbar->topfixed = false;
@@ -126,7 +125,7 @@ defined('_JEXEC') or die('Restricted access');
 						<label for="published"><?php echo acymailing_translation('ACY_PUBLISHED'); ?></label>
 					</td>
 					<td class="paramlist_value">
-						<?php echo JHTML::_('acyselect.booleanlist', "data[filter][published]", '', @$this->filter->published); ?>
+						<?php echo acymailing_boolean("data[filter][published]", '', @$this->filter->published); ?>
 					</td>
 				</tr>
 			</table>
@@ -148,15 +147,10 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div class="clr"></div>
 
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value="process"/>
-		<input type="hidden" name="ctrl" value="filter"/>
 		<input type="hidden" name="filid" value="<?php echo @$this->filter->filid; ?>"/>
 		<input type="hidden" name="limitstart" value="0">
-		<input type="hidden" name="filter_order" value="<?php echo $this->pageInfo->filter->order->value; ?>"/>
-		<input type="hidden" name="filter_order_Dir" value="<?php echo $this->pageInfo->filter->order->dir; ?>"/>
 
-		<?php echo JHTML::_('form.token'); ?>
+		<?php acymailing_formOptions($this->pageInfo->filter->order); ?>
 		<!--</form>-->
 		<?php if(!empty($this->subid)){ ?>
 			<div class="acyblockoptions" id="selectedUsers">
@@ -200,7 +194,7 @@ defined('_JEXEC') or die('Restricted access');
 					<thead>
 					<tr>
 						<th class="title">
-							<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_FILTER'), 'name', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
+							<?php echo acymailing_gridSort(acymailing_translation('ACY_FILTER'), 'name', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
 						</th>
 						<th class="title titletoggle">
 							<?php echo acymailing_translation('ACY_PUBLISHED'); ?>
@@ -209,7 +203,7 @@ defined('_JEXEC') or die('Restricted access');
 							<?php echo acymailing_translation('ACY_DELETE'); ?>
 						</th>
 						<th class="title titleid">
-							<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_ID'), 'filid', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
+							<?php echo acymailing_gridSort(acymailing_translation('ACY_ID'), 'filid', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
 						</th>
 					</tr>
 					</thead>

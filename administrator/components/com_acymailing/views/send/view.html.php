@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -31,15 +31,13 @@ class SendViewSend extends acymailingView{
 
 		if(empty($values->nbqueue)){
 			$lists = $listmailClass->getReceivers($mailid);
-			$this->assignRef('lists', $lists);
+			$this->lists = $lists;
 
-			$db = JFactory::getDBO();
-			$db->setQuery('SELECT count(subid) FROM `#__acymailing_userstats` WHERE `mailid` = '.intval($mailid));
-			$values->alreadySent = $db->loadResult();
+			$values->alreadySent = acymailing_loadResult('SELECT count(subid) FROM `#__acymailing_userstats` WHERE `mailid` = '.intval($mailid));
 		}
 
-		$this->assignRef('values', $values);
-		$this->assignRef('mail', $mail);
+		$this->values = $values;
+		$this->mail = $mail;
 	}
 
 

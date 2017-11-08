@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -9,11 +9,8 @@
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<div id="iframedoc"></div>
-	<form action="<?php echo JRoute::_('index.php?option=com_acymailing&ctrl=cpanel'); ?>" method="post" name="adminForm" autocomplete="off" id="adminForm">
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="cpanel"/>
-		<?php echo JHTML::_('form.token');
+	<form action="<?php echo acymailing_route('index.php?option=com_acymailing&ctrl=cpanel'); ?>" method="post" name="adminForm" autocomplete="off" id="adminForm">
+		<?php acymailing_formOptions();
 
 		echo '<div class="acytabsystem">';
 		echo $this->tabs->startPane('config_tab');

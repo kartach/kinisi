@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -12,9 +12,8 @@ defined('_JEXEC') or die('Restricted access');
 class acymenuHelper{
 	function display($selected = ''){
 
-		$doc = JFactory::getDocument();
 		if(!ACYMAILING_J16){
-			$doc->addStyleDeclaration(" #submenu-box{display:none !important;} ");
+			acymailing_addStyle(true, " #submenu-box{display:none !important;} ");
 		}
 
 		$js = "function acyToggleClass(id,myclass){
@@ -34,7 +33,7 @@ class acymenuHelper{
 			}
 		}
 
-		window.addEvent('domready', function(){
+		document.addEventListener(\"DOMContentLoaded\", function(){
 			var isClosed = sessionStorage.getItem('acyclosedmenu');
 			if(isClosed == 1) acyToggleClass('acyallcontent', 'iconsonly');
 			setTimeout(function () {
@@ -56,12 +55,11 @@ class acymenuHelper{
 		";
 
 
-		$app = JFactory::getApplication();
-		if($app->isAdmin()){
-			$doc->addScript(ACYMAILING_JS.'acytoolbar.js?v='.filemtime(ACYMAILING_MEDIA.'js'.DS.'acytoolbar.js'));
+		if(acymailing_isAdmin()){
+			acymailing_addScript(false, ACYMAILING_JS.'acytoolbar.js?v='.filemtime(ACYMAILING_MEDIA.'js'.DS.'acytoolbar.js'));
 		}
 
-		$doc->addScriptDeclaration($js);
+		acymailing_addScript(true, $js);
 
 		$selected = substr($selected, 0, 5);
 		if($selected == 'data' || $selected == 'data&' || $selected == 'field' || $selected == 'filte') $selected = 'subsc';
@@ -83,7 +81,7 @@ class acymenuHelper{
 			$submenu['subscriber'][] = array(acymailing_translation('USERS'), 'index.php?option=com_acymailing&ctrl=subscriber', 'acyicon-user');
 			if(acymailing_isAllowed($config->get('acl_subscriber_import', 'all'))) $submenu['subscriber'][] = array(acymailing_translation('IMPORT'), 'index.php?option=com_acymailing&ctrl=data&task=import', 'acyicon-import');
 			if(acymailing_isAllowed($config->get('acl_subscriber_export', 'all'))) $submenu['subscriber'][] = array(acymailing_translation('ACY_EXPORT'), 'index.php?option=com_acymailing&ctrl=data&task=export', 'acyicon-export');
-			if(acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || JFactory::getUser()->authorise('core.admin', 'com_acymailing'))){
+			if(acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || acymailing_authorised('core.admin', 'com_acymailing'))){
 				$submenu['subscriber'][] = array(acymailing_translation('EXTRA_FIELDS'), 'index.php?option=com_acymailing&ctrl=fields', 'acyicon-custom-field');
 			}
 			if(acymailing_isAllowed($config->get('acl_lists_filter', 'all'))) $submenu['subscriber'][] = array(acymailing_translation('ACY_MASS_ACTIONS'), 'index.php?option=com_acymailing&ctrl=filter', 'acyicon-filter');
@@ -108,7 +106,7 @@ class acymenuHelper{
 			if(acymailing_level(3) && acymailing_isAllowed($config->get('acl_campaign_manage', 'all'))){
 				$submenu['newsletter'][] = array(acymailing_translation('CAMPAIGN'), 'index.php?option=com_acymailing&ctrl=campaign', 'acyicon-campaign');
 			}
-			if(acymailing_level(1) && acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || JFactory::getUser()->authorise('core.admin', 'com_acymailing'))){
+			if(acymailing_level(1) && acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || acymailing_authorised('core.admin', 'com_acymailing'))){
 				$submenu['newsletter'][] = array(acymailing_translation('JOOMLA_NOTIFICATIONS'), 'index.php?option=com_acymailing&ctrl=notification', 'acyicon-joomla');
 			}
 			if(acymailing_level(3) && acymailing_isAllowed($config->get('acl_simple_sending_manage', 'all'))){
@@ -129,13 +127,12 @@ class acymenuHelper{
 			if(acymailing_level(1)) $submenu['stats'][] = array(acymailing_translation('CLICK_STATISTICS'), 'index.php?option=com_acymailing&ctrl=statsurl', 'acyicon-click');
 			if(acymailing_level(1)) $submenu['stats'][] = array(acymailing_translation('CHARTS'), 'index.php?option=com_acymailing&ctrl=diagram', 'acyicon-chart');
 		}
-		if(acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || JFactory::getUser()->authorise('core.admin', 'com_acymailing'))){
+		if(acymailing_isAllowed($config->get('acl_configuration_manage', 'all')) && (!ACYMAILING_J16 || acymailing_authorised('core.admin', 'com_acymailing'))){
 			$mainmenu['cpanel'] = array(acymailing_translation('ACY_CONFIGURATION'), 'index.php?option=com_acymailing&ctrl=cpanel', 'acyicon-configuration');
 			$mainmenu['bounce'] = array(acymailing_translation('BOUNCE_HANDLING'), 'index.php?option=com_acymailing&ctrl=bounces', 'acyicon-bounce');
 		}
 
-		$doc = JFactory::getDocument();
-		$doc->addStyleSheet(ACYMAILING_CSS.'acymenu.css?v='.filemtime(ACYMAILING_MEDIA.'css'.DS.'acymenu.css'));
+		acymailing_addStyle(false, ACYMAILING_CSS.'acymenu.css?v='.filemtime(ACYMAILING_MEDIA.'css'.DS.'acymenu.css'));
 
 		$acysmsLink = '';
 		if(acymailing_isAllowed($config->get('acl_configuration_manage', 'all'))) $acysmsLink = '<a class="sendother" href="index.php?option=com_acymailing&ctrl=update&task=acysms">'.acymailing_translation('ACY_SMS').'&nbsp;&nbsp;<i class="acyicon-message"></i></a>';
@@ -214,36 +211,24 @@ class acymenuHelper{
 
 		$script = "function checkForNewVersion(){
 			document.getElementById('myacymailingarea').innerHTML = '<span class=\"onload spinner2\"></span>';
-			try{
-				new Ajax('index.php?&option=com_acymailing&ctrl=update&task=checkForNewVersion&tmpl=component',
-				{
-					method: 'post',
-					onSuccess: function(responseText, responseXML) {
-						response = JSON.parse(responseText);
-						document.getElementById('myacymailingarea').innerHTML = response.content;
-					}
-				}).request();
-			}catch(err){
-				new Request({
-					method: 'post',
-					url: 'index.php?&option=com_acymailing&ctrl=update&task=checkForNewVersion&tmpl=component',
-					onSuccess: function(responseText, responseXML) {
-						response = JSON.parse(responseText);
-						document.getElementById('myacymailingarea').innerHTML = response.content;
-					}
-				}).send();
-			}
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', 'index.php?&option=com_acymailing&ctrl=update&task=checkForNewVersion&tmpl=component');
+			xhr.onload = function(){
+				response = JSON.parse(xhr.responseText);
+				document.getElementById('myacymailingarea').innerHTML = response.content;
+			};
+			xhr.send();
 		}";
 
-		$config =& acymailing_config();
+		$config = acymailing_config();
 		$lastlicensecheck = $config->get('lastlicensecheck', '');
 		if(empty($lastlicensecheck) || $lastlicensecheck < (time() - 604800)){
-			$script .= 'window.addEvent("load", function(){
+			$script .= 'window.addEventListener("load", function(){
 				checkForNewVersion();
 			});';
 		}
 
-		$doc = JFactory::getDocument();
-		$doc->addScriptDeclaration($script);
+		acymailing_addScript(true, $script);
 	}
 }

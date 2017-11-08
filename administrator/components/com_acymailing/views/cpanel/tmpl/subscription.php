@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -34,9 +34,7 @@ defined('_JEXEC') or die('Restricted access');
 				</td>
 				<td>
 					<input class="inputbox" id="configautosub" name="config[autosub]" type="text" style="width:100px" value="<?php echo $this->escape($this->config->get('autosub', 'None')); ?>">
-					<a class="modal" id="linkconfigautosub" title="<?php echo acymailing_translation('SELECT_LISTS'); ?>" href="index.php?option=com_acymailing&amp;tmpl=component&amp;ctrl=chooselist&amp;task=autosub&amp;values=<?php echo $this->config->get('autosub', 'None'); ?>&amp;control=config" rel="{handler: 'iframe', size: {x: 650, y: 375}}">
-						<button class="acymailing_button_grey" onclick="return false"><?php echo acymailing_translation('SELECT'); ?></button>
-					</a>
+					<?php echo acymailing_popup('index.php?option=com_acymailing&amp;tmpl=component&amp;ctrl=chooselist&amp;task=autosub&amp;values='.$this->config->get('autosub', 'None').'&amp;control=config', '<button class="acymailing_button_grey" onclick="return false">'.acymailing_translation('SELECT').'</button>', '', 650, 375, 'linkconfigautosub'); ?>
 				</td>
 			</tr>
 			<tr>
@@ -53,7 +51,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('GENERATE_NAME'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[generate_name]", '', $this->config->get('generate_name', 1)); ?>
+					<?php echo acymailing_boolean("config[generate_name]", '', $this->config->get('generate_name', 1)); ?>
 				</td>
 			</tr>
 		</table>
@@ -174,7 +172,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('ACY_REDIRECT_TAGS'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[redirect_tags]", '', $this->config->get('redirect_tags', 0)); ?>
+					<?php echo acymailing_boolean("config[redirect_tags]", '', $this->config->get('redirect_tags', 0)); ?>
 				</td>
 			</tr>
 		</table>
@@ -184,20 +182,14 @@ defined('_JEXEC') or die('Restricted access');
 		<script language="JavaScript" type="text/javascript">
 			function testAPI(id, newvalue){
 				window.document.getElementById(id).className = 'onload';
-				try{
-					new Ajax('index.php?option=com_acymailing&tmpl=component&ctrl=toggle&task=' + id + '&value=' + newvalue, {
-						method: 'get', update: $(id), onComplete: function(){
-							window.document.getElementById(id).className = 'loading';
-						}
-					}).request();
-				}catch(err){
-					new Request({
-						url: 'index.php?option=com_acymailing&tmpl=component&ctrl=toggle&task=' + id + '&value=' + newvalue, method: 'get', onComplete: function(response){
-							$(id).innerHTML = response;
-							window.document.getElementById(id).className = 'loading';
-						}
-					}).send();
-				}
+
+				var xhr = new XMLHttpRequest();
+				xhr.open('GET', 'index.php?option=com_acymailing&tmpl=component&ctrl=toggle&task=' + id + '&value=' + newvalue);
+				xhr.onload = function(){
+					window.document.getElementById(id).innerHTML = xhr.responseText;
+					window.document.getElementById(id).className = 'loading';
+				};
+				xhr.send();
 			}
 		</script>
 		<table class="acymailing_table" cellspacing="1">

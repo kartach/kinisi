@@ -1,6 +1,6 @@
 /**
  * @package    AcyMailing for Joomla!
- * @version    5.7.0
+ * @version    5.8.1
  * @author     acyba.com
  * @copyright  (C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -382,10 +382,6 @@
 	width: 600px;
 }
 
-#acystylesheettextarea{
-	width: 650px !important
-}
-
 
 .acymailing_table{
 	width: 100%;
@@ -428,7 +424,7 @@
 	background-color: #fff;
 }
 
-.acymailing_table thead tr, .acymailing_table thead tr:hover{
+.acymailing_table thead:not(.calendar-header) tr, .acymailing_table thead:not(.calendar-header) tr:hover{
 	background-color: #91acd7;
 	color: #fff;
 	font-style: normal;
@@ -872,8 +868,9 @@
 
 
 .acytabsystem ul{
-	padding: 0px;
-	margin: 0px 0px 9px 0px;
+	padding: 0px !important;
+	margin: 0px 0px 9px 0px !important;
+	list-style-type: none !important;
 }
 
 .nav-tabs{
@@ -902,10 +899,11 @@
 	line-height: 18px;
 	border: 1px solid transparent;
 	border-radius: 4px 4px 0 0;
+	text-decoration: none;
 }
 
-.acytabsystem .nav > li > a:hover, .acytabsystem .nav > li > a:focus, #template_css.nav > li > a:hover, #template_css.nav > li > a:focus{
-	background-color: #b1c7ea;
+.acytabsystem .nav > li > a:hover, #template_css.nav > li > a:hover{
+	background-color: #b1c7ea !important;
 	color: #fff;
 	border-color: #b1c7ea #b1c7ea #dddddd;
 	text-decoration: none;
@@ -919,6 +917,18 @@
 
 .acytabsystem .nav-tabs > li > a{
 	background-color: #fff;
+}
+
+.acytabsystem .tab-content .tab-pane, #template_css .tab-content .tab-pane{
+	display: none;
+}
+
+.acytabsystem .tab-content .tab-pane.active, #template_css .tab-content .tab-pane.active{
+	display: block;
+}
+
+.acytabsystem .nav > li > a {
+	display: block;
 }
 
 #template_css.nav-tabs > li > a{
@@ -1205,42 +1215,6 @@
 
 }
 
-@-webkit-keyframes stepcomplete{
-	0%{
-		width: 0;
-	}
-	100%{
-		width: 100%;
-	}
-}
-
-@-moz-keyframes stepcomplete{
-	0%{
-		width: 0;
-	}
-	100%{
-		width: 100%;
-	}
-}
-
-@-ms-keyframes stepcomplete{
-	0%{
-		width: 0;
-	}
-	100%{
-		width: 100%;
-	}
-}
-
-@-o-keyframes stepcomplete{
-	0%{
-		width: 0;
-	}
-	100%{
-		width: 100%;
-	}
-}
-
 @keyframes stepcomplete{
 	0%{
 		width: 0;
@@ -1460,52 +1434,7 @@
 	}
 }
 
-@-moz-keyframes deploy{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 800px;
-	}
-}
-
-@-webkit-keyframes deploy{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 800px;
-	}
-}
-
-@-ms-keyframess deploy{
-	from{
-		max-height: 0px;
-	}
-
-	to{
-		max-height: 800px;
-	}
-}
-
-@-o-keyframes deploy{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 800px;
-	}
-}
-
 .acygraph #userStatisticDetails, .acygraph #listStatisticDetails, .acygraph #newsletterStatisticDetails, .acymailing_deploy{
-	-moz-animation-duration: 2s;
-	-moz-animation-name: deploy;
-	-ms-animation-name: deploy;
-	-ms-animation-duration: 2s;
-	-o-animation-name: deploy;
-	-o-animation-duration: 2s;
-	-webkit-animation-name: deploy;
-	-webkit-animation-duration: 2s;
 	animation-name: deploy;
 	animation-duration: 2s;
 	overflow: hidden;
@@ -1529,7 +1458,7 @@ h1.acy_graphtitle:after{
 
 
 
-@keyframes deployhelp{
+@keyframes deployslide{
 	from{
 		max-height: 0px;
 	}
@@ -1538,53 +1467,28 @@ h1.acy_graphtitle:after{
 	}
 }
 
-@-moz-keyframes deployhelp{
+@keyframes retractslide{
 	from{
-		max-height: 0px;
+		max-height: 450px;
 	}
 	to{
-		max-height: 450px;
+		max-height: 0px;
+		display: none;
 	}
 }
 
-@-webkit-keyframes deployhelp{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 450px;
-	}
+.slide_close{
+	animation: retractslide 1s forwards;
+	overflow: hidden;
+	background-color: #fff;
+	height: 350px;
+	box-shadow: 0px 1px 5px #eee;
+	padding: 5px;
+	margin-bottom: 20px;
 }
 
-@-ms-keyframes deployhelp{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 450px;
-	}
-}
-
-@-o-keyframes deployhelp{
-	from{
-		max-height: 0px;
-	}
-	to{
-		max-height: 450px;
-	}
-}
-
-.help_open{
-	-ms-animation-name: deployhelp;
-	-ms-animation-duration: 2s;
-	-o-animation-name: deployhelp;
-	-o-animation-duration: 2s;
-	-moz-animation-name: deployhelp;
-	-moz-animation-duration: 2s;
-	-webkit-animation-name: deployhelp;
-	-webkit-animation-duration: 2s;
-	animation-name: deployhelp;
-	animation-duration: 2s;
+.slide_open{
+	animation: deployslide 2s forwards;
 	overflow: hidden;
 	background-color: #fff;
 	height: 350px;
@@ -1691,6 +1595,7 @@ ul.buttonOptions{
 	border-bottom-left-radius: 4px !important;
 	list-style: none;
 	padding-bottom: 2px;
+	padding-left: 0px;
 	min-width: 120px;
 }
 
@@ -1807,6 +1712,10 @@ ul.buttonOptions{
 }
 
 
+#acymailing_messages_error, #acymailing_messages_success, #acymailing_messages_message, #acymailing_messages_info, #acymailing_messages_warning {
+   margin: 10px 10px 0px 10px;
+}
+
 #acymailing_messages_warning a{
 	color: #c4872f;
 }
@@ -1876,7 +1785,7 @@ ul.buttonOptions{
 
 
 .acymailing_table .titleorder{
-	width: 140px
+	width: 18px
 }
 
 .acymailing_table .titleorder i{
@@ -2158,6 +2067,10 @@ div.acytagpopup table.acymailing_table tr.selectedrow td, div.acytagpopup table.
 	padding: 5px;
 }
 
+.contentpane{
+	padding: 0px !important;
+}
+
 
 
 
@@ -2426,10 +2339,6 @@ div.onload{
 	clear: none;
 }
 
-#modal-action iframe.iframe{
-	width: 100%;
-}
-
 #acy_content .clr{
 	display: block;
 	clear: both;
@@ -2679,7 +2588,7 @@ span.acy_stat_date{
 	top: 0;
 	right: 0;
 	height: 100%;
-	padding: 25px;
+	padding: 0px 25px;
 	background-color: #ECECEC;
 	border-left: solid 1px #DCDCDC;
 	width: 190px;
@@ -2766,7 +2675,7 @@ span.acy_stat_date{
 	border-top: 0;
 	background: #fff;
 	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
-	width: 298px;
+	width: 248px;
 }
 #existingtags ul{
 	margin: 0px;
@@ -2787,6 +2696,10 @@ span.acy_stat_date{
 
 .acymailing_table_options #tagfilter{
 	vertical-align: top;
+}
+
+.onelineblockoptions #tagfilter{
+	vertical-align: middle;
 }
 
 
@@ -2918,4 +2831,38 @@ span.acy_stat_date{
 	text-overflow: ellipsis;
 	max-width: 350px;
 	overflow: hidden;
+}
+
+.icon-16-refuse{
+	 background-image: url(../images/icons/icon-16-refuse.png);
+	 background-repeat: no-repeat;
+	 width: 16px !important;
+	 height: 16px !important;
+	 float: left;
+	 margin: 3px;
+}
+
+
+.acymailingtooltip {
+	cursor: pointer;
+}
+
+.acymailingtooltiptext{
+    text-align: left;
+	visibility: hidden;
+	position: fixed;
+	z-index: 10000;
+	padding: 4px 8px;
+	max-width: 250px;
+	background-color: hsla(0, 0%, 20%, 0.9);
+	color: #fff;
+	font-size: 12px;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.acymailingtooltip:hover .acymailingtooltiptext{
+	visibility: visible;
+	transform: translateY(-12px);
+	transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
 }

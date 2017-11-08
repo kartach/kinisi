@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -100,7 +100,7 @@ class acyqueueHelper{
 			$disp .= '</div>';
 			$disp .= "<div id='divinfo' style='display:none; position:fixed; bottom:3px;left:3px;background-color : white; border : 1px solid grey; padding : 3px;'> </div>";
 			$disp .= '<br /><br />';
-			$url = JURI::base().'index.php?option=com_acymailing&ctrl=send&tmpl=component&task=continuesend&mailid='.$this->mailid.'&totalsend='.$this->total.'&alreadysent=';
+			$url = acymailing_baseURI().'index.php?option=com_acymailing&ctrl=send&tmpl=component&task=continuesend&mailid='.$this->mailid.'&totalsend='.$this->total.'&alreadysent=';
 			$disp .= '<script type="text/javascript" language="javascript">';
 			$disp .= 'var mycounter = document.getElementById("counter");';
 			$disp .= 'var divinfo = document.getElementById("divinfo");
@@ -370,7 +370,7 @@ class acyqueueHelper{
 
 		if(!empty($num)){
 			$color = $status ? 'green' : 'red';
-			echo '<br />'.$num.' : <font color="'.$color.'">'.$message.'</font>';
+			echo '<br />'.$num.' : <span style="color:'.$color.';">'.$message.'</span>';
 		}else{
 			echo '<script type="text/javascript" language="javascript">setInfo(\''.addslashes($message).'\')</script>';
 		}

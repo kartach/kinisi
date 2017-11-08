@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -25,6 +25,7 @@ defined('_JEXEC') or die('Restricted access');
 						<tr class="<?php echo "row$k"; ?>">
 							<td>
 								<?php
+								$row->subject = Emoji::Decode($row->subject);
 								echo acymailing_translation_sprintf('EMAIL_READY', $row->mailid, $row->subject, $row->nbsub);
 								?>
 							</td>
@@ -52,6 +53,7 @@ defined('_JEXEC') or die('Restricted access');
 						<tr class="<?php echo "row$k"; ?>">
 							<td>
 								<?php
+								$row->subject = Emoji::Decode($row->subject);
 								echo acymailing_translation_sprintf('QUEUE_SCHED', $row->mailid, $row->subject, acymailing_getDate($row->senddate));
 								?>
 							</td>
@@ -75,6 +77,7 @@ defined('_JEXEC') or die('Restricted access');
 						<tr class="<?php echo "row$k"; ?>">
 							<td>
 								<?php
+								$row->subject = Emoji::Decode($row->subject);
 								echo acymailing_translation_sprintf('EMAIL_READY', $row->mailid, $row->subject, $row->nbsub);
 								echo '<br />'.acymailing_translation_sprintf('QUEUE_NEXT_SCHEDULE', acymailing_getDate($row->senddate));
 								?>
@@ -90,8 +93,8 @@ defined('_JEXEC') or die('Restricted access');
 	</div>
 	<div class="clr"></div>
 	<input type="hidden" name="mailid" value="<?php echo $this->infos->mailid; ?>"/>
-	<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-	<input type="hidden" name="task" value="continuesend"/>
-	<input type="hidden" name="ctrl" value="send"/>
-	<?php echo JHTML::_('form.token'); ?>
+	<?php
+	acymailing_setVar('ctrl', 'send');
+	acymailing_formOptions();
+	?>
 </form>

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -64,9 +64,9 @@ class plgAcymailingManagetext extends JPlugin{
 				static $done = false;
 				if(!$done && strpos($val, 'COM_USERS') !== false){
 					$done = true;
-					$lang = JFactory::getLanguage();
-					$lang->load('com_users', JPATH_SITE);
-					$lang->load('com_users', JPATH_ADMINISTRATOR);
+
+					acymailing_loadLanguageFile('com_users', JPATH_SITE);
+					acymailing_loadLanguageFile('com_users', JPATH_ADMINISTRATOR);
 				}
 				if(!empty($arrayVal)){
 					$tagsReplaced[$i] = nl2br(vsprintf(acymailing_translation($val), $arrayVal));
@@ -259,8 +259,7 @@ class plgAcymailingManagetext extends JPlugin{
 	}
 
 	function onAcyDisplayFilters(&$type, $context = "massactions"){
-		$app = JFactory::getApplication();
-		if($this->params->get('displayfilter_'.$context, true) == false || ($this->params->get('frontendaccess') == 'none' && !$app->isAdmin())) return;
+		if($this->params->get('displayfilter_'.$context, true) == false || ($this->params->get('frontendaccess') == 'none' && !acymailing_isAdmin())) return;
 
 		$type['limitrand'] = acymailing_translation_sprintf('ACY_RAND_LIMIT', 'X');
 
@@ -290,8 +289,9 @@ class plgAcymailingManagetext extends JPlugin{
 		$emailsToDisplay = array();
 		$typeNews = '';
 		foreach($allEmails as $oneMail){
+			$oneMail->subject = Emoji::Decode($oneMail->subject);
 			if($oneMail->type != $typeNews){
-				if(!empty($typeNews)) $emailsToDisplay[] = JHTML::_('select.option', '</OPTGROUP>');
+				if(!empty($typeNews)) $emailsToDisplay[] = acymailing_selectOption('</OPTGROUP>');
 				$typeNews = $oneMail->type;
 				if($oneMail->type == 'news'){
 					$label = acymailing_translation('NEWSLETTERS');
@@ -304,17 +304,17 @@ class plgAcymailingManagetext extends JPlugin{
 				}else{
 					$label = $oneMail->type;
 				}
-				$emailsToDisplay[] = JHTML::_('select.option', '<OPTGROUP>', $label);
+				$emailsToDisplay[] = acymailing_selectOption('<OPTGROUP>', $label);
 			}
-			$emailsToDisplay[] = JHTML::_('select.option', $oneMail->mailid, $oneMail->subject.' ['.$oneMail->mailid.']');
+			$emailsToDisplay[] = acymailing_selectOption($oneMail->mailid, $oneMail->subject.' ['.$oneMail->mailid.']');
 		}
-		$emailsToDisplay[] = JHTML::_('select.option', '</OPTGROUP>');
+		$emailsToDisplay[] = acymailing_selectOption('</OPTGROUP>');
 
-		$addqueue = '<div id="action__num__addqueue">'.JHTML::_('select.genericlist', $emailsToDisplay, "action[__num__][addqueue][mailid]", 'class="inputbox" size="1"').'<br /><label for="addqueuesenddate__num__">'.acymailing_translation('SEND_DATE').' </label> <input type="text" value="{time}" id="addqueuesenddate__num__" name="action[__num__][addqueue][senddate]" onclick="displayDatePicker(this,event)"/></div>';
+		$addqueue = '<div id="action__num__addqueue">'.acymailing_select($emailsToDisplay, "action[__num__][addqueue][mailid]", 'class="inputbox" size="1"').'<br /><label for="addqueuesenddate__num__">'.acymailing_translation('SEND_DATE').' </label> <input type="text" value="{time}" id="addqueuesenddate__num__" name="action[__num__][addqueue][senddate]" onclick="displayDatePicker(this,event)"/></div>';
 
-		$allMessages = JHTML::_('select.option', 0, acymailing_translation('ACY_ALL'));
+		$allMessages = acymailing_selectOption(0, acymailing_translation('ACY_ALL'));
 		array_unshift($emailsToDisplay, $allMessages);
-		$removequeue = '<div id="action__num__removequeue">'.JHTML::_('select.genericlist', $emailsToDisplay, "action[__num__][removequeue][mailid]", 'class="inputbox" size="1"').'</div>';
+		$removequeue = '<div id="action__num__removequeue">'.acymailing_select($emailsToDisplay, "action[__num__][removequeue][mailid]", 'class="inputbox" size="1"').'</div>';
 		return $addqueue.$removequeue;
 	}
 

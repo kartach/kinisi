@@ -20,3 +20,5 @@
 2017-10-26T21:42:31+00:00	INFO 192.168.0.193	sloginfailure	Prázdné heslo není povoleno
 2017-10-26T21:42:53+00:00	INFO 192.168.0.193	sloginfailure	Prázdné heslo není povoleno
 2017-10-26T21:43:05+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-11-06T11:53:19+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-11-08T08:28:10+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.

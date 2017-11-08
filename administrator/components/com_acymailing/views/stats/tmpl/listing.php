@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -9,7 +9,7 @@
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<div id="iframedoc"></div>
-	<?php if(!$this->app->isAdmin()){ ?>
+	<?php if(!acymailing_isAdmin()){ ?>
 	<fieldset>
 		<div class="acyheader icon-48-stats" style="float: left;"><?php echo acymailing_translation('GLOBAL_STATISTICS'); ?></div>
 		<div class="toolbar" id="acytoolbar" style="float: right;">
@@ -22,7 +22,7 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 	</fieldset>
 	<?php } ?>
-	<form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo JRequest::getCmd('ctrl'); ?>" method="post" name="adminForm" id="adminForm">
+	<form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo acymailing_getVar('cmd', 'ctrl'); ?>" method="post" name="adminForm" id="adminForm">
 		<table class="acymailing_table_options">
 			<tr>
 				<td>
@@ -34,7 +34,7 @@ defined('_JEXEC') or die('Restricted access');
 				</td>
 			</tr>
 		</table>
-		<?php if(!$this->app->isAdmin()) echo '<div class="acyslide">'; ?>
+		<?php if(!acymailing_isAdmin()) echo '<div class="acyslide">'; ?>
 		<table class="acymailing_table" cellpadding="1">
 			<thead>
 			<tr>
@@ -44,61 +44,61 @@ defined('_JEXEC') or die('Restricted access');
 					</th>
 				<?php } ?>
 				<th class="title titlebox">
-					<input type="checkbox" name="toggle" value="" onclick="acymailing_js.checkAll(this);"/>
+					<input type="checkbox" name="toggle" value="" onclick="acymailing.checkAll(this);"/>
 				</th>
 				<th class="title statsubjectsenddate">
-					<?php echo JHTML::_('grid.sort', acymailing_translation('JOOMEXT_SUBJECT'), 'b.subject', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing').' - '.JHTML::_('grid.sort', acymailing_translation('SEND_DATE'), 'a.senddate', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+					<?php echo acymailing_gridSort(acymailing_translation('JOOMEXT_SUBJECT'), 'b.subject', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing').' - '.acymailing_gridSort(acymailing_translation('SEND_DATE'), 'a.senddate', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 				</th>
 				<?php if($this->menuparams->get('opens', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('OPEN'), 'openprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('OPEN'), 'openprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 				<?php if(acymailing_level(1)){ ?>
 					<?php if($this->menuparams->get('clicks', '1') == 1){ ?>
 						<th class="title titletoggle">
-							<?php echo JHTML::_('grid.sort', acymailing_translation('CLICKED_LINK'), 'clickprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+							<?php echo acymailing_gridSort(acymailing_translation('CLICKED_LINK'), 'clickprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 						</th>
 					<?php } ?>
 					<?php if($this->menuparams->get('efficiency', '1') == 1){ ?>
 						<th class="title titletoggle">
-							<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_CLICK_EFFICIENCY'), 'efficiencyprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+							<?php echo acymailing_gridSort(acymailing_translation('ACY_CLICK_EFFICIENCY'), 'efficiencyprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 						</th>
 					<?php } ?>
 				<?php } ?>
 				<?php if($this->menuparams->get('unsubscribe', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('UNSUBSCRIBE'), 'unsubprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('UNSUBSCRIBE'), 'unsubprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 				<?php if(acymailing_level(1) && $this->menuparams->get('forward', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('FORWARDED'), 'a.forward', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('FORWARDED'), 'a.forward', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 				<?php if($this->menuparams->get('sent', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_SENT'), 'totalsent', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('ACY_SENT'), 'totalsent', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 				<?php if(acymailing_level(3) && $this->menuparams->get('bounces', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('BOUNCES'), 'bounceprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('BOUNCES'), 'bounceprct', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 				<?php if($this->menuparams->get('failed', '1') == 1){ ?>
 					<th class="title titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('FAILED'), 'a.fail', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('FAILED'), 'a.fail', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
-				<?php if(acymailing_level(3) && $this->app->isAdmin()){ ?>
+				<?php if(acymailing_level(3) && acymailing_isAdmin()){ ?>
 					<th class="title titletoggle" style="font-size: 12px;">
 						<?php echo acymailing_translation('STATS_PER_LIST'); ?>
 					</th>
 				<?php } ?>
 				<?php if($this->menuparams->get('id', '1') == 1){ ?>
 					<th class="title titleid titletoggle">
-						<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_ID'), 'a.mailid', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
+						<?php echo acymailing_gridSort(acymailing_translation('ACY_ID'), 'a.mailid', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value, 'listing'); ?>
 					</th>
 				<?php } ?>
 			</tr>
@@ -132,13 +132,16 @@ defined('_JEXEC') or die('Restricted access');
 						</td>
 					<?php } ?>
 					<td align="center" style="text-align:center">
-						<?php echo JHTML::_('grid.id', $i, $row->mailid); ?>
+						<?php echo acymailing_gridID($i, $row->mailid); ?>
 					</td>
 					<td>
-						<?php if(acymailing_level(2)){ ?><a class="modal" href="<?php echo acymailing_completeLink(($this->app->isAdmin() ? '' : 'front').'diagram&task=mailing&mailid='.$row->mailid, true) ?>" rel="{handler: 'iframe', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i><?php } ?>
-							<?php echo '<span class="acy_stat_subject">'.acymailing_tooltip('<b>'.acymailing_translation('JOOMEXT_ALIAS').' : </b>'.$row->alias, ' ', '', $row->subject).'</span>'; ?>
-							<?php if(acymailing_level(2)){ ?></a><?php } ?>
-						<?php echo '<br /><span class="acy_stat_date"><b>'.acymailing_translation('SEND_DATE').' : </b>'.acymailing_getDate($row->senddate).'</span>'; ?>
+						<?php
+						if(acymailing_level(2)) {
+							echo acymailing_popup(acymailing_completeLink((acymailing_isAdmin() ? '' : 'front').'diagram&task=mailing&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i><span class="acy_stat_subject">'.acymailing_tooltip('<b>'.acymailing_translation('JOOMEXT_ALIAS').' : </b>'.$row->alias, '', '', $row->subject).'</span>', '', 800, 590);
+						}else{
+							echo '<span class="acy_stat_subject">'.acymailing_tooltip('<b>'.acymailing_translation('JOOMEXT_ALIAS').' : </b>'.$row->alias, ' ', '', $row->subject).'</span>';
+						}
+						echo '<br /><span class="acy_stat_date"><b>'.acymailing_translation('SEND_DATE').' : </b>'.acymailing_getDate($row->senddate).'</span>'; ?>
 					</td>
 					<?php if($this->menuparams->get('opens', '1') == 1){ ?>
 						<td align="center" style="text-align:center">
@@ -148,7 +151,7 @@ defined('_JEXEC') or die('Restricted access');
 								$text .= '<br /><b>'.acymailing_translation('OPEN_TOTAL').' : </b>'.$row->opentotal;
 								$pourcent = ($cleanSent == 0 ? '0%' : (substr($row->openunique / $cleanSent * 100, 0, 5)).'%');
 								$title = acymailing_translation_sprintf('PERCENT_OPEN', $pourcent);
-								echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=open&filter_mail='.$row->mailid));
+								echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=open&filter_mail='.$row->mailid));
 							}
 							?>
 						</td>
@@ -162,7 +165,7 @@ defined('_JEXEC') or die('Restricted access');
 									$text .= '<br /><b>'.acymailing_translation('TOTAL_HITS').' : </b>'.$row->clicktotal;
 									$pourcent = ($cleanSent == 0 ? '0%' : (substr($row->clickunique / $cleanSent * 100, 0, 5)).'%');
 									$title = acymailing_translation_sprintf('PERCENT_CLICK', $pourcent);
-									echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(($this->app->isAdmin() ? '' : 'front').'statsurl&filter_mail='.$row->mailid));
+									echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink((acymailing_isAdmin() ? '' : 'front').'statsurl&filter_mail='.$row->mailid));
 								}
 								?>
 							</td>
@@ -175,7 +178,7 @@ defined('_JEXEC') or die('Restricted access');
 									$text .= '<br /><b>'.acymailing_translation('OPEN_UNIQUE').' : </b>'.$row->openunique;
 									$pourcentEfficiency = ($row->openunique == 0 ? '0%' : (substr($row->clickunique / $row->openunique * 100, 0, 5)).'%');
 									$title = acymailing_translation_sprintf('ACY_CLICK_EFFICIENCY_DESC', $pourcentEfficiency);
-									echo acymailing_tooltip($text, $title, '', $pourcentEfficiency, acymailing_completeLink(($this->app->isAdmin() ? '' : 'front').'statsurl&filter_mail='.$row->mailid));
+									echo acymailing_tooltip($text, $title, '', $pourcentEfficiency, acymailing_completeLink((acymailing_isAdmin() ? '' : 'front').'statsurl&filter_mail='.$row->mailid));
 								}
 								?>
 							</td>
@@ -183,16 +186,18 @@ defined('_JEXEC') or die('Restricted access');
 					<?php } ?>
 					<?php if($this->menuparams->get('unsubscribe', '1') == 1){ ?>
 						<td align="center" style="text-align:center">
-							<?php echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&task=unsubchart&mailid='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i></a> '; ?>
-							<?php $pourcent = ($cleanSent == 0) ? '0%' : (substr($row->unsub / $cleanSent * 100, 0, 5)).'%';
+							<?php
+							echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=unsubchart&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i>', '', 800, 590);
+							$pourcent = ($cleanSent == 0) ? '0%' : (substr($row->unsub / $cleanSent * 100, 0, 5)).'%';
 							$text = $row->unsub.' / '.$cleanSent;
 							$title = acymailing_translation('UNSUBSCRIBE');
-							echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&start=0&task=unsubscribed&filter_mail='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}">'.acymailing_tooltip($text, $title, '', $pourcent).'</a>'; ?>
+							echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&start=0&task=unsubscribed&filter_mail='.$row->mailid, true), acymailing_tooltip($text, $title, '', $pourcent), '', 800, 590);
+							?>
 						</td>
 					<?php } ?>
 					<?php if(acymailing_level(1) && $this->menuparams->get('forward', '1') == 1){ ?>
 						<td align="center" style="text-align:center">
-							<?php echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&start=0&task=forward&filter_mail='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}">'.$row->forward.'</a>'; ?>
+							<?php echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&start=0&task=forward&filter_mail='.$row->mailid, true), $row->forward, '', 800, 590); ?>
 						</td>
 					<?php } ?>
 					<?php if($this->menuparams->get('sent', '1') == 1){ ?>
@@ -200,28 +205,28 @@ defined('_JEXEC') or die('Restricted access');
 							<?php $text = '<b>'.acymailing_translation('HTML').' : </b>'.$row->senthtml;
 							$text .= '<br /><b>'.acymailing_translation('JOOMEXT_TEXT').' : </b>'.$row->senttext;
 							$title = acymailing_translation('ACY_SENT');
-							echo acymailing_tooltip($text, $title, '', $row->senthtml + $row->senttext, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=0&filter_mail='.$row->mailid)); ?>
+							echo acymailing_tooltip($text, $title, '', $row->senthtml + $row->senttext, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=0&filter_mail='.$row->mailid)); ?>
 						</td>
 					<?php } ?>
 					<?php if(acymailing_level(3) && $this->menuparams->get('bounces', '1') == 1){ ?>
 						<td align="center" style="text-align:center" nowrap="nowrap">
-							<?php echo '<a class="modal" href="'.acymailing_completeLink(($this->app->isAdmin() ? '' : 'front').'bounces&task=chart&mailid='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i></a> ';
+							<?php echo acymailing_popup(acymailing_completeLink((acymailing_isAdmin() ? '' : 'front').'bounces&task=chart&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i>', '', 800, 590);
 							$text = $row->bounceunique.' / '.($row->senthtml + $row->senttext);
 							$title = acymailing_translation('BOUNCES');
 							$pourcent = (empty($row->senthtml) AND empty($row->senttext)) ? '0%' : (substr($row->bounceunique / ($row->senthtml + $row->senttext) * 100, 0, 5)).'%';
-							echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=bounce&filter_mail='.$row->mailid)); ?>
+							echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=bounce&filter_mail='.$row->mailid)); ?>
 						</td>
 					<?php } ?>
 					<?php if($this->menuparams->get('failed', '1') == 1){ ?>
 						<td align="center" style="text-align:center">
-							<a href="<?php echo acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=failed&filter_mail='.$row->mailid); ?>">
+							<a href="<?php echo acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=failed&filter_mail='.$row->mailid); ?>">
 								<?php echo $row->fail; ?>
 							</a>
 						</td>
 					<?php } ?>
-					<?php if(acymailing_level(3) && $this->app->isAdmin()){ ?>
+					<?php if(acymailing_level(3) && acymailing_isAdmin()){ ?>
 						<td align="center" style="text-align:center">
-							<?php echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&task=mailinglist&mailid='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i></a>'; ?>
+							<?php echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=mailinglist&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i>', '', 800, 590); ?>
 						</td>
 					<?php } ?>
 					<?php if($this->menuparams->get('id', '1') == 1){ ?>
@@ -236,14 +241,10 @@ defined('_JEXEC') or die('Restricted access');
 			?>
 			</tbody>
 		</table>
-		<?php if(!$this->app->isAdmin()) echo '</div>'; ?>
-
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
-		<input type="hidden" name="boxchecked" value="0"/>
-		<input type="hidden" name="filter_order" value="<?php echo $this->pageInfo->filter->order->value; ?>"/>
-		<input type="hidden" name="filter_order_Dir" value="<?php echo $this->pageInfo->filter->order->dir; ?>"/>
-		<?php echo JHTML::_('form.token'); ?>
+		<?php
+		if(!acymailing_isAdmin()) echo '</div>';
+		if(!empty($this->Itemid)) echo '<input type="hidden" name="Itemid" value="'.$this->Itemid.'" />';
+		acymailing_formOptions($this->pageInfo->filter->order);
+		?>
 	</form>
 </div>

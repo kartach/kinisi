@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -174,12 +174,6 @@ defined('_JEXEC') or die('Restricted access');
 			</tfoot>
 		</table>
 	<?php } ?>
-	<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-	<input type="hidden" name="task" value="theme"/>
 	<input type="hidden" name="defaulttask" value="theme"/>
-	<input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
-	<input type="hidden" name="boxchecked" value="0"/>
-	<input type="hidden" name="filter_order" value="<?php echo $this->pageInfo->filter->order->value; ?>"/>
-	<input type="hidden" name="filter_order_Dir" value="<?php echo $this->pageInfo->filter->order->dir; ?>"/>
-	<?php echo JHTML::_('form.token'); ?>
+	<?php acymailing_formOptions($this->pageInfo->filter->order); ?>
 </form>

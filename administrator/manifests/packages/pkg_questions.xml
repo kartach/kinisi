@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension version="3.0" type="package" method="upgrade">
+ <name>Questions Package</name>
+ <author>Sweta Ray</author>
+ <creationDate>Sept 2012</creationDate>
+ <packagename>Questions</packagename>
+ <version>1.3.6</version>
+ <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+ <url>http://www.phpseo.net/</url>
+ <packager>PHP SEO Developers Team</packager>
+ <packagerurl>http://www.phpseo.net/</packagerurl>
+ <scriptfile>install.php</scriptfile>
+ <description><![CDATA[
+	<h3>Questions Package</h3>
+    <p><strong>Questions and Answers Component for Joomla.</strong><br /></p>
+	<table class="adminlist" style="width:50%">
+		<tbody>
+		<tr class="row0">
+			<td class="key" colspan="2">Quetions Component</td>
+			 <td><strong>Installed</strong></td>
+			<td><img src="../media/media/images/success.png" alt="OK" /></td>
+			<td></td>
+		</tr>
+		<tr class="row1">
+			<td class="key" colspan="2">Plugin Search - Questions</td>
+			<td><strong>Installed</strong></td>
+			<td><img src="../media/media/images/success.png" alt="OK" /></td>
+			<td></td>
+		</tr>
+		<tr class="row0">
+			<td class="key" colspan="2">Documentation</td>
+			<td ><a href="http://phpseo.net/" target="_blank">PHP SEO</a></td>			
+			<td><img src="../media/system/images/notice-info.png" alt="OK" /></td>
+		</tr>
+		
+		</tbody>		
+	</table>
+	]]>
+ </description>
+ <update></update>
+ <files>
+   <file type="component" id="com_questions" >com_questions.zip</file>
+   <file type="plugin" id="questionssearch" group="search">plg_questionssearch.zip</file>
+ </files>
+ </extension>

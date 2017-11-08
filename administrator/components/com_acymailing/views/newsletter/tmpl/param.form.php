@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -14,8 +14,7 @@ if(acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || a
 		<?php echo $this->tabs->startPane('mail_tab');
 
 		if(!acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || $this->type == 'joomlanotification'){
-			$doc = JFactory::getDocument();
-			$doc->addStyleDeclaration(" .mail_receivers_acl{display:none;} ");
+			acymailing_addStyle(true, " .mail_receivers_acl{display:none;} ");
 			echo '<div class="mail_receivers_acl">';
 		}else{
 			echo $this->tabs->startPanel(acymailing_translation('LISTS'), 'mail_receivers');
@@ -34,7 +33,6 @@ if(acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || a
 		}else echo $this->tabs->endPanel();
 
 		if(acymailing_isAllowed($this->config->get('acl_newsletters_attachments', 'all'))){
-			JHTML::_('behavior.modal', 'a.modal');
 			echo $this->tabs->startPanel(acymailing_translation('ATTACHMENTS'), 'mail_attachments');
 			if(!empty($this->mail->attach)){
 				echo '<div class="onelineblockoptions">
@@ -63,8 +61,7 @@ if(acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || a
 		}
 
 		if(!acymailing_isAllowed($this->config->get('acl_newsletters_sender_informations', 'all'))){
-			$doc = JFactory::getDocument();
-			$doc->addStyleDeclaration(" .mail_sender_acl{display:none;} ");
+			acymailing_addStyle(true, " .mail_sender_acl{display:none;} ");
 			echo '<div id="mail_sender_acl" style="display:none" >';
 		}else{
 			echo $this->tabs->startPanel(acymailing_translation('SENDER_INFORMATIONS'), 'mail_sender');
@@ -112,7 +109,6 @@ if(acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || a
 			</tr>
 			<?php
 			if(acymailing_level(1)){
-				JHTML::_('behavior.modal', 'a.modal');
 				echo '<tr>
 					<td class="paramlist_key">'.acymailing_translation('FAVICON').'</td><td class="paramlist_value">';
 				if(!empty($this->mail->favicon) && !empty($this->mail->favicon->filename)){
@@ -140,8 +136,7 @@ if(acymailing_isAllowed($this->config->get('acl_newsletters_lists', 'all')) || a
 		}
 
 		if($this->type == 'joomlanotification'){
-			$doc = JFactory::getDocument();
-			$doc->addStyleDeclaration(" .mail_metadata_jnotif{display:none;} ");
+			acymailing_addStyle(true, " .mail_metadata_jnotif{display:none;} ");
 			echo '<div class="mail_metadata_jnotif">';
 		}else{
 			if(acymailing_isAllowed($this->config->get('acl_newsletters_meta_data', 'all'))){

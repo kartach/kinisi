@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -54,21 +54,17 @@ class acymailerHelper extends acymailingPHPMailer{
 		static $loaded = false;
 		if(!$loaded){
 			$loaded = true;
-			JPluginHelper::importPlugin('acymailing');
+			acymailing_importPlugin('acymailing');
 		}
 
 		$this->SMTPAutoTLS = false;
-
-		$this->dispatcher = JDispatcher::getInstance();
-
-		$this->app = JFactory::getApplication();
 
 		$this->subscriberClass = acymailing_get('class.subscriber');
 		$this->encodingHelper = acymailing_get('helper.encoding');
 		$this->userHelper = acymailing_get('helper.user');
 
 
-		$this->config =& acymailing_config();
+		$this->config = acymailing_config();
 		$this->setFrom($this->config->get('from_email'), $this->config->get('from_name'));
 
 		$this->Sender = $this->cleanText($this->config->get('bounce_email'));
@@ -510,17 +506,16 @@ class acymailerHelper extends acymailingPHPMailer{
 		if(empty($receiver->key) && !empty($receiver->subid)){
 			$receiver->key = acymailing_generateKey(14);
 			$db = JFactory::getDBO();
-			$db->setQuery('UPDATE '.acymailing_table('subscriber').' SET `key`= '.$db->Quote($receiver->key).' WHERE subid = '.(int)$receiver->subid.' LIMIT 1');
+			$db->setQuery('UPDATE '.acymailing_table('subscriber').' SET `key`= '.acymailing_escapeDB($receiver->key).' WHERE subid = '.(int)$receiver->subid.' LIMIT 1');
 			$db->query();
 		}
 
 		if(strpos($receiver->email, '@mail-tester.com') !== false){
-			$my = JFactory::getUser();
-			$currentUser = $this->subscriberClass->get($my->email);
+			$currentUser = $this->subscriberClass->get(acymailing_currentUserEmail());
 			if(empty($currentUser)) $currentUser = $receiver;
-			$this->dispatcher->trigger('acymailing_replaceusertags', array(&$this, &$currentUser, true));
+			acymailing_trigger('acymailing_replaceusertags', array(&$this, &$currentUser, true));
 		}else{
-			$this->dispatcher->trigger('acymailing_replaceusertags', array(&$this, &$receiver, true));
+			acymailing_trigger('acymailing_replaceusertags', array(&$this, &$receiver, true));
 		}
 
 		if($this->sendHTML){
@@ -752,27 +747,25 @@ class acymailerHelper extends acymailingPHPMailer{
 
 	function triggerTagsWithRightLanguage(&$mail, $loadedToSend){
 		if(!empty($mail->language)){
-			$lang = JFactory::getLanguage();
-			if(!in_array($mail->language, $lang->getLocale())){
+
+			if(!in_array($mail->language, acymailing_getLanguageLocale())){
 				$db = JFactory::getDBO();
-				$db->setQuery('SELECT lang_code FROM #__languages WHERE sef = '.$db->quote($mail->language).' LIMIT 1');
-				$emaillangcode = $db->loadResult();
+				$emaillangcode = acymailing_loadResult('SELECT lang_code FROM #__languages WHERE sef = '.acymailing_escapeDB($mail->language).' LIMIT 1');
 				if(!empty($emaillangcode)){
-					$previousLanguage = $lang->setLanguage($emaillangcode);
-					$lang->load(ACYMAILING_COMPONENT, JPATH_SITE, $emaillangcode, true);
-					$lang->load(ACYMAILING_COMPONENT.'_custom', JPATH_SITE, $emaillangcode, true);
-					$lang->load('joomla', JPATH_BASE, $emaillangcode, true);
+					$previousLanguage = acymailing_setLanguage($emaillangcode);
+					acymailing_loadLanguageFile(ACYMAILING_COMPONENT, JPATH_SITE, $emaillangcode, true);
+					acymailing_loadLanguageFile(ACYMAILING_COMPONENT.'_custom', JPATH_SITE, $emaillangcode, true);
+					acymailing_loadLanguageFile('joomla', JPATH_BASE, $emaillangcode, true);
 				}
 			}
 		}
 
-		$dispatcher = JDispatcher::getInstance();
-		$dispatcher->trigger('acymailing_replacetags', array(&$mail, $loadedToSend));
+		acymailing_trigger('acymailing_replacetags', array(&$mail, &$loadedToSend));
 
 		if(empty($previousLanguage)) return;
-		$lang->setLanguage($previousLanguage);
-		$lang->load(ACYMAILING_COMPONENT, JPATH_SITE, $previousLanguage, true);
-		$lang->load(ACYMAILING_COMPONENT.'_custom', JPATH_SITE, $previousLanguage, true);
-		$lang->load('joomla', JPATH_BASE, $previousLanguage, true);
+		acymailing_setLanguage($previousLanguage);
+		acymailing_loadLanguageFile(ACYMAILING_COMPONENT, JPATH_SITE, $previousLanguage, true);
+		acymailing_loadLanguageFile(ACYMAILING_COMPONENT.'_custom', JPATH_SITE, $previousLanguage, true);
+		acymailing_loadLanguageFile('joomla', JPATH_BASE, $previousLanguage, true);
 	}
 }

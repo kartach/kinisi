@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -38,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
 					tag = tag + i;
 				}
 			}
-			if (allElements == 0) tag = 'All';
+			<?php if(acymailing_getVar('int', 'all', 1) == 1){ ?>if (allElements == 0) tag = 'All';<?php } ?>
 			if (allElements == <?php echo count($this->rows);?>) tag = 'None';
 
 			<?php if(empty($this->popup)){ ?>
@@ -47,7 +47,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php }else{ ?>
 			window.top.document.getElementById('<?php echo $this->controlName.$this->fieldName; ?>').value = tag;
 			window.top.document.getElementById('link<?php echo $this->controlName.$this->fieldName; ?>').href = 'index.php?option=com_acymailing&tmpl=component&ctrl=chooselist&task=<?php echo $this->fieldName; ?>&control=<?php echo $this->controlName; ?>&values=' + tag;
-			acymailing_js.closeBox(true);
+			acymailing.closeBox(true);
 			<?php } ?>
 		}
 		//-->

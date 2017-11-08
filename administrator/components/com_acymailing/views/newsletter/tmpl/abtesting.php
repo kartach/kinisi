@@ -1,13 +1,14 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content" class="abTestingPage">
+	<div id="iframedoc"></div>
 	<?php
 	if(empty($this->mailid) && empty($this->validationStatus)){
 		acymailing_display(acymailing_translation('PLEASE_SELECT_NEWSLETTERS'), 'warning');
@@ -16,7 +17,6 @@ defined('_JEXEC') or die('Restricted access');
 	if(!empty($this->missingMail)) return;
 	if($this->validationStatus == 'abTestFinalSend') return; ?>
 
-	<div id="iframedoc"></div>
 	<script type="text/javascript">
 		function updateReceivers(prct){
 			newVal = Math.floor(prct.value *<?php echo $this->nbTotalReceivers; ?> / 100);
@@ -120,7 +120,7 @@ defined('_JEXEC') or die('Restricted access');
 					</div>
 				<?php } ?>
 			</div>
-			<?php echo acymailing_translation_sprintf('ABTESTING_MODIFY_RECEIVERS', '<a target="_blank" href="'.acymailing_completeLink(($this->app->isAdmin() ? '' : 'front').'newsletter&task=edit&mailid='.$this->mailsdetails[0]->mailid).'">'.$this->mailsdetails[0]->subject.'</a>'); ?>
+			<?php echo acymailing_translation_sprintf('ABTESTING_MODIFY_RECEIVERS', '<a target="_blank" href="'.acymailing_completeLink((acymailing_isAdmin() ? '' : 'front').'newsletter&task=edit&mailid='.$this->mailsdetails[0]->mailid).'">'.$this->mailsdetails[0]->subject.'</a>'); ?>
 		</div>
 		<div class="onelineblockoptions">
 			<?php echo acymailing_translation_sprintf('ABTESTING_DELAY_ACTION', '<input type="text" id="abTesting_delay" name="abTesting_delay" style="width:20px;" value="'.$this->abTestDetail['delay'].'">'); ?>

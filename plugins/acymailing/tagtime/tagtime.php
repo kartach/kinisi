@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -22,8 +22,7 @@ class plgAcymailingTagtime extends JPlugin{
 
 	function acymailing_getPluginType(){
 
-		$app = JFactory::getApplication();
-		if($this->params->get('frontendaccess') == 'none' && !$app->isAdmin()) return;
+		if($this->params->get('frontendaccess') == 'none' && !acymailing_isAdmin()) return;
 		$onePlugin = new stdClass();
 		$onePlugin->name = acymailing_translation('ACY_TIME');
 		$onePlugin->function = 'acymailingtagtime_show';

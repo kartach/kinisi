@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -26,9 +26,6 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div class="clr"></div>
 		<input type="hidden" name="code" value="<?php echo @$this->escape($this->file->name); ?>"/>
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="file"/>
-		<?php echo JHTML::_('form.token'); ?>
+		<?php acymailing_formOptions(); ?>
 	</form>
 </div>

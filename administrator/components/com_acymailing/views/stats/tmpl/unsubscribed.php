@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -9,21 +9,21 @@
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<div id="iframedoc"></div>
-	<form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo JRequest::getCmd('ctrl'); ?>" method="post" name="adminForm" id="adminForm">
-		<?php if(!$this->app->isAdmin()){ ?>
+	<form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo acymailing_getVar('cmd', 'ctrl'); ?>" method="post" name="adminForm" id="adminForm">
+		<?php if(!acymailing_isAdmin()){ ?>
 			<fieldset class="acyheaderarea">
 				<?php if(!empty($this->rows[0]->subject)) $this->rows[0]->subject = Emoji::Decode($this->rows[0]->subject); ?>
 				<div class="acyheader icon-48-stats" style="float: left;"><?php echo(!empty($this->rows) ? $this->rows[0]->subject : acymailing_translation('UNSUBSCRIBECAPTION')); ?></div>
 				<div class="toolbar" id="toolbar" style="float: right;">
 					<table>
 						<tr>
-							<?php if(JRequest::getString('tmpl') == 'component' && !empty($this->rows)){ ?>
-								<td><a onclick="javascript:submitbutton('export<?php echo ucfirst(JRequest::getCmd('task')); ?>'); return false;" href="#"><span class="icon-32-acyexport" title="<?php echo acymailing_translation('ACY_EXPORT', true); ?>"></span><?php echo acymailing_translation('ACY_EXPORT'); ?></a></td>
+							<?php if(acymailing_getVar('string', 'tmpl') == 'component' && !empty($this->rows)){ ?>
+								<td><a onclick="javascript:submitbutton('export<?php echo ucfirst(acymailing_getVar('cmd', 'task')); ?>'); return false;" href="#"><span class="icon-32-acyexport" title="<?php echo acymailing_translation('ACY_EXPORT', true); ?>"></span><?php echo acymailing_translation('ACY_EXPORT'); ?></a></td>
 								<td>
 								</td>
 							<?php } ?>
-							<?php if(JRequest::getInt('fromdetail') == 1){ ?>
-								<td><a href="<?php echo acymailing_completeLink('frontdiagram&task=mailing&mailid='.JRequest::getInt('filter_mail'), true); ?>"><span class="icon-32-cancel" title="<?php echo acymailing_translation('ACY_CANCEL', true); ?>"></span><?php echo acymailing_translation('ACY_CANCEL'); ?></a></td>
+							<?php if(acymailing_getVar('int', 'fromdetail') == 1){ ?>
+								<td><a href="<?php echo acymailing_completeLink('frontdiagram&task=mailing&mailid='.acymailing_getVar('int', 'filter_mail'), true); ?>"><span class="icon-32-cancel" title="<?php echo acymailing_translation('ACY_CANCEL', true); ?>"></span><?php echo acymailing_translation('ACY_CANCEL'); ?></a></td>
 							<?php } ?>
 						</tr>
 					</table>
@@ -50,10 +50,10 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('ACY_NUM'); ?>
 				</th>
 				<th class="title titledate">
-					<?php echo JHTML::_('grid.sort', acymailing_translation('FIELD_DATE'), 'a.date', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
+					<?php echo acymailing_gridSort(acymailing_translation('FIELD_DATE'), 'a.date', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
 				</th>
 				<th class="title">
-					<?php echo JHTML::_('grid.sort', acymailing_translation('ACY_USER'), 'c.email', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
+					<?php echo acymailing_gridSort(acymailing_translation('ACY_USER'), 'c.email', $this->pageInfo->filter->order->dir, $this->pageInfo->filter->order->value); ?>
 				</th>
 				<th class="title">
 					<?php echo acymailing_translation('ACY_DETAILS'); ?>
@@ -114,12 +114,12 @@ defined('_JEXEC') or die('Restricted access');
 		</table>
 
 		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value="<?php echo JRequest::getCmd('task'); ?>"/>
-		<input type="hidden" name="defaulttask" value="<?php echo JRequest::getCmd('task'); ?>"/>
-		<input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
+		<input type="hidden" name="task" value="<?php echo acymailing_getVar('cmd', 'task'); ?>"/>
+		<input type="hidden" name="defaulttask" value="<?php echo acymailing_getVar('cmd', 'task'); ?>"/>
+		<input type="hidden" name="ctrl" value="<?php echo acymailing_getVar('cmd', 'ctrl'); ?>"/>
 		<input type="hidden" name="filter_order" value="<?php echo $this->pageInfo->filter->order->value; ?>"/>
 		<input type="hidden" name="filter_order_Dir" value="<?php echo $this->pageInfo->filter->order->dir; ?>"/>
 		<input type="hidden" name="tmpl" value="component"/>
-		<input type="hidden" name="fromdetail" value="<?php echo JRequest::getInt('fromdetail'); ?>"/>
+		<input type="hidden" name="fromdetail" value="<?php echo acymailing_getVar('int', 'fromdetail'); ?>"/>
 	</form>
 </div>

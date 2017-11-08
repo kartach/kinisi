@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -17,23 +17,22 @@ class SubscriberController extends acymailingController{
 
 	function choose(){
 		if(!$this->isAllowed('subscriber', 'view')) return;
-		JRequest::setVar('layout', 'choose');
+		acymailing_setVar('layout', 'choose');
 		return parent::display();
 	}
 
 	function export(){
 		if(!$this->isAllowed('subscriber', 'export')) return;
-		$app = JFactory::getApplication();
-		$cids = JRequest::getVar('cid');
-		$selectedList = JRequest::getInt('filter_lists');
+		$cids = acymailing_getVar('none', 'cid');
+		$selectedList = acymailing_getVar('int', 'filter_lists');
 		$_SESSION['acymailing'] = array();
-		$redirection = ($app->isAdmin() ? '' : 'front').'data&task=export';
+		$redirection = (acymailing_isAdmin() ? '' : 'front').'data&task=export';
 		if(!empty($cids) || !empty($selectedList)){
 			if(!empty($cids)){
 				$_SESSION['acymailing']['exportusers'] = $cids;
 			}else{
 				$_SESSION['acymailing']['exportlist'] = $selectedList;
-				$_SESSION['acymailing']['exportliststatus'] = JRequest::getInt('filter_statuslist');
+				$_SESSION['acymailing']['exportliststatus'] = acymailing_getVar('int', 'filter_statuslist');
 			}
 			$redirection .= '&sessionvalues=1';
 		}
@@ -44,7 +43,7 @@ class SubscriberController extends acymailingController{
 
 	function store(){
 		if(!$this->isAllowed('subscriber', 'manage')) return;
-		JRequest::checkToken() or die('Invalid Token');
+		acymailing_checkToken();
 
 		$subscriberClass = acymailing_get('class.subscriber');
 		$subscriberClass->sendConf = false;
@@ -69,12 +68,11 @@ class SubscriberController extends acymailingController{
 	}
 
 	function remove(){
-		JRequest::checkToken() or die('Invalid Token');
-		$app = JFactory::getApplication();
+		acymailing_checkToken();
 		$config = acymailing_config();
 		$deleteBehaviour = $config->get('frontend_delete_button', 'delete');
-		$subscriberIds = JRequest::getVar('cid', array(), '', 'array');
-		if($app->isAdmin() || $deleteBehaviour == 'delete'){
+		$subscriberIds = acymailing_getVar('array', 'cid', array(), '');
+		if(acymailing_isAdmin() || $deleteBehaviour == 'delete'){
 			if(!$this->isAllowed('subscriber', 'delete')) return;
 
 			$subscriberObject = acymailing_get('class.subscriber');
@@ -84,7 +82,7 @@ class SubscriberController extends acymailingController{
 		}else{
 			if(!$this->isAllowed('subscriber', 'manage')) return;
 
-			$listId = JRequest::getInt('filter_lists', 0);
+			$listId = acymailing_getVar('int', 'filter_lists', 0);
 			if(empty($listId)){
 				acymailing_enqueueMessage('List not found', 'error');
 			}else{
@@ -100,14 +98,13 @@ class SubscriberController extends acymailingController{
 			}
 		}
 
-		JRequest::setVar('layout', 'listing');
+		acymailing_setVar('layout', 'listing');
 		return parent::display();
 	}
 
 	function getSubscribersByEmail(){
-		$app = JFactory::getApplication();
-		$NameSearched = JRequest::getString('search', '');
-		if(empty($NameSearched) || !$app->isAdmin() || !$this->isAllowed('subscriber', 'view')) exit;
+		$NameSearched = acymailing_getVar('string', 'search', '');
+		if(empty($NameSearched) || !acymailing_isAdmin() || !$this->isAllowed('subscriber', 'view')) exit;
 
 		$db = JFactory::getDBO();
 		$NameSearched = '\'%'.acymailing_getEscaped($NameSearched, true).'%\'';

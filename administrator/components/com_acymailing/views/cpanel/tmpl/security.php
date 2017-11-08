@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -35,7 +35,7 @@ defined('_JEXEC') or die('Restricted access');
 				<td>
 					<?php
 					if(function_exists('getmxrr')){
-						echo JHTML::_('acyselect.booleanlist', "config[email_checkdomain]", '', $this->config->get('email_checkdomain', 0));
+						echo acymailing_boolean("config[email_checkdomain]", '', $this->config->get('email_checkdomain', 0));
 					}else{
 						echo 'Function getmxrr not enabled';
 					}
@@ -47,7 +47,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation_sprintf('X_INTEGRATION', 'BotScout'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[email_botscout]", '', $this->config->get('email_botscout', 0)); ?>
+					<?php echo acymailing_boolean("config[email_botscout]", '', $this->config->get('email_botscout', 0)); ?>
 					<br/>API Key: <input class="inputbox" type="text" name="config[email_botscout_key]" style="width:100px;float:none;" value="<?php echo $this->escape($this->config->get('email_botscout_key')) ?>"/>
 				</td>
 			</tr>
@@ -56,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation_sprintf('X_INTEGRATION', 'StopForumSpam'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[email_stopforumspam]", '', $this->config->get('email_stopforumspam', 0)); ?>
+					<?php echo acymailing_boolean("config[email_stopforumspam]", '', $this->config->get('email_stopforumspam', 0)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -64,7 +64,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('IPTIMECHECK_DESC'), acymailing_translation('IPTIMECHECK'), '', acymailing_translation('IPTIMECHECK')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[email_iptimecheck]", '', $this->config->get('email_iptimecheck', 0)); ?>
+					<?php echo acymailing_boolean("config[email_iptimecheck]", '', $this->config->get('email_iptimecheck', 0)); ?>
 				</td>
 			</tr>
 		</table>

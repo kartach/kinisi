@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -35,7 +35,7 @@ class listsViewLists extends acymailingView{
 
 		if(empty($menu)) {
 			acymailing_enqueueMessage(acymailing_translation('ACY_NOTALLOWED'));
-			$app->redirect('index.php');
+			acymailing_redirect('index.php');
 		}
 
 		$selectedLists = 'all';
@@ -45,14 +45,14 @@ class listsViewLists extends acymailingView{
 			$menuparams = new acyParameter($menu->params);
 
 
-			$this->assign('listsintrotext', $menuparams->get('listsintrotext'));
-			$this->assign('listsfinaltext', $menuparams->get('listsfinaltext'));
+			$this->listsintrotext = $menuparams->get('listsintrotext');
+			$this->listsfinaltext = $menuparams->get('listsfinaltext');
 			$selectedLists = $menuparams->get('lists', 'all');
 
 			$document = JFactory::getDocument();
 			if($menuparams->get('menu-meta_description')) $document->setDescription($menuparams->get('menu-meta_description'));
-			if($menuparams->get('menu-meta_keywords')) $document->setMetadata('keywords', $menuparams->get('menu-meta_keywords'));
-			if($menuparams->get('robots')) $document->setMetadata('robots', $menuparams->get('robots'));
+			if($menuparams->get('menu-meta_keywords')) acymailing_addMetadata('keywords', $menuparams->get('menu-meta_keywords'));
+			if($menuparams->get('robots')) acymailing_addMetadata('robots', $menuparams->get('robots'));
 			if($menuparams->get('page_title')) acymailing_setPageTitle($menuparams->get('page_title'));
 		}
 
@@ -65,11 +65,11 @@ class listsViewLists extends acymailingView{
 		$link = '&format=feed&limitstart=';
 		if($config->get('acyrss_format') == 'rss' || $config->get('acyrss_format') == 'both'){
 			$attribs = array('type' => 'application/rss+xml', 'title' => 'RSS 2.0');
-			$document->addHeadLink(JRoute::_($link.'&type=rss'), 'alternate', 'rel', $attribs);
+			$document->addHeadLink(acymailing_route($link.'&type=rss'), 'alternate', 'rel', $attribs);
 		}
 		if($config->get('acyrss_format') == 'atom' || $config->get('acyrss_format') == 'both'){
 			$attribs = array('type' => 'application/atom+xml', 'title' => 'Atom 1.0');
-			$document->addHeadLink(JRoute::_($link.'&type=atom'), 'alternate', 'rel', $attribs);
+			$document->addHeadLink(acymailing_route($link.'&type=atom'), 'alternate', 'rel', $attribs);
 		}
 
 		$listsClass = acymailing_get('class.list');
@@ -80,7 +80,7 @@ class listsViewLists extends acymailingView{
 		}
 
 		$myItem = empty($Itemid) ? '' : '&Itemid='.$Itemid;
-		$this->assignRef('rows', $allLists);
-		$this->assignRef('item', $myItem);
+		$this->rows = $allLists;
+		$this->item = $myItem;
 	}
 }

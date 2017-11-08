@@ -1,15 +1,15 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><?php $app = JFactory::getApplication();
+?><?php
 $config = acymailing_config();
-$backend = $app->isAdmin(); ?>
+$backend = acymailing_isAdmin(); ?>
 <style type="text/css">
 	.respuserinfo{
 		float: left;
@@ -113,19 +113,15 @@ $backend = $app->isAdmin(); ?>
 <div id="acy_content">
 	<div id="iframedoc"></div>
 
-	<form action="<?php echo JRoute::_('index.php?option='.ACYMAILING_COMPONENT.'&ctrl='.JRequest::getCmd('ctrl')); ?>" method="post" name="adminForm" id="adminForm" autocomplete="off" <?php if(!empty($this->fieldsClass->formoption)) echo $this->fieldsClass->formoption; ?> >
+	<form action="<?php echo acymailing_route('index.php?option='.ACYMAILING_COMPONENT.'&ctrl='.acymailing_getVar('cmd', 'ctrl')); ?>" method="post" name="adminForm" id="adminForm" autocomplete="off" <?php if(!empty($this->fieldsClass->formoption)) echo $this->fieldsClass->formoption; ?> >
 		<input type="hidden" name="cid[]" value="<?php echo @$this->subscriber->subid; ?>"/>
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="acy_source" value="<?php $app = JFactory::getApplication();
-		echo $app->isAdmin() ? 'management_back' : 'management_front'; ?>"/>
-		<input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
-		<?php $selectedList = JRequest::getInt('filter_lists');
+		<input type="hidden" name="acy_source" value="<?php echo acymailing_isAdmin() ? 'management_back' : 'management_front'; ?>"/>
+		<?php $selectedList = acymailing_getVar('int', 'filter_lists');
 		if(!empty($selectedList)){ ?>
 			<input type="hidden" name="filter_lists" value="<?php echo $selectedList; ?>"/>
 		<?php }
 		if(!empty($this->Itemid)) echo '<input type="hidden" name="Itemid" value="'.$this->Itemid.'" />';
-		echo JHTML::_('form.token'); ?>
+		acymailing_formOptions(); ?>
 		<div class="<?php echo $this->isAdmin ? 'acyblockoptions' : 'onelineblockoptions'; ?>">
 			<span class="acyblocktitle"><?php echo acymailing_translation('USER_INFORMATIONS'); ?></span>
 
@@ -222,7 +218,7 @@ $backend = $app->isAdmin(); ?>
 							</label>
 						</td>
 						<td nowrap="nowrap">
-							<?php echo JHTML::_('acyselect.booleanlist', "data[subscriber][html]", '', $this->subscriber->html, acymailing_translation('HTML'), acymailing_translation('JOOMEXT_TEXT')); ?>
+							<?php echo acymailing_boolean("data[subscriber][html]", '', $this->subscriber->html, acymailing_translation('HTML'), acymailing_translation('JOOMEXT_TEXT')); ?>
 						</td>
 					</tr>
 					<tr id="trconfirmed">
@@ -232,7 +228,7 @@ $backend = $app->isAdmin(); ?>
 							</label>
 						</td>
 						<td>
-							<?php echo JHTML::_('acyselect.booleanlist', "data[subscriber][confirmed]", '', $this->subscriber->confirmed, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+							<?php echo acymailing_boolean("data[subscriber][confirmed]", '', $this->subscriber->confirmed, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 						</td>
 					</tr>
 					<tr id="trenabled">
@@ -242,7 +238,7 @@ $backend = $app->isAdmin(); ?>
 							</label>
 						</td>
 						<td>
-							<?php echo JHTML::_('acyselect.booleanlist', "data[subscriber][enabled]", '', $this->subscriber->enabled, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+							<?php echo acymailing_boolean("data[subscriber][enabled]", '', $this->subscriber->enabled, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 						</td>
 					</tr>
 					<tr id="traccept">
@@ -252,7 +248,7 @@ $backend = $app->isAdmin(); ?>
 							</label>
 						</td>
 						<td>
-							<?php echo JHTML::_('acyselect.booleanlist', "data[subscriber][accept]", '', $this->subscriber->accept, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+							<?php echo acymailing_boolean("data[subscriber][accept]", '', $this->subscriber->accept, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 						</td>
 					</tr>
 				</table>
@@ -263,7 +259,6 @@ $backend = $app->isAdmin(); ?>
 		</div>
 		<?php
 		if(!empty($this->extraFields)){
-			$app = JFactory::getApplication();
 			$this->fieldsClass->currentUser = $this->subscriber;
 			include(dirname(__FILE__).DS.'extrafields.'.basename(__FILE__));
 		} ?>
@@ -340,7 +335,7 @@ $backend = $app->isAdmin(); ?>
 									<?php echo acymailing_tooltip($row->description, $row->name, 'tooltip.png', $row->name); ?>
 								</td>
 								<td align="center" style="text-align:center" nowrap="nowrap">
-									<?php echo $this->statusType->display('data[listsub]['.$row->listid.'][status]', (empty($this->subscriber->subid) && JRequest::getInt('filter_lists') == $row->listid) ? 1 : @$row->status); ?>
+									<?php echo $this->statusType->display('data[listsub]['.$row->listid.'][status]', (empty($this->subscriber->subid) && acymailing_getVar('int', 'filter_lists') == $row->listid) ? 1 : @$row->status); ?>
 								</td>
 								<td align="center" style="text-align:center">
 									<?php if(!empty($row->subdate)) echo acymailing_getDate($row->subdate); ?>
@@ -418,9 +413,9 @@ $backend = $app->isAdmin(); ?>
 									</td>
 									<td>
 										<?php
-										if($app->isAdmin()){
+										if(acymailing_isAdmin()){
 											$link = acymailing_completeLink('queue&task=preview&mailid='.$row->mailid.'&subid='.$this->subscriber->subid, true);
-											echo '<a class="modal" rel="{handler: \'iframe\', size: {x: '.$width.', y: '.$height.'}}" href="'.$link.'">'.$row->subject.'</a>';
+											echo acymailing_popup($link, $row->subject, '', $width, $height);
 										}else{
 											$text = '<b>'.acymailing_translation('ACY_ID').' : </b>'.$row->mailid;
 											echo acymailing_tooltip( $text, $row->subject, '', $row->subject);

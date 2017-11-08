@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -234,7 +234,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('SUBJECT_DISPLAY_DESC'), acymailing_translation('SUBJECT_DISPLAY'), '', acymailing_translation('SUBJECT_DISPLAY')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[frontend_subject]", '', $this->config->get('frontend_subject', 1)); ?>
+					<?php echo acymailing_boolean("config[frontend_subject]", '', $this->config->get('frontend_subject', 1)); ?>
 				</td>
 			</tr>
 			<?php if(!ACYMAILING_J16){ ?>
@@ -243,7 +243,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php echo acymailing_tooltip(acymailing_translation('FRONTEND_PDF_DESC'), acymailing_translation('FRONTEND_PDF'), '', acymailing_translation('FRONTEND_PDF')); ?>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "config[frontend_pdf]", '', $this->config->get('frontend_pdf', 0)); ?>
+						<?php echo acymailing_boolean("config[frontend_pdf]", '', $this->config->get('frontend_pdf', 0)); ?>
 					</td>
 				</tr>
 			<?php } ?>
@@ -252,7 +252,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('FRONTEND_PRINT_DESC'), acymailing_translation('FRONTEND_PRINT'), '', acymailing_translation('FRONTEND_PRINT')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[frontend_print]", '', $this->config->get('frontend_print', 0)); ?>
+					<?php echo acymailing_boolean("config[frontend_print]", '', $this->config->get('frontend_print', 0)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -260,7 +260,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('SHOW_DESCRIPTION_DESC'), acymailing_translation('SHOW_DESCRIPTION'), '', acymailing_translation('SHOW_DESCRIPTION')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[show_description]", '', $this->config->get('show_description', 1)); ?>
+					<?php echo acymailing_boolean("config[show_description]", '', $this->config->get('show_description', 1)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -268,7 +268,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('SHOW_FILTER_DESC'), acymailing_translation('SHOW_FILTER'), '', acymailing_translation('SHOW_FILTER')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[show_filter]", '', $this->config->get('show_filter', 1)); ?>
+					<?php echo acymailing_boolean("config[show_filter]", '', $this->config->get('show_filter', 1)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -276,7 +276,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('ACY_ORDER'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[show_order]", '', $this->config->get('show_order', 1)); ?>
+					<?php echo acymailing_boolean("config[show_order]", '', $this->config->get('show_order', 1)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -284,7 +284,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('SHOW_SENDDATE_DESC'), acymailing_translation('SHOW_SENDDATE'), '', acymailing_translation('SHOW_SENDDATE')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[show_senddate]", '', $this->config->get('show_senddate', 1)); ?>
+					<?php echo acymailing_boolean("config[show_senddate]", '', $this->config->get('show_senddate', 1)); ?>
 				</td>
 			</tr>
 			<?php if(acymailing_level(1)){ ?>
@@ -293,7 +293,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php echo acymailing_translation_sprintf('SHOW_COLUMN_X', '<b><i>'.acymailing_translation('RECEIVE_VIA_EMAIL').'</i></b>'); ?>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "config[show_receiveemail]", '', $this->config->get('show_receiveemail', 0)); ?>
+						<?php echo acymailing_boolean("config[show_receiveemail]", '', $this->config->get('show_receiveemail', 0)); ?>
 					</td>
 				</tr>
 			<?php } ?>
@@ -302,7 +302,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_tooltip(acymailing_translation('OPEN_POPUP_DESC'), acymailing_translation('OPEN_POPUP'), '', acymailing_translation('OPEN_POPUP')); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[open_popup]", '', $this->config->get('open_popup', 1)); ?>
+					<?php echo acymailing_boolean("config[open_popup]", '', $this->config->get('open_popup', 1)); ?>
 					<div style="margin-top:10px;">
 						<?php echo acymailing_translation('CAPTCHA_WIDTH'); ?> <input type="text" name="config[popup_width]" style="float:none;width:30px" value="<?php echo intval($this->config->get('popup_width', 750)); ?>"/> x <?php echo acymailing_translation('CAPTCHA_HEIGHT'); ?> <input type="text" name="config[popup_height]" style="float:none;width:30px"
 																																																																		value="<?php echo intval($this->config->get('popup_height', 550)); ?>"/>
@@ -335,7 +335,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('UNSUB_DISP_CHOICE'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[unsub_dispoptions]", '', $this->config->get('unsub_dispoptions', 1)); ?>
+					<?php echo acymailing_boolean("config[unsub_dispoptions]", '', $this->config->get('unsub_dispoptions', 1)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -343,7 +343,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('ACY_UNSUB_DISP_OTHER_SUBS'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[unsub_dispothersubs]", '', $this->config->get('unsub_dispothersubs', 0)); ?>
+					<?php echo acymailing_boolean("config[unsub_dispothersubs]", '', $this->config->get('unsub_dispothersubs', 0)); ?>
 				</td>
 			</tr>
 			<tr>
@@ -351,7 +351,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('UNSUB_DISP_SURVEY'); ?>
 				</td>
 				<td>
-					<?php echo JHTML::_('acyselect.booleanlist', "config[unsub_survey]", 'onclick="displaySurvey(this.value)"', $this->config->get('unsub_survey', 1));
+					<?php echo acymailing_boolean("config[unsub_survey]", 'onclick="displaySurvey(this.value)"', $this->config->get('unsub_survey', 1));
 					$reasons = unserialize($this->config->get('unsub_reasons'));
 					?>
 					<div id="unsub_reasons_area" class="acymailing_deploy" <?php if(!$this->config->get('unsub_survey', 1)) echo 'style="display:none"'; ?> >

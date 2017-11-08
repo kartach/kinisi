@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -81,16 +81,16 @@ class plgAcymailingStats extends JPlugin{
 		array_unshift($allemails, $element);
 
 		$actions = array();
-		$actions[] = JHTML::_('select.option', 'open', acymailing_translation('OPEN'));
-		$actions[] = JHTML::_('select.option', 'notopen', acymailing_translation('NOT_OPEN'));
-		$actions[] = JHTML::_('select.option', 'failed', acymailing_translation('FAILED'));
-		if(acymailing_level(3)) $actions[] = JHTML::_('select.option', 'bounce', acymailing_translation('BOUNCES'));
-		$actions[] = JHTML::_('select.option', 'htmlsent', acymailing_translation('SENT_HTML'));
-		$actions[] = JHTML::_('select.option', 'textsent', acymailing_translation('SENT_TEXT'));
-		$actions[] = JHTML::_('select.option', 'notsent', acymailing_translation('NOT_SENT'));
+		$actions[] = acymailing_selectOption('open', acymailing_translation('OPEN'));
+		$actions[] = acymailing_selectOption('notopen', acymailing_translation('NOT_OPEN'));
+		$actions[] = acymailing_selectOption('failed', acymailing_translation('FAILED'));
+		if(acymailing_level(3)) $actions[] = acymailing_selectOption('bounce', acymailing_translation('BOUNCES'));
+		$actions[] = acymailing_selectOption('htmlsent', acymailing_translation('SENT_HTML'));
+		$actions[] = acymailing_selectOption('textsent', acymailing_translation('SENT_TEXT'));
+		$actions[] = acymailing_selectOption('notsent', acymailing_translation('NOT_SENT'));
 
-		$return = '<div id="filter__num__deliverstat">'.JHTML::_('select.genericlist', $actions, "filter[__num__][deliverstat][action]", 'class="inputbox" onchange="countresults(__num__)" size="1"', 'value', 'text');
-		$return .= ' '.JHTML::_('select.genericlist', $allemails, "filter[__num__][deliverstat][mailid]", 'onchange="countresults(__num__)" class="inputbox" size="1" style="max-width:200px"', 'mailid', 'value').'</div>';
+		$return = '<div id="filter__num__deliverstat">'.acymailing_select($actions, "filter[__num__][deliverstat][action]", 'class="inputbox" onchange="countresults(__num__)" size="1"', 'value', 'text');
+		$return .= ' '.acymailing_select($allemails, "filter[__num__][deliverstat][mailid]", 'onchange="countresults(__num__)" class="inputbox" size="1" style="max-width:200px"', 'mailid', 'value').'</div>';
 
 		return $return;
 	}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -26,7 +26,7 @@ class acyorderHelper{
 			$dir = 'DESC';
 		}
 
-		$ids = JRequest::getVar( 'cid', array(), '', 'array' );
+		$ids = acymailing_getVar('array',  'cid', array(), '');
 		$id = (int) $ids[0];
 
 		$pkey = $this->pkey;
@@ -49,8 +49,8 @@ class acyorderHelper{
 		else $secondElement->ordering++;
 
 
-		$status1 = $database->updateObject(acymailing_table($this->table),$firstElement,$pkey);
-		$status2 = $database->updateObject(acymailing_table($this->table),$secondElement,$pkey);
+		$status1 = acymailing_updateObject(acymailing_table($this->table),$firstElement,$pkey);
+		$status2 = acymailing_updateObject(acymailing_table($this->table),$secondElement,$pkey);
 
 		$status = $status1 && $status2;
 		if($status){
@@ -63,8 +63,8 @@ class acyorderHelper{
 	function save(){
 		$pkey = $this->pkey;
 
-		$cid	= JRequest::getVar( 'cid', array(), 'post', 'array' );
-		$order	= JRequest::getVar( 'order', array(), 'post', 'array' );
+		$cid	= acymailing_getVar('array',  'cid', array());
+		$order	= acymailing_getVar('array',  'order', array());
 
 		acymailing_arrayToInteger($cid);
 
@@ -99,7 +99,7 @@ class acyorderHelper{
 			$element->$pkey = $val;
 			$element->ordering = $i;
 			if(!isset($oldResults[$val]) OR $oldResults[$val]->ordering != $i){
-				$status = $database->updateObject(acymailing_table($this->table),$element,$pkey) && $status;
+				$status = acymailing_updateObject(acymailing_table($this->table),$element,$pkey) && $status;
 			}
 			$i++;
 		}
@@ -116,13 +116,13 @@ class acyorderHelper{
 		$db = JFactory::getDBO();
 
 		$query = 'UPDATE '.acymailing_table($this->table).' SET `ordering` = `ordering`+1';
-		if(!empty($this->groupMap)) $query .= ' WHERE '.$this->groupMap.' = '.$db->Quote($this->groupVal);
+		if(!empty($this->groupMap)) $query .= ' WHERE '.$this->groupMap.' = '.acymailing_escapeDB($this->groupVal);
 
 		$db->setQuery($query);
 		$db->query();
 
 		$query = 'SELECT `ordering`,`'.$this->pkey.'` FROM '.acymailing_table($this->table);
-		if(!empty($this->groupMap)) $query .= ' WHERE '.$this->groupMap.' = '.$db->Quote($this->groupVal);
+		if(!empty($this->groupMap)) $query .= ' WHERE '.$this->groupMap.' = '.acymailing_escapeDB($this->groupVal);
 		$query .= ' ORDER BY `ordering` ASC';
 		$db->setQuery($query);
 		$results = $db->loadObjectList();
@@ -131,7 +131,7 @@ class acyorderHelper{
 		foreach($results as $oneResult){
 			if($oneResult->ordering != $i){
 				$oneResult->ordering = $i;
-				$db->updateObject( acymailing_table($this->table), $oneResult, $this->pkey);
+				acymailing_updateObject( acymailing_table($this->table), $oneResult, $this->pkey);
 			}
 			$i++;
 		}

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,9 +13,6 @@ defined('_JEXEC') or die('Restricted access');
 		<div style="text-align:center;padding-top:20px;"><input type="file" style="width:auto" name="uploadedfile"/>
 			<?php echo '<br />'.(acymailing_translation_sprintf('MAX_UPLOAD', (acymailing_bytes(ini_get('upload_max_filesize')) > acymailing_bytes(ini_get('post_max_size'))) ? ini_get('post_max_size') : ini_get('upload_max_filesize'))); ?></div>
 		<br/><br/><a class="downloadmore" href="https://www.acyba.com/acymailing/templates-pack.html" target="_blank"><?php echo acymailing_translation('MORE_TEMPLATES'); ?></a>
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="template"/>
-		<?php echo JHTML::_('form.token'); ?>
+		<?php acymailing_formOptions(); ?>
 	</form>
 </div>

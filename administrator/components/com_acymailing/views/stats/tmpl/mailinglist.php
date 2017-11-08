@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<?php
 	if(empty($this->isData)) return;
-	if(!$this->app->isAdmin() && JRequest::getString('tmpl') == 'component') include(dirname(__FILE__).DS.'menu.mailinglist.php'); ?>
+	if(!acymailing_isAdmin() && acymailing_getVar('string', 'tmpl') == 'component') include(dirname(__FILE__).DS.'menu.mailinglist.php'); ?>
 	<style type="text/css">
 		.mailingListChart{
 			float: left;

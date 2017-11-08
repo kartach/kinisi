@@ -1,25 +1,25 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
 ?><div id="maincontent" style="border: 1px solid rgb(233, 233, 233);">
-	<form method="post" name="adminForm" id="adminForm" enctype="multipart/form-data" style="margin:0px;">
+	<form action="index.php?tmpl=component&amp;option=<?php echo ACYMAILING_COMPONENT ?>" method="post" name="adminForm" id="adminForm" enctype="multipart/form-data" style="margin:0px;">
 		<div id="folderarea" style="box-shadow: 0px 4px 4px -4px rgba(0, 0, 0, 0.3);padding:15px;">
 			<button style="float: right;" class="btn" onclick="changeDisplay(event);" id="btn_change_display" title="<?php echo acymailing_translation('ACY_DISPLAY_NOICON'); ?>"><i id="iconTypeDisplay" class="acyicon-list_view"></i></button>
 			<?php
 			$folders = acymailing_generateArborescence($this->uploadFolders);
 			$filetreeType = acymailing_get('type.filetree');
-			$filetreeType->display($folders, $this->uploadFolder, 'currentFolder', 'submitform()');
+			$filetreeType->display($folders, $this->uploadFolder, 'currentFolder', 'submitbutton("select")');
 			?>
 		</div>
 		<script type="text/javascript">
 			var clickedDel = false;
-			window.addEvent('domready', function(){
+			document.addEventListener("DOMContentLoaded", function(){
 				display(document.getElementById('displayType').value);
 			});
 			function changeDisplay(event){
@@ -83,7 +83,7 @@ defined('_JEXEC') or die('Restricted access');
 		</script>
 		<div id="filesarea" style="width:100%;height:460px;overflow-x: hidden;text-align: center;">
 			<?php
-			if(file_exists($this->uploadPath)) $files = JFolder::files($this->uploadPath);
+			if(file_exists($this->uploadPath)) $files = acymailing_getFiles($this->uploadPath);
 			$imageExtensions = array('jpg', 'jpeg', 'png', 'gif', 'ico', 'bmp');
 
 			if(in_array($this->map, array('thumb', 'readmore'))){
@@ -111,16 +111,16 @@ defined('_JEXEC') or die('Restricted access');
 					$linkStart = '<a href="#" style="text-decoration:none;" onclick="if(clickedDel == false){';
 					$linkStart .= "parent.document.getElementById('".$this->map."').value = '".str_replace(DS, '/', $this->uploadFolder)."/$file';";
 					if(in_array($this->map, array('thumb', 'readmore'))){
-						$linkStart .= "parent.document.getElementById('".$this->map."preview').src = '".JURI::root().str_replace(DS, '/', $this->uploadFolder)."/$file'; ";
+						$linkStart .= "parent.document.getElementById('".$this->map."preview').src = '".acymailing_rootURI().str_replace(DS, '/', $this->uploadFolder)."/$file'; ";
 					}else{
 						$linkStart .= "parent.document.getElementById('".$this->map."selection').innerHTML = '$file'; ";
 					}
-					$linkStart .= 'window.parent.SqueezeBox.close();}">';
+					$linkStart .= 'window.parent.acymailing.closeBox();}">';
 
 					echo $linkStart;
 
 					$structPict = '<div onmouseover="diplayDeleteBtn('.$k.', \'display\');" onmouseout="diplayDeleteBtn('.$k.', \'hide\');">';
-					$structPict .= '<div style="width: 160px;height: 160px;margin: 14px;border: 1px solid rgb(233, 233, 233);border-radius:4px;" onmouseover="this.style.opacity = 0.5;" onmouseout="this.style.opacity = 1;" title="'.$file.'">';
+					$structPict .= '<div style="width: 160px;height: 160px;margin: 14px;border: 1px solid rgb(233, 233, 233);border-radius:4px;overflow: hidden;" onmouseover="this.style.opacity = 0.5;" onmouseout="this.style.opacity = 1;" title="'.$file.'">';
 					if(strlen($file) > 20){
 						$structPict .= '<span title="'.str_replace('"', '', $file).'">'.substr(rtrim($file, $ext), 0, 17).'...'.$ext.'</span>';
 					}else{
@@ -169,11 +169,11 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div id="uploadarea" style="text-align: center;box-shadow: 0px -4px 4px -4px rgba(0, 0, 0, 0.3);padding: 10px 0px 10px 0px;">
 			<input type="file" style="width:auto;" name="uploadedFile"/><br/>
-			<input type="hidden" name="task" value="select"/>
 			<input type="hidden" id="displayType" name="displayType" value="<?php echo $this->displayType; ?>"/>
 			<input type="hidden" name="selected_folder" value="<?php echo htmlspecialchars($this->uploadFolder, ENT_COMPAT, 'UTF-8'); ?>"/>
-			<?php echo JHTML::_('form.token'); ?>
-			<button class="btn btn-primary" type="button" onclick="submit();"> <?php echo acymailing_translation('IMPORT'); ?> </button>
+			<input type="hidden" name="id" value="<?php echo $this->map; ?>"/>
+			<?php acymailing_formOptions(); ?>
+			<button class="btn btn-primary" type="button" onclick="document.adminForm.task.value='select';submit();"> <?php echo acymailing_translation('IMPORT'); ?> </button>
 		</div>
 	</form>
 </div>

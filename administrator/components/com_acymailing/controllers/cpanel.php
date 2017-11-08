@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -34,17 +34,18 @@ class CpanelController extends acymailingController{
 
 	function store(){
 		if(!$this->isAllowed('configuration', 'manage')) return;
+		acymailing_checkToken();
 
-		JRequest::checkToken() or die('Invalid Token');
+		$config = acymailing_config();
 
 		$source = is_array($_POST['config']) ? 'POST' : 'REQUEST';
-		$formData = JRequest::getVar('config', array(), $source, 'array');
+		$formData = acymailing_getVar('array', 'config', array(), $source);
 
-		$aclcats = JRequest::getVar('aclcat', array(), 'POST', 'array');
+		$aclcats = acymailing_getVar('array', 'aclcat', array(), 'POST');
 
 		if(!empty($aclcats)){
 
-			if(JRequest::getString('acl_configuration', 'all') != 'all' && !acymailing_isAllowed($formData['acl_configuration_manage'])){
+			if(acymailing_getVar('string', 'acl_configuration', 'all') != 'all' && !acymailing_isAllowed($formData['acl_configuration_manage'])){
 				acymailing_enqueueMessage(acymailing_translation('ACL_WRONG_CONFIG'), 'notice');
 				unset($formData['acl_configuration_manage']);
 			}
@@ -52,7 +53,7 @@ class CpanelController extends acymailingController{
 			$deleteAclCats = array();
 			$unsetVars = array('save', 'create', 'manage', 'modify', 'delete', 'fields', 'export', 'import', 'view', 'send', 'schedule', 'bounce', 'test');
 			foreach($aclcats as $oneCat){
-				if(JRequest::getString('acl_'.$oneCat) == 'all'){
+				if(acymailing_getVar('string', 'acl_'.$oneCat) == 'all'){
 					foreach($unsetVars as $oneVar){
 						unset($formData['acl_'.$oneCat.'_'.$oneVar]);
 					}
@@ -61,12 +62,13 @@ class CpanelController extends acymailingController{
 			}
 		}
 
+
 		if(!empty($formData['hostname'])){
 			$formData['hostname'] = preg_replace('#https?://#i', '', $formData['hostname']);
 			$formData['hostname'] = preg_replace('#[^a-z0-9_.-]#i', '', $formData['hostname']);
 		}
 
-		$reasons = JRequest::getVar('unsub_reasons', array(), 'POST', 'array');
+		$reasons = acymailing_getVar('array', 'unsub_reasons', array(), 'POST');
 		$unsub_reasons = array();
 		foreach($reasons as $oneReason){
 			if(empty($oneReason)) continue;
@@ -74,9 +76,8 @@ class CpanelController extends acymailingController{
 		}
 		$formData['unsub_reasons'] = serialize($unsub_reasons);
 
-		if(!empty($formData['smtp_username']) && version_compare(JVERSION, '3.1.2', '>=')) $formData['smtp_username'] = JStringPunycode::emailToPunycode($formData['smtp_username']);
+		if(!empty($formData['smtp_username'])) $formData['smtp_username'] = acymailing_punycode($formData['smtp_username']);
 
-		$config =& acymailing_config();
 		$status = $config->save($formData);
 
 		if(!empty($deleteAclCats)){
@@ -101,11 +102,10 @@ class CpanelController extends acymailingController{
 		acymailing_displayErrors();
 
 		$config = acymailing_config();
-		$user = JFactory::getUser();
 
 		$mailClass = acymailing_get('helper.mailer');
-		$addedName = $config->get('add_names', true) ? $mailClass->cleanText($user->name) : '';
-		$mailClass->AddAddress($user->email, $addedName);
+		$addedName = $config->get('add_names', true) ? $mailClass->cleanText(acymailing_currentUserName()) : '';
+		$mailClass->AddAddress(acymailing_currentUserEmail(), $addedName);
 		$mailClass->Subject = 'Test e-mail from '.ACYMAILING_LIVE;
 		$mailClass->Body = acymailing_translation('TEST_EMAIL');
 		$mailClass->SMTPDebug = 1;
@@ -131,10 +131,10 @@ class CpanelController extends acymailingController{
 	}
 
 	function plgtrigger(){
-		$pluginToTrigger = JRequest::getCmd('plg');
-		$pluginType = JRequest::getCmd('plgtype', 'acymailing');
-		$fctName = 'onAcy'.JRequest::getCmd('fctName', 'TestPlugin');
-		$methodParam = JRequest::getCmd('param', 'NoParam');
+		$pluginToTrigger = acymailing_getVar('cmd', 'plg');
+		$pluginType = acymailing_getVar('cmd', 'plgtype', 'acymailing');
+		$fctName = 'onAcy'.acymailing_getVar('cmd', 'fctName', 'TestPlugin');
+		$methodParam = acymailing_getVar('cmd', 'param', 'NoParam');
 
 		if(!ACYMAILING_J16){
 			$path = JPATH_PLUGINS.DS.$pluginType.DS.$pluginToTrigger.'.php';
@@ -179,7 +179,7 @@ class CpanelController extends acymailingController{
 			return;
 		}
 
-		$reportPath = JPath::clean(ACYMAILING_ROOT.$path);
+		$reportPath = acymailing_cleanPath(ACYMAILING_ROOT.$path);
 
 		if(file_exists($reportPath)){
 			try{
@@ -215,7 +215,7 @@ class CpanelController extends acymailingController{
 
 	function cleanreport(){
 		if(!$this->isAllowed('configuration', 'manage')) return;
-		jimport('joomla.filesystem.file');
+
 		$config = acymailing_config();
 		$path = trim(html_entity_decode($config->get('cron_savepath')));
 		if(!preg_match('#^[a-z0-9/_\-]*\.log$#i', $path)){
@@ -223,9 +223,9 @@ class CpanelController extends acymailingController{
 			return;
 		}
 
-		$reportPath = JPath::clean(ACYMAILING_ROOT.$path);
+		$reportPath = acymailing_cleanPath(ACYMAILING_ROOT.$path);
 		if(is_file($reportPath)){
-			$result = JFile::delete($reportPath);
+			$result = acymailing_deleteFile($reportPath);
 			if($result){
 				acymailing_display(acymailing_translation('SUCC_DELETE_LOG'), 'success');
 			}else{

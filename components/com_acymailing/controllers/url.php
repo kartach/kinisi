@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,14 +15,14 @@ class UrlController extends acymailingController{
 	{
 		parent::__construct($config);
 
-		JRequest::setVar('tmpl','component');
+		acymailing_setVar('tmpl','component');
 		$this->registerDefaultTask('click');
 
 	}
 
 
 	function sef(){
-		$urls = JRequest::getVar('urls', array(), '', 'array');
+		$urls = acymailing_getVar('array', 'urls', array(), '');
 		$result = array();
 
 		$otherarguments = '';
@@ -36,10 +36,10 @@ class UrlController extends acymailingController{
 			$mainurl = ACYMAILING_LIVE;
 		}
 
-		$uri = JUri::root(true);
+		$uri = acymailing_rootURI(true);
 		foreach($urls as $url){
 			$url = base64_decode($url);
-			$link = JRoute::_($url, false);
+			$link = acymailing_route($url, false);
 			if(!empty($uri) && strpos($link, $uri) === 0) $link = substr($link, strlen($uri));
 
 			$link = ltrim($link, '/');

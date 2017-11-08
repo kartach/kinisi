@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -9,23 +9,19 @@
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<div id="iframedoc"></div>
-	<form action="<?php echo JRoute::_('index.php?option='.ACYMAILING_COMPONENT); ?>" method="post" name="adminForm" enctype="multipart/form-data" id="adminForm">
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
+	<form action="<?php echo acymailing_route('index.php?option='.ACYMAILING_COMPONENT); ?>" method="post" name="adminForm" enctype="multipart/form-data" id="adminForm">
 		<input type="hidden" name="import_type" id="import_type" value="<?php echo $this->type; ?>"/>
-		<input type="hidden" name="filename" id="filename" value="<?php echo JRequest::getCmd('filename'); ?>"/>
+		<input type="hidden" name="filename" id="filename" value="<?php echo acymailing_getVar('cmd', 'filename'); ?>"/>
 		<input type="hidden" name="import_columns" id="import_columns" value=""/>
-		<input type="hidden" name="createlist" id="createlist" value="<?php echo JRequest::getString('createlist'); ?>"/>
+		<input type="hidden" name="createlist" id="createlist" value="<?php echo acymailing_getVar('string', 'createlist'); ?>"/>
 		<?php
-		$app = JFactory::getApplication();
-		$checkedLists = JRequest::getVar('importlists', array(), '', 'array');
+		$checkedLists = acymailing_getVar('array', 'importlists', array(), '');
 		foreach($checkedLists as $key => $oneList){
 			echo '<input type="hidden" name="importlists['.intval($key).']" id="importlists'.intval($key).'-'.intval($oneList).'" value="'.intval($oneList).'"/>';
 		}
 
 		if(!empty($this->Itemid)) echo '<input type="hidden" name="Itemid" value="'.$this->Itemid.'" />';
-		echo JHTML::_('form.token'); ?>
+		acymailing_formOptions(); ?>
 
 		<div class="onelineblockoptions" id="matchdata">
 			<?php include_once(ACYMAILING_BACK.'views'.DS.'data'.DS.'tmpl'.DS.'ajaxencoding.php'); ?>
@@ -60,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
 							<?php echo acymailing_translation('IMPORT_CONFIRMED'); ?>
 						</td>
 						<td>
-							<?php echo JHTML::_('acyselect.booleanlist', "import_confirmed", '', in_array('import_confirmed', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+							<?php echo acymailing_boolean("import_confirmed", '', in_array('import_confirmed', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 						</td>
 					</tr>
 				<?php } ?>
@@ -69,7 +65,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php echo acymailing_translation('GENERATE_NAME'); ?>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "generatename", '', in_array('generatename', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+						<?php echo acymailing_boolean("generatename", '', in_array('generatename', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 					</td>
 				</tr>
 				<tr id="trfileblock">
@@ -77,7 +73,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php echo acymailing_translation('IMPORT_BLOCKED'); ?>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "importblocked", '', in_array('importblocked', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+						<?php echo acymailing_boolean("importblocked", '', in_array('importblocked', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 					</td>
 				</tr>
 				<tr id="trfileoverwrite">
@@ -85,7 +81,7 @@ defined('_JEXEC') or die('Restricted access');
 						<?php echo acymailing_translation('OVERWRITE_EXISTING'); ?>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "overwriteexisting", '', in_array('overwriteexisting', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+						<?php echo acymailing_boolean("overwriteexisting", '', in_array('overwriteexisting', $this->selectedParams) ? 1 : 0, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 					</td>
 				</tr>
 			</table>
@@ -194,7 +190,7 @@ defined('_JEXEC') or die('Restricted access');
 		}
 
 		function changeCharset(){
-			var URL = "index.php?option=com_acymailing&ctrl=<?php if(!$app->isAdmin()){ echo 'front'; } ?>data&encoding=" + document.getElementById("charsetconvert").value + "&tmpl=component&task=ajaxencoding&filename=<?php echo urlencode($filename); ?>";
+			var URL = "index.php?option=com_acymailing&ctrl=<?php if(!acymailing_isAdmin()){ echo 'front'; } ?>data&encoding=" + document.getElementById("charsetconvert").value + "&tmpl=component&task=ajaxencoding&filename=<?php echo urlencode($filename); ?>";
 			var selectedDropdowns = "";
 			var fieldNb = <?php echo $nbColumns; ?>;
 			if(isNaN(fieldNb)) fieldNb = 1;
@@ -213,21 +209,13 @@ defined('_JEXEC') or die('Restricted access');
 			document.getElementById("importdata").style.opacity = "0.5";
 			document.getElementById("importdata").style.filter = 'alpha(opacity=50)';
 
-			try{
-				var ajaxCall = new Ajax(URL, {
-					method: "POST", update: document.getElementById("matchdata"), onComplete: function(){
-						document.getElementById("loadingEncoding").innerHTML = '';
-					}
-				}).request();
-			}catch(err){
-				new Request({
-								url: URL, method: "POST", onSuccess: function(responseText, responseXML){
-						document.getElementById("matchdata").innerHTML = responseText;
-					}, onComplete: function(){
-						document.getElementById("loadingEncoding").innerHTML = '';
-					}
-							}).send();
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", URL);
+			xhr.onload = function(){
+				document.getElementById("matchdata").innerHTML = xhr.responseText;
+				document.getElementById("loadingEncoding").innerHTML = '';
 			}
+			xhr.send();
 		}
 
 		function ignoreAllOthers(){

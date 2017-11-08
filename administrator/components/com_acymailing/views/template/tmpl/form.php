@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
 	<div id="iframedoc"></div>
 	<form action="index.php" method="post" name="adminForm" id="adminForm" class="templateManagement" enctype="multipart/form-data">
-		<div class="acyblockoptions" id="sendtest" style="float:none;<?php if(JRequest::getCmd('task') != 'test') echo 'display:none;'; ?>">
+		<div class="acyblockoptions" id="sendtest" style="float:none;<?php if(acymailing_getVar('cmd', 'task') != 'test') echo 'display:none;'; ?>">
 			<span class="acyblocktitle"><?php echo acymailing_translation('SEND_TEST'); ?></span>
 			<table>
 				<tr>
@@ -50,7 +50,7 @@ defined('_JEXEC') or die('Restricted access');
 						</label>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "data[template][published]", '', @$this->template->published); ?>
+						<?php echo acymailing_boolean("data[template][published]", '', @$this->template->published); ?>
 					</td>
 				</tr>
 				<tr>
@@ -60,7 +60,7 @@ defined('_JEXEC') or die('Restricted access');
 						</label>
 					</td>
 					<td>
-						<?php echo JHTML::_('acyselect.booleanlist', "data[template][premium]", '', @$this->template->premium); ?>
+						<?php echo acymailing_boolean("data[template][premium]", '', @$this->template->premium); ?>
 					</td>
 				</tr>
 				<?php if(acymailing_level(3)){ ?>
@@ -107,7 +107,7 @@ defined('_JEXEC') or die('Restricted access');
 					</td>
 					<td>
 						<div>
-							<input data-emojiable="true" type="text" id="subject" name="data[template][subject]" class="inputbox" style="width:80%" value="<?php echo $this->escape(@$this->template->subject); ?>"/>
+							<input onClick="zoneToTag='subject';" type="text" id="subject" name="data[template][subject]" class="inputbox" style="width:80%" value="<?php echo $this->escape(@$this->template->subject); ?>"/>
 						</div>
 					</td>
 				</tr>
@@ -149,6 +149,7 @@ defined('_JEXEC') or die('Restricted access');
 
 		<div class="acyblockoptions">
 			<span class="acyblocktitle"><?php echo acymailing_translation('ACY_STYLES'); ?></span>
+			<div class="acytabsystem">
 			<?php
 			echo $this->tabs->startPane('template_css');
 			echo $this->tabs->startPanel(acymailing_translation('STYLE_IND'), 'template_css_classes'); ?>
@@ -238,6 +239,7 @@ defined('_JEXEC') or die('Restricted access');
 			<?php }
 			echo $this->tabs->endPanel();
 			echo $this->tabs->endPane(); ?>
+			</div>
 		</div>
 		<?php if(acymailing_level(3)){
 			$acltype = acymailing_get('type.acl'); ?>
@@ -252,14 +254,11 @@ defined('_JEXEC') or die('Restricted access');
 		</div>
 		<div class="acyblockoptions" style="width:90%;" id="textfieldset">
 			<span class="acyblocktitle"><?php echo acymailing_translation('TEXT_VERSION'); ?></span>
-			<textarea style="width:98%;min-height:250px;" rows="20" name="data[template][altbody]" id="altbody" placeholder="<?php echo acymailing_translation('AUTO_GENERATED_HTML'); ?>"><?php echo @$this->template->altbody; ?></textarea>
+			<textarea onClick="zoneToTag='altbody';" style="width:98%;min-height:250px;" rows="20" name="data[template][altbody]" id="altbody" placeholder="<?php echo acymailing_translation('AUTO_GENERATED_HTML'); ?>"><?php echo @$this->template->altbody; ?></textarea>
 		</div>
 		<div class="clr"></div>
 		<input type="hidden" name="cid[]" value="<?php echo @$this->template->tempid; ?>"/>
-		<input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-		<input type="hidden" name="task" value=""/>
-		<input type="hidden" name="ctrl" value="template"/>
-		<?php echo JHTML::_('form.token'); ?>
+		<?php acymailing_formOptions(); ?>
 	</form>
 	<div style="display:none;position:absolute;background-color:transparent;" id="wysija">
 		<?php echo $this->colorBox->displayOne('wysijacolor', "", ""); ?>

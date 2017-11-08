@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -25,11 +25,11 @@ if($this->config->get('inboxactionswhitelist', 1)){
 			</td>
 			<td class="paramlist_value">
 				<?php $ordering = array();
-				$ordering[] = JHTML::_('select.option', "none", acymailing_translation('ACY_NONE'));
-				$ordering[] = JHTML::_('select.option', "confirm", acymailing_translation('ACY_BUTTON_CONFIRM'));
-				$ordering[] = JHTML::_('select.option', "save", acymailing_translation('ACY_BUTTON_SAVE'));
-				$ordering[] = JHTML::_('select.option', "goto", acymailing_translation('ACY_GOTO'));
-				echo JHTML::_('select.genericlist', $ordering, 'data[mail][params][action]', 'size="1" onchange="displayActionOptions(this.value);" style="width:150px;"', 'value', 'text', @$this->mail->params['action']); ?>
+				$ordering[] = acymailing_selectOption("none", acymailing_translation('ACY_NONE'));
+				$ordering[] = acymailing_selectOption("confirm", acymailing_translation('ACY_BUTTON_CONFIRM'));
+				$ordering[] = acymailing_selectOption("save", acymailing_translation('ACY_BUTTON_SAVE'));
+				$ordering[] = acymailing_selectOption("goto", acymailing_translation('ACY_GOTO'));
+				echo acymailing_select($ordering, 'data[mail][params][action]', 'size="1" onchange="displayActionOptions(this.value);" style="width:150px;"', 'value', 'text', @$this->mail->params['action']); ?>
 			</td>
 		</tr>
 		<tr class="action_option action_goto action_confirm action_save">

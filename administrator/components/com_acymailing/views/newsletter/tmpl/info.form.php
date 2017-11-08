@@ -1,13 +1,13 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><table<?php if(!$this->app->isAdmin()){
+?><table<?php if(!acymailing_isAdmin()){
 	echo ' class="acymailing_table" style="margin: 10px 0px;"';
 } ?> width="100%">
 	<tr>
@@ -27,7 +27,7 @@ defined('_JEXEC') or die('Restricted access');
 			</label>
 		</td>
 		<td id="publishedinput" valign="top">
-			<?php echo ($this->mail->published == 2) ? acymailing_translation('SCHED_NEWS') : JHTML::_('acyselect.booleanlist', "data[mail][published]", '', $this->mail->published, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+			<?php echo ($this->mail->published == 2) ? acymailing_translation('SCHED_NEWS') : acymailing_boolean("data[mail][published]", '', $this->mail->published, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 		</td>
 	</tr>
 	<tr>
@@ -46,7 +46,7 @@ defined('_JEXEC') or die('Restricted access');
 			</label>
 		</td>
 		<td id="visibleinput">
-			<?php echo JHTML::_('acyselect.booleanlist', "data[mail][visible]", '', $this->mail->visible, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+			<?php echo acymailing_boolean("data[mail][visible]", '', $this->mail->visible, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 		</td>
 	</tr>
 	<tr>
@@ -65,7 +65,7 @@ defined('_JEXEC') or die('Restricted access');
 			</label>
 		</td>
 		<td id="sendhtmlinput">
-			<?php echo JHTML::_('acyselect.booleanlist', "data[mail][html]", 'onclick="updateAcyEditor(this.value); initTagZone(this.value);"', $this->mail->html, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+			<?php echo acymailing_boolean("data[mail][html]", 'onclick="updateAcyEditor(this.value); initTagZone(this.value);"', $this->mail->html, acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 		</td>
 	</tr>
 	<?php if($this->type != 'joomlanotification'){ ?>

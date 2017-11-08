@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -11,9 +11,9 @@ defined('_JEXEC') or die('Restricted access');
 $listClass = acymailing_get('class.list');
 $this->data = $listClass->getLists('listid');
 $this->values = array();
-$this->values[] = JHTML::_('select.option', '0', '- - -');
+$this->values[] = acymailing_selectOption('0', '- - -');
 foreach($this->data as $onelist){
-	$this->values[] = JHTML::_('select.option', $onelist->listid, $onelist->name);
+	$this->values[] = acymailing_selectOption($onelist->listid, $onelist->name);
 }
 $zohoFields = $this->config->get('zoho_fields');
 $value['zoho_fields'] = empty($zohoFields) ? array() : unserialize($zohoFields);
@@ -31,7 +31,7 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 			</td>
 			<td>
 				<?php
-				echo JHTML::_('acyselect.booleanlist', "zoho_confirmed", '', $this->config->get('zoho_confirmed'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO'));
+				echo acymailing_boolean("zoho_confirmed", '', $this->config->get('zoho_confirmed'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO'));
 				?>
 			</td>
 		</tr>
@@ -42,7 +42,7 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 		</td>
 		<td>
 			<?php
-			echo JHTML::_('acyselect.booleanlist', "zoho_overwrite", '', $this->config->get('zoho_overwrite'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+			echo acymailing_boolean("zoho_overwrite", '', $this->config->get('zoho_overwrite'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 		</td>
 	</tr>
 	<tr id="trzohodelete">
@@ -51,7 +51,7 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 		</td>
 		<td>
 			<?php
-			echo JHTML::_('acyselect.booleanlist', "zoho_delete", '', $this->config->get('zoho_delete'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
+			echo acymailing_boolean("zoho_delete", '', $this->config->get('zoho_delete'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO')); ?>
 		</td>
 	</tr>
 	<tr id="trzohoimportnew">
@@ -60,7 +60,7 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 		</td>
 		<td>
 			<?php
-			echo JHTML::_('acyselect.booleanlist', "zoho_importnew", '', $this->config->get('zoho_importnew'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO').' : '.acymailing_translation('ALL_USERS')); ?>
+			echo acymailing_boolean("zoho_importnew", '', $this->config->get('zoho_importnew'), acymailing_translation('JOOMEXT_YES'), acymailing_translation('JOOMEXT_NO').' : '.acymailing_translation('ALL_USERS')); ?>
 		</td>
 	</tr>
 	<tr id="trzohogeneratename">
@@ -69,9 +69,9 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 		</td>
 		<td>
 			<?php $generateFrom = array();
-			$generateFrom[] = JHTML::_('select.option', 'fromemail', acymailing_translation('ACY_ZOHO_GENERATE_NAME_FROM_EMAIL'));
-			$generateFrom[] = JHTML::_('select.option', 'fromconcat', acymailing_translation('ACY_ZOHO_GENERATE_NAME_FROM_FIELDS'));
-			echo JHTML::_('select.radiolist', $generateFrom, "zoho_generate_name", 'class="inputbox" size="1"', 'value', 'text', $this->config->get('zoho_generate_name', 'fromemail')); ?>
+			$generateFrom[] = acymailing_selectOption('fromemail', acymailing_translation('ACY_ZOHO_GENERATE_NAME_FROM_EMAIL'));
+			$generateFrom[] = acymailing_selectOption('fromconcat', acymailing_translation('ACY_ZOHO_GENERATE_NAME_FROM_FIELDS'));
+			echo acymailing_radio($generateFrom, "zoho_generate_name", 'class="inputbox" size="1"', 'value', 'text', $this->config->get('zoho_generate_name', 'fromemail')); ?>
 		</td>
 	</tr>
 	<tr id="trzohoapikey">
@@ -88,10 +88,10 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 		</td>
 		<td>
 			<?php $lists = array();
-			$lists[] = JHTML::_('select.option', 'Leads', 'Leads');
-			$lists[] = JHTML::_('select.option', 'Contacts', 'Contacts');
-			$lists[] = JHTML::_('select.option', 'Vendors', 'Vendors');
-			echo JHTML::_('select.genericlist', $lists, "zoho_list", 'class="inputbox" size="1"', 'value', 'text', $value['zoho_list']); ?>
+			$lists[] = acymailing_selectOption('Leads', 'Leads');
+			$lists[] = acymailing_selectOption('Contacts', 'Contacts');
+			$lists[] = acymailing_selectOption('Vendors', 'Vendors');
+			echo acymailing_select($lists, "zoho_list", 'class="inputbox" size="1"', 'value', 'text', $value['zoho_list']); ?>
 		</td>
 	</tr>
 	<tr id="trzohocv">
@@ -110,11 +110,11 @@ if(empty($value['zoho_fields'])) $value['zoho_fields'] = array('First Name' => '
 $db = JFactory::getDBO();
 $subfields = acymailing_getColumns('#__acymailing_subscriber');
 $acyfields = array();
-$acyfields[] = JHTML::_('select.option', '', ' - - - ');
+$acyfields[] = acymailing_selectOption('', ' - - - ');
 if(!empty($subfields)){
 	foreach($subfields as $oneField => $typefield){
 		if(in_array($oneField, array('subid', 'confirmed', 'enabled', 'key', 'userid', 'accept', 'html', 'created', 'zohoid', 'zoholist', 'email'))) continue;
-		$acyfields[] = JHTML::_('select.option', $oneField, $oneField);
+		$acyfields[] = acymailing_selectOption($oneField, $oneField);
 	}
 }
 ?>
@@ -132,7 +132,7 @@ if(!empty($subfields)){
 	foreach($fields as $oneField){
 		$fieldValue = '';
 		if(!empty($value['zoho_fields'][$oneField])) $fieldValue = $value['zoho_fields'][$oneField];
-		echo '<tr><td class="acykey">'.$oneField.'</td><td><div id="zoho_fields">'.JHTML::_('select.genericlist', $acyfields, "zoho_fields[".$oneField."]", 'class="inputbox" size="1"', 'value', 'text', $fieldValue).'</div></td></tr>';
+		echo '<tr><td class="acykey">'.$oneField.'</td><td><div id="zoho_fields">'.acymailing_select($acyfields, "zoho_fields[".$oneField."]", 'class="inputbox" size="1"', 'value', 'text', $fieldValue).'</div></td></tr>';
 	}
 	?>
 </table>

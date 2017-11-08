@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
 					</label>
 				</td>
 				<td class="paramlist_value">
-					<input type="text" name="data[mail][subject]" id="subject" class="inputbox" style="width:80%" value="<?php echo $this->escape(@$this->mail->subject); ?>"/>
+					<input onClick="zoneToTag='subject';" type="text" name="data[mail][subject]" id="subject" class="inputbox" style="width:80%" value="<?php echo $this->escape(@$this->mail->subject); ?>"/>
 				</td>
 			</tr>
 			<tr>
@@ -29,7 +29,7 @@ defined('_JEXEC') or die('Restricted access');
 					<?php echo acymailing_translation('SEND_HTML'); ?>
 				</td>
 				<td class="paramlist_value">
-					<?php echo JHTML::_('acyselect.booleanlist', "data[mail][html]", 'onchange="updateAcyEditor(this.value)"', $this->mail->html); ?>
+					<?php echo acymailing_boolean("data[mail][html]", 'onchange="updateAcyEditor(this.value)"', $this->mail->html); ?>
 				</td>
 			</tr>
 			<?php

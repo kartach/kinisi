@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -20,8 +20,7 @@ class plgAcymailingOnline extends JPlugin{
 
 	function acymailing_getPluginType(){
 
-		$app = JFactory::getApplication();
-		if($this->params->get('frontendaccess') == 'none' && !$app->isAdmin()) return;
+		if($this->params->get('frontendaccess') == 'none' && !acymailing_isAdmin()) return;
 		$onePlugin = new stdClass();
 		$onePlugin->name = acymailing_translation('WEBSITE_LINKS');
 		$onePlugin->function = 'acymailingtagonline_show';
@@ -74,9 +73,9 @@ class plgAcymailingOnline extends JPlugin{
 		<?php
 		echo acymailing_translation('FIELD_TEXT').' : <input type="text" name="tagtext" size="100px" onchange="setOnlineTag();" /><br /><br />';
 		$radios = array();
-		$radios[] = JHTML::_('select.option', "standard", acymailing_translation('IN_TEMPLATE'));
-		$radios[] = JHTML::_('select.option', "notemplate", acymailing_translation('WITHOUT_TEMPLATE'));
-		echo JHTML::_('acyselect.radiolist', $radios, 'template', 'size="1" onclick="setOnlineTag();"', 'value', 'text', 'notemplate');
+		$radios[] = acymailing_selectOption("standard", acymailing_translation('IN_TEMPLATE'));
+		$radios[] = acymailing_selectOption("notemplate", acymailing_translation('WITHOUT_TEMPLATE'));
+		echo acymailing_radio($radios, 'template', 'size="1" onclick="setOnlineTag();"', 'value', 'text', 'notemplate');
 		echo '<div class="onelineblockoptions">
 				<table class="acymailing_table" cellpadding="1">';
 		$k = 0;

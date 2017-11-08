@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -9,7 +9,7 @@
 defined('_JEXEC') or die('Restricted access');
 ?><div id="acy_content">
     <div id="iframedoc"></div>
-    <form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo JRequest::getCmd('ctrl'); ?>" method="post" name="adminForm" id="adminForm" style="text-align: center;">
+    <form action="index.php?option=<?php echo ACYMAILING_COMPONENT ?>&amp;ctrl=<?php echo acymailing_getVar('cmd', 'ctrl'); ?>" method="post" name="adminForm" id="adminForm" style="text-align: center;">
         <div class="onelineblockoptions">
             <table class="acymailing_table">
 
@@ -28,23 +28,21 @@ defined('_JEXEC') or die('Restricted access');
                         echo '<td style="width: '.(100/(count($this->rows)+1)).'%;">';
                         $row->subject = Emoji::Decode($row->subject); ?>
                         <input type="hidden" name="cid[]" value="<?php echo $row->mailid; ?>">
-                        <a class="modal" href="<?php echo acymailing_completeLink('diagram&task=mailing&mailid='.$row->mailid, true) ?>" rel="{handler: 'iframe', size: {x: 800, y: 590}}" title="<?php echo htmlspecialchars($row->subject, ENT_QUOTES, 'utf-8'); ?>">
-                            <?php echo strlen($row->subject) > 30 ? substr($row->subject, 0, 30).'...' : $row->subject; ?>
-                        </a>
+                        <?php echo acymailing_popup(acymailing_completeLink('diagram&task=mailing&mailid='.$row->mailid, true), strlen($row->subject) > 30 ? acymailing_tooltip($row->subject, '', '', substr($row->subject, 0, 30).'...') : $row->subject, '', 800, 590); ?>
                     <?php }elseif($oneProp == 'SEND_DATE'){ ?>
                         <span style="font-size: 10px;"><?php echo acymailing_getDate($row->senddate); ?></span>
                     <?php }elseif($oneProp == 'ACY_SENT'){ ?>
                         <?php $text = '<b>'.acymailing_translation('HTML').' : </b>'.$row->senthtml;
                         $text .= '<br /><b>'.acymailing_translation('JOOMEXT_TEXT').' : </b>'.$row->senttext;
                         $title = acymailing_translation('ACY_SENT');
-                        echo acymailing_tooltip($text, $title, '', $row->senthtml + $row->senttext, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=0&filter_mail='.$row->mailid)); ?>
+                        echo acymailing_tooltip($text, $title, '', $row->senthtml + $row->senttext, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=0&filter_mail='.$row->mailid)); ?>
                     <?php }elseif($oneProp == 'OPEN'){
                         if(!empty($row->senthtml)){
                             $text = '<b>'.acymailing_translation('OPEN_UNIQUE').' : </b>'.$row->openunique.' / '.$cleanSent;
                             $text .= '<br /><b>'.acymailing_translation('OPEN_TOTAL').' : </b>'.$row->opentotal;
                             $pourcent = ($cleanSent == 0 ? '0%' : (substr($row->openunique / $cleanSent * 100, 0, 5)).'%');
                             $title = acymailing_translation_sprintf('PERCENT_OPEN', $pourcent);
-                            echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=open&filter_mail='.$row->mailid));
+                            echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=open&filter_mail='.$row->mailid));
                         }
                     }elseif($oneProp == 'CLICKED_LINK'){
                         $text = '<b>'.acymailing_translation('UNIQUE_HITS').' : </b>'.$row->clickunique.' / '.$cleanSent;
@@ -59,21 +57,21 @@ defined('_JEXEC') or die('Restricted access');
                         $title = acymailing_translation_sprintf('ACY_CLICK_EFFICIENCY_DESC', $pourcentEfficiency);
                         echo acymailing_tooltip($text, $title, '', $pourcentEfficiency, acymailing_completeLink('statsurl&filter_mail='.$row->mailid));
                     }elseif($oneProp == 'UNSUBSCRIBE'){
-                        echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&task=unsubchart&mailid='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i></a> ';
+                        echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=unsubchart&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i>', '', 800, 590);
                         $pourcent = ($cleanSent == 0) ? '0%' : (substr($row->unsub / $cleanSent * 100, 0, 5)).'%';
                         $text = $row->unsub.' / '.$cleanSent;
                         $title = acymailing_translation('UNSUBSCRIBE');
-                        echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&start=0&task=unsubscribed&filter_mail='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}">'.acymailing_tooltip($text, $title, '', $pourcent).'</a>';
+                        echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&start=0&task=unsubscribed&filter_mail='.$row->mailid, true), acymailing_tooltip($text, $title, '', $pourcent), '', 800, 590);
                     }elseif($oneProp == 'FORWARDED'){
-                        echo '<a class="modal" href="'.acymailing_completeLink(JRequest::getCmd('ctrl').'&start=0&task=forward&filter_mail='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}">'.$row->forward.'</a>';
+                        echo acymailing_popup(acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&start=0&task=forward&filter_mail='.$row->mailid, true), $row->forward, '', 800, 590);
                     }elseif($oneProp == 'BOUNCES'){
-                        echo '<a class="modal" href="'.acymailing_completeLink('bounces&task=chart&mailid='.$row->mailid, true).'" rel="{handler: \'iframe\', size: {x: 800, y: 590}}"><i class="acyicon-statistic"></i></a> ';
+                        echo acymailing_popup(acymailing_completeLink('bounces&task=chart&mailid='.$row->mailid, true), '<i class="acyicon-statistic"></i>', '', 800, 590);
                         $text = $row->bounceunique.' / '.($row->senthtml + $row->senttext);
                         $title = acymailing_translation('BOUNCES');
                         $pourcent = (empty($row->senthtml) AND empty($row->senttext)) ? '0%' : (substr($row->bounceunique / ($row->senthtml + $row->senttext) * 100, 0, 5)).'%';
-                        echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=bounce&filter_mail='.$row->mailid));
+                        echo acymailing_tooltip($text, $title, '', $pourcent, acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=bounce&filter_mail='.$row->mailid));
                     }else{ ?>
-                        <a href="<?php echo acymailing_completeLink(JRequest::getCmd('ctrl').'&task=detaillisting&filter_status=failed&filter_mail='.$row->mailid); ?>">
+                        <a href="<?php echo acymailing_completeLink(acymailing_getVar('cmd', 'ctrl').'&task=detaillisting&filter_status=failed&filter_mail='.$row->mailid); ?>">
                             <?php echo $row->fail; ?>
                         </a>
                     <?php }
@@ -85,9 +83,6 @@ defined('_JEXEC') or die('Restricted access');
             ?>
             </table>
         </div>
-        <input type="hidden" name="option" value="<?php echo ACYMAILING_COMPONENT; ?>"/>
-        <input type="hidden" name="task" value=""/>
-        <input type="hidden" name="ctrl" value="<?php echo JRequest::getCmd('ctrl'); ?>"/>
-        <?php echo JHTML::_('form.token'); ?>
+        <?php acymailing_formOptions(); ?>
     </form>
 </div>

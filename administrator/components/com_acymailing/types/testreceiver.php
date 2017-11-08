@@ -1,7 +1,7 @@
 <?php
 /**
  * @package	AcyMailing for Joomla!
- * @version	5.7.0
+ * @version	5.8.1
  * @author	acyba.com
  * @copyright	(C) 2009-2017 ACYBA S.A.R.L. All rights reserved.
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -11,9 +11,7 @@ defined('_JEXEC') or die('Restricted access');
 
 class testreceiverType{
 	function display($selection = '', $group = '', $emails = ''){
-		$app = JFactory::getApplication();
-		$my = JFactory::getUser();
-		if(empty($emails)) $emails = $my->email;
+		if(empty($emails)) $emails = acymailing_currentUserEmail();
 
 		$js = 'function timeoutAddNewTestAddress(currentValue){
 					if(currentValue.length > 1 && ((currentValue.indexOf("@") != -1 && currentValue.slice(-1) == " ") || currentValue.slice(-1) == ";" || currentValue.slice(-1) == ",")){
@@ -25,36 +23,19 @@ class testreceiverType{
 				}
 
 			function addNewTestAddress(currentValue){';
-		if($app->isAdmin()){
+		if(acymailing_isAdmin()){
 			$js .= 'if(currentValue != document.getElementById("message_receivers").value) return;
-
-				try{
-					var ajaxCall = new Ajax("index.php?option=com_acymailing&tmpl=component&ctrl=subscriber&task=getSubscribersByEmail&search="+currentValue,{
-						method: "get",
-						onComplete: function(responseText, responseXML) {
-							document.getElementById("acymailing_divSelectReceiver").style.display = "block";
-							document.getElementById("acymailing_receiversTable").innerHTML = responseText;
-							receiversList = document.getElementById("acymailing_receiversTable");
-							if(receiversList.getElementsByClassName("row_user").length==0) {
-								document.getElementById("acymailing_divSelectReceiver").style.display = "none";
-							}
+					var xhr = new XMLHttpRequest();
+					xhr.open("GET", "index.php?option=com_acymailing&tmpl=component&ctrl=subscriber&task=getSubscribersByEmail&search="+currentValue);
+					xhr.onload = function(){
+						document.getElementById("acymailing_divSelectReceiver").style.display = "block";
+						document.getElementById("acymailing_receiversTable").innerHTML = xhr.responseText;
+						receiversList = document.getElementById("acymailing_receiversTable");
+						if(receiversList.getElementsByClassName("row_user").length==0) {
+							document.getElementById("acymailing_divSelectReceiver").style.display = "none";
 						}
-					}).request();
-
-				}catch(err){
-					new Request({
-						url:"index.php?option=com_acymailing&tmpl=component&ctrl=subscriber&task=getSubscribersByEmail&search="+currentValue,
-						method: "get",
-						onSuccess: function(responseText, responseXML) {
-							document.getElementById("acymailing_divSelectReceiver").style.display = "block";
-							document.getElementById("acymailing_receiversTable").innerHTML = responseText;
-							receiversList = document.getElementById("acymailing_receiversTable");
-							if(receiversList.getElementsByClassName("row_user").length==0) {
-								document.getElementById("acymailing_divSelectReceiver").style.display = "none";
-							}
-						}
-					}).send();
-				}';
+					};
+					xhr.send();';
 		}
 		$js .= '}
 
@@ -107,8 +88,7 @@ class testreceiverType{
 				return true;
 			}';
 
-		$doc = JFactory::getDocument();
-		$doc->addScriptDeclaration($js);
+		acymailing_addScript(true, $js);
 		?>
 		<style>
 			.removeUser{
@@ -161,11 +141,11 @@ class testreceiverType{
 		</style>
 		<?php
 		echo acymailing_getFunctionsEmailCheck();
-		if($app->isAdmin()){
+		if(acymailing_isAdmin()){
 			$values = array();
-			$values[] = JHTML::_('select.option', 'users', acymailing_translation('ACY_SUBSCRIBER'));
-			$values[] = JHTML::_('select.option', 'group', acymailing_translation('ACY_GROUP'));
-			echo JHTML::_('select.genericlist', $values, 'test_selection', 'size="1" style="margin:0;" onchange="showOptions(this.value);"', 'value', 'text', $selection);
+			$values[] = acymailing_selectOption('users', acymailing_translation('ACY_SUBSCRIBER'));
+			$values[] = acymailing_selectOption('group', acymailing_translation('ACY_GROUP'));
+			echo acymailing_select($values, 'test_selection', 'size="1" style="margin:0;" onchange="showOptions(this.value);"', 'value', 'text', $selection);
 		}else{
 			echo '<input class="inputbox" type="hidden" id="test_selection" name="test_selection" value="users" />';
 		}
@@ -187,7 +167,7 @@ class testreceiverType{
 			<input class="inputbox" type="hidden" id="test_emails" name="test_emails" value="<?php echo htmlspecialchars($emails, ENT_COMPAT, 'UTF-8'); ?>"/>
 		</div>
 		<?php
-		if($app->isAdmin()){
+		if(acymailing_isAdmin()){
 			$db = JFactory::getDBO();
 			if(ACYMAILING_J16){
 				$db->setQuery('SELECT ug.id, ug.parent_id, ug.title AS text, COUNT(ugm.user_id) AS nbusers '.'FROM #__usergroups AS ug '.'LEFT JOIN #__user_usergroup_map ugm '.'ON ug.id = ugm.group_id '.'GROUP BY ug.id');
@@ -202,16 +182,16 @@ class testreceiverType{
 				}
 			}
 			$this->catvalues = array();
-			$this->catvalues[] = JHTML::_('select.option', -1, '- - -');
+			$this->catvalues[] = acymailing_selectOption(-1, '- - -');
 			$this->_handleChildren();
-			echo '<div id="groupSelection" style="'.($selection != 'group' ? 'display:none;' : '').'margin-top:5px;">'.JHTML::_('select.genericlist', $this->catvalues, 'test_group', 'size="1"', 'value', 'text', $group).'</div>';
+			echo '<div id="groupSelection" style="'.($selection != 'group' ? 'display:none;' : '').'margin-top:5px;">'.acymailing_select($this->catvalues, 'test_group', 'size="1"', 'value', 'text', $group).'</div>';
 		}
 	}
 
 	private function _handleChildren($parent_id = 0, $level = 0){
 		if(empty($this->cats[$parent_id])) return;
 		foreach($this->cats[$parent_id] as $cat){
-			$addValue = JHTML::_('select.option', $cat->id, str_repeat(" - - ", $level).$cat->text);
+			$addValue = acymailing_selectOption($cat->id, str_repeat(" - - ", $level).$cat->text);
 			if($cat->nbusers > 10 || $cat->nbusers == 0) $addValue->disable = true;
 			$this->catvalues[] = $addValue;
 			$this->_handleChildren($cat->id, $level + 1);

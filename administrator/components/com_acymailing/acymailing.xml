@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.0" method="upgrade">
 	<name>AcyMailing</name>
-	<creationDate>mai 2017</creationDate>
-	<version>5.7.0</version>
+	<creationDate>septembre 2017</creationDate>
+	<version>5.8.1</version>
 	<level>starter</level>
 	<author>Acyba</author>
 	<authorEmail>dev@acyba.com</authorEmail>
