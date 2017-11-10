@@ -16,3 +16,12 @@
 2017-10-09T13:25:43+00:00	INFO ::1	update	Deleting removed files and folders.
 2017-10-09T13:25:44+00:00	INFO ::1	update	Cleaning up after installation.
 2017-10-09T13:25:44+00:00	INFO ::1	update	Update to version 3.8.1 is complete.
+2017-11-08T11:40:12+00:00	INFO ::1	update	Aktualizaci spustil uživatel Klára K (630). Stará verze je 3.8.1.
+2017-11-08T11:40:12+00:00	INFO ::1	update	Stahování aktualizačních souborů z https://downloads.joomla.org/cms/joomla3/3-8-2/Joomla_3.8.2-Stable-Update_Package.zip.
+2017-11-08T11:40:22+00:00	INFO ::1	update	Soubor Joomla_3.8.2-Stable-Update_Package.zip byl úspěšně stažen.
+2017-11-08T11:40:22+00:00	INFO ::1	update	Spuštění instalace nové verze.
+2017-11-08T11:40:28+00:00	INFO ::1	update	Dokončení instalace.
+2017-11-08T11:40:28+00:00	INFO ::1	update	Spustit dotaz ze souboru 3.8.2-2017-10-14. Text dotazu: ALTER TABLE `#__content` ADD INDEX `idx_alias` (`alias`(191));.
+2017-11-08T11:40:28+00:00	INFO ::1	update	Mazání odstraněných souborů a složek.
+2017-11-08T11:40:29+00:00	INFO ::1	update	Úklid po instalaci.
+2017-11-08T11:40:29+00:00	INFO ::1	update	Aktualizace na verzi 3.8.2 je dokončena.

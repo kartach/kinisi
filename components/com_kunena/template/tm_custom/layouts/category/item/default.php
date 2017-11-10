@@ -151,7 +151,7 @@ $this->addStyleSheet('assets/css/rating.css');
 	</table>
 </form>
 
-<?php var_dump($this->pagination->limit); var_dump(count($this->topics)); if ($this->pagination->limit < count($this->topics)) : ?>
+<?php if ($this->pagination->limit < count($this->topics)) : ?>
 	<div class="pull-left">
 		<?php echo $this->subLayout('Widget/Pagination/List')
 	->set('pagination', $this->pagination)

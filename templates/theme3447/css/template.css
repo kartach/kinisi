@@ -8414,7 +8414,8 @@ form.mod_tm_ajax_contact_form .control-group-button .btn {
 .navbar-form .checkbox,
 .navbar-form .btn,
 .navbar-form .btn-group {
-  margin-top: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .acymailing_module_success {
   font-weight: bold;
@@ -11738,10 +11739,18 @@ mod-custom.mod-custom__bottom_contact2 {
 .category_img a:hover .BWfade {
   opacity: 1 !important;
 }
+
+/*======================= KK originalne: .item_img img,
+.category_img img {
+  max-width: 100%;
+  height: auto;
+}  ===========================*/
+
 .item_img img,
 .category_img img {
   max-width: 100%;
   height: auto;
+  margin-left: 10px;
 }
 .img-intro__left,
 .img-full__left {

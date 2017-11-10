@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Tento web je právě v údržbě.<br /> Zkuste to prosím později.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'KINISI';
+	public $sitename = 'Fyzioteraputické centrum KINISI';
 	public $editor = 'arkeditor';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -19,7 +19,7 @@ class JConfig {
 	public $dbprefix = 'bc73q_';
 	public $live_site = '';
 	public $secret = 'fBHCg7nuAzGEzcml';
-	public $gzip = '0';
+	public $gzip = '1';
 	public $error_reporting = 'default';
 	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
 	public $ftp_host = '';
@@ -32,7 +32,7 @@ class JConfig {
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'karkoskova.klara@gmail.com';
-	public $fromname = 'KINISI';
+	public $fromname = 'Fyzioterapeutické centrum KINISI';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
@@ -40,12 +40,12 @@ class JConfig {
 	public $smtphost = 'localhost';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
-	public $caching = '0';
+	public $caching = '1';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
 	public $cache_platformprefix = '0';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'Fyzioteraputické centrum KINISI, Praha 9, Horní Počernice, špičkoví fyzioterapeuti, fyzioterapie pro dospělé a děti, péče o sportovce, fukční trénink';
+	public $MetaKeys = 'fyzioterapie Praha 9, dětská fyzioterapie, funkční trénink, sportovní fyzioterapie, péče o sportovce, fyzioterapie pro ženy';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
@@ -95,4 +95,5 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $session_redis_server_db = '0';
 }
