@@ -15,3 +15,4 @@ INSERT INTO `bc73q_kunena_version` VALUES(2, '3.0.6', '2014-07-28', '2014-08-05'
 INSERT INTO `bc73q_kunena_version` VALUES(3, '4.0.10', '2016-02-18', '2016-07-13', '', 'Villavicencio', '');
 INSERT INTO `bc73q_kunena_version` VALUES(4, '4.0.12', '2016-10-01', '2016-10-19', '', 'Lima', '');
 INSERT INTO `bc73q_kunena_version` VALUES(5, '5.0.8', '2017-05-15', '2017-06-29', '', 'Hoatzin', '');
+INSERT INTO `bc73q_kunena_version` VALUES(6, '5.0.11', '2017-09-02', '2017-10-09', '', 'Kinkajou', '');

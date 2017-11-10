@@ -97,6 +97,20 @@ ALTER TABLE `bc73q_acymailing_userstats`
   ADD KEY `senddateindex` (`senddate`),
   ADD KEY `subidindex` (`subid`);
 
+ALTER TABLE `bc73q_ark_editor_inline_views`
+  ADD PRIMARY KEY (`element`,`context`);
+
+ALTER TABLE `bc73q_ark_editor_languages`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `bc73q_ark_editor_plugins`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `plugin` (`name`);
+
+ALTER TABLE `bc73q_ark_editor_toolbars`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `toolbar` (`name`);
+
 ALTER TABLE `bc73q_assets`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `idx_asset_name` (`name`),
@@ -156,7 +170,8 @@ ALTER TABLE `bc73q_content`
   ADD KEY `idx_createdby` (`created_by`),
   ADD KEY `idx_featured_catid` (`featured`,`catid`),
   ADD KEY `idx_language` (`language`),
-  ADD KEY `idx_xreference` (`xreference`);
+  ADD KEY `idx_xreference` (`xreference`),
+  ADD KEY `idx_alias` (`alias`(191));
 
 ALTER TABLE `bc73q_contentitem_tag_map`
   ADD UNIQUE KEY `uc_ItemnameTagid` (`type_id`,`content_item_id`,`tag_id`),
@@ -722,163 +737,252 @@ ALTER TABLE `bc73q_weblinks`
 
 ALTER TABLE `bc73q_acymailing_action`
   MODIFY `action_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_acymailing_fields`
   MODIFY `fieldid` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 ALTER TABLE `bc73q_acymailing_filter`
   MODIFY `filid` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_acymailing_geolocation`
   MODIFY `geolocation_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_acymailing_list`
   MODIFY `listid` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `bc73q_acymailing_mail`
   MODIFY `mailid` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 ALTER TABLE `bc73q_acymailing_rules`
   MODIFY `ruleid` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_acymailing_subscriber`
-  MODIFY `subid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `subid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 ALTER TABLE `bc73q_acymailing_tag`
   MODIFY `tagid` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_acymailing_template`
   MODIFY `tempid` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 ALTER TABLE `bc73q_acymailing_url`
   MODIFY `urlid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `bc73q_ark_editor_languages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `bc73q_ark_editor_plugins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
+
+ALTER TABLE `bc73q_ark_editor_toolbars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 ALTER TABLE `bc73q_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=735;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=888;
+
 ALTER TABLE `bc73q_banners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_banner_clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+
 ALTER TABLE `bc73q_contact_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `bc73q_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=225;
+
 ALTER TABLE `bc73q_content_types`
-  MODIFY `type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 ALTER TABLE `bc73q_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10196;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10325;
+
 ALTER TABLE `bc73q_fields`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_fields_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_finder_filters`
   MODIFY `filter_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_finder_links`
-  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+
 ALTER TABLE `bc73q_finder_taxonomy`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
 ALTER TABLE `bc73q_finder_terms`
-  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54330;
+
 ALTER TABLE `bc73q_finder_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 ALTER TABLE `bc73q_joomgallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
+
 ALTER TABLE `bc73q_joomgallery_catg`
   MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 ALTER TABLE `bc73q_joomgallery_comments`
   MODIFY `cmtid` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_joomgallery_config`
   MODIFY `id` int(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `bc73q_joomgallery_maintenance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_joomgallery_nameshields`
   MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_joomgallery_orphans`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_joomgallery_users`
   MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_joomgallery_votes`
   MODIFY `voteid` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_acl`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 ALTER TABLE `bc73q_komento_actions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_activities`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 ALTER TABLE `bc73q_komento_captcha`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_comments`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
 ALTER TABLE `bc73q_komento_hashkeys`
   MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_ipfilter`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_mailq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_subscription`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_komento_uploads`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_announcement`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_attachments`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 ALTER TABLE `bc73q_kunena_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 ALTER TABLE `bc73q_kunena_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
 ALTER TABLE `bc73q_kunena_polls`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_polls_options`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_ranks`
   MODIFY `rank_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 ALTER TABLE `bc73q_kunena_rate`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_smileys`
   MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+
 ALTER TABLE `bc73q_kunena_topics`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 ALTER TABLE `bc73q_kunena_users_banned`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_kunena_version`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 ALTER TABLE `bc73q_languages`
-  MODIFY `lang_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `lang_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 ALTER TABLE `bc73q_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=615;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=698;
+
 ALTER TABLE `bc73q_menu_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 ALTER TABLE `bc73q_messages`
   MODIFY `message_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 ALTER TABLE `bc73q_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=237;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=286;
+
 ALTER TABLE `bc73q_newsfeeds`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_overrider`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=7072;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=9264;
+
 ALTER TABLE `bc73q_plg_slogin_profile`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_postinstall_messages`
   MODIFY `postinstall_message_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 ALTER TABLE `bc73q_redirect_links`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_slogin_users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_tags`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
 ALTER TABLE `bc73q_template_styles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 ALTER TABLE `bc73q_ucm_content`
-  MODIFY `core_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `core_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
 ALTER TABLE `bc73q_ucm_history`
-  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `bc73q_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 ALTER TABLE `bc73q_usergroups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=10;
+
 ALTER TABLE `bc73q_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=849;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=853;
+
 ALTER TABLE `bc73q_user_keys`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
 ALTER TABLE `bc73q_user_notes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `bc73q_viewlevels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=7;
+
 ALTER TABLE `bc73q_weblinks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;

@@ -8,8 +8,6 @@ CREATE TABLE `bc73q_kunena_user_read` (
   `time` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `bc73q_kunena_user_read` VALUES(846, 1, 2, 1, 1482315296);
-INSERT INTO `bc73q_kunena_user_read` VALUES(846, 2, 5, 5, 1444814130);
-INSERT INTO `bc73q_kunena_user_read` VALUES(847, 2, 5, 5, 1418121885);
-INSERT INTO `bc73q_kunena_user_read` VALUES(847, 3, 6, 6, 1418121958);
-INSERT INTO `bc73q_kunena_user_read` VALUES(848, 3, 6, 7, 1418122014);
+INSERT INTO `bc73q_kunena_user_read` VALUES(630, 19, 2, 30, 1510262168);
+INSERT INTO `bc73q_kunena_user_read` VALUES(849, 19, 2, 27, 1510248194);
+INSERT INTO `bc73q_kunena_user_read` VALUES(849, 21, 3, 29, 1510248841);

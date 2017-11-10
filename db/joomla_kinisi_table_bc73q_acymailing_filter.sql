@@ -9,5 +9,6 @@ CREATE TABLE `bc73q_acymailing_filter` (
   `trigger` text,
   `report` text,
   `action` text,
-  `filter` text
+  `filter` text,
+  `daycron` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

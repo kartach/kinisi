@@ -29,3 +29,5 @@ INSERT INTO `bc73q_acymailing_subscriber` VALUES(5, 'rwrw2@1312.aa', 0, 'Rwrw', 
 INSERT INTO `bc73q_acymailing_subscriber` VALUES(6, 'admin@admin.co', 0, 'Admin', 1427376525, 0, 1, 1, '192.168.9.17', 1, 'bywCJIRslYdTAD', 0, NULL, 0, NULL, 0, 0, '');
 INSERT INTO `bc73q_acymailing_subscriber` VALUES(7, 'm@m.com', 0, 'M', 1443442316, 0, 1, 1, '192.168.9.17', 1, 'XzmOX7h6mH83Cx', 0, NULL, 0, NULL, 0, 0, '');
 INSERT INTO `bc73q_acymailing_subscriber` VALUES(8, 'as@as.cxom', 0, 'As', 1466683696, 0, 1, 1, '192.168.9.155', 1, 'VQvZj62Cnyia8z', 0, NULL, 0, NULL, 0, 0, '');
+INSERT INTO `bc73q_acymailing_subscriber` VALUES(9, 'karkoskova.klara@gmail.com', 630, 'Klára K', 1507486274, 1, 1, 1, NULL, 1, NULL, 0, NULL, 0, NULL, 0, 0, '');
+INSERT INTO `bc73q_acymailing_subscriber` VALUES(10, 'czechtraveldream@gmail.com', 849, 'Alena H.', 1509965351, 1, 1, 1, NULL, 1, NULL, 0, NULL, 0, NULL, 0, 0, '');

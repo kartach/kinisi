@@ -6,7 +6,7 @@ CREATE TABLE `bc73q_acymailing_config` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `bc73q_acymailing_config` VALUES('level', 'Starter');
-INSERT INTO `bc73q_acymailing_config` VALUES('version', '5.7.0');
+INSERT INTO `bc73q_acymailing_config` VALUES('version', '5.8.1');
 INSERT INTO `bc73q_acymailing_config` VALUES('smtp_port', '25');
 INSERT INTO `bc73q_acymailing_config` VALUES('from_name', '');
 INSERT INTO `bc73q_acymailing_config` VALUES('from_email', '');
@@ -80,7 +80,7 @@ INSERT INTO `bc73q_acymailing_config` VALUES('Starter', '0');
 INSERT INTO `bc73q_acymailing_config` VALUES('Essential', '1');
 INSERT INTO `bc73q_acymailing_config` VALUES('Business', '2');
 INSERT INTO `bc73q_acymailing_config` VALUES('Enterprise', '3');
-INSERT INTO `bc73q_acymailing_config` VALUES('website', 'http://localhost/joomla/master-b3-3.7.2/');
+INSERT INTO `bc73q_acymailing_config` VALUES('website', 'http://localhost/kinisi/');
 INSERT INTO `bc73q_acymailing_config` VALUES('max_execution_time', '0');
 INSERT INTO `bc73q_acymailing_config` VALUES('last_maxexec_check', '1468415918');
 INSERT INTO `bc73q_acymailing_config` VALUES('ssl_links', '0');
@@ -133,6 +133,6 @@ INSERT INTO `bc73q_acymailing_config` VALUES('mediafolder', 'media/com_acymailin
 INSERT INTO `bc73q_acymailing_config` VALUES('description_sidekick', 'Joomla!® Newsletter System');
 INSERT INTO `bc73q_acymailing_config` VALUES('Sidekick', '4');
 INSERT INTO `bc73q_acymailing_config` VALUES('captcha_plugin', 'no');
-INSERT INTO `bc73q_acymailing_config` VALUES('latestversion', '5.7.0');
+INSERT INTO `bc73q_acymailing_config` VALUES('latestversion', '5.8.1');
 INSERT INTO `bc73q_acymailing_config` VALUES('expirationdate', '0');
-INSERT INTO `bc73q_acymailing_config` VALUES('lastlicensecheck', '1498740579');
+INSERT INTO `bc73q_acymailing_config` VALUES('lastlicensecheck', '1510129755');

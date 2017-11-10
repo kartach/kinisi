@@ -7,4 +7,4 @@ CREATE TABLE `bc73q_joomgallery_countstop` (
   `cstime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `bc73q_joomgallery_countstop` VALUES(19, '192.168.9.155', 'FvkFR9dfmI2gBXdIHcHtHWgxBunEqQ3T', '2016-06-23 16:27:11');
+INSERT INTO `bc73q_joomgallery_countstop` VALUES(190, '::1', 'YypXeM1HrD2A7iSQQUdXXbYHlwZ6U5CG', '2017-10-25 15:52:16');

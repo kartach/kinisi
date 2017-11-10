@@ -17,4 +17,5 @@ CREATE TABLE `bc73q_languages` (
   `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `bc73q_languages` VALUES(1, 0, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 1, 1, 1);
+INSERT INTO `bc73q_languages` VALUES(1, 0, 'en-GB', 'English (UK)', 'English (UK)', 'en', 'en', '', '', '', '', 1, 1, 2);
+INSERT INTO `bc73q_languages` VALUES(2, 744, 'cs-CZ', 'Czech (cs-CZ)', 'Czech (Czech republic)', 'cs', 'cs_cz', '', '', '', '', 1, 1, 1);

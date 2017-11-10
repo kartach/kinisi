@@ -12,8 +12,6 @@ CREATE TABLE `bc73q_kunena_user_topics` (
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `bc73q_kunena_user_topics` VALUES(317, 1, 2, 1, 1, 1, 0, 0, '');
-INSERT INTO `bc73q_kunena_user_topics` VALUES(846, 2, 5, 2, 3, 1, 0, 1, '');
-INSERT INTO `bc73q_kunena_user_topics` VALUES(847, 2, 5, 2, 5, 0, 0, 1, '');
-INSERT INTO `bc73q_kunena_user_topics` VALUES(847, 3, 6, 1, 6, 1, 0, 1, '');
-INSERT INTO `bc73q_kunena_user_topics` VALUES(848, 3, 6, 1, 7, 0, 0, 1, '');
+INSERT INTO `bc73q_kunena_user_topics` VALUES(630, 19, 2, 1, 30, 0, 0, 1, '');
+INSERT INTO `bc73q_kunena_user_topics` VALUES(849, 19, 2, 1, 27, 1, 0, 1, '');
+INSERT INTO `bc73q_kunena_user_topics` VALUES(849, 21, 3, 1, 29, 1, 0, 1, '');
