@@ -27,3 +27,6 @@ INSERT INTO `bc73q_update_sites_extensions` VALUES(18, 10299);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(19, 10303);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(20, 10313);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(21, 10317);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(22, 10326);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(22, 10329);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(22, 10331);

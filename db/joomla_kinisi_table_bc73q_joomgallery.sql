@@ -30,7 +30,7 @@ CREATE TABLE `bc73q_joomgallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `bc73q_joomgallery` VALUES(180, 635, 9, 'gallery-image1', 'gallery-image1-180', '', '', '2016-09-10 11:39:41', 0, 0, 0, 0, 1, 1, 0, 0, 'gallery-image1_20160910_1412166015.jpg', 'gallery-image1_20160910_1412166015.jpg', 0, 0, 1, 0, 1, '', '', '');
-INSERT INTO `bc73q_joomgallery` VALUES(181, 636, 9, 'gallery-image2', 'gallery-image2-181', '', '', '2016-09-10 11:39:42', 0, 0, 0, 0, 1, 1, 0, 0, 'gallery-image2_20160910_1460550998.jpg', 'gallery-image2_20160910_1460550998.jpg', 0, 0, 1, 0, 2, '', '', '');
+INSERT INTO `bc73q_joomgallery` VALUES(181, 636, 9, 'gallery-image2', 'gallery-image2-181', '', '', '2016-09-10 11:39:42', 1, 0, 0, 0, 1, 1, 0, 0, 'gallery-image2_20160910_1460550998.jpg', 'gallery-image2_20160910_1460550998.jpg', 0, 0, 1, 0, 2, '', '', '');
 INSERT INTO `bc73q_joomgallery` VALUES(182, 637, 9, 'gallery-image3', 'gallery-image3-182', '', '', '2016-09-10 11:39:43', 0, 0, 0, 0, 1, 1, 0, 0, 'gallery-image3_20160910_1841047942.jpg', 'gallery-image3_20160910_1841047942.jpg', 0, 0, 1, 0, 3, '', '', '');
 INSERT INTO `bc73q_joomgallery` VALUES(183, 638, 9, 'gallery-image4', 'gallery-image4-183', '', '', '2016-09-10 11:39:44', 0, 0, 0, 0, 1, 1, 0, 0, 'gallery-image4_20160910_1736778152.jpg', 'gallery-image4_20160910_1736778152.jpg', 0, 0, 1, 0, 4, '', '', '');
 INSERT INTO `bc73q_joomgallery` VALUES(184, 639, 9, 'gallery-image5', 'gallery-image5-184', '', '', '2016-09-10 11:39:45', 0, 0, 0, 0, 1, 1, 0, 0, 'gallery-image5_20160910_2075970967.jpg', 'gallery-image5_20160910_2075970967.jpg', 0, 0, 1, 0, 5, '', '', '');

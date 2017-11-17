@@ -29,3 +29,4 @@ INSERT INTO `bc73q_update_sites` VALUES(18, 'Accredited Joomla! Translations', '
 INSERT INTO `bc73q_update_sites` VALUES(19, '', 'extension', 'https://update.unitemplates.com/extensions/mod_ut_joomstagram.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(20, 'mod_jbcookies', 'extension', 'http://www.joomball.com/images/updates/jbcookies.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(21, 'Regular Labs - Articles Anywhere', 'extension', 'https://download.regularlabs.com/updates.xml?e=articlesanywhere&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(22, 'RocketTheme Update Directory', 'collection', 'http://updates.rockettheme.com/joomla/updates.xml', 1, 0, '');
