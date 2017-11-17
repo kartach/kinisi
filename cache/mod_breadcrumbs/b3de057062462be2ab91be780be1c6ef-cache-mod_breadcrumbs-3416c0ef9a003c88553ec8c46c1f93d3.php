@@ -1,8 +1,8 @@
-<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:252:"<div class="moduletable   col-sm-12"><div class="module_container">
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:195:"<div class="moduletable   col-sm-12"><div class="module_container">
 <div class="shell">
 
 <ul class="breadcrumb">
-	<li class="page-title"><span>Dotazy a návrhy k obsahu webových stránek a online komunikaci</span></li></ul>
+	<li class="page-title"><span>Gallery</span></li></ul>
 </div>
 
 </div></div>";s:6:"output";a:3:{s:4:"body";s:0:"";s:4:"head";a:1:{s:6:"script";a:1:{s:15:"text/javascript";s:974:"

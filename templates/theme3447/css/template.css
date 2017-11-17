@@ -9613,6 +9613,7 @@ div#fixed-sidebar-right .moduletable.login .mod_login_wrapper .input-prepend .ad
   z-index: 1;
   color: #25313d;
   background: #ffffff;
+  margin-top: 15px;
 }
 .icemegamenu > ul > li > a.iceMenuTitle * {
   font: inherit;
@@ -11750,7 +11751,7 @@ mod-custom.mod-custom__bottom_contact2 {
 .category_img img {
   max-width: 100%;
   height: auto;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .img-intro__left,
 .img-full__left {
