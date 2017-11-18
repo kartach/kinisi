@@ -1,0 +1,11 @@
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";a:4:{i:0;O:8:"stdClass":8:{s:2:"id";s:2:"94";s:5:"title";s:16:"Recent templates";s:6:"module";s:16:"mod_tm_templates";s:8:"position";s:6:"cpanel";s:7:"content";s:0:"";s:9:"showtitle";s:1:"1";s:6:"params";s:0:"";s:6:"menuid";s:1:"0";}i:1;O:8:"stdClass":8:{s:2:"id";s:3:"104";s:5:"title";s:16:"JoomGallery News";s:6:"module";s:8:"mod_feed";s:8:"position";s:11:"joom_cpanel";s:7:"content";s:0:"";s:9:"showtitle";s:1:"1";s:6:"params";s:210:"cache=1
+    cache_time=15
+    moduleclass_sfx=
+    rssurl=http://www.en.joomgallery.net/feed/rss.html
+    rssrtl=0
+    rsstitle=1
+    rssdesc=0
+    rssimage=1
+    rssitems=3
+    rssitemdesc=1
+    word_count=200";s:6:"menuid";s:1:"0";}i:2;O:8:"stdClass":8:{s:2:"id";s:1:"2";s:5:"title";s:5:"Login";s:6:"module";s:9:"mod_login";s:8:"position";s:5:"login";s:7:"content";s:0:"";s:9:"showtitle";s:1:"1";s:6:"params";s:0:"";s:6:"menuid";s:1:"0";}i:3;O:8:"stdClass":8:{s:2:"id";s:3:"237";s:5:"title";s:28:"Regular Labs - Cache Cleaner";s:6:"module";s:16:"mod_cachecleaner";s:8:"position";s:6:"status";s:7:"content";s:0:"";s:9:"showtitle";s:1:"1";s:6:"params";s:0:"";s:6:"menuid";s:1:"0";}}s:6:"output";s:0:"";}

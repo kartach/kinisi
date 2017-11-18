@@ -24,4 +24,4 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(34, 11, 'Péče o sportovce', 1, 1, 0
 INSERT INTO `bc73q_finder_taxonomy` VALUES(35, 11, 'METODY A LÉČEBNÉ PŘÍSTUPY', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(36, 11, 'Funkční fyziotréning', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(37, 11, 'Fyzioterapie pro ženy', 1, 1, 0);
-INSERT INTO `bc73q_finder_taxonomy` VALUES(41, 11, 'Fyzioterapie dospělých', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(61, 11, 'Fyzioterapie dospělých', 1, 1, 0);

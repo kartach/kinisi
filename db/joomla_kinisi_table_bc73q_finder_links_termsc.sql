@@ -86,4 +86,5 @@ INSERT INTO `bc73q_finder_links_termsc` VALUES(60, 45587, 0.51);
 INSERT INTO `bc73q_finder_links_termsc` VALUES(60, 45588, 0.21);
 INSERT INTO `bc73q_finder_links_termsc` VALUES(60, 45589, 0.91);
 INSERT INTO `bc73q_finder_links_termsc` VALUES(60, 45590, 1.14331);
-INSERT INTO `bc73q_finder_links_termsc` VALUES(64, 52236, 0.51);
+INSERT INTO `bc73q_finder_links_termsc` VALUES(144, 117998, 0.51);
+INSERT INTO `bc73q_finder_links_termsc` VALUES(146, 118764, 0.51);
