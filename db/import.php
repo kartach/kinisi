@@ -1,12 +1,12 @@
 <?php
 echo '<html><head></head><body>' . PHP_EOL;
 
-echo '<form action="/kinisi/db/import.php" method="get" id="form1">' . PHP_EOL;
+echo '<form action="?" method="get" id="form1">' . PHP_EOL;
 echo '    <input type="hidden" name="action" value="export" />' . PHP_EOL;
 echo '    <button type="submit" value="Export">Export</button>' . PHP_EOL;
 echo '</form>' . PHP_EOL . PHP_EOL;
 echo '    &nbsp;' . PHP_EOL;
-echo '<form action="/kinisi/db/import.php" method="get" id="form2">' . PHP_EOL;
+echo '<form action="?" method="get" id="form2">' . PHP_EOL;
 echo '    <input type="hidden" name="action" value="import" />' . PHP_EOL;
 echo '    <button type="submit" value="Import">Import</button>' . PHP_EOL;
 echo '</form>' . PHP_EOL . '<br>';
