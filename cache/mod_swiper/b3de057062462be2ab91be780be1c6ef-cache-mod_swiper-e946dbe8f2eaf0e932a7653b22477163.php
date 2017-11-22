@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:2760:"<div class="moduletable "><div class="module_container">
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:2626:"<div class="moduletable "><div class="module_container">
 <div id="swiper-slider_208" class="swiper-container swiper-slider "
 	data-min-height="200px"
 	data-height="35.46875%"
@@ -11,7 +11,7 @@
 		
 <div
 class="swiper-slide "
-data-slide-bg="/kinisi/images/slider/slide-1.jpg"
+data-slide-bg="/kinisi/images/slider/uv-1.jpg"
         
 >
 	<div class="swiper-slide-caption"
@@ -30,9 +30,11 @@ data-slide-bg="/kinisi/images/slider/slide-1.jpg"
 						
 						
 				
-				<p>Rádi Vás uvítáme v našem fyzioterapeutickém centru v Praze, Horních počernicích v po - pá 7:00 - 20:00</p>
+				<div>
+<p>Rádi Vás uvítáme v našem fyzioterapeutickém centru v Praze - Horních Počernicích</p>
+</div>
 
-<p><a class="btn" href="https://services.bookio.com/kinisi-centrum-fyzioterapie/widget?lang=cs">Make Appointment</a></p>
+<div><a class="btn" href="index.php?option=com_contact&amp;view=contact&amp;id=1&amp;Itemid=142" title="Kontakt">Domluvit si termín</a></div>
 
 				
 </div>
@@ -46,7 +48,7 @@ data-slide-bg="/kinisi/images/slider/slide-1.jpg"
 
 <div
 class="swiper-slide "
-data-slide-bg="/kinisi/images/slider/slide-2.jpg"
+data-slide-bg="/kinisi/images/slider/uv-2.jpg"
         
 >
 	<div class="swiper-slide-caption"
@@ -59,15 +61,17 @@ data-slide-bg="/kinisi/images/slider/slide-2.jpg"
 
 										
 					<h2 class="slide-title">
-											Individuální péče a léčba										</h2>
+											Individuální péče										</h2>
 		
 						
 						
 						
 				
-				<p>Každá zdravotní kondice/ každé zraranění je vysoce individuální. Naši péči přizpůsobíme přesně vašim potřebám.</p>
+				<div>
+<p>Každý zdravotní stav nebo zranění je individuální. Naši péči přizpůsobujeme přesně vašim potřebám.</p>
+</div>
 
-<p><a class="btn" href="index.php/centrum-fyzioterapie-praha">Zjistit o Kinisi více</a></p>
+<div><a class="btn" href="index.php/centrum-fyzioterapie-praha">Zjistit o Kinisi více</a></div>
 
 				
 </div>
@@ -94,15 +98,17 @@ data-slide-bg="/kinisi/images/slider/slide-3.jpg"
 
 										
 					<h2 class="slide-title">
-											Buďte v té nejlepší kondici!										</h2>
+											Buďte v kondici!										</h2>
 		
 						
 						
 						
 				
-				<p>Pomůžeme vám vyřešit současný problém a zabránit jeho návratu</p>
+				<div>
+<p>Pomůžeme vám vyřešit současný problém a zabránit jeho návratu</p>
+</div>
 
-<p><a class="btn" href="https://services.bookio.com/kinisi-centrum-fyzioterapie/widget?lang=cs">Objednat se</a>&nbsp; &nbsp; nebo &nbsp;&nbsp; <a class="btn" href="index.php/fyzioterapie-praha-kontakt">Kontaktovat</a></p>
+<div><a class="btn" href="index.php/fyzioterapie-praha-kontakt">Kontaktovat</a></div>
 
 				
 </div>

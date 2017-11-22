@@ -8,6 +8,7 @@ CREATE TABLE `bc73q_finder_links_terms1` (
 
 INSERT INTO `bc73q_finder_links_terms1` VALUES(46, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(52, 396, 0.09331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(77, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(7, 396, 0.18662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(42, 396, 0.18662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(54, 396, 0.18662);
@@ -92,3 +93,5 @@ INSERT INTO `bc73q_finder_links_terms1` VALUES(60, 46022, 1.12);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(64, 53338, 0.42);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(64, 53339, 1.07331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(64, 53340, 1.30669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(77, 55280, 0.81669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(77, 55281, 1.14331);

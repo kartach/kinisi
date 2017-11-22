@@ -230,7 +230,7 @@ INSERT INTO `bc73q_assets` VALUES(476, 447, 304, 305, 6, 'com_content.article.13
 INSERT INTO `bc73q_assets` VALUES(477, 448, 314, 315, 6, 'com_content.article.136', 'Resilience', '{\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1}}');
 INSERT INTO `bc73q_assets` VALUES(478, 64, 33, 40, 3, 'com_content.category.63', 'Slider', '{\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `bc73q_assets` VALUES(479, 478, 34, 35, 4, 'com_content.article.137', 'Jsme tu pro vás', '{\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1}}');
-INSERT INTO `bc73q_assets` VALUES(480, 478, 36, 37, 4, 'com_content.article.138', 'Individuální péče a léčba', '{\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1}}');
+INSERT INTO `bc73q_assets` VALUES(480, 478, 36, 37, 4, 'com_content.article.138', 'Individuální péče', '{\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1}}');
 INSERT INTO `bc73q_assets` VALUES(519, 8, 364, 365, 2, 'com_content.category.64', 'Mapa stránek', '{}');
 INSERT INTO `bc73q_assets` VALUES(520, 18, 640, 641, 2, 'com_modules.module.208', 'Slider', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}');
 INSERT INTO `bc73q_assets` VALUES(521, 170, 827, 840, 3, 'com_joomgallery.category.9', 'Gallery 1', '{\"joom.upload\":[],\"joom.upload.inown\":[],\"core.create\":[],\"joom.create.inown\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[],\"core.edit.own\":[]}');
@@ -359,7 +359,7 @@ INSERT INTO `bc73q_assets` VALUES(756, 18, 712, 713, 2, 'com_modules.module.249'
 INSERT INTO `bc73q_assets` VALUES(757, 724, 58, 59, 4, 'com_content.article.164', 'Confidentiality a4 (2)', '{}');
 INSERT INTO `bc73q_assets` VALUES(758, 18, 714, 715, 2, 'com_modules.module.250', 'KDO se vám bude věnovat', '{}');
 INSERT INTO `bc73q_assets` VALUES(759, 18, 716, 717, 2, 'com_modules.module.251', 'Zavoláme vám', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}');
-INSERT INTO `bc73q_assets` VALUES(760, 478, 38, 39, 4, 'com_content.article.165', 'Buďte v té nejlepší kondici!', '{}');
+INSERT INTO `bc73q_assets` VALUES(760, 478, 38, 39, 4, 'com_content.article.165', 'Buďte v kondici!', '{}');
 INSERT INTO `bc73q_assets` VALUES(761, 18, 718, 719, 2, 'com_modules.module.252', 'Accordion 2 (kopie)', '{}');
 INSERT INTO `bc73q_assets` VALUES(762, 18, 720, 721, 2, 'com_modules.module.253', 'Accordion 2 (kopie) (kopie)', '{}');
 INSERT INTO `bc73q_assets` VALUES(763, 18, 722, 723, 2, 'com_modules.module.254', 'Služby HP', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}');

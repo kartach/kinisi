@@ -607,6 +607,21 @@ ALTER TABLE `bc73q_newsfeeds`
   ADD KEY `idx_language` (`language`),
   ADD KEY `idx_xreference` (`xreference`);
 
+ALTER TABLE `bc73q_os_gallery`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `bc73q_os_gallery_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_gal_id` (`fk_gal_id`);
+
+ALTER TABLE `bc73q_os_gallery_connect`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_cat_id` (`fk_cat_id`),
+  ADD KEY `fk_gal_img_id` (`fk_gal_img_id`);
+
+ALTER TABLE `bc73q_os_gallery_img`
+  ADD PRIMARY KEY (`id`);
+
 ALTER TABLE `bc73q_overrider`
   ADD PRIMARY KEY (`id`);
 
@@ -811,13 +826,13 @@ ALTER TABLE `bc73q_finder_filters`
   MODIFY `filter_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `bc73q_finder_links`
-  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 ALTER TABLE `bc73q_finder_taxonomy`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 ALTER TABLE `bc73q_finder_terms`
-  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54330;
+  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55470;
 
 ALTER TABLE `bc73q_finder_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
@@ -935,6 +950,18 @@ ALTER TABLE `bc73q_modules`
 
 ALTER TABLE `bc73q_newsfeeds`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `bc73q_os_gallery`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `bc73q_os_gallery_categories`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `bc73q_os_gallery_connect`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+ALTER TABLE `bc73q_os_gallery_img`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 ALTER TABLE `bc73q_overrider`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=9264;

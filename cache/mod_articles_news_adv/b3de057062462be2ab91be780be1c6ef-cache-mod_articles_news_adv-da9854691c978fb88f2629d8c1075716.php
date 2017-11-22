@@ -1,4 +1,4 @@
-<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:3620:"<div class="moduletable latest_news  col-sm-12"><div class="module_container"><header class='page_header'><h3 class="moduleTitle ">Fyzioterapie - vše, co vás zajímá</h3></header>
+<?php die("Access Denied"); ?>#x#a:2:{s:6:"result";s:3618:"<div class="moduletable latest_news  col-sm-12"><div class="module_container"><header class='page_header'><h3 class="moduleTitle ">Fyzioterapie - vše, co vás zajímá</h3></header>
 <div class="mod-newsflash-adv blog mod-newsflash-adv__latest_news cols-3" id="module_229">
     <div class="row">
     <article class="col-sm-4 item item_num0 item__module  " id="item_10">
@@ -8,7 +8,7 @@
 <!-- Intro Image -->
 <figure class="item_img img-intro img-intro__none"> 
 			<a href="/kinisi/index.php/fyzioterapie-clanky-a-informace/15-posledni/10-svaly-okolo-kolena-by-mel-posilovat-kazdy">
-				<img src="images/blog/funkcni-fyziotrenink.jpg" alt="">
+				<img src="images/blog/HPpooperacni-fyzio.jpg" alt="">
 				</a>
 	</figure>
 
