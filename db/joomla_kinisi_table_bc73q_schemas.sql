@@ -9,3 +9,4 @@ INSERT INTO `bc73q_schemas` VALUES(700, '3.8.2-2017-10-14');
 INSERT INTO `bc73q_schemas` VALUES(10032, '3.3.0');
 INSERT INTO `bc73q_schemas` VALUES(10072, 'install.mysql.utf8');
 INSERT INTO `bc73q_schemas` VALUES(10148, '1.0.2');
+INSERT INTO `bc73q_schemas` VALUES(10325, '1.0.0');

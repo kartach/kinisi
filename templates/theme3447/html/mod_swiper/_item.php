@@ -20,11 +20,13 @@ if(!empty($itemURLs)){
 $check_effect = 3;
 $c = 0;
 $current_effect = 0;
-for($c;$c<count($item_effects);$c++){
-	if($item_effects[$c]->article_number == ($i+1)){
-		$current_effect = $item_effects[$c];
-		$check_effect = $current_effect->slide_effect;
-	}
+if($effects != NULL){
+    for($c;$c<count($item_effects);$c++){
+    	if($item_effects[$c]->article_number == ($i+1)){
+    		$current_effect = $item_effects[$c];
+    		$check_effect = $current_effect->slide_effect;
+    	}
+    }
 }
 ?>
 

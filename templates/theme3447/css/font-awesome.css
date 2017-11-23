@@ -1321,6 +1321,12 @@
 }
 .fa-dot-circle-o:before {
   content: "\f192";
+    font-size: 22px;
+color: #9b9b9b;
+display: inline-block;
+width: 40px;
+float: left;
+margin-bottom: -5px;
 }
 .fa-wheelchair:before {
   content: "\f193";
