@@ -25,3 +25,5 @@ INSERT INTO `bc73q_user_usergroup_map` VALUES(852, 3);
 INSERT INTO `bc73q_user_usergroup_map` VALUES(852, 4);
 INSERT INTO `bc73q_user_usergroup_map` VALUES(852, 5);
 INSERT INTO `bc73q_user_usergroup_map` VALUES(852, 6);
+INSERT INTO `bc73q_user_usergroup_map` VALUES(853, 2);
+INSERT INTO `bc73q_user_usergroup_map` VALUES(854, 2);

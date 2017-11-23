@@ -15,3 +15,4 @@ CREATE TABLE `bc73q_kunena_user_topics` (
 INSERT INTO `bc73q_kunena_user_topics` VALUES(630, 19, 2, 1, 30, 0, 0, 1, '');
 INSERT INTO `bc73q_kunena_user_topics` VALUES(849, 19, 2, 1, 27, 1, 0, 1, '');
 INSERT INTO `bc73q_kunena_user_topics` VALUES(849, 21, 3, 1, 29, 1, 0, 1, '');
+INSERT INTO `bc73q_kunena_user_topics` VALUES(851, 21, 3, 1, 31, 0, 0, 1, '');

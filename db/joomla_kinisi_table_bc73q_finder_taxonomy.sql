@@ -25,3 +25,18 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(35, 11, 'METODY A LÉČEBNÉ PŘÍSTU
 INSERT INTO `bc73q_finder_taxonomy` VALUES(36, 11, 'Funkční fyziotréning', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(37, 11, 'Fyzioterapie pro ženy', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(41, 11, 'Fyzioterapie dospělých', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(43, 11, 'Poslední', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(45, 11, 'Služby I', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(46, 11, 'Služby II', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(47, 11, 'Tým Centra fyzioterapie Kinisi', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(49, 11, 'Uncategorised', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(53, 11, 'Kvalita služeb 3', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(55, 11, 'Slider', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(58, 11, 'Reference', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(59, 11, 'HP reference', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(60, 11, 'Reference jednotlivci', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(64, 11, 'O nás', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(67, 11, 'About HP pro Article', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(68, 11, 'Kvalita služeb 4', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(69, 11, 'Kvalita služeb ', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(70, 11, 'Kvalita služeb 2', 1, 1, 0);
