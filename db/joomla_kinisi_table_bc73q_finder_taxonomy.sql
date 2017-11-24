@@ -40,3 +40,5 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(67, 11, 'About HP pro Article', 1, 1,
 INSERT INTO `bc73q_finder_taxonomy` VALUES(68, 11, 'Kvalita služeb 4', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(69, 11, 'Kvalita služeb ', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(70, 11, 'Kvalita služeb 2', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(71, 2, 'Category', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(72, 11, 'Služby a programy', 1, 1, 0);
