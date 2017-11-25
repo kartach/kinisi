@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_messages`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_messages`;
 CREATE TABLE `bc73q_kunena_messages` (
   `id` int(11) NOT NULL,
@@ -21,6 +27,10 @@ CREATE TABLE `bc73q_kunena_messages` (
   `modified_time` int(11) DEFAULT NULL,
   `modified_reason` tinytext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_messages`
+--
 
 INSERT INTO `bc73q_kunena_messages` VALUES(12, 0, 5, 2, 'Klara', 630, '', 'ssssss', 1509998110, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
 INSERT INTO `bc73q_kunena_messages` VALUES(13, 0, 6, 2, 'Klara', 630, '', 'ff', 1509998178, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');

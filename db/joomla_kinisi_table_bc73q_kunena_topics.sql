@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_topics`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_topics`;
 CREATE TABLE `bc73q_kunena_topics` (
   `id` int(11) NOT NULL,
@@ -27,6 +33,10 @@ CREATE TABLE `bc73q_kunena_topics` (
   `rating` tinyint(6) NOT NULL DEFAULT '0',
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_topics`
+--
 
 INSERT INTO `bc73q_kunena_topics` VALUES(5, 2, 'ssssss', 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, '');
 INSERT INTO `bc73q_kunena_topics` VALUES(6, 2, 'ff', 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL, 0, 0, 0, NULL, NULL, 0, '');

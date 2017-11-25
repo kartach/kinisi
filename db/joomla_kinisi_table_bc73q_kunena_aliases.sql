@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_aliases`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_aliases`;
 CREATE TABLE `bc73q_kunena_aliases` (
   `alias` varchar(255) NOT NULL,
@@ -6,6 +12,10 @@ CREATE TABLE `bc73q_kunena_aliases` (
   `item` varchar(32) NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_aliases`
+--
 
 INSERT INTO `bc73q_kunena_aliases` VALUES('announcement', 'view', 'announcement', 1);
 INSERT INTO `bc73q_kunena_aliases` VALUES('category', 'view', 'category', 1);

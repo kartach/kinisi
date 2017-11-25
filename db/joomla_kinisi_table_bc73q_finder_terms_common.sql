@@ -1,9 +1,19 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_finder_terms_common`
+--
+
 DROP TABLE IF EXISTS `bc73q_finder_terms_common`;
 CREATE TABLE `bc73q_finder_terms_common` (
   `term` varchar(75) NOT NULL,
   `language` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bc73q_finder_terms_common`
+--
 
 INSERT INTO `bc73q_finder_terms_common` VALUES('a', 'en');
 INSERT INTO `bc73q_finder_terms_common` VALUES('about', 'en');

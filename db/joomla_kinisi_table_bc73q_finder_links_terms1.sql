@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_finder_links_terms1`
+--
+
 DROP TABLE IF EXISTS `bc73q_finder_links_terms1`;
 CREATE TABLE `bc73q_finder_links_terms1` (
   `link_id` int(10) UNSIGNED NOT NULL,
@@ -6,36 +12,39 @@ CREATE TABLE `bc73q_finder_links_terms1` (
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 396, 0.09331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 396, 0.09331);
+--
+-- Dumping data for table `bc73q_finder_links_terms1`
+--
+
 INSERT INTO `bc73q_finder_links_terms1` VALUES(215, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(216, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(326, 396, 0.09331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 396, 0.09331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(7, 396, 0.18662);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(85, 396, 0.18662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(315, 396, 0.18662);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(403, 396, 0.18662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(7, 397, 1.72662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(7, 398, 1.86662);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 1115, 0.23331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 1115, 0.23331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(10, 1115, 0.46662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(10, 1116, 2.1);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(10, 1117, 2.19338);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(332, 16750, 0.28);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(338, 16750, 0.28);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 21578, 0.23331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(296, 21578, 0.23331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(369, 21578, 0.23331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 21578, 0.69993);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 21578, 0.93324);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 21579, 0.86331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 21579, 1.72662);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 21587, 0.14);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 21587, 0.14);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 21578, 0.23331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 21578, 0.69993);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 21578, 0.93324);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 21579, 0.86331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 21579, 1.72662);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(315, 21587, 0.14);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(323, 21587, 0.14);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 21587, 0.14);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(95, 31405, 0.28);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 31405, 0.28);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(338, 31405, 0.28);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 31405, 0.28);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(315, 33003, 0.95669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(326, 33003, 0.95669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(315, 33004, 1.00331);
@@ -49,43 +58,8 @@ INSERT INTO `bc73q_finder_links_terms1` VALUES(326, 33008, 0.95669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(315, 33009, 1.07331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(326, 33009, 1.07331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(213, 33013, 1.46685);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54800, 1.02669);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54801, 1.19);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54806, 1.00331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54807, 1.19);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54808, 0.91);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(66, 54809, 1.12);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(85, 71714, 1.07331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(85, 71715, 1.21331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(85, 71716, 0.81669);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(85, 71717, 1.00331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 77857, 0.07);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 77858, 0.86331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 77859, 0.93331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78499, 0.86331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78500, 1.05);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78501, 0.98);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78502, 1.00331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78503, 1.19);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78504, 1.00331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78505, 1.14331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78506, 0.98);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78507, 1.16669);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78508, 0.81669);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(92, 78509, 1.02669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(95, 80242, 1.00331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(95, 80243, 1.26);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85530, 0.98);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85531, 1.14331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85532, 1.07331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85533, 1.05);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85534, 1.00331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85535, 1.07331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85536, 0.23331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85537, 0.98);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85538, 1.12);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85548, 0.93331);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(98, 85549, 1.09669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(323, 110587, 0.23331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(332, 110587, 0.23331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(152, 117699, 0.28);
@@ -167,3 +141,36 @@ INSERT INTO `bc73q_finder_links_terms1` VALUES(338, 177177, 1.00331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(338, 177178, 1.14331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(369, 182038, 1.05);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(369, 182039, 1.30669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195006, 0.98);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195007, 1.14331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195008, 1.07331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195009, 1.05);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195010, 1.00331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195011, 1.07331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195012, 0.23331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195013, 0.98);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195014, 1.12);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195024, 0.93331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(386, 195025, 1.09669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204261, 0.07);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204262, 0.86331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204263, 0.93331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204801, 0.86331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204802, 1.05);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204803, 0.98);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204804, 1.00331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204805, 1.19);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204806, 1.00331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204807, 1.14331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204808, 0.98);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204809, 1.16669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204810, 0.81669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(396, 204811, 1.02669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(403, 208847, 1.07331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(403, 208848, 1.21331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(403, 208849, 0.81669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(403, 208850, 1.00331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 216417, 1.02669);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 216418, 1.19);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 216421, 1.00331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(412, 216422, 1.19);

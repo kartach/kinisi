@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_announcement`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_announcement`;
 CREATE TABLE `bc73q_kunena_announcement` (
   `id` int(3) NOT NULL,

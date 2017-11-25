@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_joomgallery_nameshields`
+--
+
 DROP TABLE IF EXISTS `bc73q_joomgallery_nameshields`;
 CREATE TABLE `bc73q_joomgallery_nameshields` (
   `nid` int(11) NOT NULL,

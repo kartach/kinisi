@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_banner_clients`
+--
+
 DROP TABLE IF EXISTS `bc73q_banner_clients`;
 CREATE TABLE `bc73q_banner_clients` (
   `id` int(11) NOT NULL,

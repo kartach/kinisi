@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_action`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_action`;
 CREATE TABLE `bc73q_acymailing_action` (
   `action_id` int(10) UNSIGNED NOT NULL,

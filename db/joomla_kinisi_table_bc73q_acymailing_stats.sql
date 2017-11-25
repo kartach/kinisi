@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_stats`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_stats`;
 CREATE TABLE `bc73q_acymailing_stats` (
   `mailid` mediumint(8) UNSIGNED NOT NULL,

@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_modules`
+--
+
 DROP TABLE IF EXISTS `bc73q_modules`;
 CREATE TABLE `bc73q_modules` (
   `id` int(11) NOT NULL,
@@ -20,6 +26,10 @@ CREATE TABLE `bc73q_modules` (
   `client_id` tinyint(4) NOT NULL DEFAULT '0',
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bc73q_modules`
+--
 
 INSERT INTO `bc73q_modules` VALUES(2, 56, 'Login', '', '', 1, 'login', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_login', 1, 1, '', 1, '*');
 INSERT INTO `bc73q_modules` VALUES(3, 57, 'Popular Articles', '', '', 3, 'cpanel', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_popular', 3, 1, '{\"count\":\"5\",\"catid\":\"\",\"user_id\":\"0\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":\"0\",\"automatic_title\":\"1\"}', 1, '*');

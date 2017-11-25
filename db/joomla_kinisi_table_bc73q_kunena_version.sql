@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_version`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_version`;
 CREATE TABLE `bc73q_kunena_version` (
   `id` int(11) NOT NULL,
@@ -9,6 +15,10 @@ CREATE TABLE `bc73q_kunena_version` (
   `versionname` varchar(40) DEFAULT NULL,
   `state` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_version`
+--
 
 INSERT INTO `bc73q_kunena_version` VALUES(1, '3.0.5', '2014-03-09', '2014-05-02', '', 'Invecchiato', '');
 INSERT INTO `bc73q_kunena_version` VALUES(2, '3.0.6', '2014-07-28', '2014-08-05', '', 'Tala', '');

@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_template_styles`
+--
+
 DROP TABLE IF EXISTS `bc73q_template_styles`;
 CREATE TABLE `bc73q_template_styles` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -8,6 +14,10 @@ CREATE TABLE `bc73q_template_styles` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `params` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bc73q_template_styles`
+--
 
 INSERT INTO `bc73q_template_styles` VALUES(4, 'beez3', 0, '0', 'Beez3 - Default', '{\"wrapperSmall\":\"53\",\"wrapperLarge\":\"72\",\"logo\":\"images\\/joomla_black.gif\",\"sitetitle\":\"Joomla!\",\"sitedescription\":\"Open Source Content Management\",\"navposition\":\"left\",\"templatecolor\":\"personal\",\"html5\":\"0\"}');
 INSERT INTO `bc73q_template_styles` VALUES(5, 'hathor', 1, '0', 'Hathor - Default', '{\"showSiteName\":\"0\",\"colourChoice\":\"\",\"boldText\":\"0\"}');

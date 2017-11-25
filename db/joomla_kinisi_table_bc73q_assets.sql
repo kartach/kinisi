@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_assets`
+--
+
 DROP TABLE IF EXISTS `bc73q_assets`;
 CREATE TABLE `bc73q_assets` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
@@ -10,6 +16,10 @@ CREATE TABLE `bc73q_assets` (
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bc73q_assets`
+--
 
 INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1051, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `bc73q_assets` VALUES(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}');
@@ -440,10 +450,10 @@ INSERT INTO `bc73q_assets` VALUES(850, 834, 449, 458, 3, 'com_content.category.9
 INSERT INTO `bc73q_assets` VALUES(851, 834, 459, 472, 3, 'com_content.category.100', 'Péče o sportovce', '{}');
 INSERT INTO `bc73q_assets` VALUES(852, 835, 400, 401, 4, 'com_content.article.192', 'Fyzioterapeutické vyšetření', '{}');
 INSERT INTO `bc73q_assets` VALUES(853, 835, 402, 403, 4, 'com_content.article.193', 'Pomoc fyzioterapeuta', '{}');
-INSERT INTO `bc73q_assets` VALUES(854, 835, 404, 405, 4, 'com_content.article.194', 'Metodiky a terapeutické přístupy ve fyzioterapii dospělých', '{}');
+INSERT INTO `bc73q_assets` VALUES(854, 835, 404, 405, 4, 'com_content.article.194', 'Metody a terapeutické přístupy ve fyzioterapii dospělých', '{}');
 INSERT INTO `bc73q_assets` VALUES(855, 839, 416, 417, 4, 'com_content.article.195', 'Vyšetření v dětské fyzioterapii', '{}');
 INSERT INTO `bc73q_assets` VALUES(856, 839, 418, 419, 4, 'com_content.article.196', 'Indikace v dětské fyzioterapii', '{}');
-INSERT INTO `bc73q_assets` VALUES(857, 839, 420, 421, 4, 'com_content.article.197', 'Metodiky a terapeutické přístupy v dětské fyzioterapii', '{}');
+INSERT INTO `bc73q_assets` VALUES(857, 839, 420, 421, 4, 'com_content.article.197', 'Metody a terapeutické přístupy v dětské fyzioterapii', '{}');
 INSERT INTO `bc73q_assets` VALUES(858, 843, 430, 431, 4, 'com_content.article.198', 'Akutní fyzioterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(859, 839, 422, 423, 4, 'com_content.article.199', 'Indikace (4)', '{}');
 INSERT INTO `bc73q_assets` VALUES(860, 843, 432, 433, 4, 'com_content.article.200', 'Pooperační fyzioterapie', '{}');
@@ -467,10 +477,10 @@ INSERT INTO `bc73q_assets` VALUES(877, 876, 489, 490, 3, 'com_content.article.21
 INSERT INTO `bc73q_assets` VALUES(878, 876, 491, 492, 3, 'com_content.article.217', 'Integrace primitivních reflexů', '{}');
 INSERT INTO `bc73q_assets` VALUES(879, 876, 493, 494, 3, 'com_content.article.218', 'Integrace primitivních reflexů (2)', '{}');
 INSERT INTO `bc73q_assets` VALUES(880, 876, 495, 496, 3, 'com_content.article.219', 'Synergická reflexní terapie (SRT)', '{}');
-INSERT INTO `bc73q_assets` VALUES(881, 876, 497, 498, 3, 'com_content.article.220', 'Metoda Ludmily Mojžíšové v našem fyzioterapeutickém centru', '{}');
+INSERT INTO `bc73q_assets` VALUES(881, 876, 497, 498, 3, 'com_content.article.220', 'Metoda Ludmily Mojžíšové', '{}');
 INSERT INTO `bc73q_assets` VALUES(882, 876, 499, 500, 3, 'com_content.article.221', 'Léčba suchou jehlou (Dry Needling)', '{}');
 INSERT INTO `bc73q_assets` VALUES(883, 876, 501, 502, 3, 'com_content.article.222', 'Využití metody kineziotapingu ', '{}');
-INSERT INTO `bc73q_assets` VALUES(884, 876, 503, 504, 3, 'com_content.article.223', 'Ultrazvuk a elektroterapie v našem fyzickoterapeutickém centru', '{}');
+INSERT INTO `bc73q_assets` VALUES(884, 876, 503, 504, 3, 'com_content.article.223', 'Ultrazvuk a elektroterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(885, 876, 505, 506, 3, 'com_content.article.224', 'Léčba TDP lampou ve fyzioterapii', '{}');
 INSERT INTO `bc73q_assets` VALUES(886, 18, 782, 783, 2, 'com_modules.module.284', 'Vyhledávání', '{\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1}}');
 INSERT INTO `bc73q_assets` VALUES(887, 18, 784, 785, 2, 'com_modules.module.285', 'Hledání pode tagů', '{}');

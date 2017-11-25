@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_update_sites`
+--
+
 DROP TABLE IF EXISTS `bc73q_update_sites`;
 CREATE TABLE `bc73q_update_sites` (
   `update_site_id` int(11) NOT NULL,
@@ -9,6 +15,10 @@ CREATE TABLE `bc73q_update_sites` (
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
+
+--
+-- Dumping data for table `bc73q_update_sites`
+--
 
 INSERT INTO `bc73q_update_sites` VALUES(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 0, '');

@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_mail`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_mail`;
 CREATE TABLE `bc73q_acymailing_mail` (
   `mailid` mediumint(8) UNSIGNED NOT NULL,
@@ -35,6 +41,10 @@ CREATE TABLE `bc73q_acymailing_mail` (
   `lastupdate` int(10) UNSIGNED DEFAULT NULL,
   `userlastupdate` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_acymailing_mail`
+--
 
 INSERT INTO `bc73q_acymailing_mail` VALUES(1, 'New Subscriber on your website : {user:email}', '<p>Hello {subtag:name},</p><p>A new user has been created in AcyMailing : </p><blockquote><p>Name : {user:name}</p><p>Email : {user:email}</p><p>IP : {user:ip} </p><p>Subscription : {user:subscription}</p></blockquote>', '', 1, NULL, NULL, NULL, NULL, NULL, NULL, 'notification', 0, NULL, 'notification_created', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, '', NULL, NULL, NULL, NULL);
 INSERT INTO `bc73q_acymailing_mail` VALUES(2, 'A User unsubscribed from all your lists : {user:email}', '<p>Hello {subtag:name},</p><p>The user {user:name} : {user:email} unsubscribed from all your lists</p><p>Subscription : {user:subscription}</p><p>{survey}</p>', '', 1, NULL, NULL, NULL, NULL, NULL, NULL, 'notification', 0, NULL, 'notification_unsuball', NULL, 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, '', NULL, NULL, NULL, NULL);
