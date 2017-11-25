@@ -107,6 +107,9 @@ body.com_osgallery {
             }
         }
     }
+    .subhead-collapse {
+        margin-bottom: 18px !important;
+    }
     .subhead {
         background: lighten($grey, 30%);
         border: none;
@@ -252,17 +255,45 @@ body.com_osgallery {
                             }
                         }
                     }
-                    #file-area {
+                    #fine-uploader {
                         width: 100%;
-                        .qq-uploader {
+                        display: inline-block;
+                        -webkit-box-sizing: border-box;
+                           -moz-box-sizing: border-box;
+                                box-sizing: border-box;
+                        .qq-uploader-selector {
+                             min-height: 135px;
+                            -webkit-border-radius: 0px;
+                                    border-radius: 0px;
+                            border: none !important;
+                            -webkit-box-sizing: border-box;
+                               -moz-box-sizing: border-box;
+                                    box-sizing: border-box;
+                            padding: 15px;
+                            overflow: hidden;
+                            &:before {
+                                font-weight: bold;
+                                top: 65%;
+                                text-transform: uppercase;
+                                font-size: 20px;
+                            }
                             .qq-upload-button {
                                 width: 100%;
                                 height: 50px;
-                                margin: 6px 0;
-                                background: $white;
+                                margin: 0;
+                                background:  lighten($grey, 30%);
                                 color: $grey;
                                 text-transform: uppercase;
                                 font-weight: 700;
+                                border: none;
+                                padding: 17px 10px;
+                                -webkit-border-radius: 0px;
+                                        border-radius: 0px;
+                                -webkit-box-shadow: none !important;
+                                        box-shadow: none !important;
+                                -webkit-box-sizing: border-box;
+                                   -moz-box-sizing: border-box;
+                                        box-sizing: border-box;
                                 &:hover {
                                     background: lighten($blue, 20%);
                                 }

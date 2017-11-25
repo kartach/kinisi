@@ -3,7 +3,7 @@
 * @package OS Gallery
 * @copyright 2016 OrdaSoft
 * @author 2016 Andrey Kvasnevskiy(akbet@mail.ru),Roman Akoev (akoevroman@gmail.com)
-* @license GNU General Public License version 2 or later;
+* @license This component is released under License from included LICENSE.txt file
 * @description Ordasoft Image Gallery
 */
 
@@ -13,7 +13,7 @@ defined('_JEXEC') or die('Restricted access');
 
 // Set some global property
 $document = JFactory::getDocument();
-$app = JFactory::getApplication();
+
 //include needed style
 $document->addStyleSheet(JURI::base() . "components/com_osgallery/assets/css/admin.css");
 //include icons
@@ -22,18 +22,17 @@ $document->addStyleSheet("//fonts.googleapis.com/icon?family=Material+Icons");
 // Access check: is this user allowed to access the backend of this component?
 if (!JFactory::getUser()->authorise('core.manage', 'com_osgallery'))
 {
-    return $app->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'error');
-
+    return JError::raiseWarning(404, JText::_('JERROR_ALERTNOAUTHOR'));
 }
 
 // require helper file
 JLoader::register('osGalleryHelperAdmin', JPATH_COMPONENT . '/helpers/osGalleryHelperAdmin.php');
 
 // Perform the Request task
-$input = $app->input;
+$input = JFactory::getApplication()->input;
 $task = $input->getCmd('task', '');
 $galId = $input->getCmd('galId', '');
-//print_r($task);exit;
+// print_r($task);exit;
 switch ($task) {
     case "upload_images":
         osGalleryHelperAdmin::uploadImages();

@@ -30,6 +30,7 @@ class plgSystemOsGallery_system extends JPlugin{
     $doc = JFactory::getDocument();
     $html = $app->getBody();
     if ($app->isSite() && $doc->getType() == 'html') {
+      JLoader::register('osGallerySocialButtonsHelper', JPATH_SITE . '/components/com_osgallery/helpers/osGallerySocialButtonsHelper.php');
       JLoader::register('osGalleryHelperSite', JPATH_SITE . "/components/com_osgallery/helpers/osGalleryHelperSite.php");
       if(isset($article->introtext)){
         $article_content = $article->introtext;
@@ -65,6 +66,7 @@ class plgSystemOsGallery_system extends JPlugin{
       $head = substr($html, 0, $pos);
 
       $body = substr($html, $pos);
+      JLoader::register('osGallerySocialButtonsHelper', JPATH_SITE . '/components/com_osgallery/helpers/osGallerySocialButtonsHelper.php');
       JLoader::register('osGalleryHelperSite', JPATH_SITE . "/components/com_osgallery/helpers/osGalleryHelperSite.php");
       if(isset($body)){
         preg_match_all('{os-gal-[0-9]{1,}}',$body,$matches);
@@ -111,8 +113,8 @@ class plgSystemOsGallery_system extends JPlugin{
       $head .= '<link rel="stylesheet" href="'.$link.'">'."\n";
     }
 
-    $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/jquery.fancyboxGall.css';
-    if(!preg_match_all('|jquery.fancyboxGall|',$head,$matches)){
+    $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/jquery.os_fancyboxGall.css';
+    if(!preg_match_all('|jquery.os_fancyboxGall|',$head,$matches)){
       $head .= '<link rel="stylesheet" href="'.$link.'">'."\n";
     }
 
@@ -121,37 +123,49 @@ class plgSystemOsGallery_system extends JPlugin{
       $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
     }
 
-    $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/jquery.fancyboxGall.js';
-    if(!preg_match_all('|jquery.fancyboxGall.js|',$head,$matches)){
+    $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/jquery.os_fancyboxGall.js';
+    if(!preg_match_all('|jquery.os_fancyboxGall.js|',$head,$matches)){
       $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
     }
 
+    
+    $link = JURI::base() . 'components/com_osgallery/assets/libraries/imagesloadedGall.pkgd.min.js';
+    if(!preg_match_all('|imagesloadedGall.pkgd.min.js|',$head,$matches)){
+      $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
+    }
+
+    $link = JURI::base() . 'components/com_osgallery/assets/libraries/isotope/isotope.pkgd.min.js';
+    if(!preg_match_all('|isotope.pkgd.min.js|',$head,$matches)){
+      $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
+    }
+
+
     if($buttons){
-      $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/helpers/jquery.fancybox-buttons.css';
-      if(!preg_match_all('|jquery.fancybox-buttons.css|',$head,$matches)){
+      $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/helpers/jquery.os_fancybox-buttons.css';
+      if(!preg_match_all('|jquery.os_fancybox-buttons.css|',$head,$matches)){
         $head .= '<link rel="stylesheet" href="'.$link.'">'."\n";
       }
 
-      $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/helpers/jquery.fancyboxGall-buttons.js';
-      if(!preg_match_all('|jquery.fancyboxGall-buttons.js|',$head,$matches)){
+      $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/helpers/jquery.os_fancyboxGall-buttons.js';
+      if(!preg_match_all('|jquery.os_fancyboxGall-buttons.js|',$head,$matches)){
         $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
       }
     }
 
     if($thumbnail){
-      $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/helpers/jquery.fancybox-thumbs.css';
-      if(!preg_match_all('|jquery.fancybox-thumbs.css|',$head,$matches)){
+      $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/helpers/jquery.os_fancybox-thumbs.css';
+      if(!preg_match_all('|jquery.os_fancybox-thumbs.css|',$head,$matches)){
         $head .= '<link rel="stylesheet" href="'.$link.'">'."\n";
       }
 
-      $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/helpers/jquery.fancyboxGall-thumbs.js';
-      if(!preg_match_all('|jquery.fancyboxGall-thumbs.js|',$head,$matches)){
+      $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/helpers/jquery.os_fancyboxGall-thumbs.js';
+      if(!preg_match_all('|jquery.os_fancyboxGall-thumbs.js|',$head,$matches)){
         $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
       }
     }
 
     if($wheel){
-      $link = JURI::base() . 'components/com_osgallery/assets/libraries/fancybox/helpers/jquery.mousewheel-3.0.6.pack.js';
+      $link = JURI::base() . 'components/com_osgallery/assets/libraries/os_fancybox/helpers/jquery.mousewheel-3.0.6.pack.js';
       if(!preg_match_all('|jquery.mousewheel-3.0.6.pack.js|',$head,$matches)){
         $head .= '<script type="text/javascript" src="'.$link.'"></script>'."\n";
       }

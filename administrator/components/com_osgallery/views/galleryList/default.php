@@ -3,7 +3,7 @@
 * @package OS Gallery
 * @copyright 2016 OrdaSoft
 * @author 2016 Andrey Kvasnevskiy(akbet@mail.ru),Roman Akoev (akoevroman@gmail.com)
-* @license GNU General Public License version 2 or later;
+* @license This component is released under License from included LICENSE.txt file
 * @description Ordasoft Image Gallery
 */
 
@@ -103,7 +103,7 @@ defined('_JEXEC') or die('Restricted Access');
   </div>
   <div class="modal-footer">
         <span class="span3">
-            <label class="about-col-1"><?php echo JText::_("COM_OSGALLERY_VERSION")?></label><span id="gallery-version" class="about-col-2"><?php echo $galV.' Lite'?></span>
+            <label class="about-col-1"><?php echo JText::_("COM_OSGALLERY_VERSION")?></label><span id="gallery-version" class="about-col-2"><?php echo $galV.' Pro'?></span>
         </span>
         <span class="span3">
             <label class="about-col-1"><?php echo JText::_("COM_OSGALLERY_CREATION_DATE")?></label><span id="gallery-version" class="about-col-2"><?php echo $creationDate?></span>

@@ -22,7 +22,7 @@ body.com_osgallery #confirm-delete-modal .modal-footer .btn,
 body.com_osgallery #about-modal .modal-footer .btn, body.com_osgallery #confirm-modal .modal-footer .btn-primary,
 body.com_osgallery #confirm-delete-modal .modal-footer .btn-primary,
 body.com_osgallery #about-modal .modal-footer .btn-primary {
-  padding: 10px 25px;
+  padding: 5px 25px;
   color: #354052;
   cursor: pointer;
   border: none;
@@ -33,7 +33,7 @@ body.com_osgallery #about-modal .modal-footer .btn-primary {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
-  border-radius: 0;
+  border-radius: 4px;
   font-size: 13px;
   font-weight: 700;
   margin: 5px 0;
@@ -66,6 +66,8 @@ body.com_osgallery {
         float: left; }
       body.com_osgallery .header .container-title .page-title .os-gallery-title-text {
         font-size: 25px; }
+  body.com_osgallery .subhead-collapse {
+    margin-bottom: 18px !important; }
   body.com_osgallery .subhead {
     background: #788aa8;
     border: none; }
@@ -120,7 +122,7 @@ body.com_osgallery {
         background-size: 100%; }
     body.com_osgallery .subhead #toolbar-gallery-update-unavaible .btn {
       position: relative;
-      padding: 10px 25px 10px 40px; }
+      padding: 6px 25px 5px 25px; }
       body.com_osgallery .subhead #toolbar-gallery-update-unavaible .btn .icon-gallery-update-unavaible {
         background: url(../images/no-update.png) no-repeat;
         position: absolute;
@@ -204,22 +206,50 @@ body.com_osgallery {
         box-sizing: border-box;
         height: 35px;
         width: 100%; }
-  body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #file-area {
-    width: 100%; }
-    body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #file-area .qq-uploader .qq-upload-button {
-      width: 100%;
-      height: 50px;
-      margin: 6px 0;
-      background: #fff;
-      color: #354052;
-      text-transform: uppercase;
-      font-weight: 700; }
-      body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #file-area .qq-uploader .qq-upload-button:hover {
-        background: #92bfed; }
-      body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #file-area .qq-uploader .qq-upload-button p {
-        margin: 6px 0 5px 0; }
-      body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #file-area .qq-uploader .qq-upload-button input {
-        height: 100%; }
+  body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader {
+    width: 100%;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector {
+      min-height: 135px;
+      -webkit-border-radius: 0px;
+      border-radius: 0px;
+      border: none !important;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 15px;
+      overflow: hidden; }
+      body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector:before {
+        font-weight: bold;
+        top: 65%;
+        text-transform: uppercase;
+        font-size: 20px; }
+      body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector .qq-upload-button {
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        background: #788aa8;
+        color: #354052;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: none;
+        padding: 17px 10px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector .qq-upload-button:hover {
+          background: #92bfed; }
+        body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector .qq-upload-button p {
+          margin: 6px 0 5px 0; }
+        body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #fine-uploader .qq-uploader-selector .qq-upload-button input {
+          height: 100%; }
   body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab #osgalery-cat-tabs {
     margin: 10px 0;
     padding: 10px 0; }
@@ -418,7 +448,7 @@ body.com_osgallery {
       padding: 10px 15px; }
       body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab .category-options-block .tab-content .tab-pane .cat-col-1 {
         float: left;
-        width: 40%;
+        width: 37%;
         padding: 12px 0;
         font-weight: 700;
         color: #536480; }
@@ -447,8 +477,19 @@ body.com_osgallery {
   body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab .category-options-block-message {
     top: 281px; }
   body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab .category-options-block-fixed {
-    position: fixed;
+    /*position: fixed;*/
     top: 115px; }
+    .type_html_code .cat-col-1 {
+      /*float: none !important;*/
+      /*width: 148px !important;*/
+      display: block;
+    }
+    .type_html_code .cat-col-2 textarea {
+      width: 217px !important;
+    }
+    .subhead.subhead-fixed {
+      position: inherit !important;
+    }
     @media (max-width: 1200px) {
       body.com_osgallery #content #adminForm .gallery-main-content-tab #gallery-main-tab .category-options-block-fixed {
         position: absolute; } }
@@ -460,7 +501,7 @@ body.com_osgallery {
       width: 100% !important;
       float: none; } }
   body.com_osgallery #content .gallery-main-content-tab #gallery-settings-tab {
-    width: 40%;
+    width: 43.5%;
     background: white; }
     @media (max-width: 1300px) {
       body.com_osgallery #content .gallery-main-content-tab #gallery-settings-tab {
@@ -475,7 +516,7 @@ body.com_osgallery {
       body.com_osgallery #content .gallery-main-content-tab #gallery-settings-tab {
         width: 100%; } }
     body.com_osgallery #content .gallery-main-content-tab #gallery-settings-tab #osgalery-settings-tabs li {
-      width: 33.333%; }
+      width: 25%; }
       body.com_osgallery #content .gallery-main-content-tab #gallery-settings-tab #osgalery-settings-tabs li a {
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -963,9 +1004,72 @@ body.com_osgallery {
     transform: scale(1); } }
 
 /*# sourceMappingURL=admin.css.map */
+        body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .sett-col-2 .osgallery-checkboxes-block,
+        body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .cat-col-2 .osgallery-checkboxes-block {
+          width: 230px;
+          height: 35px;
+          position: relative;
+          margin: 6px 0 0 0;
+          display: inline-block;
+          border: none;
+          background: #fff;
+          text-decoration: none;
+          overflow: hidden;
+          -moz-user-select: -moz-none;
+          -ms-user-select: none;
+          -webkit-user-select: none;
+          user-select: none;
+          -moz-transition-duration: 0.4s;
+          -o-transition-duration: 0.4s;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+          -moz-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -o-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -webkit-transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -webkit-tap-highlight-color: transparent; }
+          body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .sett-col-2 .osgallery-checkboxes-block input[type="radio"],
+          body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .cat-col-2 .osgallery-checkboxes-block input[type="radio"] {
+            visibility: hidden;
+            position: absolute; }
+          body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .sett-col-2 .osgallery-checkboxes-block label,
+          body.com_osgallery #content .gallery-main-content-tab .category-options-block .tab-content .tab-pane .cat-col-2 .osgallery-checkboxes-block label {
+            margin: 0;
+            font-size: 15px;
+            line-height: 24px;
+            background: #788aa8;
+            color: #354052;
+            padding: 6px 0;
+            -moz-transition-duration: 0;
+            -o-transition-duration: 0;
+            -webkit-transition-duration: 0;
+            transition-duration: 0; }
+            #toolbar [class^="icon-"], #toolbar [class*=" icon-"] {
+              background-color: rgba(18, 187, 197, 0.3) !important;
+              border-radius: 3px 0 0 3px;
+              border-right: none !important; 
+              height: auto;
+              line-height: inherit;
+              margin: 0 6px 0 -10px;
+              opacity: 1;
+              text-shadow: none;
+              width: 28px;
+              z-index: -1;
+            }
+/*# sourceMappingURL=admin.css.map */
 /*---------------------------------FREE CSS BLOCK-------------------------------*/
 .osg-pro-avaible, .osg-pro-avaible *{
     color: red!important;
-    background-color: gray!important;
+    background-color: #cccccc!important;
     cursor: not-allowed!important;
+}
+
+.osg-pro-avaible-string * {
+    color: #942A25!important;
+    cursor: not-allowed!important;
+}
+
+.osg-pro-avaible label,.osg-pro-avaible-string label {
+    color: black!important;
+    background: #A1A1A1!important;
 }

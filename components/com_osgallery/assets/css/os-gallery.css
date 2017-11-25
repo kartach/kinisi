@@ -108,6 +108,113 @@ box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
     width: 100%;
 }
 
+/*****------------------------------------------------- none ----------------------------------------------------*****/
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect,
+[class^=os-gallery-album-tabs-main] .img-block.none-effect,
+[class^=os-gallery-tabs-main] .img-block.none-effect {
+    background: #2f3238;
+    overflow: hidden;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect .os-gallery-caption,
+[class^=os-gallery-album-tabs-main] .img-block.none-effect .os-gallery-caption,
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+[class^=os-gallery-all-in-one-main] .img-block.none-effect .os-gallery-caption h3.os-gallery-img-title,
+[class^=os-gallery-album-tabs-main] .img-block.none-effect .os-gallery-caption h3.os-gallery-img-title,
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption h3.os-gallery-img-title {
+    position: relative;
+    padding: 0.5em 0;
+    color: #fff;
+    text-align: center;
+    font-size: 100%;
+    line-height: 100%;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 2px 4px #505050;
+    -webkit-text-shadow: 1px 2px 4px #505050;
+    -moz-text-shadow: 1px 2px 4px #505050;
+}
+[class^=os-gallery-all-in-one-main]  .img-block.none-effect .os-gallery-caption p,
+[class^=os-gallery-album-tabs-main]  .img-block.none-effect .os-gallery-caption p,
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption p {
+    display: inline-block;
+    margin: 1% 5px 1% 11%;
+    padding: 0.4em 1em;
+    background: rgba(255,255,255,0.9);
+    color: #2f3238;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 70%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-360px,0,0);
+    transform: translate3d(-360px,0,0);
+    opacity: 0;
+}
+
+[class^=os-gallery-all-in-one-main]  .img-block.none-effect .os-gallery-caption p:first-child,
+[class^=os-gallery-album-tabs-main]  .img-block.none-effect .os-gallery-caption p:first-child,
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption p:first-child {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+    position: absolute;
+    top: 50px;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(2),
+[class^=os-gallery-album-tabs-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(2),
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(2) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(3),
+[class^=os-gallery-album-tabs-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(3),
+[class^=os-gallery-tabs-main] .img-block.none-effect .os-gallery-caption p:nth-of-type(3) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect:hover .os-gallery-caption p:first-child,
+[class^=os-gallery-album-tabs-main] .img-block.none-effect:hover .os-gallery-caption p:first-child,
+[class^=os-gallery-tabs-main] .img-block.none-effect:hover .os-gallery-caption p:first-child {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 1;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(2),
+[class^=os-gallery-album-tabs-main]  .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(2),
+[class^=os-gallery-tabs-main] .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(2) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    opacity: 1;
+}
+[class^=os-gallery-all-in-one-main] .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(3),
+[class^=os-gallery-album-tabs-main] .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(3),
+[class^=os-gallery-tabs-main] .img-block.none-effect:hover .os-gallery-caption p:nth-of-type(3) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+    opacity: 1;
+}
+
+[class^=os-gallery-all-in-one-main] .img-block.none-effect:hover .os-gallery-caption p,
+[class^=os-gallery-album-tabs-main] .img-block.none-effect:hover .os-gallery-caption p,
+[class^=os-gallery-tabs-main] .img-block.none-effect:hover .os-gallery-caption p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
 /*****------------------------------------------------- dimas ----------------------------------------------------*****/
 
 [class^=os-gallery-all-in-one-main] .img-block.dimas-effect,
@@ -967,7 +1074,7 @@ box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
 }
 
 
-.fancybox-wrap .fancybox-title-outside-wrap h2 {
+.os_fancybox-wrap .os_fancybox-title-outside-wrap h2 {
     color: #fff;
     text-shadow: 1px 2px 4px #505050;
     font-weight: bold;
@@ -1033,9 +1140,191 @@ box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
     background: #788aa8 !important;
 }
 
+.add-zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+.add-animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.grid-item {
+  float: left;
+}
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+[class=sharing] {
+  position: absolute;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+  text-align: right;
+  padding: 4px 0;
+  min-height: 20px;
+}
+[class=sharing] a {
+  width: auto !important;
+  margin-left: 2px;
+}
+
+[class=sharing] .soc1{
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[class=sharing] .soc2{
+  -webkit-animation-duration: 0.8s;
+  -moz-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[class=sharing] .soc3{
+  -webkit-animation-duration: 1.1s;
+  -moz-animation-duration: 1.1s;
+  animation-duration: 1.1s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[class=sharing] .soc4{
+  -webkit-animation-duration: 1.4s;
+  -moz-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[class=sharing] .soc5{
+  -webkit-animation-duration: 1.7s;
+  -moz-animation-duration: 1.7s;
+  animation-duration: 1.7s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;    
+}
+[class=sharing] .soc6{
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both; 
+}
+[class=sharing] .soc7{
+  -webkit-animation-duration: 2.3s;
+  -moz-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;    
+}
+
+
+[class=sharing] .soc7.zoomOut {
+   -webkit-animation-duration: 0.5s;
+   -moz-animation-duration: 0.5s;
+   animation-duration: 0.5s;
+   webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+[class=sharing] .soc6.zoomOut {
+   -webkit-animation-duration: 0.8s;
+   -moz-animation-duration: 0.8s;
+   animation-duration: 0.8s;
+   webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+[class=sharing] .soc5.zoomOut {
+   -webkit-animation-duration: 1.1s;
+   -moz-animation-duration: 1.1s;
+   animation-duration: 1.1s;
+   webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+[class=sharing] .soc4.zoomOut {
+   -webkit-animation-duration: 1.4s;
+   -moz-animation-duration: 1.4s;
+   animation-duration: 1.4s;
+   webkit-animation-fill-mode: both;
+   animation-fill-mode: both
+}
+[class=sharing] .soc3.zoomOut {
+   -webkit-animation-duration: 1.7s;
+   -moz-animation-duration: 1.7s;
+   animation-duration: 1.7s;
+   webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+[class=sharing] .soc2.zoomOut {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+[class=sharing] .soc1.zoomOut {
+  -webkit-animation-duration: 2.3s;
+  -moz-animation-duration: 2.3s;
+  animation-duration: 2.3s;
+  webkit-animation-fill-mode: both;
+  animation-fill-mode: both;     
+}
+
+[class=sharing] .act {
+    display: none;
+}
+[class=sharing] .act.zoomIn {
+    display: block;
+}
+[class=sharing] .zoomIn, 
+[class=sharing] .zoomOut {
+  display: block;
+  float: right;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.icons_os_image {
+    background: url(../images/shareLink.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    cursor: pointer;
+}
+.icons_os {
+    margin-right: 39px;
+    overflow: hidden;
+
+}
+
+.icons_download {
+    background: url(../images/downloadButton.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    cursor: pointer;
+}
 
 @-webkit-keyframes zoomIn {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(.3, .3, .3);
     transform: scale3d(.3, .3, .3);
@@ -1047,7 +1336,7 @@ box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
 }
 
 @keyframes zoomIn {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(.3, .3, .3);
     transform: scale3d(.3, .3, .3);
@@ -1058,14 +1347,49 @@ box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
   }
 }
 
-.add-zoomIn {
+.zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
 
-.add-animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+
+@-webkit-keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
+
+.os_fancybox-outer a.os_fancybox-nav {
+    width: 10%;
 }

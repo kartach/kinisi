@@ -3,14 +3,14 @@
 
     <name>COM_OSGALLERY</name>
     <!-- The following elements are optional and free of formatting constraints -->
-    <creationDate>February 2017</creationDate>
-    <author>Andrey Kvasnevskiy, Roman Akoev</author>
-    <authorEmail>akbet@mail.ru,akoevroman@gmail.com</authorEmail>
+    <creationDate>August 2017</creationDate>
+    <author>Andrey Kvasnevskiy, Roman Akoev, Dmitriy Smirnov</author>
+    <authorEmail>akbet@mail.ru,akoevroman@gmail.com, dmitriiua21@gmail.com</authorEmail>
     <authorUrl>http://www.ordasoft.com</authorUrl>
     <copyright>Ordasoft - Andrey Kvasnevskiy</copyright>
-    <license>GNU General Public License version 2 or later</license>
+    <license>This component is released under License from included LICENSE.txt file</license>
     <!--  The version string is recorded in the components table -->
-    <version>2.0.3</version>
+    <version>3.2.2</version>
     <!-- The description is optional and defaults to the name -->
     <description><![CDATA[<img style="width:515px; display: block; margin: 0 auto;" src="../administrator/components/com_osgallery/assets/images/os-image-gallery.png">]]></description>
 
@@ -71,6 +71,7 @@
             <filename>access.xml</filename>
             <filename>config.xml</filename>
             <filename>osgallery.xml</filename>
+            <filename>LICENSE.txt</filename>
         </files>
     </administration>
 

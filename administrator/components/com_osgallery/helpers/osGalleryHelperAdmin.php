@@ -3,7 +3,7 @@
 * @package OS Gallery
 * @copyright 2016 OrdaSoft
 * @author 2016 Andrey Kvasnevskiy(akbet@mail.ru),Roman Akoev (akoevroman@gmail.com)
-* @license GNU General Public License version 2 or later;
+* @license This component is released under License from included LICENSE.txt file
 * @description Ordasoft Image Gallery
 */
 
@@ -23,40 +23,42 @@ class osGalleryHelperAdmin{
         $galleries = $db->loadObjectList();
 
         //get gallery version
-        $xml = JFactory::getXml(JURI::base() . "/components/com_osgallery/osgallery.xml");
-        $galV = (string)$xml->version;
-        $creationDate = (string)$xml->creationDate;
-        unset($xml);
-
-        //check update
-        $url="http://ordasoft.com/xml_update/osgallery.xml";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
-        curl_setopt($ch, CURLOPT_TIMEOUT, 1);
-
-        $data = curl_exec($ch);
-        curl_close($ch);
-
-        $xml = simplexml_load_string($data);
-        $updateArticleUrl = '#';
-        $galVArr = explode(".", $galV);
-        $avaibleUpdate = false;
-        if($xml && isset($xml->version)){
-            $ordasoftGalV = (string)$xml->version;
-            $ordasoftGalVArr = explode(".", $ordasoftGalV);
-            $ordasoftCreationDate = (string)$xml->creationDate;
-            $updateArticleUrl = (string)$xml->updateArticleUrl;
+        $xml = @simplexml_load_file(JPATH_BASE . "/components/com_osgallery/osgallery.xml");
+        if($xml){
+            $galV = (string)$xml->version;
+            $creationDate = (string)$xml->creationDate;
             unset($xml);
-            foreach ($galVArr as $k => $galSubV) {
-                if(isset($ordasoftGalVArr[$k])){
-                    if((int)$ordasoftGalVArr[$k] < (int)$galSubV){
-                        break;
-                    }
-                    if((int)$ordasoftGalVArr[$k] > (int)$galSubV){
-                        $avaibleUpdate = true;
-                        break;
+
+            //check update
+            $url="http://ordasoft.com/xml_update/osgallery.xml";
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0); 
+            curl_setopt($ch, CURLOPT_TIMEOUT, 1);
+
+            $data = curl_exec($ch);
+            curl_close($ch);
+
+            $xml = simplexml_load_string($data);
+            $updateArticleUrl = '#';
+            $galVArr = explode(".", $galV);
+            $avaibleUpdate = false;
+            if($xml && isset($xml->version)){
+                $ordasoftGalV = (string)$xml->version;
+                $ordasoftGalVArr = explode(".", $ordasoftGalV);
+                $ordasoftCreationDate = (string)$xml->creationDate;
+                $updateArticleUrl = (string)$xml->updateArticleUrl;
+                unset($xml);
+                foreach ($galVArr as $k => $galSubV) {
+                    if(isset($ordasoftGalVArr[$k])){
+                        if((int)$ordasoftGalVArr[$k] < (int)$galSubV){
+                            break;
+                        }
+                        if((int)$ordasoftGalVArr[$k] > (int)$galSubV){
+                            $avaibleUpdate = true;
+                            break;
+                        }
                     }
                 }
             }
@@ -96,13 +98,13 @@ class osGalleryHelperAdmin{
         $app = JFactory::getApplication();
         $params = new JRegistry;
         $images = array();
-
-        $document->addStyleSheet(JURI::base() . "components/com_osgallery/assets/css/fileuploader.css");
+        $document->addStyleSheet(JURI::base() . "components/com_osgallery/assets/css/fine-uploader-new.css");
         $document->addStyleSheet(JURI::base() . "components/com_osgallery/assets/css/jquery-ui.min.css");
         $document->addStyleSheet(JURI::base() . "components/com_osgallery/assets/css/jquery.slider.minicolors.css");
 
         //include needed script
-        $document->addScript(JURI::base() . "components/com_osgallery/assets/js/fileuploader.js");
+        $document->addScript(JURI::base() . "components/com_osgallery/assets/js/fine-uploader.js");
+        // $document->addScript(JURI::base() . "components/com_osgallery/assets/js/jquery.json.js");
 
         if($galId){
             $query = "SELECT title FROM #__os_gallery WHERE id=$galId";
@@ -173,30 +175,32 @@ class osGalleryHelperAdmin{
             //need for f5reload page without bugs//we go to else above if new gallery
             $app->redirect('index.php?option=com_osgallery&task=edit_gallery&galId='.$galId);
         }
+
+        // print_r($imgParamsArray);exit;
         //load params
         $query = "SELECT params FROM #__os_gallery WHERE id=$galId";
         $db->setQuery($query);
         $paramsString = $db->loadResult();
 
         $params->loadString($paramsString);
-        $fancy_box_background = $params->get("fancy_box_background","");
-        $open_close_effect = $params->get("open_close_effect","none");
+        $fancy_box_background = $params->get("fancy_box_background","transparent");
+        $open_close_effect = $params->get("open_close_effect","fade");
         $click_close = $params->get("click_close",1);
         $helper_buttons = $params->get("helper_buttons",0);
-        $helper_thumbnail = $params->get("helper_thumbnail",0);
-        $loop = $params->get("loop",0);
+        $helper_thumbnail = $params->get("helper_thumbnail",1);
+        $loop = $params->get("loop",1);
         $open_close_speed = $params->get("open_close_speed",500);
-        $prev_next_effect = $params->get("prev_next_effect","none");
+        $prev_next_effect = $params->get("prev_next_effect","elastic");
         $prev_next_speed = $params->get("prev_next_speed",500);
         $img_title = $params->get("img_title","inside");
         $thumbnail_width = $params->get("thumbnail_width",50);
         $thumbnail_height = $params->get("thumbnail_height",50);
-        $fancybox_arrows = $params->get("fancybox_arrows",1);
-        $fancybox_arrows_pos = $params->get("fancybox_arrows_pos",1);
+        $os_fancybox_arrows = $params->get("os_fancybox_arrows",1);
+        $os_fancybox_arrows_pos = $params->get("os_fancybox_arrows_pos",0);
         $close_button = $params->get("close_button",1);
         $next_click = $params->get("next_click",0);
-        $mouse_wheel = $params->get("mouse_wheel",0);
-        $fancybox_autoplay = $params->get("fancybox_autoplay",0);
+        $mouse_wheel = $params->get("mouse_wheel",1);
+        $os_fancybox_autoplay = $params->get("os_fancybox_autoplay",0);
         $autoplay_speed = $params->get("autoplay_speed",3000);
 
         $watermark_position = $params->get("watermark_position","center");
@@ -211,12 +215,29 @@ class osGalleryHelperAdmin{
         $watermark_text_angle = $params->get("watermark_text_angle",0);
         $exist_watermark_text = $params->get("exist_watermark_text",'');
 
+        $facebook_enable = $params->get("facebook_enable",1);
+        $googleplus_enable = $params->get("googleplus_enable",1);
+        $vkontacte_enable = $params->get("vkontacte_enable",1);
+        $odnoklassniki_enable = $params->get("odnoklassniki_enable",1);
+        $twitter_enable = $params->get("twitter_enable",1);
+        $pinterest_enable = $params->get("pinterest_enable",1);
+        $linkedin_enable = $params->get("linkedin_enable",1);
+
         $imageMargin = $params->get("image_margin",5);
         $numColumn = $params->get("num_column",3);
         $gallerylayout = $params->get("galleryLayout","defaultTabs");
-        $imagehover = $params->get("imageHover","dimas");
+        $masonryLayout = $params->get("masonryLayout","");
+        $imagehover = $params->get("imageHover","none");
         $minImgEnable = $params->get("minImgEnable",1);
         $minImgSize = $params->get("minImgSize",200);
+        $imgWidth = $params->get("imgWidth",600);
+        $imgHeight = $params->get("imgHeight",400);
+        $showLoadMore = $params->get("showLoadMore",0);
+        $showDownload = $params->get("showDownload",0);
+        $showImgAlias = $params->get("showImgAlias",0);
+        $numberImages = $params->get("number_images",5);
+        $loadMoreButtonText = $params->get("loadMoreButtonText",JText::_("COM_OSGALLERY_SETTINGS_GENERAL_LOADMORE_BUTTON_TEXT"));
+        $load_more_background = $params->get("load_more_background",'#12BBC5');
 
         $backButtonText = $params->get("backButtonText",JText::_("COM_OSGALLERY_SETTINGS_GENERAL_BACK_BUTTON_TEXT"));
         $title = '<span class="title-block input-block"><input id="gallery-title" type="text" placeholder="'.JText::_("COM_OSGALLERY_TITLE_LABEL").'" value="'.$galeryTitle.'" oninput="jQuery(\'#hidden-title\').val(jQuery(this).val())"></span>';
@@ -247,23 +268,24 @@ class osGalleryHelperAdmin{
             $paramsString = $db->loadResult();
             $params->loadString($paramsString);
 
-            $params->set("fancy_box_background", $input->get("fancy_box_background","","STRING"));
-            $params->set("open_close_effect", $input->get("open_close_effect","none","STRING"));
+            $params->set("fancy_box_background", $input->get("fancy_box_background","transparent","STRING"));
+            $params->set("open_close_effect", $input->get("open_close_effect","fade","STRING"));
             $params->set("click_close", $input->get("click_close",1,"INT"));
             $params->set("helper_buttons", $input->get("helper_buttons",0,"INT"));
-            $params->set("helper_thumbnail", $input->get("helper_thumbnail",0,"INT"));
-            $params->set("loop", $input->get("loop",0,"INT"));
+            $params->set("helper_thumbnail", $input->get("helper_thumbnail",1,"INT"));
+            $params->set("loop", $input->get("loop",1,"INT"));
             $params->set("open_close_speed", $input->get("open_close_speed",500,"INT"));
-            $params->set("prev_next_effect", $input->get("prev_next_effect","none","STRING"));
+            $params->set("prev_next_effect", $input->get("prev_next_effect","elastic","STRING"));
+            $params->set("prev_next_speed", $input->get("prev_next_speed",500,"INT"));
             $params->set("img_title", $input->get("img_title","","STRING"));
             $params->set("thumbnail_width", $input->get("thumbnail_width",50,"INT"));
             $params->set("thumbnail_height", $input->get("thumbnail_height",50,"INT"));
-            $params->set("fancybox_arrows", $input->get("fancybox_arrows",1,"INT"));
-            $params->set("fancybox_arrows_pos", $input->get("fancybox_arrows_pos",1,"INT"));
+            $params->set("os_fancybox_arrows", $input->get("os_fancybox_arrows",1,"INT"));
+            $params->set("os_fancybox_arrows_pos", $input->get("os_fancybox_arrows_pos",0,"INT"));
             $params->set("close_button", $input->get("close_button",1,"INT"));
             $params->set("next_click", $input->get("next_click",0,"INT"));
-            $params->set("mouse_wheel", $input->get("mouse_wheel",0,"INT"));
-            $params->set("fancybox_autoplay", $input->get("fancybox_autoplay",0,"INT"));
+            $params->set("mouse_wheel", $input->get("mouse_wheel",1,"INT"));
+            $params->set("os_fancybox_autoplay", $input->get("os_fancybox_autoplay",0,"INT"));
             $params->set("autoplay_speed", $input->get("autoplay_speed",3000,"INT"));
             $params->set("imageHover", $input->get("imageHover",'dimas',"STRING"));
             $watermarkRedraw = false;
@@ -299,11 +321,26 @@ class osGalleryHelperAdmin{
             $params->set("image_margin", $input->get("image_margin",5,"INT"));
             $params->set("num_column", $input->get("num_column",3,"INT"));
             $params->set("galleryLayout", $input->get("galleryLayout","defaultTabs","STRING"));
+            $params->set("masonryLayout", $input->get("masonryLayout","","STRING"));
             $params->set("imageHover", $input->get("imageHover","julia","STRING"));
             $params->set("minImgEnable", $input->get("minImgEnable",1,"INT"));
             $params->set("minImgSize", $input->get("minImgSize",200,"INT"));
+            $params->set("imgWidth", $input->get("imgWidth",600,"INT"));
+            $params->set("imgHeight", $input->get("imgHeight",400,"INT"));
+            $params->set("showLoadMore", $input->get("showLoadMore",0,"INT"));
+            $params->set("showDownload", $input->get("showDownload",0,"INT"));
+            $params->set("showImgAlias", $input->get("showImgAlias",0,"INT"));
+            $params->set("number_images", $input->get("number_images",5,"INT"));
+            $params->set("loadMoreButtonText", $input->get("loadMoreButtonText",JText::_("COM_OSGALLERY_SETTINGS_GENERAL_LOADMORE_BUTTON_TEXT"),"STRING"));
+            $params->set("load_more_background", $input->get("load_more_background",'#12BBC5',"STRING"));
 
-
+            $params->set("facebook_enable", $input->get("facebook_enable",1,"INT"));
+            $params->set("googleplus_enable", $input->get("googleplus_enable",1,"INT"));
+            $params->set("vkontacte_enable", $input->get("vkontacte_enable",1,"INT"));
+            $params->set("odnoklassniki_enable", $input->get("odnoklassniki_enable",1,"INT"));
+            $params->set("twitter_enable", $input->get("twitter_enable",1,"INT"));
+            $params->set("pinterest_enable", $input->get("pinterest_enable",1,"INT"));
+            $params->set("linkedin_enable", $input->get("linkedin_enable",1,"INT"));
 
             if($params->get("watermark_enable")){
                 //img watermark
@@ -319,7 +356,9 @@ class osGalleryHelperAdmin{
                         if (isset($_FILES['watermark_file']['tmp_name']) && !empty($_FILES['watermark_file']['tmp_name']) && !copy($_FILES['watermark_file']['tmp_name'], $uploaddir.$_FILES['watermark_file']['name'])) {
                             $app->enqueueMessage(JText::_('COM_OSGALLERY_WATERMARK_UPLOAD_ERROR'), 'error');
                         }else{
-                            $params->set("watermark_file", $_FILES['watermark_file']['name']);
+                            if($_FILES['watermark_file']['name'] != ''){
+                                $params->set("watermark_file", $_FILES['watermark_file']['name']);
+                            }
                             $files = scandir($pathOrg);
                             foreach($files as $file) {
                                 if(strlen($file) > 10){
@@ -333,6 +372,7 @@ class osGalleryHelperAdmin{
                     $diffFile = array_diff($filesOriginal, $filesWatermark);
                     foreach($diffFile as $file) {
                         if(strlen($file) > 10){
+                            // print_r($file);exit;
                             self::createWaterMark($file, $galId, $params);
                         }
                     }
@@ -358,6 +398,22 @@ class osGalleryHelperAdmin{
                     }
                 }
             }
+
+            /** Add masonry **/
+            $dir = JPATH_BASE . '/../images/com_osgallery/gal-'.$galId;
+            if($params->get("galleryLayout") == "masonry") {
+                if (!file_exists($dir . '/thumbnail_masonry') || !is_dir($dir)) mkdir($dir . '/thumbnail_masonry', 0755, true);
+                if (!file_exists($dir . '/thumbnail_masonry/default') || !is_dir($dir)) mkdir($dir . '/thumbnail_masonry/default', 0755, true);
+                if (!file_exists($dir . '/thumbnail_masonry/horizontal') || !is_dir($dir)) mkdir($dir . '/thumbnail_masonry/horizontal', 0755, true);
+                if (!file_exists($dir . '/thumbnail_masonry/vertical') || !is_dir($dir)) mkdir($dir . '/thumbnail_masonry/vertical', 0755, true);      
+                self::createImageThumbnailForMasonry($params->get("masonryLayout"));
+            }
+            if($params->get("galleryLayout") == "fit_rows") {
+                if (!file_exists($dir . '/thumbnail_fitrows') || !is_dir($dir)) mkdir($dir . '/thumbnail_fitrows', 0755, true);
+                self::createImageThumbnailForMasonry($params->get("galleryLayout"));
+            }
+
+            /*****************/ 
 
             if($galleryTitle){
                 $query = "UPDATE #__os_gallery SET title=".$db->quote($galleryTitle).
@@ -407,6 +463,7 @@ class osGalleryHelperAdmin{
             //img ordering
             $imgOrderArrString = $input->get("imageOrdering", '', 'ARRAY');
             $imgParamsArr = $input->get("imgSettings",array(),"ARRAY");
+            // print_r($imgParamsArr);exit;
             if(count($imgOrderArrString)){
                 foreach ($imgOrderArrString as $catId => $imgIdStr) {
                     if($imgIdStr){
@@ -422,6 +479,16 @@ class osGalleryHelperAdmin{
             }
 
             $deletedImgIds = $input->get("deletedImgIds", '', 'ARRAY');
+            
+            // add crop images
+            $imgWidth = $input->get("imgWidth",600,"INT");
+            $imgHeight = $input->get("imgHeight",400,"INT");
+
+            if ( !isset($deletedImgIds[0])) {
+                self::cropImages($galId, $params->get("galleryLayout"), $imgWidth, $imgHeight);
+            }
+            // end crop
+
             if(isset($deletedImgIds[0])){
                 foreach ($deletedImgIds as $delImgId) {
                     $query = "SELECT gim.file_name FROM #__os_gallery_img as gim ".
@@ -446,7 +513,23 @@ class osGalleryHelperAdmin{
                     if(file_exists($imageFolderPath.'/thumbnail/'.$imgForDelete)){
                         unlink($imageFolderPath.'/thumbnail/'.$imgForDelete);
                     }
-
+                    // delete masonry default
+                    if(file_exists($imageFolderPath.'/thumbnail_masonry/default/'.$imgForDelete)){
+                       unlink($imageFolderPath.'/thumbnail_masonry/default/'.$imgForDelete);
+                    }
+                    // delete masonry horizontal
+                    if(file_exists($imageFolderPath.'/thumbnail_masonry/horizontal/'.$imgForDelete)){
+                       unlink($imageFolderPath.'/thumbnail_masonry/horizontal/'.$imgForDelete);
+                    }
+                    // delete masonry vertical
+                    if(file_exists($imageFolderPath.'/thumbnail_masonry/vertical/'.$imgForDelete)){
+                       unlink($imageFolderPath.'/thumbnail_masonry/vertical/'.$imgForDelete);
+                    }
+                    // delete fit_rows
+                    if(file_exists($imageFolderPath.'/thumbnail_fitrows/'.$imgForDelete)){
+                       unlink($imageFolderPath.'/thumbnail_fitrows/'.$imgForDelete);
+                    }
+                    
                     $query = "DELETE FROM #__os_gallery_connect".
                             "\n WHERE fk_gal_img_id=$delImgId";
                     $db->setQuery($query);
@@ -483,10 +566,6 @@ class osGalleryHelperAdmin{
                         //delete thumbnail
                         if(file_exists($imageFolderPath.'/thumbnail/'.$imgLink.'_600_400_1')){
                             unlink($imageFolderPath.'/thumbnail/'.$imgLink.'_600_400_1');
-                        }
-                        //delete thumbnail
-                        if(file_exists($imageFolderPath.'/thumbnail/'.$imgLink)){
-                            unlink($imageFolderPath.'/thumbnail/'.$imgLink);
                         }
                     }
 
@@ -727,7 +806,7 @@ class osGalleryHelperAdmin{
 
         //check maxFileSize
         if (self::getFileSize($post_form) > $max_filesize) {
-            $response['message'] = "File is too largest";
+            $response['message'] = "File is too large";
             echo json_encode($response);
             return;
         }
@@ -755,8 +834,9 @@ class osGalleryHelperAdmin{
             $response['message'] = "Can't save file here: {$dir}/original/{$filename}.{$ext}";
         }else{
             $imagesize = getimagesize("{$dir}/original/{$filename}.{$ext}", $imageinfo);
-            self::createImageThumbnail($dir . "/original/{$filename}.{$ext}", $dir . "/thumbnail/{$filename}.{$ext}", 600, 400, 1);
-
+            self::createImageThumbnail($dir . "/original/{$filename}.{$ext}", $dir .
+             "/thumbnail/{$filename}.{$ext}", 600, 400, 1);
+            
             //save image to database
             $response['id'] = self::dbSaveImages($filename.'.'.$ext, $catId, $galId);
             $response['galId'] = $galId;
@@ -889,7 +969,7 @@ class osGalleryHelperAdmin{
             imagesavealpha($mark,true);
             $white = imagecolorallocatealpha($mark, 255, 255, 255, 127);
             $grey = imagecolorallocate($mark, 128, 128, 128);
-            $fontColor = str_replace("rgb(", '', $params->get("watermark_text_color"));
+            $fontColor = str_replace("rgba(", '', $params->get("watermark_text_color"));
             $fontColor = str_replace(")", '', $fontColor);
             $fontColor = explode(',', $fontColor);
             $r = isset($fontColor[0])?$fontColor[0]:0;
@@ -897,6 +977,7 @@ class osGalleryHelperAdmin{
             $b = isset($fontColor[2])?$fontColor[2]:0;
             $fontColor = imagecolorallocate($mark, $r, $g, $b);
             imagefilledrectangle($mark, 0, 0, $width, $height, $white);
+
             // Тень
             //size,angle
             if($textAngle ==45){
@@ -1013,7 +1094,120 @@ class osGalleryHelperAdmin{
         return $dst_im;
     }
 
-    static function createImageThumbnail($src, $dest, $destWidht, $destHeight ,$crop = true, $quality = 90){
+    static function cropImages( $galId, $layout, $destWidht, $destHeight ) {
+
+        $db = JFactory::getDbo();
+        $imageFolderPath = JPATH_BASE . '/../images/com_osgallery/gal-'.$galId;
+
+        $query = "SELECT gim.id, gim.file_name, cat.id as catId  FROM #__os_gallery_img as gim ".
+                "\n LEFT JOIN #__os_gallery_connect as gc ON gim.id=gc.fk_gal_img_id".
+                "\n LEFT JOIN #__os_gallery_categories as cat ON cat.id=gc.fk_cat_id ".
+                "\n WHERE cat.fk_gal_id=$galId".
+                "\n ORDER BY cat.ordering ASC";
+        $db->setQuery($query);
+        $images =$db->loadObjectList();
+
+        foreach ($images as $value) {
+            $info = getimagesize($imageFolderPath.'/thumbnail/'.$value->file_name, $imageinfo);
+            if (($info[0] == $destWidht) && ($info[1] == $destHeight) ) {
+                continue; 
+            } 
+
+            if(file_exists($imageFolderPath.'/thumbnail/'.$value->file_name)){
+                unlink($imageFolderPath.'/thumbnail/'.$value->file_name);
+            }
+
+            $query = "DELETE FROM #__os_gallery_connect".
+                    "\n WHERE fk_gal_img_id=$value->id";
+            $db->setQuery($query);
+            $db->query();
+
+            $query = "DELETE FROM #__os_gallery_img".
+                    "\n WHERE id=$value->id";
+            $db->setQuery($query);
+            $db->query();
+
+            self::createImageThumbnail($imageFolderPath . "/original/{$value->file_name}", $imageFolderPath .
+             "/thumbnail/{$value->file_name}", $destWidht, $destHeight, 1);
+            
+            self::dbSaveImages($value->file_name, $value->catId, $galId);            
+
+        }
+    }
+
+    static function createImageThumbnailForMasonry($layoutMasonry)
+    {
+        jimport('joomla.application.module.helper');
+        jimport('joomla.filesystem.folder');
+        jimport('joomla.filesystem.file');
+        $db = JFactory::getDbo();
+        $input  = JFactory::getApplication()->input;
+        $catId = $input->get("catId",0);
+        $galId = $input->get("galId",0);
+        $spaceBetween = $input->get("image_margin",0);
+        $numColumns = $input->get("num_column", 3);
+        $dir = JPATH_BASE . '/../images/com_osgallery/gal-'.$galId ;
+        $images = scandir("{$dir}/original");
+        foreach ($images as $image) {
+            if (!self::checkImgExtension($image)) continue;
+            $pathinfo = pathinfo($image);
+            $filename = $pathinfo['filename'];
+            $ext = $pathinfo['extension'];
+            $max_filesize = self::toBytes(ini_get('upload_max_filesize'));
+            
+            $destWidht = 600; 
+            $destHeight = 400;
+
+            $info = getimagesize("{$dir}/original/{$filename}.{$ext}", $imageinfo);
+            $width = $info[0];
+            $height = $info[1];
+            
+            if ($layoutMasonry == "default") {
+                $destHeight = round(($height * $destWidht) / $width, 0, PHP_ROUND_HALF_UP);
+                $thumbnail = "thumbnail_masonry/{$layoutMasonry}";
+            }
+
+            if ($layoutMasonry == "horizontal") {
+                if ($height >= $width) {
+                    $destHeight = $destWidht + ($spaceBetween * 2)*$numColumns ;
+                }
+                else {
+                    $destWidht = $destHeight * 2 - $spaceBetween *($numColumns-1) ;
+                }
+                $thumbnail = "thumbnail_masonry/{$layoutMasonry}";         
+            }
+
+            if ($layoutMasonry == "vertical") {
+                if ($height <= $width) $destHeight = $destWidht  ;
+                else {
+                    $destHeight = $destWidht * 2 - $spaceBetween;
+                    $destWidht -= ($spaceBetween * 2);
+                }
+                $thumbnail = "thumbnail_masonry/{$layoutMasonry}";
+            }
+
+            if ($layoutMasonry == "fit_rows") {
+                $destWidht = 1; 
+                $destHeight = 400;
+                if ($height <= $width) $destWidht = $destHeight* 2;
+                else $destWidht = $destHeight ;
+                $thumbnail = "thumbnail_fitrows";
+            } 
+
+            self::createImageThumbnail($dir . "/original/{$filename}.{$ext}", $dir .
+                 "/{$thumbnail}/{$filename}.{$ext}", $destWidht, $destHeight, 1, 100);                
+        }
+    }
+
+    static function checkImgExtension($image) {
+            $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+            foreach ($allowedExtensions as $ext) {
+                if (strpos($image, $ext)) return true;
+            }
+            return false;
+    } 
+
+    static function createImageThumbnail($src, $dest, $destWidht, $destHeight ,$crop = true, $quality = 100){
         // Setting the resize parameters
         $info = getimagesize($src, $imageinfo);
         $file_type = '.'.str_replace('image/', '', $info['mime']);
@@ -1022,27 +1216,27 @@ class osGalleryHelperAdmin{
 
         if (file_exists($dest)) {
             return;
-        }else{
+        } else {
             if ($width < $height) {
-            if ($height > $destHeight) {
-                $k = $height / $destHeight;
-            } else if ($width > $destWidht) {
-                $k = $width / $destWidht;
-            }
-            else
-                $k = 1;
+                if ($height > $destHeight) {
+                    $k = $height / $destHeight;
+                } else if ($width > $destWidht) {
+                    $k = $width / $destWidht;
+                }
+                else
+                    $k = 1;
             } else {
-            if ($width > $destWidht) {
-                $k = $width / $destWidht;
-            } else if ($height > $destHeight) {
-                $k = $height / $destHeight;
-            }
-            else
-                $k = 1;
+                if ($width > $destWidht) {
+                    $k = $width / $destWidht;
+                } else if ($height > $destHeight) {
+                    $k = $height / $destHeight;
+                }
+                else
+                    $k = 1;
             }
             $w_ = $width / $k;
             $h_ = $height / $k;
-        }
+        } 
 
         if($crop == 1){
             $CreateNewImage = self::createImage($src, $dest, $destWidht, $destHeight ,$crop, $quality);
@@ -1078,7 +1272,7 @@ class osGalleryHelperAdmin{
         }
     }
 
-    static function createImage($src, $dest, $destWidht, $destHeight ,$crop = true, $quality = 90){
+    static function createImage($src, $dest, $destWidht, $destHeight ,$crop = true, $quality = 100){
         $info = getimagesize($src, $imageinfo);
         $sWidth = $info[0];
         $sHeight = $info[1];
@@ -1230,6 +1424,6 @@ class osGalleryHelperAdmin{
 
         $db->setQuery($query);
         $test = $db->loadResult();
-        return $db->loadResult();
-    }
+        return $test;
+    } 
 }

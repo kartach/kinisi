@@ -3,7 +3,7 @@
 * @package OS Gallery
 * @copyright 2016 OrdaSoft
 * @author 2016 Andrey Kvasnevskiy(akbet@mail.ru),Roman Akoev (akoevroman@gmail.com)
-* @license GNU General Public License version 2 or later;
+* @license This component is released under License from included LICENSE.txt file
 * @description Ordasoft Image Gallery
 */
 
@@ -32,7 +32,6 @@ class com_osgalleryInstallerScript {
         // $parent is the class calling this method
         // delete folder with images start
         $db = JFactory::getDBO();
-        
         if(!function_exists('removeGalleriesDirectory')){
             function removeGalleriesDirectory($dir) {
               if ($objs = glob($dir."/*")) {
