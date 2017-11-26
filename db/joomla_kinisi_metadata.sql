@@ -1354,7 +1354,7 @@ ALTER TABLE `bc73q_finder_filters`
 -- AUTO_INCREMENT for table `bc73q_finder_links`
 --
 ALTER TABLE `bc73q_finder_links`
-  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=424;
+  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=520;
 
 --
 -- AUTO_INCREMENT for table `bc73q_finder_taxonomy`
@@ -1366,7 +1366,7 @@ ALTER TABLE `bc73q_finder_taxonomy`
 -- AUTO_INCREMENT for table `bc73q_finder_terms`
 --
 ALTER TABLE `bc73q_finder_terms`
-  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=218472;
+  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250240;
 
 --
 -- AUTO_INCREMENT for table `bc73q_finder_types`
@@ -1606,25 +1606,25 @@ ALTER TABLE `bc73q_newsfeeds`
 -- AUTO_INCREMENT for table `bc73q_os_gallery`
 --
 ALTER TABLE `bc73q_os_gallery`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `bc73q_os_gallery_categories`
 --
 ALTER TABLE `bc73q_os_gallery_categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `bc73q_os_gallery_connect`
 --
 ALTER TABLE `bc73q_os_gallery_connect`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `bc73q_os_gallery_img`
 --
 ALTER TABLE `bc73q_os_gallery_img`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `bc73q_overrider`
