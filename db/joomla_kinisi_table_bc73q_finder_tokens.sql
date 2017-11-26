@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_tokens`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_tokens`;
 CREATE TABLE `bc73q_finder_tokens` (
   `term` varchar(75) NOT NULL,

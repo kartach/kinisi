@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_ranks`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_ranks`;
 CREATE TABLE `bc73q_kunena_ranks` (
   `rank_id` mediumint(8) UNSIGNED NOT NULL,
@@ -13,10 +7,6 @@ CREATE TABLE `bc73q_kunena_ranks` (
   `rank_special` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   `rank_image` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_ranks`
---
 
 INSERT INTO `bc73q_kunena_ranks` VALUES(1, 'Nový uživatel', 0, 0, 'rank1.gif');
 INSERT INTO `bc73q_kunena_ranks` VALUES(2, 'Čerstvý uživatel', 20, 0, 'rank2.gif');

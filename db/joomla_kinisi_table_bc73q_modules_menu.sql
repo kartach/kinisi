@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_modules_menu`
---
-
 DROP TABLE IF EXISTS `bc73q_modules_menu`;
 CREATE TABLE `bc73q_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_modules_menu`
---
 
 INSERT INTO `bc73q_modules_menu` VALUES(2, 0);
 INSERT INTO `bc73q_modules_menu` VALUES(3, 0);
@@ -97,6 +87,7 @@ INSERT INTO `bc73q_modules_menu` VALUES(233, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(234, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(235, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(236, 134);
+INSERT INTO `bc73q_modules_menu` VALUES(236, 701);
 INSERT INTO `bc73q_modules_menu` VALUES(237, 0);
 INSERT INTO `bc73q_modules_menu` VALUES(244, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(245, 136);
@@ -106,8 +97,10 @@ INSERT INTO `bc73q_modules_menu` VALUES(248, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(249, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(250, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(250, 136);
+INSERT INTO `bc73q_modules_menu` VALUES(250, 701);
 INSERT INTO `bc73q_modules_menu` VALUES(251, 134);
 INSERT INTO `bc73q_modules_menu` VALUES(251, 343);
+INSERT INTO `bc73q_modules_menu` VALUES(251, 701);
 INSERT INTO `bc73q_modules_menu` VALUES(252, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(253, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(254, 101);
@@ -154,6 +147,7 @@ INSERT INTO `bc73q_modules_menu` VALUES(258, 614);
 INSERT INTO `bc73q_modules_menu` VALUES(258, 639);
 INSERT INTO `bc73q_modules_menu` VALUES(258, 640);
 INSERT INTO `bc73q_modules_menu` VALUES(258, 641);
+INSERT INTO `bc73q_modules_menu` VALUES(258, 701);
 INSERT INTO `bc73q_modules_menu` VALUES(260, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(261, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(263, 101);
@@ -195,6 +189,7 @@ INSERT INTO `bc73q_modules_menu` VALUES(263, 614);
 INSERT INTO `bc73q_modules_menu` VALUES(263, 639);
 INSERT INTO `bc73q_modules_menu` VALUES(263, 640);
 INSERT INTO `bc73q_modules_menu` VALUES(263, 641);
+INSERT INTO `bc73q_modules_menu` VALUES(263, 701);
 INSERT INTO `bc73q_modules_menu` VALUES(268, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(269, 101);
 INSERT INTO `bc73q_modules_menu` VALUES(270, 101);

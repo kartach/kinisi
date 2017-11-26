@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_joomgallery_votes`
---
-
 DROP TABLE IF EXISTS `bc73q_joomgallery_votes`;
 CREATE TABLE `bc73q_joomgallery_votes` (
   `voteid` int(11) NOT NULL,

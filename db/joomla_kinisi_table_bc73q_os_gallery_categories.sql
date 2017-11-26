@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_os_gallery_categories`
---
-
 DROP TABLE IF EXISTS `bc73q_os_gallery_categories`;
 CREATE TABLE `bc73q_os_gallery_categories` (
   `id` int(11) UNSIGNED NOT NULL,
@@ -13,10 +7,6 @@ CREATE TABLE `bc73q_os_gallery_categories` (
   `ordering` int(11) NOT NULL,
   `params` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_os_gallery_categories`
---
 
 INSERT INTO `bc73q_os_gallery_categories` VALUES(1, 1, 'Category Title', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:false%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(2, 2, 'Category Title', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:false%7D');
@@ -44,7 +34,7 @@ INSERT INTO `bc73q_os_gallery_categories` VALUES(24, 24, 'Metoda Ludmily Mojží
 INSERT INTO `bc73q_os_gallery_categories` VALUES(25, 25, 'Pooperační fyzioterapie', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(26, 26, 'Funkční fyziotrénink', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(27, 27, 'Funkční fyziotrénink - box', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
-INSERT INTO `bc73q_os_gallery_categories` VALUES(28, 28, 'Preventivní programy, box', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(28, 28, 'Nácvik techniky golfového švihu', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(29, 29, 'Správné cvičení a posilování ', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(30, 30, 'DNS', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(31, 31, ' Metoda Ludmily Mojžíšové', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');

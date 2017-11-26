@@ -1,20 +1,10 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_os_gallery_connect`
---
-
 DROP TABLE IF EXISTS `bc73q_os_gallery_connect`;
 CREATE TABLE `bc73q_os_gallery_connect` (
   `id` int(11) UNSIGNED NOT NULL,
   `fk_cat_id` int(11) UNSIGNED DEFAULT NULL COMMENT 'The id from table __os_gallery_categories',
   `fk_gal_img_id` int(11) UNSIGNED DEFAULT NULL COMMENT 'The img id from table __os_gallery_img'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_os_gallery_connect`
---
 
 INSERT INTO `bc73q_os_gallery_connect` VALUES(1, 1, 1);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(2, 2, 2);
@@ -42,12 +32,12 @@ INSERT INTO `bc73q_os_gallery_connect` VALUES(38, 23, 38);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(40, 24, 40);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(42, 25, 42);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(44, 26, 44);
-INSERT INTO `bc73q_os_gallery_connect` VALUES(46, 27, 46);
-INSERT INTO `bc73q_os_gallery_connect` VALUES(48, 28, 48);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(69, 27, 69);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(50, 29, 50);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(52, 30, 52);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(54, 31, 54);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(58, 32, 58);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(68, 28, 68);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(61, 34, 61);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(67, 36, 67);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(65, 35, 65);

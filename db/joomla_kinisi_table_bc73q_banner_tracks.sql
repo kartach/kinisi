@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_banner_tracks`
---
-
 DROP TABLE IF EXISTS `bc73q_banner_tracks`;
 CREATE TABLE `bc73q_banner_tracks` (
   `track_date` datetime NOT NULL,

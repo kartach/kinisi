@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_categories`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_categories`;
 CREATE TABLE `bc73q_kunena_categories` (
   `id` int(11) NOT NULL,
@@ -43,10 +37,6 @@ CREATE TABLE `bc73q_kunena_categories` (
   `allow_ratings` tinyint(4) NOT NULL DEFAULT '0',
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_categories`
---
 
 INSERT INTO `bc73q_kunena_categories` VALUES(1, 0, 'Dotazy a návrhy ke službám a onlinu Kinisi', 'obecne-sluzby-onlie', '', 0, 0, 'joomla.group', 1, 1, 1, 0, 1, 1, 1, 'THIS', 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'Obecná část diskusního fóra Centra fyzioterapie Kinisi', 'Obecná támata, návrhy, aj.', '', 0, 'lastpost', 'default', 0, 0, 0, 0, 0, 0, '{\"display\":{\"index\":{\"parent\":\"2\",\"children\":\"2\"}}}');
 INSERT INTO `bc73q_kunena_categories` VALUES(2, 1, 'Dotazy a návrhy k obsahu webových stránek a online komunikaci', 'obsah-online-komunikace', '', 0, 0, 'joomla.group', 1, 1, 1, 0, 1, 1, 1, 'THIS', 0, '0000-00-00 00:00:00', 0, 0, 0, 0, 'Rádi uvíátáme veškeré připomínky, dotazy, návrhy k webovým stránkám, fóru, facebooku, instagramu, a pod.', '', '', 0, 'lastpost', 'default', 1, 2, 19, 30, 1510262167, 0, '{\"access_post\":[\"6\",\"2\",\"8\"],\"access_reply\":[\"6\",\"2\",\"8\"],\"display\":{\"index\":{\"parent\":\"3\",\"children\":\"3\"}}}');

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_overrider`
---
-
 DROP TABLE IF EXISTS `bc73q_overrider`;
 CREATE TABLE `bc73q_overrider` (
   `id` int(10) NOT NULL COMMENT 'Primary Key',
@@ -12,10 +6,6 @@ CREATE TABLE `bc73q_overrider` (
   `string` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_overrider`
---
 
 INSERT INTO `bc73q_overrider` VALUES(1, 'SEND_DATE', 'Send Date', '/home/k/projects/kinisi/language/en-GB/en-GB.com_acymailing.ini');
 INSERT INTO `bc73q_overrider` VALUES(2, 'ACTIVATED', 'Activated', '/home/k/projects/kinisi/language/en-GB/en-GB.com_acymailing.ini');

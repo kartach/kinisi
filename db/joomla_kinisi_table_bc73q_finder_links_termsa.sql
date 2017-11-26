@@ -1,20 +1,10 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_links_termsa`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_links_termsa`;
 CREATE TABLE `bc73q_finder_links_termsa` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `term_id` int(10) UNSIGNED NOT NULL,
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_links_termsa`
---
 
 INSERT INTO `bc73q_finder_links_termsa` VALUES(7, 300, 0.74662);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(7, 301, 2.1);
@@ -27,7 +17,7 @@ INSERT INTO `bc73q_finder_links_termsa` VALUES(152, 13617, 0.23331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(457, 13617, 0.23331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(487, 13617, 0.23331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(502, 13617, 0.23331);
-INSERT INTO `bc73q_finder_links_termsa` VALUES(512, 13617, 0.23331);
+INSERT INTO `bc73q_finder_links_termsa` VALUES(520, 13617, 0.23331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(499, 13617, 0.46662);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(237, 13660, 0.09331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(457, 13660, 0.09331);
@@ -220,9 +210,9 @@ INSERT INTO `bc73q_finder_links_termsa` VALUES(502, 245801, 1.00331);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(502, 245802, 1.26);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(509, 247791, 2.34327);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(509, 247792, 2.78673);
-INSERT INTO `bc73q_finder_links_termsa` VALUES(512, 248581, 1.05);
-INSERT INTO `bc73q_finder_links_termsa` VALUES(512, 248582, 1.12);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(514, 249332, 0.77);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(514, 249333, 0.91);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(519, 250011, 0.91);
 INSERT INTO `bc73q_finder_links_termsa` VALUES(519, 250012, 0.98);
+INSERT INTO `bc73q_finder_links_termsa` VALUES(520, 250269, 1.05);
+INSERT INTO `bc73q_finder_links_termsa` VALUES(520, 250270, 1.12);

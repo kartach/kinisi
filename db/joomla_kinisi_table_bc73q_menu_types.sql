@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_menu_types`
---
-
 DROP TABLE IF EXISTS `bc73q_menu_types`;
 CREATE TABLE `bc73q_menu_types` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -14,10 +8,6 @@ CREATE TABLE `bc73q_menu_types` (
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_menu_types`
---
 
 INSERT INTO `bc73q_menu_types` VALUES(2, 0, 'kunenamenu', 'Kunena Menu', 'This is the default Kunena menu. It is used as the top navigation for Kunena. It can be publish in any module position. Simply unpublish items that are not required.', 0);
 INSERT INTO `bc73q_menu_types` VALUES(3, 0, 'system-menu', 'System Menu', '', 0);

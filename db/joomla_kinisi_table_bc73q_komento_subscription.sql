@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_subscription`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_subscription`;
 CREATE TABLE `bc73q_komento_subscription` (
   `id` bigint(20) UNSIGNED NOT NULL,

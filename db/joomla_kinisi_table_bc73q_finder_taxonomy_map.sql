@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_taxonomy_map`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_taxonomy_map`;
 CREATE TABLE `bc73q_finder_taxonomy_map` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `node_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_taxonomy_map`
---
 
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 6);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 7);
@@ -257,10 +247,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 72);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(506, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(506, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(506, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(506, 36);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 29);
@@ -273,10 +259,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(510, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(510, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(510, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(510, 72);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(512, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(512, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(512, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(512, 34);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(513, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(513, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(513, 29);
@@ -297,3 +279,11 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(519, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(519, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(519, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(519, 41);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(520, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(520, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(520, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(520, 34);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 36);

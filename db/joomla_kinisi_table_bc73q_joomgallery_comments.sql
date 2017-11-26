@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_joomgallery_comments`
---
-
 DROP TABLE IF EXISTS `bc73q_joomgallery_comments`;
 CREATE TABLE `bc73q_joomgallery_comments` (
   `cmtid` int(11) NOT NULL,

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_ark_editor_toolbars`
---
-
 DROP TABLE IF EXISTS `bc73q_ark_editor_toolbars`;
 CREATE TABLE `bc73q_ark_editor_toolbars` (
   `id` int(11) NOT NULL,
@@ -16,10 +10,6 @@ CREATE TABLE `bc73q_ark_editor_toolbars` (
   `iscore` tinyint(3) NOT NULL DEFAULT '0',
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_ark_editor_toolbars`
---
 
 INSERT INTO `bc73q_ark_editor_toolbars` VALUES(1, 'Back', 'back', 1, 0, '0000-00-00 00:00:00', 1, '{\"show_new\":\"0\",\"show_save\":\"0\",\"components\":[]}');
 INSERT INTO `bc73q_ark_editor_toolbars` VALUES(2, 'Front', 'front', 1, 0, '0000-00-00 00:00:00', 1, '{\"show_versions\":\"0\",\"show_new\":\"0\",\"show_save\":\"0\",\"show_undo\":\"0\",\"show_redo\":\"0\",\"show_find\":\"0\",\"show_close\":\"0\",\"show_source\":\"0\",\"show_design\":\"0\",\"show_maximum\":\"0\",\"components\":[]}');

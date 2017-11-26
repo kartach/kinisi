@@ -11713,6 +11713,11 @@ mod-custom.mod-custom__bottom_contact2 {
 #kunena.layout #iconset_inject .inline:hover {
   cursor: pointer;
 }
+/*== KK OS Gallery img bottom margin====================================
+====================================================================*/
+.bottom-margin-small {
+  margin-bottom: 20px;
+}
 .icons-marker {
   font-size: 16.8px;
   line-height: 24px;

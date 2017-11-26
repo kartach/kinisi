@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_ipfilter`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_ipfilter`;
 CREATE TABLE `bc73q_komento_ipfilter` (
   `id` bigint(20) UNSIGNED NOT NULL,

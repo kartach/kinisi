@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_hashkeys`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_hashkeys`;
 CREATE TABLE `bc73q_komento_hashkeys` (
   `id` bigint(11) NOT NULL,

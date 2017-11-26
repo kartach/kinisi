@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_assets`
---
-
 DROP TABLE IF EXISTS `bc73q_assets`;
 CREATE TABLE `bc73q_assets` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
@@ -16,10 +10,6 @@ CREATE TABLE `bc73q_assets` (
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_assets`
---
 
 INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1051, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `bc73q_assets` VALUES(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}');

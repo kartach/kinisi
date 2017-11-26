@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_acymailing_forward`
---
-
 DROP TABLE IF EXISTS `bc73q_acymailing_forward`;
 CREATE TABLE `bc73q_acymailing_forward` (
   `subid` int(10) UNSIGNED NOT NULL,

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_messages_cfg`
---
-
 DROP TABLE IF EXISTS `bc73q_messages_cfg`;
 CREATE TABLE `bc73q_messages_cfg` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT '0',

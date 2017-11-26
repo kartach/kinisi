@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_contentitem_tag_map`
---
-
 DROP TABLE IF EXISTS `bc73q_contentitem_tag_map`;
 CREATE TABLE `bc73q_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -14,10 +8,6 @@ CREATE TABLE `bc73q_contentitem_tag_map` (
   `tag_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Date of most recent save for this tag-item',
   `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
-
---
--- Dumping data for table `bc73q_contentitem_tag_map`
---
 
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 13, '2017-10-08 18:11:14', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 14, '2017-10-08 18:11:14', 1);

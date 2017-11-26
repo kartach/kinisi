@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_acymailing_queue`
---
-
 DROP TABLE IF EXISTS `bc73q_acymailing_queue`;
 CREATE TABLE `bc73q_acymailing_queue` (
   `senddate` int(10) UNSIGNED NOT NULL,

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_polls_users`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_polls_users`;
 CREATE TABLE `bc73q_kunena_polls_users` (
   `pollid` int(11) DEFAULT NULL,

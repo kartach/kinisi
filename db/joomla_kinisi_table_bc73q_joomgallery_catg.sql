@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_joomgallery_catg`
---
-
 DROP TABLE IF EXISTS `bc73q_joomgallery_catg`;
 CREATE TABLE `bc73q_joomgallery_catg` (
   `cid` int(11) NOT NULL,
@@ -31,10 +25,6 @@ CREATE TABLE `bc73q_joomgallery_catg` (
   `exclude_toplists` int(1) NOT NULL,
   `exclude_search` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_joomgallery_catg`
---
 
 INSERT INTO `bc73q_joomgallery_catg` VALUES(1, 0, 'ROOT', 'root', 0, 0, 15, 0, NULL, 1, 1, 0, 0, '', 0, NULL, 0, '', '', '', '', 0, 0);
 INSERT INTO `bc73q_joomgallery_catg` VALUES(2, 170, 'Gallery', 'gallery', 1, 1, 14, 1, '', 1, 1, 0, 0, '', 846, 0, -1, 'gallery_2', '', '', '', 0, 0);
