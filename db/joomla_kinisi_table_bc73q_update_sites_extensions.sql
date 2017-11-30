@@ -1,9 +1,19 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_update_sites_extensions`
+--
+
 DROP TABLE IF EXISTS `bc73q_update_sites_extensions`;
 CREATE TABLE `bc73q_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links extensions to update sites';
+
+--
+-- Dumping data for table `bc73q_update_sites_extensions`
+--
 
 INSERT INTO `bc73q_update_sites_extensions` VALUES(1, 700);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(2, 700);
@@ -27,3 +37,9 @@ INSERT INTO `bc73q_update_sites_extensions` VALUES(18, 10299);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(19, 10303);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(20, 10313);
 INSERT INTO `bc73q_update_sites_extensions` VALUES(21, 10317);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(22, 10329);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(23, 10331);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(24, 10334);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(25, 10336);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(25, 10337);
+INSERT INTO `bc73q_update_sites_extensions` VALUES(26, 10341);

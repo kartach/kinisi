@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_filter`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_filter`;
 CREATE TABLE `bc73q_acymailing_filter` (
   `filid` mediumint(8) UNSIGNED NOT NULL,

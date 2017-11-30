@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_ark_editor_plugins`
+--
+
 DROP TABLE IF EXISTS `bc73q_ark_editor_plugins`;
 CREATE TABLE `bc73q_ark_editor_plugins` (
   `id` int(11) NOT NULL,
@@ -16,6 +22,10 @@ CREATE TABLE `bc73q_ark_editor_plugins` (
   `params` text NOT NULL,
   `parentid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_ark_editor_plugins`
+--
 
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(1, 'Scayt', 'scayt', 'plugin', 1, '-1872', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', 82);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(2, '', 'sourcearea', 'plugin', 0, '', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);

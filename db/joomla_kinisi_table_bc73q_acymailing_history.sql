@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_history`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_history`;
 CREATE TABLE `bc73q_acymailing_history` (
   `subid` int(10) UNSIGNED NOT NULL,
@@ -9,6 +15,10 @@ CREATE TABLE `bc73q_acymailing_history` (
   `source` text,
   `mailid` mediumint(8) UNSIGNED DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_acymailing_history`
+--
 
 INSERT INTO `bc73q_acymailing_history` VALUES(3, 1418120944, '192.168.9.17', 'created', '', 'HTTP_REFERER::http://192.168.9.17/framework/default/index.php/user-registration\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0\nHTTP_HOST::192.168.9.17\nSERVER_ADDR::192.168.9.17\nREMOTE_ADDR::192.168.9.17\nREQUEST_URI::/framework/default/index.php/user-registration?task=registration.register\nQUERY_STRING::task=registration.register', 0);
 INSERT INTO `bc73q_acymailing_history` VALUES(3, 1418121419, '192.168.9.17', 'confirmed', 'EXECUTED_BY::846 ( demo )', 'HTTP_REFERER::http://192.168.9.17/framework/default/administrator/index.php?option=com_users\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0\nHTTP_HOST::192.168.9.17\nSERVER_ADDR::192.168.9.17\nREMOTE_ADDR::192.168.9.17\nREQUEST_URI::/framework/default/administrator/index.php?option=com_users&view=users\nQUERY_STRING::option=com_users&view=users', 0);

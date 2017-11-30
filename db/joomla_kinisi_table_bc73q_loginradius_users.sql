@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_loginradius_users`
+--
+
 DROP TABLE IF EXISTS `bc73q_loginradius_users`;
 CREATE TABLE `bc73q_loginradius_users` (
   `id` int(11) DEFAULT NULL,

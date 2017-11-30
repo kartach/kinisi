@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_update_sites`
+--
+
 DROP TABLE IF EXISTS `bc73q_update_sites`;
 CREATE TABLE `bc73q_update_sites` (
   `update_site_id` int(11) NOT NULL,
@@ -9,6 +15,10 @@ CREATE TABLE `bc73q_update_sites` (
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
+
+--
+-- Dumping data for table `bc73q_update_sites`
+--
 
 INSERT INTO `bc73q_update_sites` VALUES(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 0, '');
@@ -29,3 +39,8 @@ INSERT INTO `bc73q_update_sites` VALUES(18, 'Accredited Joomla! Translations', '
 INSERT INTO `bc73q_update_sites` VALUES(19, '', 'extension', 'https://update.unitemplates.com/extensions/mod_ut_joomstagram.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(20, 'mod_jbcookies', 'extension', 'http://www.joomball.com/images/updates/jbcookies.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(21, 'Regular Labs - Articles Anywhere', 'extension', 'https://download.regularlabs.com/updates.xml?e=articlesanywhere&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(22, 'eorisis: Google Analytics', 'extension', 'https://eorisis.com/updates/eorisis-google-analytics/extension.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(23, 'Regular Labs - Extension Manager', 'extension', 'https://download.regularlabs.com/updates.xml?e=extensionmanager&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(24, 'Regular Labs - Sourcerer', 'extension', 'https://download.regularlabs.com/updates.xml?e=sourcerer&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(25, 'Regular Labs - ReReplacer', 'extension', 'https://download.regularlabs.com/updates.xml?e=rereplacer&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(26, 'Regular Labs - Dummy Content', 'extension', 'https://download.regularlabs.com/updates.xml?e=dummycontent&type=.xml', 1, 0, '');

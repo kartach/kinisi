@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_categories`
+--
+
 DROP TABLE IF EXISTS `bc73q_categories`;
 CREATE TABLE `bc73q_categories` (
   `id` int(11) NOT NULL,
@@ -29,6 +35,10 @@ CREATE TABLE `bc73q_categories` (
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bc73q_categories`
+--
 
 INSERT INTO `bc73q_categories` VALUES(1, 0, 0, 0, 157, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '{}', 630, '2017-10-08 20:11:14', 0, '0000-00-00 00:00:00', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-10-08 20:11:14', 0, '0000-00-00 00:00:00', 0, '*', 1);
@@ -94,11 +104,11 @@ INSERT INTO `bc73q_categories` VALUES(83, 834, 1, 119, 154, 1, '', 'com_content'
 INSERT INTO `bc73q_categories` VALUES(84, 835, 83, 120, 127, 2, 'sluzby-a-programy/fyzioterapie-dospelych', 'com_content', 'Fyzioterapie dospělých', 'fyzioterapie-dospelych', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:12:36', 630, '2017-11-24 12:28:18', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(85, 836, 84, 121, 122, 3, 'sluzby-a-programy/fyzioterapie-dospelych/vysetreni', 'com_content', 'Vyšetření', 'vysetreni', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:13:33', 0, '2017-11-08 13:13:33', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(86, 837, 84, 123, 124, 3, 'sluzby-a-programy/fyzioterapie-dospelych/indikace', 'com_content', 'Indikace', 'indikace', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:13:54', 0, '2017-11-08 13:13:54', 0, '*', 1);
-INSERT INTO `bc73q_categories` VALUES(87, 838, 84, 125, 126, 3, 'sluzby-a-programy/fyzioterapie-dospelych/metodiky-a-terapeuticke-pristupy', 'com_content', 'Metodiky a terapeutické přístupy', 'metodiky-a-terapeuticke-pristupy', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:14:12', 0, '2017-11-08 13:14:12', 0, '*', 1);
+INSERT INTO `bc73q_categories` VALUES(87, 838, 84, 125, 126, 3, 'sluzby-a-programy/fyzioterapie-dospelych/metody-a-terapeuticke-pristupy', 'com_content', 'Metody a terapeutické přístupy', 'metody-a-terapeuticke-pristupy', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:14:12', 0, '2017-11-08 13:14:12', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(88, 839, 83, 128, 135, 2, '', 'com_content', 'Dětská fyzioterapie', 'detska-fyzioterapie', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:14:46', 0, '2017-11-08 13:14:46', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(89, 840, 88, 129, 130, 3, '', 'com_content', 'Vyšetření', 'vysetreni', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:15:08', 0, '2017-11-08 13:15:08', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(90, 841, 88, 131, 132, 3, '', 'com_content', 'Indikace', 'indikace', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:15:28', 0, '2017-11-08 13:15:28', 0, '*', 1);
-INSERT INTO `bc73q_categories` VALUES(91, 842, 88, 133, 134, 3, '', 'com_content', 'Metodiky a terapeutické přístupy', 'metodiky-a-terapeuticke-pristupy', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:15:50', 0, '2017-11-08 13:15:50', 0, '*', 1);
+INSERT INTO `bc73q_categories` VALUES(91, 842, 88, 133, 134, 3, '', 'com_content', 'Metody a terapeutické přístupy', 'metody-a-terapeuticke-pristupy', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:15:50', 0, '2017-11-08 13:15:50', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(92, 843, 83, 136, 141, 2, '', 'com_content', 'Akutní a pooperační fyzioterapie', 'akutni-a-pooperacni-fyzioterapie', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:16:33', 0, '2017-11-08 13:16:33', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(93, 844, 92, 137, 138, 3, '', 'com_content', 'Akutní fyzioterapie', 'akutni-fyzioterapie', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:16:53', 0, '2017-11-08 13:16:53', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(94, 845, 92, 139, 140, 3, '', 'com_content', 'Pooperační fyzioterapie', 'pooperacni-fyzioterapie', '', '', -2, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\",\"image_alt\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-11-08 13:17:31', 0, '2017-11-08 13:17:31', 0, '*', 1);

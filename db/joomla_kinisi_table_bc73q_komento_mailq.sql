@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_komento_mailq`
+--
+
 DROP TABLE IF EXISTS `bc73q_komento_mailq`;
 CREATE TABLE `bc73q_komento_mailq` (
   `id` int(11) NOT NULL,

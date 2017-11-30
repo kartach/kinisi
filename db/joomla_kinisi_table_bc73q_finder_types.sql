@@ -1,10 +1,20 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_finder_types`
+--
+
 DROP TABLE IF EXISTS `bc73q_finder_types`;
 CREATE TABLE `bc73q_finder_types` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(100) NOT NULL,
   `mime` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bc73q_finder_types`
+--
 
 INSERT INTO `bc73q_finder_types` VALUES(1, 'Tag', '');
 INSERT INTO `bc73q_finder_types` VALUES(2, 'Category', '');

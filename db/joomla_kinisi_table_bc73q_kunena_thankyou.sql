@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_thankyou`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_thankyou`;
 CREATE TABLE `bc73q_kunena_thankyou` (
   `postid` int(11) NOT NULL,

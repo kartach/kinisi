@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_komento_activities`
+--
+
 DROP TABLE IF EXISTS `bc73q_komento_activities`;
 CREATE TABLE `bc73q_komento_activities` (
   `id` bigint(20) NOT NULL,
@@ -8,6 +14,10 @@ CREATE TABLE `bc73q_komento_activities` (
   `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `published` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_komento_activities`
+--
 
 INSERT INTO `bc73q_komento_activities` VALUES(2, 'comment', 30, 0, '2016-05-06 14:28:30', 1);
 INSERT INTO `bc73q_komento_activities` VALUES(3, 'comment', 29, 0, '2016-05-06 14:28:30', 1);

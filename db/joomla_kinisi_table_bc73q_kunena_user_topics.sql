@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_user_topics`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_user_topics`;
 CREATE TABLE `bc73q_kunena_user_topics` (
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -11,6 +17,10 @@ CREATE TABLE `bc73q_kunena_user_topics` (
   `subscribed` tinyint(4) NOT NULL DEFAULT '0',
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_user_topics`
+--
 
 INSERT INTO `bc73q_kunena_user_topics` VALUES(630, 19, 2, 1, 30, 0, 0, 1, '');
 INSERT INTO `bc73q_kunena_user_topics` VALUES(849, 19, 2, 1, 27, 1, 0, 1, '');

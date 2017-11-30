@@ -1,9 +1,19 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_finder_taxonomy_map`
+--
+
 DROP TABLE IF EXISTS `bc73q_finder_taxonomy_map`;
 CREATE TABLE `bc73q_finder_taxonomy_map` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `node_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bc73q_finder_taxonomy_map`
+--
 
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 6);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 7);
@@ -187,10 +197,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(472, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(472, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(472, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(472, 72);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(483, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(483, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(483, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(483, 41);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(485, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(485, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(485, 29);
@@ -203,10 +209,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(487, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(487, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(487, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(487, 33);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(493, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(493, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(493, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(493, 33);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(494, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(494, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(494, 29);
@@ -219,18 +221,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(496, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(496, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(496, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(496, 72);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(498, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(498, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(498, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(498, 37);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(499, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(499, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(499, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(499, 37);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(500, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(500, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(500, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(500, 37);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(501, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(501, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(501, 29);
@@ -247,10 +237,6 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(504, 72);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 7);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 28);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 29);
-INSERT INTO `bc73q_finder_taxonomy_map` VALUES(508, 36);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(509, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(509, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(509, 29);
@@ -287,3 +273,27 @@ INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 7);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 28);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 29);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(522, 36);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(523, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(523, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(523, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(523, 41);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(524, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(524, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(524, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(524, 33);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(525, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(525, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(525, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(525, 37);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(526, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(526, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(526, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(526, 37);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(527, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(527, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(527, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(527, 37);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(529, 7);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(529, 28);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(529, 29);
+INSERT INTO `bc73q_finder_taxonomy_map` VALUES(529, 36);

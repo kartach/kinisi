@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_fields`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_fields`;
 CREATE TABLE `bc73q_acymailing_fields` (
   `fieldid` smallint(5) UNSIGNED NOT NULL,
@@ -25,6 +31,10 @@ CREATE TABLE `bc73q_acymailing_fields` (
   `frontlistingfilter` tinyint(4) DEFAULT NULL,
   `frontform` tinyint(4) DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_acymailing_fields`
+--
 
 INSERT INTO `bc73q_acymailing_fields` VALUES(1, 'NAMECAPTION', 'name', 'text', '', 1, 1, '', 1, 1, 1, 1, '', 1, 1, 0, 0, 0, 'all', 0, NULL, NULL, 1);
 INSERT INTO `bc73q_acymailing_fields` VALUES(2, 'EMAILCAPTION', 'email', 'text', '', 1, 2, '', 1, 1, 1, 1, '', 1, 1, 0, 0, 0, 'all', 0, NULL, NULL, 1);

@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_urlclick`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_urlclick`;
 CREATE TABLE `bc73q_acymailing_urlclick` (
   `urlid` int(10) UNSIGNED NOT NULL,

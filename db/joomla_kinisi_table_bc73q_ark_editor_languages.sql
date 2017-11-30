@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_ark_editor_languages`
+--
+
 DROP TABLE IF EXISTS `bc73q_ark_editor_languages`;
 CREATE TABLE `bc73q_ark_editor_languages` (
   `id` int(11) NOT NULL,

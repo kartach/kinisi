@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_messages`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_messages`;
 CREATE TABLE `bc73q_kunena_messages` (
   `id` int(11) NOT NULL,
@@ -22,6 +28,10 @@ CREATE TABLE `bc73q_kunena_messages` (
   `modified_reason` tinytext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `bc73q_kunena_messages`
+--
+
 INSERT INTO `bc73q_kunena_messages` VALUES(12, 0, 5, 2, 'Klara', 630, '', 'ssssss', 1509998110, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
 INSERT INTO `bc73q_kunena_messages` VALUES(13, 0, 6, 2, 'Klara', 630, '', 'ff', 1509998178, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
 INSERT INTO `bc73q_kunena_messages` VALUES(14, 0, 7, 2, 'Klara', 630, '', 'ff', 1509998199, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
@@ -38,4 +48,4 @@ INSERT INTO `bc73q_kunena_messages` VALUES(25, 0, 17, 2, 'Administrátor Klára 
 INSERT INTO `bc73q_kunena_messages` VALUES(27, 0, 19, 2, 'AlenaH', 849, '', 'Komentáře', 1510248194, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
 INSERT INTO `bc73q_kunena_messages` VALUES(29, 0, 21, 3, 'AlenaH', 849, '', 'Skupinové cvičení, cvičení maminek s dětma', 1510248840, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
 INSERT INTO `bc73q_kunena_messages` VALUES(30, 27, 19, 2, 'Administrátor', 630, '', 'Komentáře', 1510262167, '::1', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
-INSERT INTO `bc73q_kunena_messages` VALUES(31, 29, 21, 3, 'Lenka Augustínová', 851, '', 'Skupinové cvičení, cvičení maminek s dětma', 1510594292, '84.246.166.29', 0, 0, 0, 0, 0, 0, NULL, NULL, '');
+INSERT INTO `bc73q_kunena_messages` VALUES(31, 29, 21, 3, 'Lenka Augustínová', 851, '', 'Skupinové cvičení, cvičení maminek s dětma', 1510258840, '84.246.166.29', 0, 0, 0, 0, 0, 0, NULL, NULL, '');

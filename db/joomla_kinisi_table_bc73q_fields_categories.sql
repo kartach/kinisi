@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_fields_categories`
+--
+
 DROP TABLE IF EXISTS `bc73q_fields_categories`;
 CREATE TABLE `bc73q_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT '0',
