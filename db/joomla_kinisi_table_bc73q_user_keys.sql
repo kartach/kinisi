@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_user_keys`
+--
+
 DROP TABLE IF EXISTS `bc73q_user_keys`;
 CREATE TABLE `bc73q_user_keys` (
   `id` int(10) UNSIGNED NOT NULL,

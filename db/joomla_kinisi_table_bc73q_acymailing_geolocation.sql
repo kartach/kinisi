@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_geolocation`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_geolocation`;
 CREATE TABLE `bc73q_acymailing_geolocation` (
   `geolocation_id` int(10) UNSIGNED NOT NULL,

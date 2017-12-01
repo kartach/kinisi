@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_tags`
+--
+
 DROP TABLE IF EXISTS `bc73q_tags`;
 CREATE TABLE `bc73q_tags` (
   `id` int(10) UNSIGNED NOT NULL,
@@ -32,6 +38,10 @@ CREATE TABLE `bc73q_tags` (
   `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `bc73q_tags`
+--
 
 INSERT INTO `bc73q_tags` VALUES(1, 0, 0, 47, 0, '', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '', '', '', '', 630, '2017-10-08 20:11:14', '', 0, '0000-00-00 00:00:00', '', '', 0, '*', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `bc73q_tags` VALUES(3, 1, 1, 2, 1, 'hot', 'doporučené', 'doporucene', '', '', 0, 0, '0000-00-00 00:00:00', 1, '{\"tag_layout\":\"\",\"tag_link_class\":\"label label-info\"}', ' ', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-10-08 20:11:14', '', 630, '2017-11-02 09:17:31', '{\"image_intro\":\"\",\"float_intro\":\"\",\"image_intro_alt\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"float_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"image_fulltext_caption\":\"\"}', '{\"0\":\"{\\\"0\\\":\\\"{}\\\"}\"}', 3, '*', 1, '2017-10-08 20:11:14', '2017-10-08 20:11:14');

@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_kunena_sessions`
+--
+
 DROP TABLE IF EXISTS `bc73q_kunena_sessions`;
 CREATE TABLE `bc73q_kunena_sessions` (
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -7,6 +13,10 @@ CREATE TABLE `bc73q_kunena_sessions` (
   `readtopics` text,
   `currvisit` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_kunena_sessions`
+--
 
 INSERT INTO `bc73q_kunena_sessions` VALUES(19, 'na', 1465478134, '0', 1466687744);
 INSERT INTO `bc73q_kunena_sessions` VALUES(55, 'na', 1444224132, '0', 1445433740);

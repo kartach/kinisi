@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_komento_acl`
+--
+
 DROP TABLE IF EXISTS `bc73q_komento_acl`;
 CREATE TABLE `bc73q_komento_acl` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -7,6 +13,10 @@ CREATE TABLE `bc73q_komento_acl` (
   `type` varchar(255) NOT NULL,
   `rules` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_komento_acl`
+--
 
 INSERT INTO `bc73q_komento_acl` VALUES(1, '1', 'com_content', 'usergroup', '{\"read_comment\":true,\"read_stickies\":true,\"read_lovies\":true,\"add_comment\":true,\"like_comment\":false,\"report_comment\":false,\"share_comment\":true,\"reply_comment\":false,\"upload_attachment\":false,\"download_attachment\":true,\"edit_own_comment\":false,\"delete_own_comment\":false,\"delete_own_attachment\":false,\"author_edit_comment\":false,\"author_delete_comment\":false,\"author_publish_comment\":false,\"author_unpublish_comment\":false,\"author_stick_comment\":false,\"author_delete_attachment\":false,\"edit_all_comment\":false,\"delete_all_comment\":false,\"publish_all_comment\":false,\"unpublish_all_comment\":false,\"stick_all_comment\":false,\"delete_all_attachment\":false,\"read_others_comment\":true}');
 INSERT INTO `bc73q_komento_acl` VALUES(2, '9', 'com_content', 'usergroup', '{\"read_comment\":true,\"read_stickies\":true,\"read_lovies\":true,\"add_comment\":true,\"like_comment\":false,\"report_comment\":false,\"share_comment\":true,\"reply_comment\":false,\"upload_attachment\":false,\"download_attachment\":true,\"edit_own_comment\":false,\"delete_own_comment\":false,\"delete_own_attachment\":false,\"author_edit_comment\":false,\"author_delete_comment\":false,\"author_publish_comment\":false,\"author_unpublish_comment\":false,\"author_stick_comment\":false,\"author_delete_attachment\":false,\"edit_all_comment\":false,\"delete_all_comment\":false,\"publish_all_comment\":false,\"unpublish_all_comment\":false,\"stick_all_comment\":false,\"delete_all_attachment\":false,\"read_others_comment\":true}');

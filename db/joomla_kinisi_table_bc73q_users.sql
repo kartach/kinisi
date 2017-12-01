@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_users`
+--
+
 DROP TABLE IF EXISTS `bc73q_users`;
 CREATE TABLE `bc73q_users` (
   `id` int(11) NOT NULL,
@@ -19,7 +25,11 @@ CREATE TABLE `bc73q_users` (
   `requireReset` tinyint(4) NOT NULL DEFAULT '0' COMMENT 'Require user to reset password on next login'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `bc73q_users` VALUES(630, 'Klára K', 'Administrátor', 'karkoskova.klara@gmail.com', '$2y$10$/Lw9JAXC12jF.Xjwdrjipeg1HTqJhzdoqK2Tjj2LjSCcXTOhM.rxC', 0, 1, '2017-10-08 20:11:14', '2017-11-26 22:50:15', '0', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"arkeditor\",\"helpsite\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
+--
+-- Dumping data for table `bc73q_users`
+--
+
+INSERT INTO `bc73q_users` VALUES(630, 'Klára K', 'Administrátor', 'karkoskova.klara@gmail.com', '$2y$10$/Lw9JAXC12jF.Xjwdrjipeg1HTqJhzdoqK2Tjj2LjSCcXTOhM.rxC', 0, 1, '2017-10-08 20:11:14', '2017-11-30 17:59:49', '0', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"arkeditor\",\"helpsite\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 INSERT INTO `bc73q_users` VALUES(846, 'Demo User', 'demo', 'demo@demolink.org', 'y.xksMc0Rh19yJxOtqUOIQZ7OaxfheK7zSAsak7elym/kwAzjqW', 0, 0, '2017-10-08 20:11:14', '2017-10-08 20:11:14', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"helpsite\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 INSERT INTO `bc73q_users` VALUES(847, 'Lorem Ipsum', 'lorem_ipsum', 'lorem_ipsum@demolink.org', 'y/FxAHYMOjEIrvvJdKPfz4UB.qc9Fm1/eXeXc.ci', 0, 0, '2017-10-08 20:11:14', '2017-10-08 20:11:14', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);
 INSERT INTO `bc73q_users` VALUES(848, 'Dolor Sit', 'dolor_sit', 'dolor_sit@demolink.org', 'y/JUy', 0, 0, '2017-10-08 20:11:14', '2017-10-08 20:11:14', '', '{}', '0000-00-00 00:00:00', 0, '', '', 0);

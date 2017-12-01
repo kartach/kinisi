@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="1.6.0" group="system" method="upgrade">
+
+	<title>eorisis: Google Analytics</title>
+	<name>eorisis_google_analytics</name>
+	<author>eorisis.com</author>
+	<authorUrl>https://eorisis.com</authorUrl>
+	<authorEmail>support@eorisis.com</authorEmail>
+	<copyright>(C) 2011-2017 eorisis. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2; See /misc/licence.txt</license>
+	<version>2.1.0</version>
+	<creationDate>23 November 2017</creationDate>
+	<compatibility>Joomla! 1.6 or higher</compatibility>
+	<short_url>google-analytics</short_url>
+	<created>24 February 2012</created>
+	<min_php_version>5.3.0</min_php_version>
+	<jquery_version>1.12.4</jquery_version>
+	<migrate_version>1.4.1</migrate_version>
+	<description>PLG_SYSTEM_EORISIS_GOOGLE_ANALYTICS_XML_DESCRIPTION</description>
+	<scriptfile>framework/install/eorisis_installer.php</scriptfile>
+
+	<files>
+		<filename plugin="eorisis_google_analytics">eorisis_google_analytics.php</filename>
+		<folder>framework</folder>
+		<filename>.htaccess</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_eorisis_google_analytics.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_eorisis_google_analytics.sys.ini</language>
+		<language tag="el-GR">el-GR/el-GR.plg_system_eorisis_google_analytics.ini</language>
+		<language tag="el-GR">el-GR/el-GR.plg_system_eorisis_google_analytics.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/eorisis_google_analytics/framework/admin/html/fields">
+
+			<!-- Basic -->
+			<fieldset name="basic" label="EO_PLG">
+				<field name="basic" type="basic" />
+			</fieldset>
+
+			<!-- Tracking -->
+			<fieldset name="EO_TRACKING">
+
+				<!-- Tracking ID -->
+				<field name="tracking_id" label="EO_TRACKING_ID" type="text" size="15" class="span2" description="EO_TRACKING_ID_DSC" />
+
+				<!-- Tracking Area -->
+				<field name="tracking_area" label="EO_AREA" default="1" type="radio" filter="int" class="btn-group">
+					<option value="1">EO_SITE</option>
+					<option value="2">EO_ADMIN</option>
+					<option value="3">EO_EVERYWHERE</option>
+				</field>
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Force SSL (HTTPS) -->
+				<field name="force_ssl" label="EO_SSL" default="0" type="radio" filter="int" class="btn-group" description="EO_SSL_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<!-- Anonymize IP -->
+				<field name="anonymize_ip" label="EO_ANONYMIZE_IP" default="0" type="radio" filter="int" class="btn-group" description="EO_ANONYMIZE_IP_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<!-- Display Advertising Features -->
+				<field name="advertiser_support" label="EO_DISPLAY_AD" default="0" type="radio" filter="int" class="btn-group" description="EO_DISPLAY_AD_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+			</fieldset><!-- /Tracking -->
+
+
+			<!-- Enhanced Link Attribution -->
+			<fieldset name="EO_ENHANCED_LINK_ATTR">
+
+				<field name="enhanced_link_attr" label="EO_ENHANCED_LINK_ATTR" default="0" type="radio" filter="int" class="btn-group" description="EO_ENHANCED_LINK_ATTR_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<field type="spacer" label="EO_NO_OPT" showon="enhanced_link_attr:0" />
+				<field type="spacer" hr="true" class="eo-hr" showon="enhanced_link_attr:1" />
+
+				<field name="enhanced_link_attr_cookie_name" label="EO_COOKIE_NAME" default="_gali" type="text" size="15" class="span2" showon="enhanced_link_attr:1" description="EO_ENHANCED_LINK_ATTR_COOKIE_NAME_DSC" />
+				<field name="enhanced_link_attr_duration" label="EO_DURATION" default="30" type="text" size="5" class="validate-numeric span1" filter="int" showon="enhanced_link_attr:1" description="EO_ENHANCED_LINK_ATTR_DURATION_DSC" />
+				<field name="enhanced_link_attr_levels" label="EO_LEVELS" default="3" type="text" size="5" class="validate-numeric span1" filter="int" showon="enhanced_link_attr:1" description="EO_ENHANCED_LINK_ATTR_LEVELS_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" showon="enhanced_link_attr:1" />
+
+				<!-- Help -->
+				<field type="spacer" label="EO_HELP" class="eo-help" showon="enhanced_link_attr:1" description="EO_ENHANCED_LINK_ATTR_HELP" />
+
+			</fieldset><!-- /Enhanced Link Attribution -->
+
+
+			<!-- Domains & Cookies -->
+			<fieldset name="EO_DOMAINS_COOKIES">
+
+				<!-- Domain (FQDN) -->
+				<field name="domain_fqdn" label="EO_FQDN" default="1" type="radio" filter="int" class="btn-group" description="EO_FQDN_DESC">
+					<option value="1">EO_AUTO</option>
+					<option value="2">EO_CUSTOM</option>
+				</field>
+				<field name="domain_fqdn_custom" label="EO_CUSTOM" size="70" class="span4" type="text" showon="domain_fqdn:2" description="EO_FQDN_CUSTOM_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Domain -->
+				<field name="domain" label="EO_DOMAIN_MAIN" default="1" type="radio" filter="int" class="btn-group" description="EO_DOMAIN_DSC">
+					<option value="1">EO_FQDN</option>
+					<option value="2">EO_CUSTOM</option>
+				</field>
+				<field name="domain_custom" label="EO_CUSTOM" size="70" class="span4" type="text" showon="domain:2" description="EO_DOMAIN_CUSTOM_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Cookie Domain -->
+				<field name="cookie_domain" label="EO_COOKIE_DOMAIN" default="0" type="list" filter="int" description="EO_COOKIE_DOMAIN_DSC">
+					<option value="0">JDEFAULT</option>
+					<option value="1">EO_FQDN</option>
+					<option value="2">EO_DOMAIN_MAIN</option>
+					<option value="3">JGLOBAL_USE_GLOBAL</option>
+					<option value="4">EO_CUSTOM</option>
+				</field>
+				<field name="cookie_domain_custom" label="EO_CUSTOM" type="text" size="70" class="span4" showon="cookie_domain:4" description="EO_COOKIE_DOMAIN_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Cookie Name -->
+				<field name="cookie_name" label="EO_COOKIE_NAME" default="1" type="radio" filter="int" class="btn-group" description="EO_COOKIE_NAME_DSC">
+					<option value="1">JDEFAULT</option>
+					<option value="2">EO_CUSTOM</option>
+				</field>
+				<field name="cookie_name_custom" label="EO_CUSTOM" default="_ga" type="text" size="20" class="span2" showon="cookie_name:2" description="EO_COOKIE_NAME_CUSTOM_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Cookie Expires -->
+				<field name="cookie_expires" label="EO_COOKIE_EXPIRES" default="1" type="radio" filter="int" class="btn-group" description="EO_COOKIE_EXPIRES_DSC">
+					<option value="1">JDEFAULT</option>
+					<option value="2">EO_CUSTOM</option>
+				</field>
+				<field name="cookie_expires_custom" label="EO_CUSTOM" default="31536000" type="text" size="20" class="validate-numeric span2" filter="int" showon="cookie_expires:2" description="EO_COOKIE_EXPIRES_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Cookie Path -->
+				<field name="cookie_path" label="EO_COOKIE_PATH" default="1" type="radio" filter="int" class="btn-group" description="EO_COOKIE_PATH_DSC">
+					<option value="1">JDEFAULT</option>
+					<option value="2">JGLOBAL_USE_GLOBAL</option>
+					<option value="3">EO_CUSTOM</option>
+				</field>
+				<field name="cookie_path_custom" label="EO_CUSTOM" default="/" type="text" size="70" class="span4" showon="cookie_path:3" description="EO_COOKIE_PATH_CUSTOM_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Track Multiple Domains -->
+				<field name="track_multiple_domains" label="EO_TRACK_MULTIPLE_DOMAINS" default="0" type="radio" filter="int" class="btn-group" description="EO_TRACK_MULTIPLE_DOMAINS_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<!-- Domain Type -->
+				<field name="domain_type" label="EO_DOMAIN_TYPE" default="1" type="radio" filter="int" class="btn-group" showon="track_multiple_domains:1" description="EO_DOMAIN_TYPE_DSC">
+					<option value="1">EO_PRIMARY</option>
+					<option value="2">EO_SECONDARY</option>
+				</field>
+
+				<!-- Secondary Domains -->
+				<field name="secondary_domains" label="EO_SECONDARY_DOMAINS" rows="5" cols="55" type="textarea" class="span5 eocol-lg" showon="track_multiple_domains:1[AND]domain_type:1" description="EO_SECONDARY_DOMAINS_DSC" />
+
+			</fieldset><!-- /Domains & Cookies -->
+
+
+			<!-- Exclude Traffic-->
+			<fieldset name="EO_EXCLUDE_TRAFFIC">
+
+				<!-- Respect DNT -->
+				<field name="dnt" label="EO_DNT" default="0" type="radio" filter="int" class="btn-group" description="EO_DNT_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Opt-Out -->
+				<field name="optout" label="EO_OPTOUT" default="0" type="radio" class="btn-group" filter="int" description="EO_OPTOUT_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="optout_cookie_expires_custom" label="EO_COOKIE_EXPIRES" default="80" type="text" size="20" class="validate-numeric span2" filter="int" showon="optout:1" description="EO_OPTOUT_COOKIE_EXPIRES_DSC" />
+				<field name="optout_func" label="EO_FUNC_NAME" default="gaOptout" type="text" size="20" class="span2" showon="optout:1" description="EO_OPTOUT_FUNC_NAME_DSC" />
+				<field name="optout_link" type="optout" showon="optout:1" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- IP List -->
+				<field name="exclude_list_ip" label="EO_IP_LIST" default="0" type="radio" class="btn-group" filter="int" description="EO_IP_LIST_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="exclude_list_ip_txt" label="EO_IP_LIST_ENTRIES" rows="10" cols="30" type="textarea" class="span3 eocol-lg" showon="exclude_list_ip:1" description="EO_IP_LIST_ENTRIES_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Hostname List -->
+				<field name="exclude_list_hostname" label="EO_HOSTNAME_LIST" default="0" type="radio" class="btn-group" filter="int" description="EO_HOSTNAME_LIST_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="exclude_list_hostname_txt" label="EO_HOSTNAME_LIST_ENTRIES" rows="10" cols="70" type="textarea" class="span5 eocol-lg" showon="exclude_list_hostname:1" description="EO_HOSTNAME_LIST_ENTRIES_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- UA List -->
+				<field name="exclude_list_ua" label="EO_UA_LIST" default="0" type="radio" class="btn-group" filter="int" description="EO_UA_LIST_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="exclude_list_ua_txt" label="EO_UA_LIST_ENTRIES" rows="10" cols="70" type="textarea" class="span5 eocol-lg" showon="exclude_list_ua:1" description="EO_UA_LIST_ENTRIES_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Referrer List -->
+				<field name="exclude_list_referrer" label="EO_REF_LIST" default="0" type="radio" class="btn-group" filter="int" description="EO_REF_LIST_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+				<field name="exclude_list_referrer_txt" label="EO_REF_LIST_ENTRIES" rows="10" cols="70" type="textarea" class="span5 eocol-lg" showon="exclude_list_referrer:1" description="EO_REF_LIST_ENTRIES_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Help -->
+				<field type="spacer" label="EO_HELP" class="eo-help" description="EO_EXCLUDE_LISTS_HELP" />
+
+			</fieldset>
+
+
+			<!-- Advanced -->
+			<fieldset name="advanced">
+
+				<!-- Code Position -->
+				<field name="code_pos" label="EO_CODE_POS" default="body_end" type="radio" filter="word" class="btn-group" description="EO_CODE_POS_DSC">
+					<option value="head">EO_HEAD</option>
+					<option value="body_end">EO_BODY_END</option>
+				</field>
+
+				<!-- Code Tags -->
+				<field name="code_tags" label="EO_CODE_TAGS" default="1" type="radio" filter="int" class="btn-group" description="EO_CODE_TAGS_DSC">
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+
+				<!-- Minify Code -->
+				<field name="minify" label="EO_MINIFY" default="0" type="radio" class="btn-group" filter="int" description="EO_MINIFY_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Global Object -->
+				<field name="global_object" label="EO_GLOBAL_OBJ" default="1" type="radio" filter="int" class="btn-group" description="EO_GLOBAL_OBJ_DSC">
+					<option value="1">JDEFAULT</option>
+					<option value="2">EO_CUSTOM</option>
+				</field>
+				<field name="global_object_custom" label="EO_CUSTOM" default="ga" type="text" size="20" class="span2" showon="global_object:2" description="EO_GLOBAL_OBJ_DSC" />
+
+				<field type="spacer" hr="true" class="eo-hr" />
+
+				<!-- Testing on localhost -->
+				<field name="testing_localhost" label="EO_LOCALHOST_TEST" default="0" type="radio" filter="int" class="btn-group" description="EO_LOCALHOST_TEST_DSC">
+					<option value="1">JON</option>
+					<option value="0">JOFF</option>
+				</field>
+
+			</fieldset><!-- /Advanced -->
+
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" priority="1" name="eorisis: Google Analytics">https://eorisis.com/updates/eorisis-google-analytics/extension.xml</server>
+	</updateservers>
+
+</extension>

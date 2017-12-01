@@ -1,10 +1,20 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_finder_links_termsb`
+--
+
 DROP TABLE IF EXISTS `bc73q_finder_links_termsb`;
 CREATE TABLE `bc73q_finder_links_termsb` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `term_id` int(10) UNSIGNED NOT NULL,
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `bc73q_finder_links_termsb`
+--
 
 INSERT INTO `bc73q_finder_links_termsb` VALUES(7, 316, 0.84);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(7, 317, 1.91338);
@@ -37,7 +47,7 @@ INSERT INTO `bc73q_finder_links_termsb` VALUES(515, 20317, 1.05);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(509, 20318, 1.23669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(515, 20318, 1.23669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(459, 21051, 0.60669);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(498, 21051, 0.60669);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(527, 21051, 0.60669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(460, 22521, 0.32669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(522, 22521, 0.32669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(174, 129075, 0.51331);
@@ -66,11 +76,11 @@ INSERT INTO `bc73q_finder_links_termsb` VALUES(460, 230871, 1.23669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(461, 231407, 1.05);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(461, 231408, 1.16669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(469, 239089, 1.19);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(498, 243263, 1.23669);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(498, 243264, 1.4);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(499, 244336, 0.51331);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(499, 244337, 1.23669);
-INSERT INTO `bc73q_finder_links_termsb` VALUES(499, 244338, 1.4);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(502, 245853, 0.18669);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(502, 245854, 0.93331);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(502, 245855, 1.16669);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(526, 251632, 0.51331);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(526, 251633, 1.23669);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(526, 251634, 1.4);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(527, 252604, 1.23669);
+INSERT INTO `bc73q_finder_links_termsb` VALUES(527, 252605, 1.4);

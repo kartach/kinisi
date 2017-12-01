@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_joomgallery_config`
+--
+
 DROP TABLE IF EXISTS `bc73q_joomgallery_config`;
 CREATE TABLE `bc73q_joomgallery_config` (
   `id` int(1) NOT NULL,
@@ -298,5 +304,9 @@ CREATE TABLE `bc73q_joomgallery_config` (
   `jg_showfavouritesdownload` int(1) NOT NULL,
   `jg_showfavouriteseditorlinks` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_joomgallery_config`
+--
 
 INSERT INTO `bc73q_joomgallery_config` VALUES(1, 1, 1, 'images/joomgallery/details/', 'images/joomgallery/originals/', 'images/joomgallery/thumbnails/', 'administrator/components/com_joomgallery/temp/ftp_upload/', 'administrator/components/com_joomgallery/temp/', 'media/joomgallery/images/', 'watermark.png', 1, 1, 1, 'Š|S,Œ|O,Ž|Z,š|s,œ|oe,ž|z,Ÿ|Y,¥|Y,µ|u,À|A,Á|A,Â|A,Ã|A,Ä|AE,Å|A,Æ|A,Ç|C,È|E,É|E,Ê|E,Ë|E,Ì|I,Í|I,Î|I,Ï|I,Ð|D,Ñ|N,Ò|O,Ó|O,Ô|O,Õ|O,Ö|OE,Ø|O,Ù|U,Ú|U,Û|U,Ü|UE,Ý|Y,à|a,á|a,â|a,ã|a,ä|ae,å|a,æ|a,ç|c,è|e,é|e,ê|e,ë|e,ì|i,í|i,î|i,ï|i,ð|o,ñ|n,ò|o,ó|o,ô|o,õ|o,ö|oe,ø|o,ù|u,ú|u,û|u,ü|ue,ý|y,ÿ|y,ß|ss,ă|a,ş|s,ţ|t,ț|t,Ț|T,Ș|S,ș|s,Ş|S', 'gd2', 1, '', 1, 1900, 100, 2, 2, 768, 640, 100, 2, 1, 1, 0, 2, '-1', 2, '-1', 0, 2, '-1', 0, 2, '-1', 1, 0, 2, '-1', 0, 1, 0, 0, 1, '', 0, 0, 25, 0, 0, 0, 0, 10, 500, 0, 2000000, 1, 1, 1, 3, 1, 1, 1, 0, 1, 1, 2, 1, 1, 1, 0, 0, 1, 1, 2, 1, 0, 5, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 'grey', 0, 1, 1, '_:default', 0, 0, 0, 2, 100, 100, '#ffffff', 0, 0, 0, 1, 0, 'ordering ASC', 'imgdate DESC', 'imgtitle DESC', '#page_title - [! COM_JOOMGALLERY_COMMON_CATEGORY!]: #cat', '#page_title - [! COM_JOOMGALLERY_COMMON_CATEGORY!]: #cat - [! COM_JOOMGALLERY_COMMON_IMAGE!]:  #img', 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '#000000', '#808080', 1, 1, 5, 1, 1, 1, 1, 0, 3, 9, 0, 1, 0, 1, 3, 3, 0, 0, 0, 7, 0, 0, 0, 10, '0', 0, 0, 0, 'date', 0, 3, 0, 9, 3, 3, 'fancyBox', 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 9, 1, 3, 2, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 300, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 15, 0, 0, '6', 0, 0, 1, 0, 0, 2, 400, 50, 0, 28, 28, 2, 0, 1, 1, 0, 10, 6, 0, 6000, 0, 2000, 0, 640, 480, 0, 0, 0, 0, 0, 0, '', '', '', '', 0, '', 0, 12, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);

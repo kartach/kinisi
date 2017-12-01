@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_fields`
+--
+
 DROP TABLE IF EXISTS `bc73q_fields`;
 CREATE TABLE `bc73q_fields` (
   `id` int(10) UNSIGNED NOT NULL,

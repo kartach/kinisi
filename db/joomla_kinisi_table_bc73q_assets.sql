@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_assets`
+--
+
 DROP TABLE IF EXISTS `bc73q_assets`;
 CREATE TABLE `bc73q_assets` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
@@ -11,7 +17,11 @@ CREATE TABLE `bc73q_assets` (
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1051, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
+--
+-- Dumping data for table `bc73q_assets`
+--
+
+INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1055, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `bc73q_assets` VALUES(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}');
 INSERT INTO `bc73q_assets` VALUES(3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}');
 INSERT INTO `bc73q_assets` VALUES(4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}');
@@ -424,11 +434,11 @@ INSERT INTO `bc73q_assets` VALUES(834, 8, 392, 485, 2, 'com_content.category.83'
 INSERT INTO `bc73q_assets` VALUES(835, 834, 393, 408, 3, 'com_content.category.84', 'Fyzioterapie dospělých', '{}');
 INSERT INTO `bc73q_assets` VALUES(836, 835, 394, 395, 4, 'com_content.category.85', 'Vyšetření', '{}');
 INSERT INTO `bc73q_assets` VALUES(837, 835, 396, 397, 4, 'com_content.category.86', 'Indikace', '{}');
-INSERT INTO `bc73q_assets` VALUES(838, 835, 398, 399, 4, 'com_content.category.87', 'Metodiky a terapeutické přístupy', '{}');
+INSERT INTO `bc73q_assets` VALUES(838, 835, 398, 399, 4, 'com_content.category.87', 'Metody a terapeutické přístupy', '{}');
 INSERT INTO `bc73q_assets` VALUES(839, 834, 409, 424, 3, 'com_content.category.88', 'Dětská fyzioterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(840, 839, 410, 411, 4, 'com_content.category.89', 'Vyšetření', '{}');
 INSERT INTO `bc73q_assets` VALUES(841, 839, 412, 413, 4, 'com_content.category.90', 'Indikace', '{}');
-INSERT INTO `bc73q_assets` VALUES(842, 839, 414, 415, 4, 'com_content.category.91', 'Metodiky a terapeutické přístupy', '{}');
+INSERT INTO `bc73q_assets` VALUES(842, 839, 414, 415, 4, 'com_content.category.91', 'Metody a terapeutické přístupy', '{}');
 INSERT INTO `bc73q_assets` VALUES(843, 834, 425, 434, 3, 'com_content.category.92', 'Akutní a pooperační fyzioterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(844, 843, 426, 427, 4, 'com_content.category.93', 'Akutní fyzioterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(845, 843, 428, 429, 4, 'com_content.category.94', 'Pooperační fyzioterapie', '{}');
@@ -485,3 +495,5 @@ INSERT INTO `bc73q_assets` VALUES(895, 834, 479, 480, 3, 'com_content.article.22
 INSERT INTO `bc73q_assets` VALUES(896, 834, 481, 482, 3, 'com_content.article.229', 'Funkční fyziotrénink', '{}');
 INSERT INTO `bc73q_assets` VALUES(897, 834, 483, 484, 3, 'com_content.article.230', 'Akutní a pooperační fyzioterapie', '{}');
 INSERT INTO `bc73q_assets` VALUES(898, 851, 470, 471, 4, 'com_content.article.231', 'Sportovní úrazy a operace', '{}');
+INSERT INTO `bc73q_assets` VALUES(899, 1, 1051, 1052, 1, 'com_regularlabsmanager', 'com_regularlabsmanager', '{\"core.admin\":[],\"core.manage\":[]}');
+INSERT INTO `bc73q_assets` VALUES(900, 1, 1053, 1054, 1, 'com_rereplacer', 'com_rereplacer', '{\"core.admin\":[],\"core.manage\":[],\"core.create\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}');

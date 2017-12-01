@@ -1,4 +1,10 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_associations`
+--
+
 DROP TABLE IF EXISTS `bc73q_associations`;
 CREATE TABLE `bc73q_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',

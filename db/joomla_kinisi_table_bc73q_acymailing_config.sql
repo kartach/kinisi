@@ -1,9 +1,19 @@
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bc73q_acymailing_config`
+--
+
 DROP TABLE IF EXISTS `bc73q_acymailing_config`;
 CREATE TABLE `bc73q_acymailing_config` (
   `namekey` varchar(200) NOT NULL,
   `value` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bc73q_acymailing_config`
+--
 
 INSERT INTO `bc73q_acymailing_config` VALUES('level', 'Starter');
 INSERT INTO `bc73q_acymailing_config` VALUES('version', '5.8.1');
