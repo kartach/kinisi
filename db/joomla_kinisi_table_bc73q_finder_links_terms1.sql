@@ -1,20 +1,10 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_links_terms1`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_links_terms1`;
 CREATE TABLE `bc73q_finder_links_terms1` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `term_id` int(10) UNSIGNED NOT NULL,
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_links_terms1`
---
 
 INSERT INTO `bc73q_finder_links_terms1` VALUES(215, 396, 0.09331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(216, 396, 0.09331);
@@ -77,10 +67,10 @@ INSERT INTO `bc73q_finder_links_terms1` VALUES(213, 135043, 2.53327);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135043, 2.53327);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(213, 135044, 2.85);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135044, 2.85);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135045, 2.66);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(213, 135045, 2.66);
-INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135046, 3.29327);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135045, 2.66);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(213, 135046, 3.29327);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(496, 135046, 3.29327);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(215, 135452, 0.81669);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(215, 135453, 1.14331);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(216, 135696, 0.81669);

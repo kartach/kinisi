@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_rereplacer`
---
-
 DROP TABLE IF EXISTS `bc73q_rereplacer`;
 CREATE TABLE `bc73q_rereplacer` (
   `id` int(11) UNSIGNED NOT NULL,

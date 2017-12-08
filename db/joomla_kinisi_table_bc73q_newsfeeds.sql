@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_newsfeeds`
---
-
 DROP TABLE IF EXISTS `bc73q_newsfeeds`;
 CREATE TABLE `bc73q_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT '0',

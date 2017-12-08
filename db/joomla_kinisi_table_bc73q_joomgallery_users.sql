@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_joomgallery_users`
---
-
 DROP TABLE IF EXISTS `bc73q_joomgallery_users`;
 CREATE TABLE `bc73q_joomgallery_users` (
   `uid` int(11) NOT NULL,

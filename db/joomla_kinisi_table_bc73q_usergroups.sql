@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_usergroups`
---
-
 DROP TABLE IF EXISTS `bc73q_usergroups`;
 CREATE TABLE `bc73q_usergroups` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
@@ -13,10 +7,6 @@ CREATE TABLE `bc73q_usergroups` (
   `rgt` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set rgt.',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_usergroups`
---
 
 INSERT INTO `bc73q_usergroups` VALUES(1, 0, 1, 18, 'Public');
 INSERT INTO `bc73q_usergroups` VALUES(2, 1, 8, 15, 'Registered');

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_user_profiles`
---
-
 DROP TABLE IF EXISTS `bc73q_user_profiles`;
 CREATE TABLE `bc73q_user_profiles` (
   `user_id` int(11) NOT NULL,
@@ -12,10 +6,6 @@ CREATE TABLE `bc73q_user_profiles` (
   `profile_value` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Simple user profile storage table';
-
---
--- Dumping data for table `bc73q_user_profiles`
---
 
 INSERT INTO `bc73q_user_profiles` VALUES(630, 'profile.aboutme', '\"\"', 10);
 INSERT INTO `bc73q_user_profiles` VALUES(630, 'profile.address1', '\"\"', 1);

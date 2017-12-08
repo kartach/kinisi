@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_joomgallery_maintenance`
---
-
 DROP TABLE IF EXISTS `bc73q_joomgallery_maintenance`;
 CREATE TABLE `bc73q_joomgallery_maintenance` (
   `id` int(11) NOT NULL,

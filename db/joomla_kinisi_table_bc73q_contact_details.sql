@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_contact_details`
---
-
 DROP TABLE IF EXISTS `bc73q_contact_details`;
 CREATE TABLE `bc73q_contact_details` (
   `id` int(11) NOT NULL,
@@ -52,8 +46,4 @@ CREATE TABLE `bc73q_contact_details` (
   `hits` int(10) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `bc73q_contact_details`
---
-
-INSERT INTO `bc73q_contact_details` VALUES(1, 'Fyzioterapeutické centrum Kinisi', 'fyzioterapeuticke-centrum-kinisi', 'kinisi', 'Plkovská 1,', 'Praha 9 – Horní Počernice; 193 00', '</br>Spojení MHD: Zastávka bus „Na Kovárně“ (10 minut od metra B Černý most)', 'Česká republika', '</br>Bezproblémové parkování přímo před budovou', '+420 725 300 254', '', '<p>Napište nám jakýkoli dotaz, rádi vám odpovíme.</p>', '', 'info@kinisi.cz', 0, 1, 0, '0000-00-00 00:00:00', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"plain\",\"show_tags\":\"\",\"show_name\":\"0\",\"show_position\":\"0\",\"show_email\":\"1\",\"show_street_address\":\"1\",\"show_suburb\":\"1\",\"show_state\":\"1\",\"show_postcode\":\"1\",\"show_country\":\"\",\"show_telephone\":\"1\",\"show_mobile\":\"0\",\"show_fax\":\"1\",\"show_webpage\":\"\",\"show_misc\":\"1\",\"show_image\":\"0\",\"allow_vcard\":\"1\",\"show_articles\":\"0\",\"articles_display_num\":\"\",\"show_profile\":\"0\",\"show_links\":\"0\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"0\",\"show_email_copy\":\"\",\"banned_email\":\"\",\"banned_subject\":\"\",\"banned_text\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 846, 30, 1, '+420 601 094 490, +420 725 300 254', 'http://www.kinisi.cz', '', '', '', '*', '2017-10-08 20:11:14', 630, '', '2017-10-08 20:11:14', 630, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 8, 1077);
+INSERT INTO `bc73q_contact_details` VALUES(1, 'Fyzioterapeutické centrum Kinisi', 'fyzioterapeuticke-centrum-kinisi', 'kinisi', 'Plkovská 1,', 'Praha 9 – Horní Počernice; 193 00', '</br>Spojení MHD: Zastávka bus „Na Kovárně“ (10 minut od metra B Černý most)', 'Česká republika', '</br>Bezproblémové parkování přímo před budovou', '+420 725 300 254', '', '<p>Napište nám jakýkoli dotaz, rádi vám odpovíme.</p>', '', 'info@kinisi.cz', 0, 1, 0, '0000-00-00 00:00:00', 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"presentation_style\":\"plain\",\"show_tags\":\"\",\"show_name\":\"0\",\"show_position\":\"0\",\"show_email\":\"1\",\"show_street_address\":\"1\",\"show_suburb\":\"1\",\"show_state\":\"1\",\"show_postcode\":\"1\",\"show_country\":\"\",\"show_telephone\":\"1\",\"show_mobile\":\"0\",\"show_fax\":\"1\",\"show_webpage\":\"\",\"show_misc\":\"1\",\"show_image\":\"0\",\"allow_vcard\":\"1\",\"show_articles\":\"0\",\"articles_display_num\":\"\",\"show_profile\":\"0\",\"show_links\":\"0\",\"linka_name\":\"\",\"linka\":false,\"linkb_name\":\"\",\"linkb\":false,\"linkc_name\":\"\",\"linkc\":false,\"linkd_name\":\"\",\"linkd\":false,\"linke_name\":\"\",\"linke\":false,\"contact_layout\":\"\",\"show_email_form\":\"0\",\"show_email_copy\":\"\",\"banned_email\":\"\",\"banned_subject\":\"\",\"banned_text\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 846, 30, 1, '+420 601 094 490, +420 725 300 254', 'http://www.kinisi.cz', '', '', '', '*', '2017-10-08 20:11:14', 630, '', '2017-10-08 20:11:14', 630, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 8, 1078);

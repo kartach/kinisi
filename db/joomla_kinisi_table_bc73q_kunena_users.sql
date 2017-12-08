@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_users`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_users`;
 CREATE TABLE `bc73q_kunena_users` (
   `userid` int(11) NOT NULL DEFAULT '0',
@@ -59,10 +53,6 @@ CREATE TABLE `bc73q_kunena_users` (
   `thankyou` int(11) DEFAULT '0',
   `ip` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_users`
---
 
 INSERT INTO `bc73q_kunena_users` VALUES(19, 0, '', '', NULL, 0, NULL, 0, 0, NULL, 0, 0, 1, 0, NULL, 0, '0001-01-01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1, 1, -2, 0, '');
 INSERT INTO `bc73q_kunena_users` VALUES(55, 0, '', '', NULL, 0, NULL, 0, 0, NULL, 0, 0, 1, 0, NULL, 0, '0001-01-01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1, 1, -2, 0, '');

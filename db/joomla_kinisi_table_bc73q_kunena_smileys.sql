@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_smileys`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_smileys`;
 CREATE TABLE `bc73q_kunena_smileys` (
   `id` int(4) NOT NULL,
@@ -13,10 +7,6 @@ CREATE TABLE `bc73q_kunena_smileys` (
   `greylocation` varchar(60) NOT NULL DEFAULT '',
   `emoticonbar` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_smileys`
---
 
 INSERT INTO `bc73q_kunena_smileys` VALUES(1, 'B)', 'cool.png', 'cool-grey.png', 1);
 INSERT INTO `bc73q_kunena_smileys` VALUES(2, '8)', 'cool.png', 'cool-grey.png', 0);

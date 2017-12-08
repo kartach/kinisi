@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_comments`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_comments`;
 CREATE TABLE `bc73q_komento_comments` (
   `id` bigint(20) UNSIGNED NOT NULL,
@@ -38,10 +32,6 @@ CREATE TABLE `bc73q_komento_comments` (
   `params` text,
   `ratings` int(11) UNSIGNED DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_komento_comments`
---
 
 INSERT INTO `bc73q_komento_comments` VALUES(1, 'com_content', 118, 'The author did a great job with all these research work. Really valuable information, thank you!', 'James Bernard', '', 'james_bernard@gmail.com', '', '127.0.0.1', 0, '2014-05-03 09:58:29', 846, '2015-10-15 12:20:08', 0, '0000-00-00 00:00:00', 0, 0, '2015-02-25 13:41:36', '2016-04-01 05:36:34', 0, 0, 0, 1, 4, 0, '', '', '', '{}', 0);
 INSERT INTO `bc73q_komento_comments` VALUES(2, 'com_content', 118, 'Completely agree with the author. Modern businessmen should involve young people, introduce brands to them, socialize… Looks like a fresh product market!', 'Bill Brown', '', 'bill_brown@gmail.com', '', '127.0.0.1', 0, '2014-05-03 09:59:15', 846, '2015-10-15 12:20:34', 0, '0000-00-00 00:00:00', 0, 0, '2014-05-03 09:59:30', '2016-04-01 05:36:27', 0, 0, 0, 5, 8, 0, '', '', '', '{}', 0);

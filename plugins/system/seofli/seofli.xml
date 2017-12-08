@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.2" type="plugin" group="system" method="upgrade">
+    <name>PLG_SEOFLI</name>
+    <version>3.3.3</version>
+    <creationDate>2017-08-13</creationDate>
+    <license>http://www.gnu.org/licenses/gpl</license>
+    <copyright>Copyright 2017 Viktor Vogel. All rights reserved.</copyright>
+    <author>Viktor Vogel</author>
+    <authorEmail>admin@kubik-rubik.de</authorEmail>
+    <authorUrl>https://joomla-extensions.kubik-rubik.de/</authorUrl>
+    <description>PLG_SEOFLI_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="seofli">seofli.php</filename>
+        <filename plugin="seofli">index.html</filename>
+        <folder plugin="seofli">fields</folder>
+    </files>
+    <languages folder="language">
+        <language tag="de-DE">de-DE/de-DE.plg_system_seofli.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_system_seofli.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_seofli.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_system_seofli.sys.ini</language>
+    </languages>
+    <updateservers>
+        <server type="extension" priority="1" name="PLG_SEOFLI">https://check.kubik-rubik.de/updates/seofli.xml</server>
+    </updateservers>
+    <config>
+        <fields name="params" addfieldpath="/plugins/system/seofli/fields">
+            <fieldset name="settings">
+                <field type="krdonationcodecheck" />
+                <field name="links_spacer" type="krtitle" label="PLG_SEOFLI_SPACER_LINKS" />
+                <field name="edit_links" type="list" default="1" label="PLG_SEOFLI_EDITLINKS" description="PLG_SEOFLI_EDITLINKSDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">PLG_SEOFLI_TITLEATTRIBUTE</option>
+                </field>
+                <field name="overwrite_links" type="list" default="0" label="PLG_SEOFLI_OVERWRITELINKS" description="PLG_SEOFLI_OVERWRITELINKSDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="images_spacer" type="krtitle" label="PLG_SEOFLI_SPACER_IMAGES" />
+                <field name="edit_images" type="list" default="1" label="PLG_SEOFLI_EDITIMAGES" description="PLG_SEOFLI_EDITIMAGESDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">PLG_SEOFLI_ALTATTRIBUTE</option>
+                    <option value="2">PLG_SEOFLI_ALTANDTITLEATTRIBUTE</option>
+                </field>
+                <field name="overwrite_images" type="list" default="0" label="PLG_SEOFLI_OVERWRITEIMAGES" description="PLG_SEOFLI_OVERWRITEIMAGESDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="add_size" type="list" default="1" label="PLG_SEOFLI_ADDSIZE" description="PLG_SEOFLI_ADDSIZEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="general_spacer" type="krtitle" label="PLG_SEOFLI_SPACER_GENERAL" />
+                <field name="exclude_editor" type="list" default="1" label="PLG_SEOFLI_EXCLUDEEDITOR" description="PLG_SEOFLI_EXCLUDEEDITORDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="exclude_components" type="textarea" default="" label="PLG_SEOFLI_EXCLUDECOMPONENTS" description="PLG_SEOFLI_EXCLUDECOMPONENTSDESC" rows="6" cols="60" />
+                <field name="exclude_components_toggle" type="list" default="0" label="PLG_SEOFLI_EXCLUDECOMPONENTS_TOGGLE" description="PLG_SEOFLI_EXCLUDECOMPONENTS_TOGGLEDESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="donation">
+                <field type="krdonationcodecheck" name="donation" />
+                <field name="donation_code" type="text" default="" size="40" label="KR_DONATION_CODE" description="KR_DONATION_CODEDESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

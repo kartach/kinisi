@@ -1,20 +1,10 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_links_termsb`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_links_termsb`;
 CREATE TABLE `bc73q_finder_links_termsb` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `term_id` int(10) UNSIGNED NOT NULL,
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_links_termsb`
---
 
 INSERT INTO `bc73q_finder_links_termsb` VALUES(7, 316, 0.84);
 INSERT INTO `bc73q_finder_links_termsb` VALUES(7, 317, 1.91338);

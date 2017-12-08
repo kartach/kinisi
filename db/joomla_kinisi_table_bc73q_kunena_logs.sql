@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_logs`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_logs`;
 CREATE TABLE `bc73q_kunena_logs` (
   `id` int(11) NOT NULL,
@@ -18,10 +12,6 @@ CREATE TABLE `bc73q_kunena_logs` (
   `operation` varchar(40) NOT NULL,
   `data` mediumtext NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_logs`
---
 
 INSERT INTO `bc73q_kunena_logs` VALUES(1, 3, 630, 0, 0, 0, '::1', 1509997975, 'LOG_ERROR_FATAL', '{\"type\":1,\"message\":\"Call to undefined function iconv()\",\"file\":\"\\/home\\/k\\/projects\\/kinisi\\/administrator\\/components\\/com_finder\\/helpers\\/indexer\\/parser\\/html.php\",\"line\":36}');
 INSERT INTO `bc73q_kunena_logs` VALUES(2, 3, 630, 0, 0, 0, '::1', 1509997988, 'LOG_ERROR_FATAL', '{\"type\":1,\"message\":\"Call to undefined function iconv()\",\"file\":\"\\/home\\/k\\/projects\\/kinisi\\/administrator\\/components\\/com_finder\\/helpers\\/indexer\\/parser\\/html.php\",\"line\":36}');

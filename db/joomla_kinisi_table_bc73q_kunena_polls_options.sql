@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_polls_options`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_polls_options`;
 CREATE TABLE `bc73q_kunena_polls_options` (
   `id` int(11) NOT NULL,

@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_updates`
---
-
 DROP TABLE IF EXISTS `bc73q_updates`;
 CREATE TABLE `bc73q_updates` (
   `update_id` int(11) NOT NULL,

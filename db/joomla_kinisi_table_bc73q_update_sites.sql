@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_update_sites`
---
-
 DROP TABLE IF EXISTS `bc73q_update_sites`;
 CREATE TABLE `bc73q_update_sites` (
   `update_site_id` int(11) NOT NULL,
@@ -15,10 +9,6 @@ CREATE TABLE `bc73q_update_sites` (
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
-
---
--- Dumping data for table `bc73q_update_sites`
---
 
 INSERT INTO `bc73q_update_sites` VALUES(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(2, 'Joomla! Extension Directory', 'collection', 'http://update.joomla.org/jed/list.xml', 1, 0, '');
@@ -44,3 +34,20 @@ INSERT INTO `bc73q_update_sites` VALUES(23, 'Regular Labs - Extension Manager', 
 INSERT INTO `bc73q_update_sites` VALUES(24, 'Regular Labs - Sourcerer', 'extension', 'https://download.regularlabs.com/updates.xml?e=sourcerer&type=.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(25, 'Regular Labs - ReReplacer', 'extension', 'https://download.regularlabs.com/updates.xml?e=rereplacer&type=.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(26, 'Regular Labs - Dummy Content', 'extension', 'https://download.regularlabs.com/updates.xml?e=dummycontent&type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(27, 'Sitemap Generator Update Site', 'extension', 'https://static.marcobeierer.com/joomla-extensions/sitemapgenerator/update.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(28, 'Google Structured Data', 'extension', 'http://static.tassos.gr/update/gsdfree?type=.xml', 1, 0, 'dlid=');
+INSERT INTO `bc73q_update_sites` VALUES(29, 'System - Novarain Installer', 'extension', 'http://static.tassos.gr/update?type=.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(30, 'Google TagManager Updates', 'extension', 'http://toolsforjoomla.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=2', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(31, 'COM_EASYFRONTENDSEO', 'extension', 'https://check.kubik-rubik.de/updates/com_easyfrontendseo.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(32, 'ext_joomsef4_banners', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_banners.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(33, 'ext_joomsef4_contact', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_contact.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(34, 'ext_joomsef4_content', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_content.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(35, 'ext_joomsef4_mailto', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_mailto.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(36, 'ext_joomsef4_newfeeds', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_newsfeeds.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(37, 'ext_joomsef4_search', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_search.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(38, 'ext_joomsef4_tags', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_tags.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(39, 'ext_joomsef4_users', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_users.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(40, 'ext_joomsef4_weblinks', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_weblinks.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(41, 'ext_joomsef4_wrapper', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_wrapper.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(42, 'com_joomsef', 'sef_update', 'http://www.artio.net/joomla-updates/list/com_joomsef4.xml', 1, 0, '');
+INSERT INTO `bc73q_update_sites` VALUES(43, 'PLG_SEOFLI', 'extension', 'https://check.kubik-rubik.de/updates/seofli.xml', 1, 0, '');

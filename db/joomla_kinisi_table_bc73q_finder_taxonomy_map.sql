@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_taxonomy_map`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_taxonomy_map`;
 CREATE TABLE `bc73q_finder_taxonomy_map` (
   `link_id` int(10) UNSIGNED NOT NULL,
   `node_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_taxonomy_map`
---
 
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 6);
 INSERT INTO `bc73q_finder_taxonomy_map` VALUES(7, 7);

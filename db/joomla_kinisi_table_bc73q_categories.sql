@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_categories`
---
-
 DROP TABLE IF EXISTS `bc73q_categories`;
 CREATE TABLE `bc73q_categories` (
   `id` int(11) NOT NULL,
@@ -35,10 +29,6 @@ CREATE TABLE `bc73q_categories` (
   `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
   `version` int(10) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_categories`
---
 
 INSERT INTO `bc73q_categories` VALUES(1, 0, 0, 0, 157, 0, '', 'system', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{}', '', '', '{}', 630, '2017-10-08 20:11:14', 0, '0000-00-00 00:00:00', 0, '*', 1);
 INSERT INTO `bc73q_categories` VALUES(2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 630, '2017-10-08 20:11:14', 0, '0000-00-00 00:00:00', 0, '*', 1);

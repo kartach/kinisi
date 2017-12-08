@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_redirect_links`
---
-
 DROP TABLE IF EXISTS `bc73q_redirect_links`;
 CREATE TABLE `bc73q_redirect_links` (
   `id` int(10) UNSIGNED NOT NULL,

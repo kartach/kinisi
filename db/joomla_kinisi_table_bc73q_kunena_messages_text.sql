@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_kunena_messages_text`
---
-
 DROP TABLE IF EXISTS `bc73q_kunena_messages_text`;
 CREATE TABLE `bc73q_kunena_messages_text` (
   `mesid` int(11) NOT NULL DEFAULT '0',
   `message` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_kunena_messages_text`
---
 
 INSERT INTO `bc73q_kunena_messages_text` VALUES(12, 'ssssss');
 INSERT INTO `bc73q_kunena_messages_text` VALUES(13, 'fff');

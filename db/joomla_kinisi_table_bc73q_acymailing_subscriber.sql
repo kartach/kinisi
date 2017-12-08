@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_acymailing_subscriber`
---
-
 DROP TABLE IF EXISTS `bc73q_acymailing_subscriber`;
 CREATE TABLE `bc73q_acymailing_subscriber` (
   `subid` int(10) UNSIGNED NOT NULL,
@@ -26,10 +20,6 @@ CREATE TABLE `bc73q_acymailing_subscriber` (
   `lastsent_date` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `source` varchar(50) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_acymailing_subscriber`
---
 
 INSERT INTO `bc73q_acymailing_subscriber` VALUES(1, 'admin@admin.com', 787, 'Super User', 1414757087, 1, 1, 1, NULL, 1, NULL, 0, NULL, 0, NULL, 0, 0, '');
 INSERT INTO `bc73q_acymailing_subscriber` VALUES(2, 'demo@demolink.org', 846, 'Demo User', 1350460572, 1, 1, 1, NULL, 1, NULL, 0, NULL, 0, NULL, 0, 0, '');

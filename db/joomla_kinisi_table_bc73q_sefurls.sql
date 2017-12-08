@@ -1,0 +1,31 @@
+
+DROP TABLE IF EXISTS `bc73q_sefurls`;
+CREATE TABLE `bc73q_sefurls` (
+  `id` int(11) NOT NULL,
+  `cpt` int(11) NOT NULL DEFAULT '0',
+  `sefurl` varchar(255) NOT NULL,
+  `origurl` varchar(255) NOT NULL,
+  `Itemid` varchar(20) DEFAULT NULL,
+  `metadesc` varchar(255) DEFAULT '',
+  `metakey` varchar(255) DEFAULT '',
+  `metatitle` varchar(255) DEFAULT '',
+  `metalang` varchar(30) DEFAULT '',
+  `metarobots` varchar(30) DEFAULT '',
+  `metagoogle` varchar(30) DEFAULT '',
+  `metacustom` text,
+  `metaauthor` varchar(30) DEFAULT '',
+  `canonicallink` varchar(255) DEFAULT '',
+  `dateadd` date NOT NULL DEFAULT '0000-00-00',
+  `priority` int(11) NOT NULL DEFAULT '0',
+  `trace` text,
+  `enabled` tinyint(1) NOT NULL DEFAULT '1',
+  `locked` tinyint(1) NOT NULL DEFAULT '0',
+  `sef` tinyint(1) NOT NULL DEFAULT '1',
+  `sm_indexed` tinyint(1) NOT NULL DEFAULT '0',
+  `sm_date` date NOT NULL DEFAULT '0000-00-00',
+  `sm_frequency` varchar(20) NOT NULL DEFAULT 'weekly',
+  `sm_priority` varchar(10) NOT NULL DEFAULT '0.5',
+  `flag` tinyint(1) NOT NULL DEFAULT '0',
+  `host` varchar(255) NOT NULL DEFAULT '',
+  `showsitename` int(1) NOT NULL DEFAULT '3'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

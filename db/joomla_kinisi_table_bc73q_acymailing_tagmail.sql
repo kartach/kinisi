@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_acymailing_tagmail`
---
-
 DROP TABLE IF EXISTS `bc73q_acymailing_tagmail`;
 CREATE TABLE `bc73q_acymailing_tagmail` (
   `tagid` smallint(5) UNSIGNED NOT NULL,

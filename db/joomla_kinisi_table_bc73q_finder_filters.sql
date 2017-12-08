@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_filters`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_filters`;
 CREATE TABLE `bc73q_finder_filters` (
   `filter_id` int(10) UNSIGNED NOT NULL,

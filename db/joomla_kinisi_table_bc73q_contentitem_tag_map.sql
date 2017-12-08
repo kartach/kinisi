@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_contentitem_tag_map`
---
-
 DROP TABLE IF EXISTS `bc73q_contentitem_tag_map`;
 CREATE TABLE `bc73q_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -15,36 +9,32 @@ CREATE TABLE `bc73q_contentitem_tag_map` (
   `type_id` mediumint(8) NOT NULL COMMENT 'PK from the content_type table'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Maps items from content tables to tags';
 
---
--- Dumping data for table `bc73q_contentitem_tag_map`
---
-
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 13, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 14, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 5, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 6, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 12, '2017-11-14 21:21:15', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 21, '2017-11-14 21:21:15', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 25, '2017-11-14 21:21:15', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 7, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 17, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 5, 12, 9, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 5, 12, 10, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 3, '2017-11-13 10:12:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 12, '2017-11-13 10:12:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 22, '2017-11-13 10:12:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 25, '2017-11-13 10:12:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 8, 15, 15, '2017-11-02 08:43:41', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 8, 15, 16, '2017-11-02 08:43:41', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 9, 118, 7, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 9, 118, 17, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 10, 119, 4, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 10, 119, 14, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 11, 120, 5, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 11, 120, 6, '2017-10-08 18:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 7, '2017-11-02 08:55:00', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 15, '2017-11-02 08:55:00', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 17, '2017-11-02 08:55:00', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 12, '2017-11-11 23:18:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 19, '2017-11-11 23:18:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 20, '2017-11-11 23:18:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 13, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 14, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 5, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 6, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 12, '2017-11-14 20:21:15', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 21, '2017-11-14 20:21:15', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 25, '2017-11-14 20:21:15', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 7, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 17, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 5, 12, 9, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 5, 12, 10, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 3, '2017-11-13 09:12:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 12, '2017-11-13 09:12:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 22, '2017-11-13 09:12:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 4, 13, 25, '2017-11-13 09:12:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 8, 15, 15, '2017-11-02 07:43:41', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 8, 15, 16, '2017-11-02 07:43:41', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 9, 118, 7, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 9, 118, 17, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 10, 119, 4, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 10, 119, 14, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 11, 120, 5, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 11, 120, 6, '2017-10-08 16:11:14', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 7, '2017-11-02 07:55:00', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 15, '2017-11-02 07:55:00', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 17, '2017-11-02 07:55:00', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 12, '2017-11-11 22:18:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 19, '2017-11-11 22:18:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 20, '2017-11-11 22:18:01', 1);

@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_modules_menu`
---
-
 DROP TABLE IF EXISTS `bc73q_modules_menu`;
 CREATE TABLE `bc73q_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `bc73q_modules_menu`
---
 
 INSERT INTO `bc73q_modules_menu` VALUES(2, 0);
 INSERT INTO `bc73q_modules_menu` VALUES(3, 0);

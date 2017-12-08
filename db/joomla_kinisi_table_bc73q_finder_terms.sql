@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_terms`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_terms`;
 CREATE TABLE `bc73q_finder_terms` (
   `term_id` int(10) UNSIGNED NOT NULL,
@@ -17,10 +11,6 @@ CREATE TABLE `bc73q_finder_terms` (
   `links` int(10) NOT NULL DEFAULT '0',
   `language` char(3) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `bc73q_finder_terms`
---
 
 INSERT INTO `bc73q_finder_terms` VALUES(293, '', '', 0, 0, 0, '', 73, '*');
 INSERT INTO `bc73q_finder_terms` VALUES(294, '27', '27', 0, 0, 0.2, '', 1, '*');

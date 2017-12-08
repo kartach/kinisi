@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_finder_tokens_aggregate`
---
-
 DROP TABLE IF EXISTS `bc73q_finder_tokens_aggregate`;
 CREATE TABLE `bc73q_finder_tokens_aggregate` (
   `term_id` int(10) UNSIGNED NOT NULL,

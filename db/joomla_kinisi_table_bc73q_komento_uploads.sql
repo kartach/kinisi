@@ -1,10 +1,4 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_uploads`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_uploads`;
 CREATE TABLE `bc73q_komento_uploads` (
   `id` int(11) NOT NULL,

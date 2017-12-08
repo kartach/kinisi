@@ -1,19 +1,9 @@
 
--- --------------------------------------------------------
-
---
--- Table structure for table `bc73q_komento_configs`
---
-
 DROP TABLE IF EXISTS `bc73q_komento_configs`;
 CREATE TABLE `bc73q_komento_configs` (
   `component` varchar(255) NOT NULL,
   `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `bc73q_komento_configs`
---
 
 INSERT INTO `bc73q_komento_configs` VALUES('com_komento_comments_columns', '{\"column_comment\":\"1\",\"column_published\":\"1\",\"column_sticked\":\"1\",\"column_link\":\"1\",\"column_edit\":\"1\",\"column_component\":\"1\",\"column_article\":\"1\",\"column_date\":\"1\",\"column_author\":\"1\",\"column_id\":\"1\",\"column_email\":\"1\",\"column_homepage\":\"0\",\"column_ip\":\"0\",\"column_latitude\":\"0\",\"column_longitude\":\"0\",\"column_address\":\"0\"}');
 INSERT INTO `bc73q_komento_configs` VALUES('com_komento_pending_columns', '{\"column_comment\":1,\"column_published\":1,\"column_link\":1,\"column_edit\":1,\"column_component\":1,\"column_article\":1,\"column_date\":1,\"column_author\":1,\"column_id\":1}');
