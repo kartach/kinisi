@@ -36,3 +36,4 @@
 2017-11-09T17:34:56+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2017-11-30T16:23:54+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2017-12-07T12:49:20+00:00	INFO 89.177.43.69	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-12-11T21:28:27+00:00	INFO ::1	sloginfailure	Prázdné heslo není povoleno

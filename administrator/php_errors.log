@@ -1,0 +1,58 @@
+[11-Dec-2017 22:19:18 UTC] PHP Notice:  Trying to get property of non-object in /home/k/projects/kinisi/administrator/components/com_gsd/models/item.php on line 55
+[11-Dec-2017 22:19:18 UTC] PHP Stack trace:
+[11-Dec-2017 22:19:18 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[11-Dec-2017 22:19:18 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[11-Dec-2017 22:19:18 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[11-Dec-2017 22:19:18 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[11-Dec-2017 22:19:18 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[11-Dec-2017 22:19:18 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[11-Dec-2017 22:19:18 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[11-Dec-2017 22:19:18 UTC] PHP   8. Joomla\CMS\MVC\Controller\BaseController->execute() /home/k/projects/kinisi/administrator/components/com_gsd/gsd.php:40
+[11-Dec-2017 22:19:18 UTC] PHP   9. Joomla\CMS\MVC\Controller\FormController->save() /home/k/projects/kinisi/libraries/src/MVC/Controller/BaseController.php:710
+[11-Dec-2017 22:19:18 UTC] PHP  10. GSDModelItem->getForm() /home/k/projects/kinisi/libraries/src/MVC/Controller/FormController.php:688
+[11-Dec-2017 22:19:18 UTC] PHP  11. Joomla\CMS\MVC\Model\FormModel->loadForm() /home/k/projects/kinisi/administrator/components/com_gsd/models/item.php:79
+[11-Dec-2017 22:19:18 UTC] PHP  12. GSDModelItem->preprocessForm() /home/k/projects/kinisi/libraries/src/MVC/Model/FormModel.php:242
+[11-Dec-2017 23:34:45 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[11-Dec-2017 23:34:45 UTC] PHP Stack trace:
+[11-Dec-2017 23:34:45 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[11-Dec-2017 23:34:45 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[11-Dec-2017 23:34:45 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[11-Dec-2017 23:34:45 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[11-Dec-2017 23:34:45 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[11-Dec-2017 23:34:45 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[11-Dec-2017 23:34:45 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[11-Dec-2017 23:34:45 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[11-Dec-2017 23:34:45 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[11-Dec-2017 23:34:45 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[11-Dec-2017 23:34:45 UTC] PHP Stack trace:
+[11-Dec-2017 23:34:45 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[11-Dec-2017 23:34:45 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[11-Dec-2017 23:34:45 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[11-Dec-2017 23:34:45 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[11-Dec-2017 23:34:45 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[11-Dec-2017 23:34:45 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[11-Dec-2017 23:34:45 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[11-Dec-2017 23:34:45 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[11-Dec-2017 23:34:45 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[11-Dec-2017 23:50:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[11-Dec-2017 23:50:21 UTC] PHP Stack trace:
+[11-Dec-2017 23:50:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[11-Dec-2017 23:50:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[11-Dec-2017 23:50:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[11-Dec-2017 23:50:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[11-Dec-2017 23:50:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[11-Dec-2017 23:50:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[11-Dec-2017 23:50:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[11-Dec-2017 23:50:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[11-Dec-2017 23:50:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[11-Dec-2017 23:50:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[11-Dec-2017 23:50:21 UTC] PHP Stack trace:
+[11-Dec-2017 23:50:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[11-Dec-2017 23:50:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[11-Dec-2017 23:50:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[11-Dec-2017 23:50:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[11-Dec-2017 23:50:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[11-Dec-2017 23:50:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[11-Dec-2017 23:50:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[11-Dec-2017 23:50:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[11-Dec-2017 23:50:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
