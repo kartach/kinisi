@@ -50,4 +50,3 @@ INSERT INTO `bc73q_update_sites` VALUES(39, 'ext_joomsef4_users', 'sef_update', 
 INSERT INTO `bc73q_update_sites` VALUES(40, 'ext_joomsef4_weblinks', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_weblinks.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(41, 'ext_joomsef4_wrapper', 'sef_update', 'http://www.artio.net/joomla-updates/list/ext_joomsef4_wrapper.xml', 1, 0, '');
 INSERT INTO `bc73q_update_sites` VALUES(42, 'com_joomsef', 'sef_update', 'http://www.artio.net/joomla-updates/list/com_joomsef4.xml', 1, 0, '');
-INSERT INTO `bc73q_update_sites` VALUES(43, 'PLG_SEOFLI', 'extension', 'https://check.kubik-rubik.de/updates/seofli.xml', 1, 0, '');
