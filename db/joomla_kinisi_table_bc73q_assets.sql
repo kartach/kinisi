@@ -11,7 +11,7 @@ CREATE TABLE `bc73q_assets` (
   `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1063, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
+INSERT INTO `bc73q_assets` VALUES(1, 0, 0, 1061, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}');
 INSERT INTO `bc73q_assets` VALUES(2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}');
 INSERT INTO `bc73q_assets` VALUES(3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}');
 INSERT INTO `bc73q_assets` VALUES(4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}');
@@ -323,7 +323,7 @@ INSERT INTO `bc73q_assets` VALUES(719, 1, 1039, 1040, 1, '#__ucm_content.4', '#_
 INSERT INTO `bc73q_assets` VALUES(720, 65, 53, 54, 3, 'com_content.article.155', 'Proč zvolit naše fyzioterapeuty', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.edit.own\":[]}');
 INSERT INTO `bc73q_assets` VALUES(721, 18, 690, 691, 2, 'com_modules.module.230', 'Proč Centrum fyzioterapie Kinisi', '{}');
 INSERT INTO `bc73q_assets` VALUES(723, 65, 55, 56, 3, 'com_content.article.156', 'our advantages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.edit.own\":[]}');
-INSERT INTO `bc73q_assets` VALUES(724, 65, 57, 60, 3, 'com_content.category.67', 'our advantages', '{}');
+INSERT INTO `bc73q_assets` VALUES(724, 65, 57, 60, 3, 'com_content.category.67', 'Naše přednosti', '{}');
 INSERT INTO `bc73q_assets` VALUES(725, 18, 692, 693, 2, 'com_modules.module.232', 'Atributy a1', '{}');
 INSERT INTO `bc73q_assets` VALUES(726, 753, 74, 75, 4, 'com_content.article.157', 'Kvalita služeb', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.edit.own\":[]}');
 INSERT INTO `bc73q_assets` VALUES(727, 752, 70, 71, 4, 'com_content.article.158', 'Konzultace a podpora', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":[],\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.edit.own\":[]}');
@@ -489,5 +489,4 @@ INSERT INTO `bc73q_assets` VALUES(899, 1, 1051, 1052, 1, 'com_regularlabsmanager
 INSERT INTO `bc73q_assets` VALUES(900, 1, 1053, 1054, 1, 'com_rereplacer', 'com_rereplacer', '{\"core.admin\":[],\"core.manage\":[],\"core.create\":[],\"core.delete\":[],\"core.edit\":[],\"core.edit.state\":[]}');
 INSERT INTO `bc73q_assets` VALUES(901, 1, 1055, 1056, 1, 'com_sitemapgenerator', 'com_sitemapgenerator', '{}');
 INSERT INTO `bc73q_assets` VALUES(902, 1, 1057, 1058, 1, 'com_gsd', 'GSD', '{}');
-INSERT INTO `bc73q_assets` VALUES(903, 1, 1059, 1060, 1, 'com_easyfrontendseo', 'COM_EASYFRONTENDSEO', '{}');
-INSERT INTO `bc73q_assets` VALUES(904, 1, 1061, 1062, 1, 'com_sef', 'com_sef', '{}');
+INSERT INTO `bc73q_assets` VALUES(904, 1, 1059, 1060, 1, 'com_sef', 'com_sef', '{}');
