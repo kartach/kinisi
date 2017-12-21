@@ -20,3 +20,6 @@ CREATE TABLE `bc73q_plg_slogin_profile` (
   `avatar` varchar(100) NOT NULL,
   `current_profile` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `bc73q_plg_slogin_profile` VALUES(1, 855, '2061915120694785', 'facebook', 1, 'Dadad', 'Kakak', '', '', 'testhdbtest@gmail.com', 'https://www.facebook.com/app_scoped_user_id/2061915120694785/', 'CZ', '', '', '', '', '', 1);
+INSERT INTO `bc73q_plg_slogin_profile` VALUES(2, 856, '1995680753780750', 'facebook', 2, 'Klára', 'Karkošková', '', '', 'k_cejkova@email.cz', 'https://www.facebook.com/app_scoped_user_id/1995680753780750/', 'CZ', '', '', '', '', 'facebook_1995680753780750.jpg', 1);

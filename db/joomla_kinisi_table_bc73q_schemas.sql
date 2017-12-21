@@ -21,3 +21,4 @@ INSERT INTO `bc73q_schemas` VALUES(10364, '3.0.1');
 INSERT INTO `bc73q_schemas` VALUES(10365, '3.0.3');
 INSERT INTO `bc73q_schemas` VALUES(10366, '3.0.4');
 INSERT INTO `bc73q_schemas` VALUES(10367, '3.0.3');
+INSERT INTO `bc73q_schemas` VALUES(10374, '3.0.13');

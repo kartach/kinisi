@@ -135,4 +135,4 @@ INSERT INTO `bc73q_acymailing_config` VALUES('Sidekick', '4');
 INSERT INTO `bc73q_acymailing_config` VALUES('captcha_plugin', 'no');
 INSERT INTO `bc73q_acymailing_config` VALUES('latestversion', '5.8.1');
 INSERT INTO `bc73q_acymailing_config` VALUES('expirationdate', '0');
-INSERT INTO `bc73q_acymailing_config` VALUES('lastlicensecheck', '1510129755');
+INSERT INTO `bc73q_acymailing_config` VALUES('lastlicensecheck', '1513864198');

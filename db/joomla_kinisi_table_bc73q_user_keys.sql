@@ -9,3 +9,6 @@ CREATE TABLE `bc73q_user_keys` (
   `time` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
   `uastring` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `bc73q_user_keys` VALUES(5, 'Klra-Karkokov-facebook', '$2y$10$/bWx3sanQ/gHPto5wPhS3.JjWRTdFB2ivLbK9Knav52RPEMFTzope', '5steSUpsmqmyZTCQxgT0', 0, '1518543905', 'joomla_remember_me_ebb1002713a93828a40a3a1ac9a5ed25');
+INSERT INTO `bc73q_user_keys` VALUES(6, 'Klra-Karkokov-facebook', '$2y$10$X542JGkAHQ.hF5VYFXLkVO1Kp2.JuiFoKYC.t7E8XUegiaVOg5zoq', 'MnhLs17QQfbmLebFrpjl', 0, '1518706496', 'joomla_remember_me_ebb1002713a93828a40a3a1ac9a5ed25');

@@ -223,3 +223,4 @@ INSERT INTO `bc73q_modules_menu` VALUES(288, 656);
 INSERT INTO `bc73q_modules_menu` VALUES(288, 657);
 INSERT INTO `bc73q_modules_menu` VALUES(288, 658);
 INSERT INTO `bc73q_modules_menu` VALUES(288, 681);
+INSERT INTO `bc73q_modules_menu` VALUES(289, 101);

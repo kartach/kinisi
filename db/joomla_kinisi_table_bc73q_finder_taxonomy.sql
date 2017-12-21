@@ -43,4 +43,5 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(75, 11, 'Kvalita služeb 3', 1, 1, 0)
 INSERT INTO `bc73q_finder_taxonomy` VALUES(76, 11, 'Kvalita služeb 4', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(77, 11, 'Kvalita služeb ', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(78, 11, 'Kvalita služeb 2', 1, 1, 0);
-INSERT INTO `bc73q_finder_taxonomy` VALUES(79, 11, 'Our Latest Works', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(79, 11, 'Our Latest Works', 0, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(80, 11, 'Zkušenosti týmu', 1, 1, 0);

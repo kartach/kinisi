@@ -10,7 +10,4 @@ CREATE TABLE `bc73q_acymailing_listsub` (
 
 INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 1, 1415263735, NULL, 1);
 INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 2, 1415263735, NULL, 1);
-INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 5, 1418218543, NULL, 1);
 INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 6, 1427376525, NULL, 1);
-INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 7, 1443442316, NULL, 1);
-INSERT INTO `bc73q_acymailing_listsub` VALUES(1, 8, 1466683696, NULL, 1);
