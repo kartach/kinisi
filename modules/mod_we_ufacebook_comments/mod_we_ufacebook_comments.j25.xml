@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" version="2.5" method="upgrade">
+	<name>Ultimate Facebook Comments</name>
+	<author>Stergios Zgouletas</author>
+	<creationDate>10 August 2010</creationDate>
+	<copyright>Stergios Zgouletas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@web-expert.gr</authorEmail>
+	<authorUrl>www.web-expert.gr</authorUrl>
+	<version>1.3.5</version>
+	<description><![CDATA[
+	This module loads the Facebook Comments into a Joomla 1.5/1.6/1.7/2.5/3.x site [<a href="http://www.web-expert.gr">http://www.web-expert.gr</a>].
+	]]></description>
+	<files>
+		<filename module="mod_we_ufacebook_comments">mod_we_ufacebook_comments.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<scriptfile>script.php</scriptfile>
+	<updateservers>
+		<server type="extension" priority="1" name="Ultimate Feed Display Updates">http://web-expert.gr/updates/mod_we_ufacebook_comments.xml</server>
+	</updateservers>
+	<config>
+	 <fields name="params">
+		<fieldset name="Basic">
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the CSS class of module for individual styling." />
+			<field name="textbefore" type="textarea" filter="raw" rows="3" cols="65" default="" label="Pre-Text" description="Plain or HTML text" />
+				<field name="numcomm" type="text" default="10" size="5" label="Number of Comments" description="Number of Comments you want to show on first page" />
+				<field name="width" type="text" default="480" label="Width px" size="5" description="Width at of comments in pixels" />
+				<field name="writecomment" type="radio" default="0" label="Display Write a Comment" description="Display above comment box write a comment">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field name="totalcomments" type="radio" default="1" label="Display Total Comments" description="Display above comment box the total comments">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="scheme" type="list" default="1" label="Scheme Color" description="New Layout not has custom css but has 2 color themes">
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+				</field>
+				<field name="orderby" type="list" default="social" label="OrderBy" description="Comments Ordering">
+					<option value="social">Social</option>
+					<option value="time">Time</option>
+					<option value="reverse_time">Reverse Time</option>
+				</field>
+				<field name="seoboost" type="list" default="1" label="Enable SeoBoost" description="Renders the comments to html source">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="seoboostcache" type="text" default="3600" label="SeoBoost Cache (sec)" description="Caches the facebook data for faster loading." />
+		</fieldset>
+		<fieldset name="Advanced">
+			<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+				<option value="1">Use global</option>
+				<option value="0">No caching</option>
+			</field>
+			<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+		</fieldset>
+	 </fields>
+	</config>
+</extension>

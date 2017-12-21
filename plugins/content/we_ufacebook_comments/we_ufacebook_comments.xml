@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Ultimate Facebook Comments</name>
+	<author>WEB EXPERT SERVICES LTD</author>
+	<creationDate>31 July 2017</creationDate>
+	<copyright>Stergios Zgouletas. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@web-expert.gr</authorEmail>
+	<authorUrl>www.web-expert.gr</authorUrl>
+	<version>1.3.31</version>
+	<description>PLG_WE_UFEACEBOOK_COMMENTS_DESCRIPTION</description>
+	<files>
+		<filename plugin="we_ufacebook_comments">we_ufacebook_comments.php</filename>
+		<folder>we_ufacebook_comments</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_we_ufacebook_comments.ini</language>
+		<language tag="en-GB">en-GB.plg_content_we_ufacebook_comments.sys.ini</language>
+		<language tag="el-GR">el-GR.plg_content_we_ufacebook_comments.ini</language>
+		<language tag="el-GR">el-GR.plg_content_we_ufacebook_comments.sys.ini</language>
+	</languages>
+	<scriptfile>script.we_ufacebook_comments.php</scriptfile>
+	<updateservers>
+		<server type="extension" priority="1" name="Ultimate Facebook Comments Updates">http://web-expert.gr/updates/we_ufacebook_comments.xml</server>
+	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="Basic" addfieldpath="/plugins/content/we_ufacebook_comments/we_ufacebook_comments/elements/17">
+				<field name="dlid" type="liveupdate" langPrefix="PLG_WE_UFEACEBOOK_COMMENTS" size="40" />
+				<field name="" type="fblike" default="Settings" label="" description="" />
+				<field name="codetype" type="list" default="html5" label="Code Type">
+					<option value="xfbml">XFBML</option>
+					<option value="html5">HTML5</option>
+				</field>
+				<field size="6" name="displayon" type="list" default="article" multiple="true" label="Display on" description="">
+					<option value="article">Joomla Content Article View (com_content)</option>
+					<option value="k2items">K2 Items View (com_k2)</option>
+					<option value="lyftenbloggie">LyftenBloggie Entries View (com_lyftenbloggie)</option>
+					<option value="vmp">Virtuemart Products Detail (com_virtuemart)</option>
+					<option value="eventlist_detail">EventList Detail Layout(com_eventlist)</option>
+					<option value="quickfaq_items">Quick FAQ Item (com_quickfaq)</option>
+					<option value="zooitems">Zoo Item (com_zoo)(via Element)</option>
+				</field>
+				<field name="" type="fblike" default="General Comments Settings" label="" description="" />
+				<field name="numcomm" type="text" default="10" size="5" label="Number of Comments" description="Number of Comments you want to show on first page" />
+				<field name="width" type="text" default="480" label="Width px" size="5" description="Width at of comments in pixels" />
+				<field name="writecomment" type="radio" default="0" label="Display Write a Comment" description="Display above comment box write a comment">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+				</field>
+				<field name="totalcomments" type="radio" default="1" label="Display Total Comments" description="Display above comment box the total comments">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="" type="fblike" default="New Layout Settings" label="" description="" />
+				<field name="scheme" type="list" default="1" label="Scheme Color" description="New Layout not has custom css but has 2 color themes">
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+				</field>
+				<field name="orderby" type="list" default="social" label="OrderBy" description="Comments Ordering">
+					<option value="social">Social</option>
+					<option value="time">Time</option>
+					<option value="reverse_time">Reverse Time</option>
+				</field>
+				<field name="deletecache" type="deletecache" default="Delete Cache" label="Delete Cache" description="Delete Cache" />
+				<field name="seoboost" type="list" default="1" label="Enable SeoBoost" description="Renders the comments to html source and autodetects bots-spiders">
+					<option value="2">Yes without cache</option>
+					<option value="1">Yes with cache</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="seoboostcache" type="text" default="3600" label="SeoBoost Cache (sec)" description="Caches the facebook data for faster loading." />	
+				<field name="customlink" type="text" default="" size="70" label="Custom Link" description="If you dont want to show specific article comments to ALL pages" />
+				<field name="" type="fblike" default="Include or Exclude for ALL components" label="" description="" />
+				<field name="allowhomepage" type="radio" default="0" label="Allow on Homepage" description="Allow on home page">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="inextype" type="radio" default="exclude" label="Include/Exclude" description="Include or Exclude categories/sections/articles-items">
+					<option value="include">Include</option>
+					<option value="exclude">Exclude</option>
+				</field>				
+				<field name="items" type="text" default="" label="Articles IDs" description="Exclude Article/Ite,s IDs" />
+				<!-- <field name="sections" type="text" default="" label="Sections IDs" description="Exclude Sections IDs only for com_content" /> -->
+				<field name="categories" type="text" default="" label="Categories IDs" description="Exclude Categories IDs" />
+				<field name="" type="fblike" default="OpenGraph Tags Settings" label="" description="" />
+				<field name="useOpenGraph" type="list" default="1" label="Social Graph Tags" description="Yes to able to work correctly">
+					<option value="0">Disable</option>
+					<option value="1">Enable</option>
+				</field>
+				<field name="ogdata" type="radio" default="1" label="Og Metadata Values" description="Title and desciption metadat">
+					<option value="0">Fill og:meta data from meta tags</option>
+					<option value="1">Automatic from text</option>
+				</field>
+				<field name="admins" type="text" default="" label="Admin IDs" description="Separete by commas Facebook Profile IDs to be admins" />
+				<field name="appid" type="text" default="" label="App ID" description="Use the same APP ID from JSDK plugin" />
+				<field name="" type="fblike" default="Admin E-mail Notify" label="" description="" />
+				<field name="notify" type="radio" default="0" label="E-mail on NewPost" description="Get e-mail on new comment post">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="emails" type="text" default="info@mysite.com" label="Admin Emails" description="Separate by commas for more than one email" />
+				<field name="subject" type="text" default="" label="Custom Email Subject" description="E-mail notification subject" />
+			</fieldset>
+			<fieldset name="Advanced" addfieldpath="/plugins/content/we_ufacebook_comments/we_ufacebook_comments/elements/17">
+				<field name="" type="fblike" default="Old Layout CSS Options" label="" description="" />	
+				<field name="cssfbstyle" type="textarea" cols="50" rows="3" default=".we_fb_comments{padding-top:10px;width:100%;}
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {width: 100% !important;}
+.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {width: 100% !important;}
+#ufbcomments{font-weight:bold;font-size:26px;line-height:30px;color:#000;margin-top:10px;}" label="Wrapper Style" description="" />
+				<field name="enablecustomstyle" type="radio" default="0" label="Load CSS Custom Style" description="Enable or Disable custom style css">
+					<option value="0">Disabled</option>
+					<option value="1">Enabled</option>
+				</field>
+				<field name="customstyle" type="text" default="plugins/content/we_ufacebook_comments/custom_style.css" size="80" label="Load Custom CSS" description="Give full link to custom css" />
+				<field name="" type="fblike" default="General &amp; Debug Config" label="" description="" />
+				<field name="getdomain" type="list" default="0" label="Domain Source" description="Some sites on subfolder have problem with wrong link,so change this setting">
+					<option value="0">Joomla JRoot()</option>
+					<option value="1">PHP Server_Name</option>
+				</field>
+				<field name="removewww" type="list" default="0" label="Remove WWW." description="Remove www from URL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="loadjq" type="list" default="1" label="Load External jQuery" description="Load jQuery 1.9.1. This applies only Joomla version under 3.0">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="debug" type="list" default="0" label="Debug" description="Debug helps to find bugs">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="debugip" type="text" default="" label="Debug IP" description="Print debug only on certain IP Address" />
+			</fieldset>
+			<fieldset name="OLD_LAYOUT_PARAMS" addfieldpath="/plugins/content/we_ufacebook_comments/we_ufacebook_comments/elements/17">
+					<field name="" type="note" default="&lt;b&gt;New Clients:&lt;/b&gt; Facebook upgrades Comments to New Layout and they might stop support for Old Layout &lt;br/&gt;
+					&lt;b&gt;Old Clients:&lt;/b&gt; You can still use Old Layout and have functinality of New layout set the Upgrade to New to Yes&lt;br/&gt;
+					Facebook has not added Custom CSS for New Layout" label="" description="" />
+					<field name="layoutapi" type="list" default="1" label="Layout" description="Choose Layout that you want. Old laygout uses old API and NOT suggsted">
+						<option value="1">New Layout (recommended!)</option>
+						<option value="0">OLd Layout</option>
+					</field>
+					<field name="" type="fblike" default="Old Layout Settings" label="" description="" />
+					<field name="upgrade2new" type="list" default="1" label="Upgrade to New" description="If you are old user and you want new layout you can have a type upgrade using this setting!">
+						<option value="1">Old API with New Layout (yes)</option>
+						<option value="0">Not upgrade!Display old layout!(no)</option>
+					</field>
+					<field name="order" type="list" default="0" label="Comments Ordering" description="Select ordering which will be displayed">
+						<option value="0">Newest to Older</option>
+						<option value="1">Older to Newest (Reverse)</option>
+					</field>
+					<field name="postchecked" type="list" default="1" label="Post to Facebook" description="Select if you want to have checked or unchecked option post to facebook">
+						<option value="1">Checked</option>
+						<option value="0">UnChecked</option>
+					</field>
+					<field name="simpleview" type="list" default="1" label="Round Box" description="Need more space (width)">
+							<option value="1">JYES</option>
+							<option value="0">JNO</option>
+					</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

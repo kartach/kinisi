@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>Ultimate Social Elements (JSDK) (by web-expert.gr)</name>
+	<author>Stergios Zgouletas</author>
+	<creationDate>1th June 2010</creationDate>
+	<copyright>Copyright (C) 2009 - 2011 web-expert.gr. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@eb-expert.gr</authorEmail>
+	<authorUrl>www.web-expert.gr</authorUrl>
+	<version>1.3.27</version>
+	<description>This plugin adds Facebook's,Google,Twitter etc Javascript code to your site with autoLoad option!</description>
+	<files>
+		<filename plugin="wefacebookjsdk">wefacebookjsdk.php</filename>
+	</files>
+	<updateservers>
+		<server type="extension" priority="1" name="Ultimate Social Elements (JSDK)">http://web-expert.gr/updates/wefacebookjsdk.xml</server>
+	</updateservers>
+	<scriptfile>script.php</scriptfile>
+	<config>
+		<fields name="params">
+			<fieldset name="Basic">
+				<field name="apiid" type="text" default="" label="Facebook API ID" description="Create API read the PDF.If empty you should use the iframe Mode" />
+				<field name="langfb" type="text" default="en_US" label="FB Default Locale" description="Greek is el_GR. Read PDF documentation how to found your locale" />
+				<field name="asyncjsdk" type="radio" default="1" label="Enable Facebook Asynchronous" description="Asynchronous JSDK code is loaded after the page load">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>	
+				<field name="jsloading" type="list" default="1" label="Social Buttons Javascript" description="If Buttons Javascript code it's already on your source code, it will not load it again">
+					<option value="1">Autoload (Recommened)</option>
+					<option value="2">Yes (force)</option>
+					<option value="0">No</option>
+				</field>
+				<field name="langggp" type="text" default="en" label="GG+ Default Language" description="Greek is el.Default is en" />
+				<field name="autodetect" type="radio" default="1" label="AutoDetect Site Language" description="Get locale from active language (joomfish supported).If disabled then will use the Default Locale">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="loadtype" type="list" default="1" label="Place JS Code:" description="Choose where you want the code to be added">
+					<option value="0">Before Body End tag</option>
+					<option value="1">After body Start tag</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
+
