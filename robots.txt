@@ -34,3 +34,5 @@ Disallow: /tmp/
 Allow: *.js
 Allow: *.css
 
+Sitemap: https://www.kinisi.cz/sitemap.xml
+
