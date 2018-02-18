@@ -8,7 +8,8 @@
  * @license     http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
  */
 defined( '_JEXEC' ) or die( 'Restricted access' );
-function we_comments_output($article,$config,$output){
+function we_comments_output(&$article,$config,$output)
+{
 	$article->text.=$output;
 }
 

@@ -44,7 +44,8 @@ class plgContentWe_ufacebook_comments extends JPlugin {
 	}
 	
 	#Joomla 1.5
-	public function onPrepareContent( &$row, &$params, $limitstart ) {
+	public function onPrepareContent( &$row, &$params, $limitstart )
+	{
 		$document =JFactory::getDocument();
 		if($document->getType()!='html') return;
 		if(!isset($row->context)) $row->context='';
@@ -54,9 +55,11 @@ class plgContentWe_ufacebook_comments extends JPlugin {
 		$config=$this->we_comments_getconfig();
 		$config["currentpage"]=$this->getComURL($row,$config);	
 		$output='';
-		if($row->context!='mod_we_ufacebook_comments' && we_comments_inexclude($row,$config) && we_comments_showonly($config) && !version_compare(JVERSION, '1.5', 'gt')){ //allow to execute
+		if($row->context!='mod_we_ufacebook_comments' && we_comments_inexclude($row,$config) && we_comments_showonly($config) && !version_compare(JVERSION, '1.5', 'gt'))
+		{ //allow to execute
 			$output=$this->we_comments_OutputData($row,$config,true);
 		}
+		
 		if($config['debug']){
 			$social = new UltimateSocialComments();
 			$social->debugme("Joomla 1.5");
@@ -84,7 +87,7 @@ class plgContentWe_ufacebook_comments extends JPlugin {
 	#Joomla 1.6.x / 1.7.x / 2.5.x / 3.x
 	public function onContentPrepare($context, &$row, &$params, $page=0){
 		$document =JFactory::getDocument();
-		if(!version_compare(JVERSION, '1.5', 'gt') || $document->getType()!='html') return;
+		if(!version_compare(JVERSION, '1.5', 'gt') || $document->getType()!='html' || !isset($row->id)) return;
 		$app =JFactory::getApplication();
 		
 		$option=version_compare(JVERSION, '2.5', 'ge')?$app->input->getCMD('option'):JRequest::getCMD('option');
@@ -100,14 +103,15 @@ class plgContentWe_ufacebook_comments extends JPlugin {
 		
 		$config=$this->we_comments_getconfig();
 		$config["currentpage"]=$this->getComURL($row,$config);
-		
+				
 		$lang = JFactory::getLanguage();
 		$menu = $app->getMenu();
 		$isFrontPage=($menu->getActive() == $menu->getDefault($lang->getTag()))?true:false;	
 		if(!$config['allowhomepage'] && $isFrontPage) return; //stop if is HOME
-		
 		$output="";
-		if($context!='mod_we_ufacebook_comments' && we_comments_inexclude($row,$config) && we_comments_showonly($config)){ //allow to execute
+		 //allow to execute
+		if($context!='mod_we_ufacebook_comments' && we_comments_inexclude($row,$config) && we_comments_showonly($config))
+		{
 			$output=$this->we_comments_OutputData($row,$config);
 			//print_r($row);
 		}
@@ -375,21 +379,23 @@ class plgContentWe_ufacebook_comments extends JPlugin {
 		$config['allowhomepage']=(int)$plgparams->get('allowhomepage',0);
 		
 		
-		#_GET Vars temporary store
-		$config['get_option']= JRequest::getCmd('option');
-		$config['get_Itemid']= JRequest::getInt('Itemid');
-		$config['get_view']	= JRequest::getCmd('view');
-		$config['get_task']	= JRequest::getCmd('task');
-		$config['get_layout']= JRequest::getCmd('layout');
-		$config['get_id']	= JRequest::getVar('id');
+		#_GET Vars temporary store]
+		$jinput=JFactory::getApplication()->input;
+		$config['get_option']= version_compare(JVERSION, '3.0', 'ge')?$jinput->get('option'):JRequest::getCmd('option');
+		$config['get_Itemid']= version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('Itemid'):JRequest::getInt('Itemid');
+		$config['get_view']	= version_compare(JVERSION, '3.0', 'ge')?$jinput->get('view'):JRequest::getCmd('view');
+		$config['get_task']	= version_compare(JVERSION, '3.0', 'ge')?$jinput->get('task'):JRequest::getCmd('task');
+		$config['get_layout']= version_compare(JVERSION, '3.0', 'ge')?$jinput->get('layout'):JRequest::getCmd('layout');
+		$config['get_id']	= version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('id'):JRequest::getInt('id');
 		#EventList && Quick Faq
-		$config['get_item_id']= JRequest::getInt('item_id');
-		$config['get_cid']	= JRequest::getInt('cid');	
-		if ($config['get_option'] == 'com_virtuemart') {
-			$config['vm']['page']= JRequest::getVar('page');
-			$config['vm']['flypage'] = JRequest::getVar('flypage');
-			$config['vm']['product_id'] = JRequest::getVar('product_id');
-			$config['vm']['category_id'] = JRequest::getVar('category_id');
+		$config['get_item_id']= version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('item_id'):JRequest::getInt('item_id');
+		$config['get_cid']	= version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('cid'):JRequest::getInt('cid');	
+		if ($config['get_option'] == 'com_virtuemart') 
+		{
+			$config['vm']['page']=  version_compare(JVERSION, '3.0', 'ge')?$jinput->get('page'):JRequest::getVar('page');
+			$config['vm']['flypage'] =  version_compare(JVERSION, '3.0', 'ge')?$jinput->get('flypage'):JRequest::getVar('flypage');
+			$config['vm']['product_id'] = version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('product_id'):JRequest::getInt('product_id');
+			$config['vm']['category_id'] = version_compare(JVERSION, '3.0', 'ge')?$jinput->getInt('category_id'):JRequest::getInt('category_id');
 		}
 		//unset($plugin,$plgparams);
 		$config['debug']=($config['debug'] && (empty($config['debugip']) || $config['debugip']==$_SERVER['REMOTE_ADDR']));

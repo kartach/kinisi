@@ -15,7 +15,7 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'pma';
 	public $password = 'pmapass';
-	public $db = 'joomla_kinisi';
+	public $db = 'joomla_kinisi_v00102';
 	public $dbprefix = 'bc73q_';
 	public $live_site = '';
 	public $secret = 'fBHCg7nuAzGEzcml';

@@ -40,11 +40,6 @@
 2017-12-20T16:55:40+00:00	INFO 79.166.161.237	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2017-12-20T16:55:52+00:00	INFO 79.166.161.237	sloginfailure	Username and password do not match or you do not have an account yet.
 2017-12-20T16:56:12+00:00	INFO 79.166.161.237	sloginfailure	Username and password do not match or you do not have an account yet.
-2017-12-21T23:43:28+00:00	INFO 89.177.43.69	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2017-12-21T23:43:44+00:00	INFO 89.177.43.69	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T13:59:36+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T13:59:39+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T14:09:51+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T14:09:53+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T14:09:56+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
-2018-02-13T15:38:28+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2017-12-21T16:26:55+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
+2017-12-21T17:18:56+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
+2017-12-21T23:17:28+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno

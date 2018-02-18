@@ -9,3 +9,5 @@ CREATE TABLE `bc73q_slogin_users` (
 
 INSERT INTO `bc73q_slogin_users` VALUES(1, 855, '2061915120694785', 'facebook');
 INSERT INTO `bc73q_slogin_users` VALUES(2, 856, '1995680753780750', 'facebook');
+INSERT INTO `bc73q_slogin_users` VALUES(3, 856, '1995706637111495', 'facebook');
+INSERT INTO `bc73q_slogin_users` VALUES(4, 855, '2061939370692360', 'facebook');
