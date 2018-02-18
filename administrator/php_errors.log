@@ -13,3 +13,29 @@ Stack trace:
 #2 /home/k/projects/kinisi/administrator/index.php(40): require_once('/home/k/project...')
 #3 {main}
   thrown in /home/k/projects/kinisi/libraries/loader.php on line 438
+[18-Feb-2018 16:08:48 UTC] PHP Warning:  get_headers(): Unable to find the wrapper &quot;https&quot; - did you forget to enable it when you configured PHP? in /home/k/projects/kinisi/administrator/components/com_joomlaupdate/models/default.php on line 254
+[18-Feb-2018 16:08:48 UTC] PHP Stack trace:
+[18-Feb-2018 16:08:48 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[18-Feb-2018 16:08:48 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[18-Feb-2018 16:08:48 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[18-Feb-2018 16:08:48 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[18-Feb-2018 16:08:48 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[18-Feb-2018 16:08:48 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[18-Feb-2018 16:08:48 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[18-Feb-2018 16:08:48 UTC] PHP   8. Joomla\CMS\MVC\Controller\BaseController->execute() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/joomlaupdate.php:18
+[18-Feb-2018 16:08:48 UTC] PHP   9. JoomlaupdateControllerUpdate->download() /home/k/projects/kinisi/libraries/src/MVC/Controller/BaseController.php:710
+[18-Feb-2018 16:08:48 UTC] PHP  10. JoomlaupdateModelDefault->download() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/controllers/update.php:48
+[18-Feb-2018 16:08:48 UTC] PHP  11. get_headers() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/models/default.php:254
+[18-Feb-2018 16:08:48 UTC] PHP Warning:  get_headers(): This function may only be used against URLs in /home/k/projects/kinisi/administrator/components/com_joomlaupdate/models/default.php on line 254
+[18-Feb-2018 16:08:48 UTC] PHP Stack trace:
+[18-Feb-2018 16:08:48 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[18-Feb-2018 16:08:48 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[18-Feb-2018 16:08:48 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:267
+[18-Feb-2018 16:08:48 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[18-Feb-2018 16:08:48 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[18-Feb-2018 16:08:48 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:356
+[18-Feb-2018 16:08:48 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:381
+[18-Feb-2018 16:08:48 UTC] PHP   8. Joomla\CMS\MVC\Controller\BaseController->execute() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/joomlaupdate.php:18
+[18-Feb-2018 16:08:48 UTC] PHP   9. JoomlaupdateControllerUpdate->download() /home/k/projects/kinisi/libraries/src/MVC/Controller/BaseController.php:710
+[18-Feb-2018 16:08:48 UTC] PHP  10. JoomlaupdateModelDefault->download() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/controllers/update.php:48
+[18-Feb-2018 16:08:48 UTC] PHP  11. get_headers() /home/k/projects/kinisi/administrator/components/com_joomlaupdate/models/default.php:254

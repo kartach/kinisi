@@ -25,3 +25,13 @@
 2017-11-08T11:40:28+00:00	INFO ::1	update	Mazání odstraněných souborů a složek.
 2017-11-08T11:40:29+00:00	INFO ::1	update	Úklid po instalaci.
 2017-11-08T11:40:29+00:00	INFO ::1	update	Aktualizace na verzi 3.8.2 je dokončena.
+2018-02-18T16:08:47+00:00	INFO 127.0.0.1	update	Aktualizaci spustil uživatel Klára K (630). Stará verze je 3.8.2.
+2018-02-18T16:08:48+00:00	INFO 127.0.0.1	update	Stahování aktualizačních souborů z https://downloads.joomla.org/cms/joomla3/3-8-5/Joomla_3.8.5-Stable-Update_Package.zip.
+2018-02-18T16:08:57+00:00	INFO 127.0.0.1	update	Soubor Joomla_3.8.5-Stable-Update_Package.zip byl úspěšně stažen.
+2018-02-18T16:08:57+00:00	INFO 127.0.0.1	update	Spuštění instalace nové verze.
+2018-02-18T16:09:05+00:00	INFO 127.0.0.1	update	Dokončení instalace.
+2018-02-18T16:09:05+00:00	INFO 127.0.0.1	update	Spustit dotaz ze souboru 3.8.4-2018-01-16. Text dotazu: ALTER TABLE `#__user_keys` DROP INDEX `series_2`;.
+2018-02-18T16:09:05+00:00	INFO 127.0.0.1	update	Spustit dotaz ze souboru 3.8.4-2018-01-16. Text dotazu: ALTER TABLE `#__user_keys` DROP INDEX `series_3`;.
+2018-02-18T16:09:05+00:00	INFO 127.0.0.1	update	Mazání odstraněných souborů a složek.
+2018-02-18T16:09:06+00:00	INFO 127.0.0.1	update	Úklid po instalaci.
+2018-02-18T16:09:06+00:00	INFO 127.0.0.1	update	Aktualizace na verzi 3.8.5 je dokončena.

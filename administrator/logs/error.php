@@ -43,3 +43,4 @@
 2017-12-21T16:26:55+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
 2017-12-21T17:18:56+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
 2017-12-21T23:17:28+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
+2018-02-18T19:09:40+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.

@@ -30,14 +30,14 @@ class JConfig {
 	public $ftp_enable = '0';
 	public $offset = 'UTC';
 	public $mailonline = '1';
-	public $mailer = 'mail';
+	public $mailer = 'smtp';
 	public $mailfrom = 'karkoskova.klara@gmail.com';
 	public $fromname = 'Fyzioterapeutické centrum KINISI';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
 	public $smtppass = '';
-	public $smtphost = 'localhost';
+	public $smtphost = 'mail.upcmail.cz';
 	public $smtpsecure = 'none';
 	public $smtpport = '25';
 	public $caching = '1';
@@ -96,4 +96,6 @@ class JConfig {
 	public $cookie_path = '';
 	public $asset_id = '1';
 	public $session_redis_server_db = '0';
+	public $session_redis_persist = '1';
+	public $session_redis_server_auth = '';
 }

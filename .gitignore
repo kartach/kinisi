@@ -5,3 +5,4 @@
 /administrator/cache/
 /administrator/logs/
 /.htaccessZZZ
+/php_errors.log
