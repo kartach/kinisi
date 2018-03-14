@@ -55,3 +55,1044 @@ Stack trace:
 [01-Mar-2018 20:36:32 UTC] PHP  12. Joomla\CMS\Installer\Adapter\ModuleAdapter->uninstall() /home/k/projects/kinisi/libraries/src/Installer/Installer.php:768
 [01-Mar-2018 20:36:32 UTC] PHP  13. Joomla\CMS\Installer\Adapter\ModuleAdapter->loadLanguage() /home/k/projects/kinisi/libraries/src/Installer/Adapter/ModuleAdapter.php:578
 [01-Mar-2018 20:36:32 UTC] PHP  14. constant() /home/k/projects/kinisi/libraries/src/Installer/Adapter/ModuleAdapter.php:214
+[14-Mar-2018 15:38:11 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:38:11 UTC] PHP Stack trace:
+[14-Mar-2018 15:38:11 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:38:11 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:38:11 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:38:11 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:38:11 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:38:11 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:38:11 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:38:11 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:38:11 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:38:11 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:38:11 UTC] PHP Stack trace:
+[14-Mar-2018 15:38:11 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:38:11 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:38:11 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:38:11 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:38:11 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:38:11 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:38:11 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:38:11 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:38:11 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:40:35 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:40:35 UTC] PHP Stack trace:
+[14-Mar-2018 15:40:35 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:40:35 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:40:35 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:40:35 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:40:35 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:40:35 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:40:35 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:40:35 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:40:35 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:40:35 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:40:35 UTC] PHP Stack trace:
+[14-Mar-2018 15:40:35 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:40:35 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:40:35 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:40:35 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:40:35 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:40:35 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:40:35 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:40:35 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:40:35 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:44:36 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:44:36 UTC] PHP Stack trace:
+[14-Mar-2018 15:44:36 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:44:36 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:44:36 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:44:36 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:44:36 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:44:36 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:44:36 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:44:36 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:44:36 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:44:36 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:44:36 UTC] PHP Stack trace:
+[14-Mar-2018 15:44:36 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:44:36 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:44:36 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:44:36 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:44:36 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:44:36 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:44:36 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:44:36 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:44:36 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:44:43 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:44:43 UTC] PHP Stack trace:
+[14-Mar-2018 15:44:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:44:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:44:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:44:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:44:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:44:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:44:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:44:43 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:44:43 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:44:43 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:44:43 UTC] PHP Stack trace:
+[14-Mar-2018 15:44:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:44:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:44:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:44:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:44:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:44:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:44:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:44:43 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:44:43 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:45:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:45:21 UTC] PHP Stack trace:
+[14-Mar-2018 15:45:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:45:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:45:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:45:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:45:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:45:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:45:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:45:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:45:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:45:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:45:21 UTC] PHP Stack trace:
+[14-Mar-2018 15:45:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:45:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:45:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:45:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:45:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:45:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:45:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:45:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:45:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/original/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 502
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:502
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/original/watermark/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 506
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:506
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 514
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:514
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/default/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 518
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:518
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/horizontal/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 522
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:522
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/vertical/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 526
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:526
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_fitrows/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 530
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:530
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/original/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 502
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:502
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/original/watermark/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 506
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:506
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 514
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:514
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/default/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 518
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:518
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/horizontal/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 522
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:522
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_masonry/vertical/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 526
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:526
+[14-Mar-2018 15:49:15 UTC] PHP Warning:  unlink(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-38/thumbnail_fitrows/): Is a directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 530
+[14-Mar-2018 15:49:15 UTC] PHP Stack trace:
+[14-Mar-2018 15:49:15 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:49:15 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:49:15 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:49:15 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:49:15 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:49:15 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:49:15 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:49:15 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 15:49:15 UTC] PHP   9. unlink() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:530
+[14-Mar-2018 15:54:50 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:54:50 UTC] PHP Stack trace:
+[14-Mar-2018 15:54:50 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:54:50 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:54:50 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:54:50 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:54:50 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:54:50 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:54:50 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:54:50 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:54:50 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:54:50 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:54:50 UTC] PHP Stack trace:
+[14-Mar-2018 15:54:50 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:54:50 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:54:50 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:54:50 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:54:50 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:54:50 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:54:50 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:54:50 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:54:50 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:55:00 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:55:00 UTC] PHP Stack trace:
+[14-Mar-2018 15:55:00 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:55:00 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:55:00 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:55:00 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:55:00 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:55:00 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:55:00 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:55:00 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:55:00 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:55:00 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:55:00 UTC] PHP Stack trace:
+[14-Mar-2018 15:55:00 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:55:00 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:55:00 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:55:00 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:55:00 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:55:00 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:55:00 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:55:00 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:55:00 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:55:36 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 15:55:36 UTC] PHP Stack trace:
+[14-Mar-2018 15:55:36 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:55:36 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:55:36 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:55:36 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:55:36 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:55:36 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:55:36 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:55:36 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:55:36 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 15:55:36 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 15:55:36 UTC] PHP Stack trace:
+[14-Mar-2018 15:55:36 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 15:55:36 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 15:55:36 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 15:55:36 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 15:55:36 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 15:55:36 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 15:55:36 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 15:55:36 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 15:55:36 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:30:56 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:30:56 UTC] PHP Stack trace:
+[14-Mar-2018 16:30:56 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:30:56 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:30:56 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:30:56 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:30:56 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:30:56 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:30:56 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:30:56 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:30:56 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:30:56 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:30:56 UTC] PHP Stack trace:
+[14-Mar-2018 16:30:56 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:30:56 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:30:56 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:30:56 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:30:56 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:30:56 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:30:56 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:30:56 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:30:56 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  getimagesize(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-39/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1016
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. getimagesize() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1016
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecreatefromjpeg(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-39/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1019
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagecreatefromjpeg() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1019
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1020
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagesx() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1020
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1021
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagesy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1021
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  Division by zero in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1026
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1059
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1059
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1060
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagealphablending() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1060
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1061
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagesavealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1061
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1062
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagecolorallocatealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1062
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1063
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. imagecopyresampled() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1063
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1082
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:33:04 UTC] PHP  11. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1082
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1085
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:33:04 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1085
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1088
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:33:04 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1088
+[14-Mar-2018 16:33:04 UTC] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1093
+[14-Mar-2018 16:33:04 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:33:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:33:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:33:04 UTC] PHP  11. imagecopymerge() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1093
+[14-Mar-2018 16:33:22 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:33:22 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:22 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:22 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:22 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:22 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:22 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:22 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:22 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:22 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:33:22 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:33:22 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:33:22 UTC] PHP Stack trace:
+[14-Mar-2018 16:33:22 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:33:22 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:33:22 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:33:22 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:33:22 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:33:22 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:33:22 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:33:22 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:33:22 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  getimagesize(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-40/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1016
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. getimagesize() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1016
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecreatefromjpeg(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-40/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1019
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagecreatefromjpeg() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1019
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1020
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagesx() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1020
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1021
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagesy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1021
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  Division by zero in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1026
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1059
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1059
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1060
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagealphablending() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1060
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1061
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagesavealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1061
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1062
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagecolorallocatealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1062
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1063
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. imagecopyresampled() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1063
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1082
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:34:43 UTC] PHP  11. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1082
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1085
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:34:43 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1085
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1088
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:34:43 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1088
+[14-Mar-2018 16:34:43 UTC] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1093
+[14-Mar-2018 16:34:43 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:43 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:43 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:43 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:43 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:43 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:43 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:43 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:43 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 16:34:43 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 16:34:43 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 16:34:43 UTC] PHP  11. imagecopymerge() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1093
+[14-Mar-2018 16:34:54 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:34:54 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:54 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:54 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:54 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:54 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:54 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:54 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:54 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:54 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:34:54 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:34:54 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:34:54 UTC] PHP Stack trace:
+[14-Mar-2018 16:34:54 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:34:54 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:34:54 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:34:54 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:34:54 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:34:54 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:34:54 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:34:54 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:34:54 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:35:05 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:35:05 UTC] PHP Stack trace:
+[14-Mar-2018 16:35:05 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:35:05 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:35:05 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:35:05 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:35:05 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:35:05 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:35:05 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:35:05 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:35:05 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:35:05 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:35:05 UTC] PHP Stack trace:
+[14-Mar-2018 16:35:05 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:35:05 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:35:05 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:35:05 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:35:05 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:35:05 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:35:05 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:35:05 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:35:05 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:36:06 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:36:06 UTC] PHP Stack trace:
+[14-Mar-2018 16:36:06 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:36:06 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:36:06 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:36:06 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:36:06 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:36:06 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:36:06 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:36:06 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:36:06 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:36:06 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:36:06 UTC] PHP Stack trace:
+[14-Mar-2018 16:36:06 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:36:06 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:36:06 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:36:06 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:36:06 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:36:06 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:36:06 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:36:06 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:36:06 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:36:34 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 16:36:34 UTC] PHP Stack trace:
+[14-Mar-2018 16:36:34 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:36:34 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:36:34 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:36:34 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:36:34 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:36:34 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:36:34 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:36:34 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:36:34 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 16:36:34 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 16:36:34 UTC] PHP Stack trace:
+[14-Mar-2018 16:36:34 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 16:36:34 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 16:36:34 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 16:36:34 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 16:36:34 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 16:36:34 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 16:36:34 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 16:36:34 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 16:36:34 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 17:19:55 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 17:19:55 UTC] PHP Stack trace:
+[14-Mar-2018 17:19:55 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:19:55 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:19:55 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:19:55 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:19:55 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:19:55 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:19:55 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:19:55 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 17:19:55 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 17:19:55 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 17:19:55 UTC] PHP Stack trace:
+[14-Mar-2018 17:19:55 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:19:55 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:19:55 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:19:55 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:19:55 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:19:55 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:19:55 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:19:55 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 17:19:55 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 17:55:00 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 17:55:00 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:00 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:00 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:00 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:00 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:00 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:00 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:00 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:00 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 17:55:00 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 17:55:00 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 17:55:00 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:00 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:00 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:00 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:00 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:00 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:00 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:00 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:00 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 17:55:00 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  getimagesize(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-41/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1016
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. getimagesize() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1016
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecreatefromjpeg(/home/k/projects/kinisi/administrator/../images/com_osgallery/gal-41/watermark/3logo_kinisi_final.png): failed to open stream: No such file or directory in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1019
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagecreatefromjpeg() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1019
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagesx() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1020
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagesx() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1020
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagesy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1021
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagesy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1021
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  Division by zero in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1026
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1059
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1059
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagealphablending() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1060
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagealphablending() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1060
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagesavealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1061
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagesavealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1061
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecolorallocatealpha() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1062
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagecolorallocatealpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1062
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1063
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. imagecopyresampled() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1063
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1082
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 17:55:04 UTC] PHP  11. imagecreatetruecolor() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1082
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1085
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 17:55:04 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1085
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecopy() expects parameter 1 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1088
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 17:55:04 UTC] PHP  11. imagecopy() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1088
+[14-Mar-2018 17:55:04 UTC] PHP Warning:  imagecopymerge() expects parameter 2 to be resource, boolean given in /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php on line 1093
+[14-Mar-2018 17:55:04 UTC] PHP Stack trace:
+[14-Mar-2018 17:55:04 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 17:55:04 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 17:55:04 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 17:55:04 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 17:55:04 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 17:55:04 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 17:55:04 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 17:55:04 UTC] PHP   8. osGalleryHelperAdmin::saveGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:70
+[14-Mar-2018 17:55:04 UTC] PHP   9. osGalleryHelperAdmin::createWaterMark() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:376
+[14-Mar-2018 17:55:04 UTC] PHP  10. osGalleryHelperAdmin::imagecopymerge_alpha() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1066
+[14-Mar-2018 17:55:04 UTC] PHP  11. imagecopymerge() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:1093
+[14-Mar-2018 18:03:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 387
+[14-Mar-2018 18:03:21 UTC] PHP Stack trace:
+[14-Mar-2018 18:03:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 18:03:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 18:03:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 18:03:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 18:03:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 18:03:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 18:03:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 18:03:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 18:03:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
+[14-Mar-2018 18:03:21 UTC] PHP Notice:  Undefined variable: showImgHtml in /home/k/projects/kinisi/administrator/components/com_osgallery/views/gallery/default.php on line 388
+[14-Mar-2018 18:03:21 UTC] PHP Stack trace:
+[14-Mar-2018 18:03:21 UTC] PHP   1. {main}() /home/k/projects/kinisi/administrator/index.php:0
+[14-Mar-2018 18:03:21 UTC] PHP   2. Joomla\CMS\Application\CMSApplication->execute() /home/k/projects/kinisi/administrator/index.php:51
+[14-Mar-2018 18:03:21 UTC] PHP   3. Joomla\CMS\Application\AdministratorApplication->doExecute() /home/k/projects/kinisi/libraries/src/Application/CMSApplication.php:303
+[14-Mar-2018 18:03:21 UTC] PHP   4. Joomla\CMS\Application\AdministratorApplication->dispatch() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:159
+[14-Mar-2018 18:03:21 UTC] PHP   5. Joomla\CMS\Component\ComponentHelper::renderComponent() /home/k/projects/kinisi/libraries/src/Application/AdministratorApplication.php:101
+[14-Mar-2018 18:03:21 UTC] PHP   6. Joomla\CMS\Component\ComponentHelper::executeComponent() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:357
+[14-Mar-2018 18:03:21 UTC] PHP   7. require_once() /home/k/projects/kinisi/libraries/src/Component/ComponentHelper.php:382
+[14-Mar-2018 18:03:21 UTC] PHP   8. osGalleryHelperAdmin::displayGallery() /home/k/projects/kinisi/administrator/components/com_osgallery/osgallery.php:62
+[14-Mar-2018 18:03:21 UTC] PHP   9. require() /home/k/projects/kinisi/administrator/components/com_osgallery/helpers/osGalleryHelperAdmin.php:252
