@@ -44,3 +44,11 @@
 2017-12-21T17:18:56+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
 2017-12-21T23:17:28+00:00	INFO 89.177.43.69	cookiefailure	Prázdné heslo není povoleno
 2018-02-18T19:09:40+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:49:08+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:49:10+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:49:14+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:49:22+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:49:44+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:50:36+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-02-27T18:50:41+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-03-11T01:12:24+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.

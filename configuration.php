@@ -31,8 +31,8 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailonline = '1';
 	public $mailer = 'smtp';
-	public $mailfrom = 'karkoskova.klara@gmail.com';
-	public $fromname = 'Fyzioterapeutické centrum KINISI';
+	public $mailfrom = 'info@kinisi.cz';
+	public $fromname = 'KINISI fyzioterapeutické centrum ';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';
