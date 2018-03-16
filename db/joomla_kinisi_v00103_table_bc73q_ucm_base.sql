@@ -20,3 +20,4 @@ INSERT INTO `bc73q_ucm_base` VALUES(11, 120, 1, 0);
 INSERT INTO `bc73q_ucm_base` VALUES(12, 189, 1, 0);
 INSERT INTO `bc73q_ucm_base` VALUES(13, 190, 1, 0);
 INSERT INTO `bc73q_ucm_base` VALUES(14, 234, 1, 0);
+INSERT INTO `bc73q_ucm_base` VALUES(15, 250, 1, 0);

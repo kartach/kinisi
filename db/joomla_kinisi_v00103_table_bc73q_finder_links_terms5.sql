@@ -6,5 +6,5 @@ CREATE TABLE `bc73q_finder_links_terms5` (
   `weight` float UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `bc73q_finder_links_terms5` VALUES(184, 130916, 0.07);
 INSERT INTO `bc73q_finder_links_terms5` VALUES(185, 130916, 0.07);
+INSERT INTO `bc73q_finder_links_terms5` VALUES(804, 130916, 0.07);

@@ -20,7 +20,9 @@ include_once('includes/includes.php'); ?>
                 <!-- Top -->
                 <?php include_once('includes/top-position.php');?>
 
-                <?php if($this->countModules('breadcrumbs')){
+                <?php 
+//                echo 'nr of BRAEDCRUMBS = ' . var_dump($this);
+                if($this->countModules('breadcrumbs')){
                     echo display_position('breadcrumbs','','','class="stuck_position"');
                 } ?>
 

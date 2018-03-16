@@ -52,3 +52,4 @@
 2018-02-27T18:50:36+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2018-02-27T18:50:41+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2018-03-11T01:12:24+00:00	INFO 127.0.0.1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-03-15T13:05:29+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.

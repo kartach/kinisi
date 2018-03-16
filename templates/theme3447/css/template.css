@@ -12575,6 +12575,7 @@ body.mobile_mode.mobile div#fixed-sidebar-right .moduletable.login {
     display: block;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 50px;
     bottom: -35px;
   }
   .swiper-slider .swiper-slide-caption .camera_caption .slide-title {

@@ -43,7 +43,9 @@ INSERT INTO `bc73q_os_gallery_categories` VALUES(33, 33, ' Léčba suchou jehlou
 INSERT INTO `bc73q_os_gallery_categories` VALUES(34, 34, 'Kineziotaping', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(35, 35, 'Elektroléčba', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
 INSERT INTO `bc73q_os_gallery_categories` VALUES(36, 36, 'Léčba TDP lampou', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
-INSERT INTO `bc73q_os_gallery_categories` VALUES(38, 38, 'Elektroléčba', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
-INSERT INTO `bc73q_os_gallery_categories` VALUES(39, 39, 'Category Title', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
-INSERT INTO `bc73q_os_gallery_categories` VALUES(40, 40, 'Category Title', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
-INSERT INTO `bc73q_os_gallery_categories` VALUES(41, 41, 'Category Title', 0, '{}');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(38, 38, 'Ultrazvuk', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(39, 39, 'Klasická masáž', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(40, 40, 'Sportovní masáž', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(41, 41, 'Mapka cesty', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:false%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(42, 42, 'Přístrojová terapie', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');
+INSERT INTO `bc73q_os_gallery_categories` VALUES(43, 43, 'Masáže', 0, '%7B%22categoryAlias%22:%22%22,%22categoryUnpublish%22:false,%22categoryShowTitle%22:false,%22categoryShowTitleCaption%22:true%7D');

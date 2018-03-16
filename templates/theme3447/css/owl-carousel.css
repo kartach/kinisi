@@ -285,7 +285,6 @@
   width: 130px;
   margin: 30px auto 0px;
   position: relative;
-  border-radius: 500px;
   overflow: hidden;
 }
 .owl-carousel.custom-indent .owl-item .owl-item_content .item_img:before {
@@ -304,7 +303,6 @@
 .owl-carousel.custom-indent .owl-item .owl-item_content .item_img img {
   position: relative;
   z-index: 1;
-  border-radius: 500px;
   height: 130px;
   width: 130px;
   -webkit-transition: all 0.3s ease;
@@ -327,7 +325,6 @@
   background: rgba(0, 0, 0, 0);
 }
 .owl-carousel.custom-indent .owl-item.center .owl-item_content .item_img img {
-  border-radius: 500px;
   height: 160px;
   width: 160px;
 }
