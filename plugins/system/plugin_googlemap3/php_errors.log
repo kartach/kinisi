@@ -478,3 +478,9 @@
 [16-Mar-2018 16:00:16 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/k/projects/kinisi/libraries/joomla/factory.php' (include_path='.:/usr/share/php56/pear') in /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php on line 50
 [16-Mar-2018 16:00:16 UTC] PHP Stack trace:
 [16-Mar-2018 16:00:16 UTC] PHP   1. {main}() /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php:0
+[04-Apr-2018 20:54:51 UTC] PHP Warning:  require_once(/home/k/projects/kinisi/libraries/joomla/factory.php): failed to open stream: No such file or directory in /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php on line 50
+[04-Apr-2018 20:54:51 UTC] PHP Stack trace:
+[04-Apr-2018 20:54:51 UTC] PHP   1. {main}() /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php:0
+[04-Apr-2018 20:54:51 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/k/projects/kinisi/libraries/joomla/factory.php' (include_path='.:/usr/share/php56/pear') in /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php on line 50
+[04-Apr-2018 20:54:51 UTC] PHP Stack trace:
+[04-Apr-2018 20:54:51 UTC] PHP   1. {main}() /home/k/projects/kinisi/plugins/system/plugin_googlemap3/plugin_googlemap3.css.php:0
