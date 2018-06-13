@@ -1,3 +1,4 @@
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1066,7 +1067,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 14px;
   color: #000000;
   background-color: #ffffff;
 }
@@ -9605,7 +9606,7 @@ div#fixed-sidebar-right .moduletable.login .mod_login_wrapper .input-prepend .ad
   display: block;
   font: 14px / 24px 'Roboto', sans-serif;
   height: 24px;
-  padding: 0 25px;
+  padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -9656,7 +9657,7 @@ div#fixed-sidebar-right .moduletable.login .mod_login_wrapper .input-prepend .ad
 }
 .icemegamenu > ul > li.menu-login-form > a.iceMenuTitle {
   padding-right: 0;
-  padding-left: 50px;
+  padding-left: 40px;
   font-size: 0;
   height: 24px;
   line-height: 24px;
@@ -12167,7 +12168,7 @@ body.body__about:not(.view-article) #content-top {
   padding-bottom: 60px;=====
   dalsi oprava puvodne padding-bottom: 40px; */
 #content {
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 0px;
 }
 #component {
