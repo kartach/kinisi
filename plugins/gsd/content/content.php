@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  *
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
  */
 
@@ -67,6 +67,12 @@ class plgGSDContent extends GSDPlugin
 			return;
 		}
 
+		// Make sure the user can access com_gsd
+		if (!JFactory::getUser()->authorise('core.manage', 'com_gsd'))
+		{
+			return;
+		}
+
 		// Make sure we are manipulating a JForm
 		if (!($form instanceof JForm))
 		{
@@ -81,5 +87,22 @@ class plgGSDContent extends GSDPlugin
 		$form->loadFile(__DIR__ . '/form/form.xml', false);
 		$form->setFieldAttribute('snippet', 'thing', $this->app->input->getInt('id'), 'attribs.gsd');
 		$form->setFieldAttribute('snippet', 'plugin', $this->_name, 'attribs.gsd');
+	}
+
+    /**
+     *  Construct the query needed for the item selection modal in the backend.
+     *  
+     *  Returns all items but trashed
+     *
+     *  @param   JModel  $model  The Things Model
+     *
+     *  @return  Query
+     */
+	protected function getListQuery($model)
+	{
+		$query = parent::getListQuery($model);
+		$query->where($this->db->quoteName('a.' . $this->getColumn('state')) . ' >= 0');
+
+		return $query;
 	}
 }

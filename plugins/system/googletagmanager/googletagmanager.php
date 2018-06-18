@@ -30,7 +30,7 @@ class plgSystemGoogleTagManager extends JPlugin {
 			// Add the pagescrolling JavaScript library
 			JHtml::_('jquery.framework');
 			$document = JFactory::getDocument();
-			$document->addScript('/kinisi/plugins/system/googletagmanager/js/scroll-tracker.js');
+			$document->addScript('/plugins/system/googletagmanager/js/scroll-tracker.js');
 			$jsContent = '
 jQuery(document).ready(function(){jQuery.contentIdPlugin.contentIdValue(\''.$scrollTrackerContentId.'\')});';
 			$document->addScriptDeclaration( $jsContent );

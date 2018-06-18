@@ -89,7 +89,7 @@ INSERT INTO `bc73q_ark_editor_plugins` VALUES(70, '', 'toolbar', 'plugin', 0, ''
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(71, '', 'filebrowser', 'plugin', 0, '', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(72, 'Styles', 'stylescombo', 'plugin', 3, '', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(73, 'Font', 'font', 'plugin', 3, '', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);
-INSERT INTO `bc73q_ark_editor_plugins` VALUES(74, 'Format', 'format', 'plugin', 4, '', 1, 1, 0, '0000-00-00 00:00:00', 0, NULL, '{\"format_tags\":\"\",\"format_force_useDefaultText\":\"0\"}', NULL);
+INSERT INTO `bc73q_ark_editor_plugins` VALUES(74, 'Format', 'format', 'plugin', 4, '', 1, 1, 630, '2018-05-23 11:45:46', 0, NULL, '{\"format_tags\":\"\",\"format_force_useDefaultText\":\"0\"}', NULL);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(75, '', 'forms', 'plugin', 0, '', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(76, 'Undo', 'undo', 'plugin', 1, '-1992', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', NULL);
 INSERT INTO `bc73q_ark_editor_plugins` VALUES(77, 'Redo', 'redo', 'command', 1, '-1944', 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '', 76);

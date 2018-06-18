@@ -47,3 +47,8 @@ INSERT INTO `bc73q_os_gallery_connect` VALUES(75, 38, 75);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(82, 41, 82);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(83, 42, 83);
 INSERT INTO `bc73q_os_gallery_connect` VALUES(84, 43, 84);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(85, 45, 85);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(86, 46, 86);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(87, 47, 87);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(94, 48, 94);
+INSERT INTO `bc73q_os_gallery_connect` VALUES(93, 50, 93);

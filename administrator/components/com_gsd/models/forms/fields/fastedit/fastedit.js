@@ -1,6 +1,6 @@
 jQuery(function($) {
     var $el     = $('.gsdFastEdit')
-        baseURL = $el.data("base") + "index.php?option=com_gsd&view=items&format=raw";
+        baseURL = $el.data("base") + "/index.php?option=com_gsd&view=items&format=raw";
         thing   = $el.data("thing")
         plugin  = $el.data("plugin")
         $modal  = $el.find(".modal");
@@ -66,9 +66,6 @@ jQuery(function($) {
             cache: false,
             success: function(response) {
                 callback(response);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                alert('Google Structured Data: ' + errorThrown);
             },
             beforeSend: function() {
                 $el.addClass("working");

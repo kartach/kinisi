@@ -2,18 +2,17 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  *
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
  */
 
 defined('_JEXEC') or die('Restricted Access');
 
 use Joomla\Registry\Registry;
-use Joomla\String\StringHelper;
 
 /**
  *  Google Structured Data Helper Class
@@ -44,7 +43,7 @@ class GSDHelper
 		JLoader::register('GSDJSON', JPATH_ADMINISTRATOR . '/components/com_gsd/helpers/json.php');
         $json = new GSDJSON();
 
-        return $json->contentTypes;
+        return $json->getContentTypes();
 	}
 
 	/**
@@ -76,13 +75,19 @@ class GSDHelper
 		}
 
 		// We don't use $items here as it references JPathway properties directly
-		$crumbs = array();
+		$crumbs = [];
 
 		for ($i = 0; $i < $count; $i++)
 		{
-			$crumbs[$i]       = new stdClass;
-			$crumbs[$i]->name = stripslashes(htmlspecialchars($items[$i]->name, ENT_COMPAT, 'UTF-8'));
-			$crumbs[$i]->link = self::route($items[$i]->link);
+			$crumbName = stripslashes(htmlspecialchars(strip_tags($items[$i]->name), ENT_COMPAT, 'UTF-8'));
+
+			// Remove [icon] shortcodes added by 3rd party plugins
+			$crumbName = preg_replace('#\[icon\].*?\[\/icon\]#', '', $crumbName);
+
+			$crumbs[$i] = (object) [
+				'name' => trim($crumbName),
+				'link' => self::route($items[$i]->link)
+ 			];
 		}
 
 		// Add Home item
@@ -145,18 +150,25 @@ class GSDHelper
 
 		// Strip HTML tags/comments and minify
 		$text = strip_tags($text);
+
+		// Strip certain patterns like shortcodes added by 3rd party extensions to avoid page breaks
+		$text = preg_replace(array(
+			'/{(\/?)zen-(.*?)}/m' // System - Zen Shortcodes
+		), '', $text);
+		 
+		// Minify Text
 		$text = self::minify($text);
 
 		// Limit characters length
 		if ($limit > 0)
 		{
-			$text = StringHelper::substr($text, 0, $limit);
+			$text = mb_substr($text, 0, $limit);
 		}
 
 		// Escape double quotes
        	$text = addcslashes($text, '"\\');
 
-        return $text;
+        return trim($text);
 	}
 
 	/**
@@ -180,14 +192,16 @@ class GSDHelper
 	 */
 	public static function absURL($url)
 	{
-		if (strpos($url, 'http://www') !== false)
+		$url = JURI::getInstance($url);
+
+		// Return the original URL if we're manipulating an external URL
+		if (in_array($url->getScheme(), array('https', 'http')))
 		{
-			return $url;
+			return $url->toString();
 		}
 
-		$url = str_replace(JURI::root(), "", $url);
-		$url = str_replace(JURI::root(true), "", $url);
-		$url = ltrim($url, "/");
+		$url = str_replace(array(JURI::root(), JURI::root(true)), '', $url->toString());
+		$url = ltrim($url, '/');
 		
 		return JURI::root() . $url;
 	}
@@ -216,7 +230,7 @@ class GSDHelper
 	}
 
 	/**
-	 *  Formats date based on ISO8601
+	 *  Formats date based on ISO8601 including site's timezone set in the global configuration
 	 *
 	 *  @param   JDate  $date  
 	 *
@@ -224,7 +238,22 @@ class GSDHelper
 	 */
 	public static function date($date)
 	{
-		return JFactory::getDate($date)->toISO8601();
+		if (empty($date) || is_null($date) || $date == '0000-00-00 00:00:00')
+		{
+			return $date;
+		}
+
+		try {
+			$dateOffset = new DateTime(
+				date($date), 
+				new DateTimeZone(JFactory::getApplication()->getCfg('offset', 'UTC'))
+			);
+
+			return $dateOffset->format('c');
+
+		} catch (Exception $e) {
+			return $date;
+		}
 	}
 
 	/**

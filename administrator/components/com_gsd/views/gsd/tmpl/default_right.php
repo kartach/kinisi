@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  *
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
  */
 
@@ -25,8 +25,6 @@ $downloadKey = \NRFramework\Functions::getDownloadKey();
         <p>
             <?php echo JText::_('GSD_INSTALLED_VERSION') ?>: <?php echo $installedVersion; ?>
         </p>
-        
-        <?php echo GSDHelper::getProField('NR_UPGRADE_TO_PRO'); ?>
         
     </div>
 </div>

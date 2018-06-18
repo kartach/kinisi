@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Tento web je právě v údržbě.<br /> Zkuste to prosím později.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Fyzioteraputické centrum KINISI';
+	public $sitename = 'KINISI centrum fyzioterapie';
 	public $editor = 'arkeditor';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -32,7 +32,7 @@ class JConfig {
 	public $mailonline = '1';
 	public $mailer = 'smtp';
 	public $mailfrom = 'info@kinisi.cz';
-	public $fromname = 'KINISI fyzioterapeutické centrum ';
+	public $fromname = 'KINISI centrum fyzioterapie';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';

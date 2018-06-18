@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  * 
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
 */
 
@@ -38,13 +38,6 @@ $isPro = GSDHelper::isPro();
                         <?php echo JText::_('NR_COMING_SOON'); ?>
                     </a>
                 <?php } ?>
-                
-                <?php 
-                    if (!$item['comingsoon'] && $item['proonly'] === true)
-                    {
-                        echo GSDHelper::getProField();
-                    }
-                ?>
                 
                 <?php if (!$item['comingsoon']) { ?>
                     <?php if ($item['id']) { ?>

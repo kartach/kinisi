@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  * 
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
 */
 
@@ -27,7 +27,7 @@ class JFormFieldFastEdit extends NRFormField
         $error = $this->get('error', 'GSD_SAVE_FIRST');
         $html  = '';
 
-        $this->doc->addStyleSheet(JURI::base() . '/components/com_gsd/models/forms/fields/fastedit/fastedit.css');
+        $this->doc->addStyleSheet(JURI::base(true) . '/components/com_gsd/models/forms/fields/fastedit/fastedit.css');
 
         // In order to be able to assosiate a snippet the item must be saved first.
         if (!$thing)
@@ -40,7 +40,7 @@ class JFormFieldFastEdit extends NRFormField
         $addURL = JRoute::_('index.php?option=com_gsd&tmpl=component&layout=modal&view=item&thing=' . $thing . '&plugin=' . $plugin);
 
         // Add Media
-        $this->doc->addScript(JURI::base() . '/components/com_gsd/models/forms/fields/fastedit/fastedit.js');
+        $this->doc->addScript(JURI::base(true) . '/components/com_gsd/models/forms/fields/fastedit/fastedit.js');
 
         // Add language strings used by the JS plugin
         JText::script('GSD_ADD_SNIPPET');
@@ -48,7 +48,7 @@ class JFormFieldFastEdit extends NRFormField
         JText::script('NR_ARE_YOU_SURE');
 
         $html .= '
-            <div class="gsdFastEdit" data-thing="'. $thing .'" data-plugin="'. $plugin .'" data-base="'. JURI::base() .'">
+            <div class="gsdFastEdit" data-thing="'. $thing .'" data-plugin="'. $plugin .'" data-base="'. JURI::base(true) .'">
                 ' . $this->renderModal() . '
                 <a href="#gsdModal" class="btn btn-success add" data-toggle="modal" data-src="'. $addURL . '">
                     <span class="icon-new"></span>'

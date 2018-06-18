@@ -37,7 +37,6 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(60, 11, 'Reference jednotlivci', 1, 1
 INSERT INTO `bc73q_finder_taxonomy` VALUES(67, 11, 'About HP pro Article', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(71, 2, 'Category', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(72, 11, 'Služby a programy', 1, 1, 0);
-INSERT INTO `bc73q_finder_taxonomy` VALUES(73, 11, 'Podmínky užití', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(74, 11, 'O nás', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(75, 11, 'Kvalita služeb 3', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(76, 11, 'Kvalita služeb 4', 1, 1, 0);
@@ -51,3 +50,5 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(95, 9, 'Lenka Augustínová', 1, 1, 0
 INSERT INTO `bc73q_finder_taxonomy` VALUES(96, 9, 'Martin Vojtovič', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(98, 11, 'HP služby', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(99, 11, 'Přístrojová fyzioterapie', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(126, 11, 'Poslední články', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(132, 11, 'Podmínky užití', 1, 1, 0);

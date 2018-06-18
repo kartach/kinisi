@@ -472,6 +472,26 @@ class com_gsdInstallerScriptHelper
 		}
 	}
 
+	public function dropIndex($table, $index)
+	{	
+		$db = $this->db;
+
+		// Check if index exists first
+		$query = 'SHOW INDEX FROM ' . $db->quoteName('#__' . $table) . ' WHERE KEY_NAME = ' . $db->quote($index);
+        $db->setQuery($query);
+        $db->execute();
+
+        if (!$db->loadResult())
+        {
+        	return;
+        }
+
+        // Remove index
+        $query = 'ALTER TABLE ' . $db->quoteName('#__' . $table) . ' DROP INDEX ' . $db->quoteName($index);
+        $db->setQuery($query);
+        $db->execute(); 
+	}
+
     public function dropUnwantedTables($tables) {
 
         if (!$tables) {
