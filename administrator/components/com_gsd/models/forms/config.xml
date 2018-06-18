@@ -109,12 +109,198 @@
             label="GSD_BUSINESSLISTING_NAME"
         />
         
-        
-        <field name="@businesslisting" type="nr_pro"
-            label="GSD_BUSINESSLISTING_NAME"
-            description="GSD_BUSINESSLISTING_ENABLED_DESC"
-            url="http://www.tassos.gr/joomla-extensions/google-structured-data-markup"
+        <field name="businesslisting_enabled" type="radio" 
+            label="JENABLED" 
+            description="GSD_BUSINESSLISTING_ENABLED_DESC" 
+            class="btn-group btn-group-yesno"
+            default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="businesslisting_type" type="businesstypes" 
+            showon="businesslisting_enabled:1"
+            default="LocalBusiness" 
+            class="input-xlarge"
+            label="GSD_BUSINESSLISTING_TYPE">
+        </field>
+        <field name="businesslisting_address_country" type="nr_geo"
+            label="GSD_BUSINESSLISTING_ADDRESS_COUNTRY"
+            showon="businesslisting_enabled:1"
+            class="input-xlarge"
         />
+        <field name="businesslisting_address_locality" type="text"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_BUSINESSLISTING_ADDRESS_LOCALITY"
+            hint="GSD_BUSINESSLISTING_ADDRESS_LOCALITY_HINT"
+        />
+        <field name="businesslisting_street_address" type="text"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_BUSINESSLISTING_STREET_ADDRESS"
+            hint="GSD_BUSINESSLISTING_STREET_ADDRESS_HINT"
+        />
+        <field name="businesslisting_address_region" type="text"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_BUSINESSLISTING_ADDRESS_REGION"
+            hint="GSD_BUSINESSLISTING_ADDRESS_REGION_HINT"
+        />
+        <field name="businesslisting_postal_code" type="text"
+            showon="businesslisting_enabled:1"
+            class="input-small"
+            label="GSD_BUSINESSLISTING_POSTAL_CODE"
+            hint="GSD_BUSINESSLISTING_POSTAL_CODE_HINT"
+        />
+        <field name="businesslisting_latlng" type="nr_gmap"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_BUSINESSLISTING_COORDINATES"
+            hint="GSD_BUSINESSLISTING_COORDINATES_HINT"
+        />
+        <field name="businesslisting_telephone" 
+            type="text"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_BUSINESSLISTING_TELEPHONE"
+            hint="GSD_BUSINESSLISTING_TELEPHONE_HINT"
+        />
+        <field name="price_range" 
+            type="text"
+            class="input-xlarge"
+            showon="businesslisting_enabled:1"
+            label="GSD_PRICE_RANGE"
+            description="GSD_PRICE_RANGE_DESC"
+            hint="GSD_PRICE_RANGE_HINT"
+        />
+        <field name="businesslisting_hours_available" type="list"
+            label="GSD_BUSINESSLISTING_HOURS_AVAILABLE"
+            showon="businesslisting_enabled:1"
+            default="0">
+            <option value="0">GSD_BUSINESSLISTING_NO_HOURS_AVAILABLE</option>
+            <option value="1">GSD_BUSINESSLISTING_ALWAYS_OPEN</option>
+            <option value="2">GSD_BUSINESSLISTING_OPEN_ON_SELECTED_HOURS</option>
+        </field>
+        <field name="businesslisting_inline_monday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_monday" type="checkbox" 
+            label="Monday"
+            value="1">
+        </field>
+        <field name="businesslisting_monday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_monday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_monday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_tuesday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_tuesday" type="checkbox" 
+            label="Tuesday"
+            value="1">
+        </field>
+        <field name="businesslisting_tuesday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_tuesday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_tuesday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_wednesday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_wednesday" type="checkbox" 
+            label="Wednesday" 
+            value="1">
+        </field>
+        <field name="businesslisting_wednesday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_wednesday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_wednesday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_thursday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_thursday" type="checkbox" 
+            label="Thursday" 
+            value="1">
+        </field>
+        <field name="businesslisting_thursday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_thursday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_thursday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_friday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_friday" type="checkbox" 
+            label="Friday" 
+            value="1">
+        </field>
+        <field name="businesslisting_friday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_friday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_friday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_saturday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_saturday" type="checkbox" 
+            label="Saturday" 
+            value="1">
+        </field>
+        <field name="businesslisting_saturday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_saturday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_saturday_end" type="nr_inline" 
+            end="1"
+        />
+        <field name="businesslisting_inline_sunday_start" type="nr_inline" 
+            showon="businesslisting_hours_available:2[AND]businesslisting_enabled:1"
+            class="timetable"
+        />
+        <field name="businesslisting_sunday" type="checkbox" 
+            label="Sunday" 
+            value="1">
+        </field>
+        <field name="businesslisting_sunday_start" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_sunday_end" type="nr_time"
+            hiddenLabel="true"
+        />
+        <field name="businesslisting_inline_sunday_end" type="nr_inline" 
+            end="1"
+        />
+        
         
         <field name="businesslistingend" type="nr_well" 
             end="1"
@@ -126,12 +312,66 @@
             label="GSD_SOCIALPROFILES"
         />
         
-        
-        <field name="@socialprofiles" type="nr_pro"
-            label="GSD_SOCIALPROFILES"
-            description="GSD_SOCIALPROFILES_DESC"
-            url="http://www.tassos.gr/joomla-extensions/google-structured-data-markup"
+        <field name="socialprofiles_type" type="list" 
+            label="GSD_SOCIALPROFILE_TYPE" 
+            description="GSD_SOCIALPROFILE_TYPE_DESC" 
+            default="Organization">
+                <option value="Organization">GSD_ORGANIZATION</option>
+                <option value="Person">GSD_PERSON</option>
+        </field>
+        <field name="socialprofiles_facebook" type="url"
+            class="input-xlarge"
+            hint="https://www.facebook.com"
+            label="Facebook"
         />
+        <field name="socialprofiles_twitter" type="url"
+            class="input-xlarge"
+            hint="https://www.twitter.com"
+            label="Twitter"
+        />
+        <field name="socialprofiles_googleplus" type="url"
+            class="input-xlarge"
+            hint="https://plus.google.com"
+            label="Google Plus"
+        />
+        <field name="socialprofiles_instagram" type="url"
+            class="input-xlarge"
+            hint="https://www.instagram.com"
+            label="Instagram"
+        />
+        <field name="socialprofiles_youtube" type="url"
+            class="input-xlarge"
+            hint="https://www.youtube.com"
+            label="YouTube"
+        />
+        <field name="socialprofiles_linkedin" type="url"
+            class="input-xlarge"
+            hint="https://www.linkedin.com"
+            label="LinkedIn"
+        />
+        <field name="socialprofiles_pinterest" type="url"
+            class="input-xlarge"
+            hint="https://www.pinterest.com"
+            label="Pinterest"
+        />
+        <field name="socialprofiles_soundcloud" type="url"
+            class="input-xlarge"
+            hint="https://www.soundcloud.com"
+            label="SoundCloud"
+        />
+        <field name="socialprofiles_tumblr" type="url"
+            class="input-xlarge"
+            hint="https://www.tumblr.com"
+            label="Tumblr"
+        />
+        <field name="socialprofiles_other" type="textarea"
+            hint="GSD_SOCIALPROFILES_OTHER_HINT"
+            class="input-xlarge"
+            rows="5"
+            description="GSD_SOCIALPROFILES_OTHER_DESC"
+            label="GSD_SOCIALPROFILES_OTHER"
+        />
+        
         
         <field name="socialprofilesend" type="nr_well" end="1"/>
     </fieldset>
@@ -221,28 +461,37 @@
             description="GSD_REMOVE_MICRODATA_DESC"
         />
         
-        
-        <field name="@removemicrodata" type="nr_pro"
+        <field name="removemicrodata" type="checkboxes"
             label="GSD_REMOVE_MICRODATA_TYPES"
-            description="GSD_REMOVE_MICRODATA_DESC"
-            url="http://www.tassos.gr/joomla-extensions/google-structured-data-markup"
-        />
+            description="GSD_REMOVE_MICRODATA_DESC">
+            <option value="Article">Article</option>
+            <option value="BlogPosting">BlogPosting</option>
+            <option value="Blog">Blog</option>
+            <option value="AggregateRating">AggregateRating</option>
+            <option value="BreadcrumbList">BreadcrumbList</option>
+            <option value="ListItem">ListItem</option>
+        </field>
+        
         
         <field name="microdataEnd" type="nr_well" 
             end="true"
         />
         <field name="customCodeStart" type="nr_well" 
             label="GSD_CUSTOM_CODE"
-            description="GSD_CUSTOM_CODE_DESC"
+            description="GSD_CUSTOM_CODE_GLOBAL_DESC"
         />
         <field name="customcode" type="textarea"
             label="GSD_CUSTOM_CODE"
-            description="GSD_CUSTOM_CODE_DESC"
+            description="GSD_CUSTOM_CODE_GLOBAL_DESC"
             class="span12"
             filter="raw"
             rows="15"
             hint="&lt;script type='application/ld+json'&gt;&lt;/script&gt;"
         />
+        <field name="customcode_disclaimer" type="note" 
+            class="alert alert-error"
+            description="GSD_CUSTOM_CODE_DISCLAIMER"
+        />  
         <field name="customCodeEnd" type="nr_well" 
             end="true"
         />

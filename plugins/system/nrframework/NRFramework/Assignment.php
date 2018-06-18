@@ -88,7 +88,7 @@ class Assignment
 	 *  @param  object  $request     
 	 *  @param  object  $date        
 	 */
-	public function __construct($assignment, $request = null, $date = null)
+	public function __construct($options, $request = null, $date = null)
 	{
 		// Set General Joomla Objects
 		$this->db   = \JFactory::getDbo();
@@ -97,9 +97,9 @@ class Assignment
 		$this->user = \JFactory::getUser();
 
 		// Set Assignment Options
-		$this->params     = $assignment->params;
-		$this->selection  = $assignment->selection;
-		$this->assignment = $assignment->assignment;
+		$this->params           = $options->params;
+		$this->selection        = $options->selection;
+		$this->assignment_state = $options->assignment_state;
 
 		// Set Request object
 		if (is_null($request))
@@ -130,7 +130,7 @@ class Assignment
 	 *  Makes a simple assignment check
 	 *
 	 *  @param   mixed   $values     Current state
-	 *  @param   string  $selection  User's selection
+	 *  @param   array  $selection   User's selection
 	 *
 	 *  @return  bool
 	 */
@@ -222,5 +222,37 @@ class Assignment
 		}
 
 		return Cache::set($hash, $parent_ids);
-	}
+    }
+    
+    /**
+     *  Splits a keyword string on commas and newlines
+     *
+     *  @param string $keywords
+     *  @return array
+     */
+    protected function splitKeywords($keywords)
+    {
+        if (empty($keywords) || !is_string($keywords))
+        {
+            return [];
+        }
+
+        // replace newlines with commas
+        $keywords = str_replace("\r\n", ',', $keywords);
+
+        // split keywords on commas
+        $keywords = explode(',', $keywords);
+        
+        // trim entries
+        $keywords = array_map(function($str)
+        {
+            return trim($str);
+        }, $keywords);
+
+        // filter out empty strings and return the resulting array
+        return array_filter($keywords, function($str)
+        {
+            return !empty($str);
+        });
+    }
 }

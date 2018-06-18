@@ -36,3 +36,10 @@ JLoader::registerAlias('NRUpdateSites', 					 '\\NRFramework\\Updatesites');
 JLoader::registerAlias('NRSmartTags', 					     '\\NRFramework\\SmartTags');
 JLoader::registerAlias('NREmail', 					         '\\NRFramework\\Email');
 JLoader::registerAlias('NRVisitor', 					     '\\NRFramework\\VisitorToken');
+JLoader::registerAlias('NRFonts', 					         '\\NRFramework\\Fonts');
+
+// Define a helper constant to indicate whether we are on a Joomla 4 installation
+if (version_compare(JVERSION, '4.0', 'ge') && !defined('nrJ4'))
+{
+	define('nrJ4', true);
+}

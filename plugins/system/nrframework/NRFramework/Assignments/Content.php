@@ -71,23 +71,25 @@ class Content extends Assignment
 			return false;
 		}
 
-		$this->params->inc_categories = false;
-		$this->params->inc_articles   = false;
-		$this->params->inc_children   = $this->params->assign_contentcats_param_inc_children;
+		$inc_categories = true;
+		$inc_articles   = true;
 
-		if (isset($this->params->assign_contentcats_param_inc) && is_array($this->params->assign_contentcats_param_inc))
+		if (isset($this->params->inc))
 		{
-			$this->params->inc_categories = in_array('inc_categories', $this->params->assign_contentcats_param_inc);
-			$this->params->inc_articles   = in_array('inc_articles', $this->params->assign_contentcats_param_inc);
+			$this->params->inc = is_array($this->params->inc) ? $this->params->inc : $this->splitKeywords($this->params->inc);
+			$inc_categories = in_array('inc_categories', $this->params->inc);
+			$inc_articles   = in_array('inc_articles', $this->params->inc);
 		}
 
 		// Check we have a valid context
-		if (!($this->params->inc_categories && $is_category) && !($this->params->inc_articles && $is_item))
+		if (!($inc_categories && $is_category) && !($inc_articles && $is_item))
 		{
 			return false;
 		}
 
 		$pass = false;
+
+		$inc_children = isset($this->params->inc_children) ? $this->params->inc_children : false;
 
 		$catids = $this->getCategoryIds($is_category);
 
@@ -101,16 +103,16 @@ class Content extends Assignment
 			$pass = in_array($catid, $this->selection);
 
 			// Pass check on child items only
-			if ($pass && $this->params->inc_children == 2)
+			if ($pass && $inc_children == 2)
 			{
 				$pass = false;
 				continue;
 			}
 
 			// Pass check for child items
-			if (!$pass && $this->params->inc_children)
+			if (!$pass && $inc_children)
 			{
-				$parent_ids = $this->getParentIDs($catid);
+				$parent_ids = $this->getParentIDs($catid, 'categories');
 				$parent_ids = array_diff($parent_ids, array('1'));
 
 				foreach ($parent_ids as $id)
@@ -171,16 +173,16 @@ class Content extends Assignment
 			return false;
 		}
 
-		if (!class_exists('ContentModelArticle'))
+		// Setup model
+		if (defined('nrJ4'))
+		{	
+			$model = new \Joomla\Component\Content\Site\Model\ArticleModel(['ignore_request' => true]);
+			$model->setState('article.id', $this->request->id);
+			$model->setState('params', $this->app->getParams());
+		} else 
 		{
 			require_once JPATH_SITE . '/components/com_content/models/article.php';
-		}
-
-		$model = \JModelLegacy::getInstance('article', 'contentModel');
-
-		if (!method_exists($model, 'getItem'))
-		{
-			return null;
+			$model = \JModelLegacy::getInstance('Article', 'ContentModel');
 		}
 
 		try

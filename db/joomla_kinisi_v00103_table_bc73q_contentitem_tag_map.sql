@@ -13,9 +13,9 @@ INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 13, 
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 7, 8, 14, '2017-10-08 12:11:14', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 5, '2017-10-08 12:11:14', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 3, 9, 6, '2017-10-08 12:11:14', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 12, '2018-02-18 18:31:18', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 21, '2018-02-18 18:31:18', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 25, '2018-02-18 18:31:18', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 12, '2018-03-21 09:41:07', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 21, '2018-03-21 09:41:07', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 2, 10, 25, '2018-03-21 09:41:07', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 7, '2017-10-08 12:11:14', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 1, 11, 17, '2017-10-08 12:11:14', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 5, 12, 9, '2017-10-08 12:11:14', 1);
@@ -35,9 +35,9 @@ INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 11, 120, 6
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 7, '2017-11-02 05:55:00', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 15, '2017-11-02 05:55:00', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 12, 189, 17, '2017-11-02 05:55:00', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 12, '2017-11-11 20:18:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 19, '2017-11-11 20:18:01', 1);
-INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 20, '2017-11-11 20:18:01', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 12, '2018-03-21 09:39:25', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 19, '2018-03-21 09:39:25', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 13, 190, 20, '2018-03-21 09:39:25', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 14, 234, 3, '2018-03-06 11:14:07', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 14, 234, 21, '2018-03-06 11:14:07', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 14, 234, 25, '2018-03-06 11:14:07', 1);
@@ -46,3 +46,11 @@ INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 15, 250, 2
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 15, 250, 25, '2018-03-15 00:40:32', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 15, 250, 27, '2018-03-15 00:40:32', 1);
 INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 15, 250, 28, '2018-03-15 00:40:32', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 16, 260, 25, '2018-04-13 14:22:56', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 16, 260, 29, '2018-04-13 14:22:56', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 16, 260, 30, '2018-04-13 14:22:56', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 16, 260, 31, '2018-04-13 14:22:56', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 18, 263, 13, '2018-05-23 10:45:29', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 18, 263, 32, '2018-05-23 10:45:29', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 18, 263, 33, '2018-05-23 10:45:29', 1);
+INSERT INTO `bc73q_contentitem_tag_map` VALUES('com_content.article', 19, 264, 10, '2018-06-14 00:08:41', 1);

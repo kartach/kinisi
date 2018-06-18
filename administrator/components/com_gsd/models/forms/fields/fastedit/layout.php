@@ -4,11 +4,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  * 
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
 */
 
@@ -33,12 +33,8 @@ extract($displayData);
     <tbody>
         <?php foreach ($items as $key => $item) { ?>
             <tr data-pk="<?php echo $item->id ?>">
-                <td>
-                    <span class="icon-<?php echo $item->state == 1 ? "publish" : "unpublish" ?>"></span>
-                </td>
-                <td>
-                    <?php echo ucfirst($item->contenttype); ?>
-                </td>
+                <td><span class="icon-<?php echo $item->state == 1 ? "publish" : "unpublish" ?>"></span></td>
+                <td><?php echo JText::_('GSD_' . $item->contenttype); ?></td>
                 <td class="gsdID">#<?php echo $item->id ?></td>
                 <td class="btn-toolbar text-right">
                     <a href="#gsdModal"

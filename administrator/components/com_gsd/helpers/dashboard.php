@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  *
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
  */
 
@@ -110,12 +110,6 @@ class GSDDashboard
 		return (self::$items = $model->getItems());
 	}
 
-	public static function getContentTypes()
-	{
-		$json = new GSDJson();
-		return $json->contentTypes;
-	}
-
 	public static function getItemsPerContentType()
 	{
 		$items = self::getItems();
@@ -129,9 +123,8 @@ class GSDDashboard
 		}
 
 		$result = array();
-		$contentTypes = self::getContentTypes();
 
-		foreach (self::getContentTypes() as $value)
+		foreach (GSDHelper::getContentTypes() as $value)
 		{
 			$count = 0;
 			$share = 0;
@@ -147,9 +140,7 @@ class GSDDashboard
 				'share' => $share
 			);
 		}
-
-		ksort($result);
-	
+		
 		return $result;
 	}
 }

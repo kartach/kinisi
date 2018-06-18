@@ -5,6 +5,13 @@ include_once('includes/includes.php'); ?>
     <head>
         <?php echo $viewport; ?>
         <jdoc:include type="head"/>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WK5RLG8');</script>
+<!-- End Google Tag Manager -->
         <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -28,6 +35,10 @@ src="https://www.facebook.com/tr?id=158039864745105&ev=PageView
     <body class="<?php echo $bodyClass; ?>">
         <?php echo $ie_warning; ?>
         <!-- Body -->
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK5RLG8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
         <div id="wrapper">
             <div class="wrapper-inner">
                 <a id="fake" href='#'></a>

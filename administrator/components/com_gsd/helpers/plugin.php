@@ -2,11 +2,11 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  * 
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
- * @copyright       Copyright © 2017 Tassos Marinos All Rights Reserved
+ * @copyright       Copyright © 2018 Tassos Marinos All Rights Reserved
  * @license         GNU GPLv3 <http://www.gnu.org/licenses/gpl.html> or later
 */
 
@@ -140,8 +140,7 @@ class GSDPlugin extends JPlugin
     }
 
     /**
-     *  Return plugin's list query
-     *  Used in backend.
+     *  Construct the query needed for the item selection modal in the backend.
      *
      *  @param   JModel  $model  The Things Model
      *
@@ -286,7 +285,7 @@ class GSDPlugin extends JPlugin
     {
         if (!$thing = $this->getThingID())
         {
-            $this->log("Invalid request ID");
+            $this->log('Invalid request ID');
             return;
         }
 
@@ -309,13 +308,13 @@ class GSDPlugin extends JPlugin
         // Prepare manually-generated snippets
         foreach ($items as $key => $item)
         {
-            if (!isset($item["params"]))
+            if (!isset($item['params']))
             {
                 continue;
             }
 
             // Get flatten offeset
-            $params = new Registry($item["params"]);
+            $params = new Registry($item['params']);
 
             $contentType = $params->get('contenttype');
             $s = new Registry($params->offsetGet("$contentType"));
@@ -474,6 +473,18 @@ class GSDPlugin extends JPlugin
                 break;
         }
 
+        // On form saving, the Calendar field is set to '0000-00-00 00:00:00' if there is no date selected by the user which causes
+        // wrong result with the payload merge. To fix this issue, we need to unset the date values.
+        if ($snippet->get('publish_up') == '0000-00-00 00:00:00')
+        {
+            $snippet->set('publish_up', null);
+        }
+
+        if ($snippet->get('modified') == '0000-00-00 00:00:00')
+        {
+            $snippet->set('modified', null);
+        }
+
         // Create a new combined object by merging the snippet data into the payload
         // Note: In order to produce a valid merged object, payload's array keys should match the field names
         // as declared in the form's XML file.
@@ -504,9 +515,9 @@ class GSDPlugin extends JPlugin
             "worstRating"   => $s['worstRating'],
 
             // Dates
-            "datePublished" => JFactory::getDate($s["publish_up"])->toISO8601(),
-            "dateCreated"   => JFactory::getDate($s["created"])->toISO8601(),
-            "dateModified"  => JFactory::getDate($s["modified"])->toISO8601(),
+            "datePublished" => GSDHelper::date($s["publish_up"]),
+            "dateCreated"   => GSDHelper::date($s["created"]),
+            "dateModified"  => GSDHelper::date($s["modified"]),
 
             // Site based
             "url"           => JURI::current(),
@@ -605,6 +616,11 @@ class GSDPlugin extends JPlugin
                     "alternateName"         => $textRating
                 );
                 break;
+            case 'video':
+                $data = array(
+                    "contentUrl" => $s['contentUrl']
+                );
+                break;
         }
 
         return array_merge($data, $commonData);
@@ -650,7 +666,7 @@ class GSDPlugin extends JPlugin
             return $str;
         }
 
-        return array_filter($array);
+        return array_values(array_filter($array));
     }
 }
 

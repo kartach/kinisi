@@ -2,7 +2,7 @@
 
 /**
  * @package         Google Structured Data
- * @version         3.1.1 Free
+ * @version         3.1.8 Pro
  *
  * @author          Tassos Marinos <info@tassos.gr>
  * @link            http://www.tassos.gr
