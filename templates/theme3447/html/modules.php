@@ -24,7 +24,7 @@ $template = $app->getTemplate();
 
 function modChrome_themeHtml5($module, &$params, &$attribs)
 {
-  $moduleTag      = $params->get('module_tag');
+  $moduleTag      = $params->get('module_tag', "div");
   $headerTag      = htmlspecialchars($params->get('header_tag'));
   $headerClass    = $params->get('header_class');
   $bootstrapSize  = $params->get('bootstrap_size');
@@ -52,7 +52,7 @@ function modChrome_themeHtml5($module, &$params, &$attribs)
 function modChrome_themeHtml5_noMobile($module, &$params, &$attribs)
 {
   if(!$client->mobile){
-    $moduleTag      = $params->get('module_tag');
+    $moduleTag      = $params->get('module_tag', "div");
     $headerTag      = htmlspecialchars($params->get('header_tag'));
     $headerClass    = $params->get('header_class');
     $bootstrapSize  = $params->get('bootstrap_size');
@@ -80,7 +80,7 @@ function modChrome_themeHtml5_noMobile($module, &$params, &$attribs)
 
 function modChrome_html5nosize($module, &$params, &$attribs)
 {
-  $moduleTag      = $params->get('module_tag');
+  $moduleTag      = $params->get('module_tag', "div");
   $headerTag      = htmlspecialchars($params->get('header_tag'));
   $headerClass    = $params->get('header_class');
   $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
@@ -120,7 +120,7 @@ function modChrome_html5nosizeMap($module, &$params, &$attribs)
       $containerClass = 'container';
       break;
   }
-  $moduleTag      = $params->get('module_tag');
+  $moduleTag      = $params->get('module_tag', "div");
   $headerTag      = htmlspecialchars($params->get('header_tag'));
   $headerClass    = $params->get('header_class');
   $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
@@ -146,7 +146,7 @@ function modChrome_html5nosizeMap($module, &$params, &$attribs)
 function modChrome_html5nosize_noMobile($module, &$params, &$attribs)
 {
   if(!$client->mobile){
-    $moduleTag      = $params->get('module_tag');
+    $moduleTag      = $params->get('module_tag', "div");
     $headerTag      = htmlspecialchars($params->get('header_tag'));
     $headerClass    = $params->get('header_class');
     $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));
@@ -169,7 +169,7 @@ function modChrome_html5nosize_noMobile($module, &$params, &$attribs)
 
 function modChrome_modal($module, &$params, &$attribs)
 {
-  $moduleTag      = $params->get('module_tag');
+  $moduleTag      = $params->get('module_tag', "div");
   $headerTag      = htmlspecialchars($params->get('header_tag'));
   $headerClass    = $params->get('header_class');
   $bootstrapSize  = $params->get('bootstrap_size');
@@ -195,7 +195,7 @@ function modChrome_modal($module, &$params, &$attribs)
 
 function modChrome_sidebar($module, &$params, &$attribs)
 {
-  $moduleTag      = $params->get('module_tag');
+  $moduleTag      = $params->get('module_tag', "div");
   $headerTag      = htmlspecialchars($params->get('header_tag'));
   $headerClass    = $params->get('header_class');
   $moduleClassSfx = htmlspecialchars($params->get('moduleclass_sfx'));

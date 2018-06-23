@@ -52,3 +52,5 @@ INSERT INTO `bc73q_finder_taxonomy` VALUES(98, 11, 'HP služby', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(99, 11, 'Přístrojová fyzioterapie', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(126, 11, 'Poslední články', 1, 1, 0);
 INSERT INTO `bc73q_finder_taxonomy` VALUES(132, 11, 'Podmínky užití', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(136, 11, 'Partneři Kinisi', 1, 1, 0);
+INSERT INTO `bc73q_finder_taxonomy` VALUES(137, 11, 'Nekategorizováno', 1, 1, 0);

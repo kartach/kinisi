@@ -307,3 +307,6 @@ INSERT INTO `bc73q_finder_links_terms1` VALUES(984, 395340, 1.12);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(998, 401909, 0.42);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(998, 401910, 0.98);
 INSERT INTO `bc73q_finder_links_terms1` VALUES(998, 401911, 1.21331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(1063, 405207, 0.23331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(1063, 405208, 0.86331);
+INSERT INTO `bc73q_finder_links_terms1` VALUES(1063, 405209, 1.09669);
