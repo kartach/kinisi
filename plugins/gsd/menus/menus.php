@@ -132,7 +132,7 @@ class plgGSDMenus extends GSDPlugin
 
 		// Add a new tab called 'Google Structured Data' in the Menu Manager Item editing page
 		// only on component-based menu items. System links such as as URLs or Menu Item Aliases are not supported.
-		if ($form->getName() == 'com_menus.item' && $data['component_id'] > 0 && $this->params->get("fastedit", false))
+		if ($form->getName() == 'com_menus.item' && $data->component_id > 0 && $this->params->get("fastedit", false))
 		{
 			$form->loadFile(__DIR__ . '/form.xml', false);
 			$form->setFieldAttribute('snippet', 'thing', $this->app->input->getInt('id'), 'params.gsd');
