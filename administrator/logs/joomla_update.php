@@ -35,3 +35,15 @@
 2018-02-18T16:09:05+00:00	INFO 127.0.0.1	update	Mazání odstraněných souborů a složek.
 2018-02-18T16:09:06+00:00	INFO 127.0.0.1	update	Úklid po instalaci.
 2018-02-18T16:09:06+00:00	INFO 127.0.0.1	update	Aktualizace na verzi 3.8.5 je dokončena.
+2018-06-28T17:57:18+00:00	INFO ::1	update	Aktualizaci spustil uživatel Klára K (630). Stará verze je 3.8.5.
+2018-06-28T17:57:18+00:00	INFO ::1	update	Stahování aktualizačních souborů z https://downloads.joomla.org/cms/joomla3/3-8-10/Joomla_3.8.10-Stable-Update_Package.zip.
+2018-06-28T17:57:26+00:00	INFO ::1	update	Soubor Joomla_3.8.10-Stable-Update_Package.zip byl úspěšně stažen.
+2018-06-28T17:57:27+00:00	INFO ::1	update	Spuštění instalace nové verze.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Dokončení instalace.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Spustit dotaz ze souboru 3.8.6-2018-02-14. Text dotazu: INSERT INTO `#__extensions` (`extension_id`, `package_id`, `name`, `type`, `elem.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Spustit dotaz ze souboru 3.8.6-2018-02-14. Text dotazu: INSERT INTO `#__postinstall_messages` (`extension_id`, `title_key`, `description.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Spustit dotaz ze souboru 3.8.8-2018-05-18. Text dotazu: INSERT INTO `#__postinstall_messages` (`extension_id`, `title_key`, `description.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Spustit dotaz ze souboru 3.8.9-2018-06-19. Text dotazu: UPDATE `#__extensions` SET `enabled` = '1' WHERE `name` = 'mod_sampledata';.
+2018-06-28T17:57:34+00:00	INFO ::1	update	Mazání odstraněných souborů a složek.
+2018-06-28T17:57:36+00:00	INFO ::1	update	Úklid po instalaci.
+2018-06-28T17:57:36+00:00	INFO ::1	update	Aktualizace na verzi 3.8.10 je dokončena.

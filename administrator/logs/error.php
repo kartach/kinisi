@@ -87,3 +87,11 @@
 2018-06-13T23:57:05+00:00	INFO 89.24.36.250	sloginfailure	Prázdné heslo není povoleno
 2018-06-18T19:50:48+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
 2018-06-19T14:08:30+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-23T11:51:17+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-23T11:51:29+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-23T11:52:45+00:00	INFO 192.168.0.193	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-28T17:55:37+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-28T17:55:44+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-28T17:56:06+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-28T17:56:13+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
+2018-06-28T17:56:55+00:00	INFO ::1	sloginfailure	Uživatelské jméno a heslo nesouhlasí nebo ještě nemáte vytvořen účet.
